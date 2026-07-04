@@ -6,7 +6,7 @@ CloudInfra Secure ships 7 baselines. Each is a curated collection of control IDs
 
 Baseline for Active Directory Domain Controllers.
 
-**ID:** `CloudInfraSecure-DomainController` &nbsp; **Controls:** 137 &nbsp; **Supported OS:** WindowsServer2022, WindowsServer2025
+**ID:** `CloudInfraSecure-DomainController` &nbsp; **Controls:** 159 &nbsp; **Supported OS:** WindowsServer2022, WindowsServer2025
 
 | Control | Name | Severity |
 |---------|------|----------|
@@ -147,12 +147,34 @@ Baseline for Active Directory Domain Controllers.
 | [WIN-EVTLOG-006](../controls/index.md#win-evtlog-006) | Setup Event Log Retention (Overwrite as Needed) | Low |
 | [WIN-EVTLOG-007](../controls/index.md#win-evtlog-007) | System Event Log Maximum Size (>= 32 MB) | Medium |
 | [WIN-EVTLOG-008](../controls/index.md#win-evtlog-008) | System Event Log Retention (Overwrite as Needed) | Low |
+| [WIN-AUD-030](../controls/index.md#win-aud-030) | Include Command Line in Process Creation Events | Medium |
+| [WIN-CREDDEL-001](../controls/index.md#win-creddel-001) | Encryption Oracle Remediation (Force Updated Clients) | High |
+| [WIN-CREDDEL-002](../controls/index.md#win-creddel-002) | Remote Host Allows Delegation of Non-Exportable Credentials | Medium |
+| [WIN-ELAM-001](../controls/index.md#win-elam-001) | Boot-Start Driver Initialization Policy | Medium |
+| [WIN-GPO-001](../controls/index.md#win-gpo-001) | Registry Policy Processing: Apply During Background Refresh | Low |
+| [WIN-GPO-002](../controls/index.md#win-gpo-002) | Registry Policy Processing: Process Even If Unchanged | Low |
+| [WIN-GPO-003](../controls/index.md#win-gpo-003) | Disable Continue Experiences (Connected Devices Platform) | Low |
+| [WIN-INET-001](../controls/index.md#win-inet-001) | Turn Off Downloading of Print Drivers Over HTTP | Low |
+| [WIN-INET-002](../controls/index.md#win-inet-002) | Turn Off Printing Over HTTP | Low |
+| [WIN-INET-003](../controls/index.md#win-inet-003) | Turn Off Windows Error Reporting | Low |
+| [WIN-INET-004](../controls/index.md#win-inet-004) | Turn Off Windows Customer Experience Improvement Program | Low |
+| [WIN-INET-005](../controls/index.md#win-inet-005) | Turn Off Internet Download for Web Publishing and Online Ordering | Low |
+| [WIN-INET-006](../controls/index.md#win-inet-006) | Turn Off Internet Connection Wizard If URL Connection | Low |
+| [WIN-INET-007](../controls/index.md#win-inet-007) | Turn Off Search Companion Content File Updates | Low |
+| [WIN-LOGON-009](../controls/index.md#win-logon-009) | Do Not Enumerate Connected Users on Domain-Joined Computers | Medium |
+| [WIN-LOGON-010](../controls/index.md#win-logon-010) | Do Not Enumerate Local Users on Domain-Joined Computers | Medium |
+| [WIN-LOGON-011](../controls/index.md#win-logon-011) | Block User From Showing Account Details on Sign-In | Low |
+| [WIN-LOGON-012](../controls/index.md#win-logon-012) | Do Not Display Network Selection UI | Low |
+| [WIN-LOGON-013](../controls/index.md#win-logon-013) | Turn Off App Notifications on the Lock Screen | Low |
+| [WIN-LOGON-014](../controls/index.md#win-logon-014) | Disable Convenience PIN Sign-In | Medium |
+| [WIN-RPC-001](../controls/index.md#win-rpc-001) | Restrict Unauthenticated RPC Clients | Medium |
+| [WIN-RPC-002](../controls/index.md#win-rpc-002) | Enable RPC Endpoint Mapper Client Authentication | Medium |
 
 ## CloudInfra Secure Enterprise - Enterprise tier
 
 Comprehensive baseline for regulated and high-assurance environments.
 
-**ID:** `CloudInfraSecure-Enterprise` &nbsp; **Controls:** 227 &nbsp; **Supported OS:** WindowsServer2022, WindowsServer2025
+**ID:** `CloudInfraSecure-Enterprise` &nbsp; **Controls:** 251 &nbsp; **Supported OS:** WindowsServer2022, WindowsServer2025
 
 | Control | Name | Severity |
 |---------|------|----------|
@@ -383,6 +405,30 @@ Comprehensive baseline for regulated and high-assurance environments.
 | [WIN-EVTLOG-006](../controls/index.md#win-evtlog-006) | Setup Event Log Retention (Overwrite as Needed) | Low |
 | [WIN-EVTLOG-007](../controls/index.md#win-evtlog-007) | System Event Log Maximum Size (>= 32 MB) | Medium |
 | [WIN-EVTLOG-008](../controls/index.md#win-evtlog-008) | System Event Log Retention (Overwrite as Needed) | Low |
+| [WIN-AUD-030](../controls/index.md#win-aud-030) | Include Command Line in Process Creation Events | Medium |
+| [WIN-CREDDEL-001](../controls/index.md#win-creddel-001) | Encryption Oracle Remediation (Force Updated Clients) | High |
+| [WIN-CREDDEL-002](../controls/index.md#win-creddel-002) | Remote Host Allows Delegation of Non-Exportable Credentials | Medium |
+| [WIN-ELAM-001](../controls/index.md#win-elam-001) | Boot-Start Driver Initialization Policy | Medium |
+| [WIN-GPO-001](../controls/index.md#win-gpo-001) | Registry Policy Processing: Apply During Background Refresh | Low |
+| [WIN-GPO-002](../controls/index.md#win-gpo-002) | Registry Policy Processing: Process Even If Unchanged | Low |
+| [WIN-GPO-003](../controls/index.md#win-gpo-003) | Disable Continue Experiences (Connected Devices Platform) | Low |
+| [WIN-INET-001](../controls/index.md#win-inet-001) | Turn Off Downloading of Print Drivers Over HTTP | Low |
+| [WIN-INET-002](../controls/index.md#win-inet-002) | Turn Off Printing Over HTTP | Low |
+| [WIN-INET-003](../controls/index.md#win-inet-003) | Turn Off Windows Error Reporting | Low |
+| [WIN-INET-004](../controls/index.md#win-inet-004) | Turn Off Windows Customer Experience Improvement Program | Low |
+| [WIN-INET-005](../controls/index.md#win-inet-005) | Turn Off Internet Download for Web Publishing and Online Ordering | Low |
+| [WIN-INET-006](../controls/index.md#win-inet-006) | Turn Off Internet Connection Wizard If URL Connection | Low |
+| [WIN-INET-007](../controls/index.md#win-inet-007) | Turn Off Search Companion Content File Updates | Low |
+| [WIN-LOGON-009](../controls/index.md#win-logon-009) | Do Not Enumerate Connected Users on Domain-Joined Computers | Medium |
+| [WIN-LOGON-010](../controls/index.md#win-logon-010) | Do Not Enumerate Local Users on Domain-Joined Computers | Medium |
+| [WIN-LOGON-011](../controls/index.md#win-logon-011) | Block User From Showing Account Details on Sign-In | Low |
+| [WIN-LOGON-012](../controls/index.md#win-logon-012) | Do Not Display Network Selection UI | Low |
+| [WIN-LOGON-013](../controls/index.md#win-logon-013) | Turn Off App Notifications on the Lock Screen | Low |
+| [WIN-LOGON-014](../controls/index.md#win-logon-014) | Disable Convenience PIN Sign-In | Medium |
+| [WIN-RA-001](../controls/index.md#win-ra-001) | Disable Solicited Remote Assistance | Medium |
+| [WIN-RA-002](../controls/index.md#win-ra-002) | Disable Offer (Unsolicited) Remote Assistance | Medium |
+| [WIN-RPC-001](../controls/index.md#win-rpc-001) | Restrict Unauthenticated RPC Clients | Medium |
+| [WIN-RPC-002](../controls/index.md#win-rpc-002) | Enable RPC Endpoint Mapper Client Authentication | Medium |
 
 ## CloudInfra Secure Essential - Essential tier
 
@@ -412,7 +458,7 @@ Baseline of essential hardening controls suitable for any Windows Server workloa
 
 Baseline for Internet Information Services (IIS) web servers.
 
-**ID:** `CloudInfraSecure-IISWebServer` &nbsp; **Controls:** 81 &nbsp; **Supported OS:** WindowsServer2022, WindowsServer2025
+**ID:** `CloudInfraSecure-IISWebServer` &nbsp; **Controls:** 88 &nbsp; **Supported OS:** WindowsServer2022, WindowsServer2025
 
 | Control | Name | Severity |
 |---------|------|----------|
@@ -497,12 +543,19 @@ Baseline for Internet Information Services (IIS) web servers.
 | [WIN-EVTLOG-003](../controls/index.md#win-evtlog-003) | Security Event Log Maximum Size (>= 192 MB) | High |
 | [WIN-EVTLOG-007](../controls/index.md#win-evtlog-007) | System Event Log Maximum Size (>= 32 MB) | Medium |
 | [WIN-AUD-029](../controls/index.md#win-aud-029) | Audit Security System Extension | Medium |
+| [WIN-AUD-030](../controls/index.md#win-aud-030) | Include Command Line in Process Creation Events | Medium |
+| [WIN-CREDDEL-001](../controls/index.md#win-creddel-001) | Encryption Oracle Remediation (Force Updated Clients) | High |
+| [WIN-INET-001](../controls/index.md#win-inet-001) | Turn Off Downloading of Print Drivers Over HTTP | Low |
+| [WIN-INET-002](../controls/index.md#win-inet-002) | Turn Off Printing Over HTTP | Low |
+| [WIN-RPC-001](../controls/index.md#win-rpc-001) | Restrict Unauthenticated RPC Clients | Medium |
+| [WIN-RA-001](../controls/index.md#win-ra-001) | Disable Solicited Remote Assistance | Medium |
+| [WIN-RA-002](../controls/index.md#win-ra-002) | Disable Offer (Unsolicited) Remote Assistance | Medium |
 
 ## CloudInfra Secure Remote Desktop Server - Role tier
 
 Baseline for Remote Desktop Session Host servers.
 
-**ID:** `CloudInfraSecure-RemoteDesktopServer` &nbsp; **Controls:** 80 &nbsp; **Supported OS:** WindowsServer2022, WindowsServer2025
+**ID:** `CloudInfraSecure-RemoteDesktopServer` &nbsp; **Controls:** 85 &nbsp; **Supported OS:** WindowsServer2022, WindowsServer2025
 
 | Control | Name | Severity |
 |---------|------|----------|
@@ -586,12 +639,17 @@ Baseline for Remote Desktop Session Host servers.
 | [WIN-EVTLOG-007](../controls/index.md#win-evtlog-007) | System Event Log Maximum Size (>= 32 MB) | Medium |
 | [WIN-AUD-028](../controls/index.md#win-aud-028) | Audit Security State Change | Medium |
 | [WIN-AUD-029](../controls/index.md#win-aud-029) | Audit Security System Extension | Medium |
+| [WIN-CREDDEL-001](../controls/index.md#win-creddel-001) | Encryption Oracle Remediation (Force Updated Clients) | High |
+| [WIN-CREDDEL-002](../controls/index.md#win-creddel-002) | Remote Host Allows Delegation of Non-Exportable Credentials | Medium |
+| [WIN-RA-001](../controls/index.md#win-ra-001) | Disable Solicited Remote Assistance | Medium |
+| [WIN-RA-002](../controls/index.md#win-ra-002) | Disable Offer (Unsolicited) Remote Assistance | Medium |
+| [WIN-LOGON-009](../controls/index.md#win-logon-009) | Do Not Enumerate Connected Users on Domain-Joined Computers | Medium |
 
 ## CloudInfra Secure SQL Server - Role tier
 
 Baseline for Microsoft SQL Server hosts.
 
-**ID:** `CloudInfraSecure-SQLServer` &nbsp; **Controls:** 76 &nbsp; **Supported OS:** WindowsServer2022, WindowsServer2025
+**ID:** `CloudInfraSecure-SQLServer` &nbsp; **Controls:** 81 &nbsp; **Supported OS:** WindowsServer2022, WindowsServer2025
 
 | Control | Name | Severity |
 |---------|------|----------|
@@ -671,12 +729,17 @@ Baseline for Microsoft SQL Server hosts.
 | [WIN-EVTLOG-004](../controls/index.md#win-evtlog-004) | Security Event Log Retention (Overwrite as Needed) | Low |
 | [WIN-AUD-024](../controls/index.md#win-aud-024) | Audit Authorization Policy Change | Medium |
 | [WIN-AUD-029](../controls/index.md#win-aud-029) | Audit Security System Extension | Medium |
+| [WIN-AUD-030](../controls/index.md#win-aud-030) | Include Command Line in Process Creation Events | Medium |
+| [WIN-CREDDEL-001](../controls/index.md#win-creddel-001) | Encryption Oracle Remediation (Force Updated Clients) | High |
+| [WIN-CREDDEL-002](../controls/index.md#win-creddel-002) | Remote Host Allows Delegation of Non-Exportable Credentials | Medium |
+| [WIN-RPC-001](../controls/index.md#win-rpc-001) | Restrict Unauthenticated RPC Clients | Medium |
+| [WIN-RPC-002](../controls/index.md#win-rpc-002) | Enable RPC Endpoint Mapper Client Authentication | Medium |
 
 ## CloudInfra Secure Standard - Standard tier
 
 Recommended baseline adding logging, auditing and access hardening on top of Essential.
 
-**ID:** `CloudInfraSecure-Standard` &nbsp; **Controls:** 200 &nbsp; **Supported OS:** WindowsServer2022, WindowsServer2025
+**ID:** `CloudInfraSecure-Standard` &nbsp; **Controls:** 224 &nbsp; **Supported OS:** WindowsServer2022, WindowsServer2025
 
 | Control | Name | Severity |
 |---------|------|----------|
@@ -880,4 +943,28 @@ Recommended baseline adding logging, auditing and access hardening on top of Ess
 | [WIN-EVTLOG-006](../controls/index.md#win-evtlog-006) | Setup Event Log Retention (Overwrite as Needed) | Low |
 | [WIN-EVTLOG-007](../controls/index.md#win-evtlog-007) | System Event Log Maximum Size (>= 32 MB) | Medium |
 | [WIN-EVTLOG-008](../controls/index.md#win-evtlog-008) | System Event Log Retention (Overwrite as Needed) | Low |
+| [WIN-AUD-030](../controls/index.md#win-aud-030) | Include Command Line in Process Creation Events | Medium |
+| [WIN-CREDDEL-001](../controls/index.md#win-creddel-001) | Encryption Oracle Remediation (Force Updated Clients) | High |
+| [WIN-CREDDEL-002](../controls/index.md#win-creddel-002) | Remote Host Allows Delegation of Non-Exportable Credentials | Medium |
+| [WIN-ELAM-001](../controls/index.md#win-elam-001) | Boot-Start Driver Initialization Policy | Medium |
+| [WIN-GPO-001](../controls/index.md#win-gpo-001) | Registry Policy Processing: Apply During Background Refresh | Low |
+| [WIN-GPO-002](../controls/index.md#win-gpo-002) | Registry Policy Processing: Process Even If Unchanged | Low |
+| [WIN-GPO-003](../controls/index.md#win-gpo-003) | Disable Continue Experiences (Connected Devices Platform) | Low |
+| [WIN-INET-001](../controls/index.md#win-inet-001) | Turn Off Downloading of Print Drivers Over HTTP | Low |
+| [WIN-INET-002](../controls/index.md#win-inet-002) | Turn Off Printing Over HTTP | Low |
+| [WIN-INET-003](../controls/index.md#win-inet-003) | Turn Off Windows Error Reporting | Low |
+| [WIN-INET-004](../controls/index.md#win-inet-004) | Turn Off Windows Customer Experience Improvement Program | Low |
+| [WIN-INET-005](../controls/index.md#win-inet-005) | Turn Off Internet Download for Web Publishing and Online Ordering | Low |
+| [WIN-INET-006](../controls/index.md#win-inet-006) | Turn Off Internet Connection Wizard If URL Connection | Low |
+| [WIN-INET-007](../controls/index.md#win-inet-007) | Turn Off Search Companion Content File Updates | Low |
+| [WIN-LOGON-009](../controls/index.md#win-logon-009) | Do Not Enumerate Connected Users on Domain-Joined Computers | Medium |
+| [WIN-LOGON-010](../controls/index.md#win-logon-010) | Do Not Enumerate Local Users on Domain-Joined Computers | Medium |
+| [WIN-LOGON-011](../controls/index.md#win-logon-011) | Block User From Showing Account Details on Sign-In | Low |
+| [WIN-LOGON-012](../controls/index.md#win-logon-012) | Do Not Display Network Selection UI | Low |
+| [WIN-LOGON-013](../controls/index.md#win-logon-013) | Turn Off App Notifications on the Lock Screen | Low |
+| [WIN-LOGON-014](../controls/index.md#win-logon-014) | Disable Convenience PIN Sign-In | Medium |
+| [WIN-RA-001](../controls/index.md#win-ra-001) | Disable Solicited Remote Assistance | Medium |
+| [WIN-RA-002](../controls/index.md#win-ra-002) | Disable Offer (Unsolicited) Remote Assistance | Medium |
+| [WIN-RPC-001](../controls/index.md#win-rpc-001) | Restrict Unauthenticated RPC Clients | Medium |
+| [WIN-RPC-002](../controls/index.md#win-rpc-002) | Enable RPC Endpoint Mapper Client Authentication | Medium |
 
