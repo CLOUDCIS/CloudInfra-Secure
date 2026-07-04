@@ -6,7 +6,7 @@ CloudInfra Secure ships 7 baselines. Each is a curated collection of control IDs
 
 Baseline for Active Directory Domain Controllers.
 
-**ID:** `CloudInfraSecure-DomainController` &nbsp; **Controls:** 72 &nbsp; **Supported OS:** WindowsServer2022, WindowsServer2025
+**ID:** `CloudInfraSecure-DomainController` &nbsp; **Controls:** 82 &nbsp; **Supported OS:** WindowsServer2022, WindowsServer2025
 
 | Control | Name | Severity |
 |---------|------|----------|
@@ -82,12 +82,22 @@ Baseline for Active Directory Domain Controllers.
 | [WIN-PSL-003](../controls/index.md#win-psl-003) | Enable PowerShell Transcription | Medium |
 | [WIN-UAC-006](../controls/index.md#win-uac-006) | Only Elevate UIAccess Apps in Secure Locations | Medium |
 | [WIN-LOGON-006](../controls/index.md#win-logon-006) | Disable Automatic Logon | Medium |
+| [WIN-TLS-001](../controls/index.md#win-tls-001) | Enable TLS 1.2 (Server) | Medium |
+| [WIN-TLS-002](../controls/index.md#win-tls-002) | Enable TLS 1.2 (Client) | Medium |
+| [WIN-TLS-003](../controls/index.md#win-tls-003) | Disable RC4 128/128 Cipher | High |
+| [WIN-TLS-004](../controls/index.md#win-tls-004) | Disable RC4 40/128 Cipher | High |
+| [WIN-TLS-005](../controls/index.md#win-tls-005) | Disable Triple DES 168 Cipher | Medium |
+| [WIN-FW-002](../controls/index.md#win-fw-002) | Block Inbound Connections by Default (Domain Profile) | Medium |
+| [WIN-FW-003](../controls/index.md#win-fw-003) | Block Inbound Connections by Default (Private Profile) | Medium |
+| [WIN-FW-004](../controls/index.md#win-fw-004) | Block Inbound Connections by Default (Public Profile) | Medium |
+| [WIN-DEF-009](../controls/index.md#win-def-009) | Enable Defender Behavior Monitoring | High |
+| [WIN-WINRM-003](../controls/index.md#win-winrm-003) | Disable WinRM Client Digest Authentication | Medium |
 
 ## CloudInfra Secure Enterprise - Enterprise tier
 
 Comprehensive baseline for regulated and high-assurance environments.
 
-**ID:** `CloudInfraSecure-Enterprise` &nbsp; **Controls:** 100 &nbsp; **Supported OS:** WindowsServer2022, WindowsServer2025
+**ID:** `CloudInfraSecure-Enterprise` &nbsp; **Controls:** 116 &nbsp; **Supported OS:** WindowsServer2022, WindowsServer2025
 
 | Control | Name | Severity |
 |---------|------|----------|
@@ -191,6 +201,22 @@ Comprehensive baseline for regulated and high-assurance environments.
 | [WIN-RDP-006](../controls/index.md#win-rdp-006) | Disable RDP Clipboard Redirection | Low |
 | [WIN-SMB-007](../controls/index.md#win-smb-007) | Disable SMB Client Insecure Guest Logons | Medium |
 | [WIN-UAC-006](../controls/index.md#win-uac-006) | Only Elevate UIAccess Apps in Secure Locations | Medium |
+| [WIN-DEF-005](../controls/index.md#win-def-005) | Enable Network Protection | Medium |
+| [WIN-DEF-006](../controls/index.md#win-def-006) | Enable Controlled Folder Access | Medium |
+| [WIN-DEF-007](../controls/index.md#win-def-007) | Scan Removable Drives During Full Scan | Low |
+| [WIN-DEF-008](../controls/index.md#win-def-008) | Enable Block at First Sight | Medium |
+| [WIN-DEF-009](../controls/index.md#win-def-009) | Enable Defender Behavior Monitoring | High |
+| [WIN-TLS-001](../controls/index.md#win-tls-001) | Enable TLS 1.2 (Server) | Medium |
+| [WIN-TLS-002](../controls/index.md#win-tls-002) | Enable TLS 1.2 (Client) | Medium |
+| [WIN-TLS-003](../controls/index.md#win-tls-003) | Disable RC4 128/128 Cipher | High |
+| [WIN-TLS-004](../controls/index.md#win-tls-004) | Disable RC4 40/128 Cipher | High |
+| [WIN-TLS-005](../controls/index.md#win-tls-005) | Disable Triple DES 168 Cipher | Medium |
+| [WIN-FW-002](../controls/index.md#win-fw-002) | Block Inbound Connections by Default (Domain Profile) | Medium |
+| [WIN-FW-003](../controls/index.md#win-fw-003) | Block Inbound Connections by Default (Private Profile) | Medium |
+| [WIN-FW-004](../controls/index.md#win-fw-004) | Block Inbound Connections by Default (Public Profile) | Medium |
+| [WIN-FW-005](../controls/index.md#win-fw-005) | Log Dropped Packets (Public Profile) | Low |
+| [WIN-SVC-002](../controls/index.md#win-svc-002) | Disable Print Spooler Service | Medium |
+| [WIN-WINRM-003](../controls/index.md#win-winrm-003) | Disable WinRM Client Digest Authentication | Medium |
 
 ## CloudInfra Secure Essential - Essential tier
 
@@ -220,7 +246,7 @@ Baseline of essential hardening controls suitable for any Windows Server workloa
 
 Baseline for Internet Information Services (IIS) web servers.
 
-**ID:** `CloudInfraSecure-IISWebServer` &nbsp; **Controls:** 35 &nbsp; **Supported OS:** WindowsServer2022, WindowsServer2025
+**ID:** `CloudInfraSecure-IISWebServer` &nbsp; **Controls:** 43 &nbsp; **Supported OS:** WindowsServer2022, WindowsServer2025
 
 | Control | Name | Severity |
 |---------|------|----------|
@@ -259,12 +285,20 @@ Baseline for Internet Information Services (IIS) web servers.
 | [WIN-PSL-003](../controls/index.md#win-psl-003) | Enable PowerShell Transcription | Medium |
 | [WIN-SMB-007](../controls/index.md#win-smb-007) | Disable SMB Client Insecure Guest Logons | Medium |
 | [WIN-UAC-006](../controls/index.md#win-uac-006) | Only Elevate UIAccess Apps in Secure Locations | Medium |
+| [WIN-TLS-001](../controls/index.md#win-tls-001) | Enable TLS 1.2 (Server) | Medium |
+| [WIN-TLS-002](../controls/index.md#win-tls-002) | Enable TLS 1.2 (Client) | Medium |
+| [WIN-TLS-003](../controls/index.md#win-tls-003) | Disable RC4 128/128 Cipher | High |
+| [WIN-TLS-004](../controls/index.md#win-tls-004) | Disable RC4 40/128 Cipher | High |
+| [WIN-TLS-005](../controls/index.md#win-tls-005) | Disable Triple DES 168 Cipher | Medium |
+| [WIN-FW-004](../controls/index.md#win-fw-004) | Block Inbound Connections by Default (Public Profile) | Medium |
+| [WIN-FW-005](../controls/index.md#win-fw-005) | Log Dropped Packets (Public Profile) | Low |
+| [WIN-DEF-009](../controls/index.md#win-def-009) | Enable Defender Behavior Monitoring | High |
 
 ## CloudInfra Secure Remote Desktop Server - Role tier
 
 Baseline for Remote Desktop Session Host servers.
 
-**ID:** `CloudInfraSecure-RemoteDesktopServer` &nbsp; **Controls:** 37 &nbsp; **Supported OS:** WindowsServer2022, WindowsServer2025
+**ID:** `CloudInfraSecure-RemoteDesktopServer` &nbsp; **Controls:** 43 &nbsp; **Supported OS:** WindowsServer2022, WindowsServer2025
 
 | Control | Name | Severity |
 |---------|------|----------|
@@ -305,12 +339,18 @@ Baseline for Remote Desktop Session Host servers.
 | [WIN-RDP-006](../controls/index.md#win-rdp-006) | Disable RDP Clipboard Redirection | Low |
 | [WIN-PSL-003](../controls/index.md#win-psl-003) | Enable PowerShell Transcription | Medium |
 | [WIN-SMB-007](../controls/index.md#win-smb-007) | Disable SMB Client Insecure Guest Logons | Medium |
+| [WIN-TLS-001](../controls/index.md#win-tls-001) | Enable TLS 1.2 (Server) | Medium |
+| [WIN-TLS-002](../controls/index.md#win-tls-002) | Enable TLS 1.2 (Client) | Medium |
+| [WIN-TLS-003](../controls/index.md#win-tls-003) | Disable RC4 128/128 Cipher | High |
+| [WIN-FW-004](../controls/index.md#win-fw-004) | Block Inbound Connections by Default (Public Profile) | Medium |
+| [WIN-WINRM-003](../controls/index.md#win-winrm-003) | Disable WinRM Client Digest Authentication | Medium |
+| [WIN-DEF-009](../controls/index.md#win-def-009) | Enable Defender Behavior Monitoring | High |
 
 ## CloudInfra Secure SQL Server - Role tier
 
 Baseline for Microsoft SQL Server hosts.
 
-**ID:** `CloudInfraSecure-SQLServer` &nbsp; **Controls:** 33 &nbsp; **Supported OS:** WindowsServer2022, WindowsServer2025
+**ID:** `CloudInfraSecure-SQLServer` &nbsp; **Controls:** 40 &nbsp; **Supported OS:** WindowsServer2022, WindowsServer2025
 
 | Control | Name | Severity |
 |---------|------|----------|
@@ -347,12 +387,19 @@ Baseline for Microsoft SQL Server hosts.
 | [WIN-LSA-010](../controls/index.md#win-lsa-010) | Sharing and Security Model for Local Accounts (Classic) | Medium |
 | [WIN-KRB-001](../controls/index.md#win-krb-001) | Configure Kerberos Encryption Types (AES only) | Medium |
 | [WIN-PSL-003](../controls/index.md#win-psl-003) | Enable PowerShell Transcription | Medium |
+| [WIN-TLS-001](../controls/index.md#win-tls-001) | Enable TLS 1.2 (Server) | Medium |
+| [WIN-TLS-002](../controls/index.md#win-tls-002) | Enable TLS 1.2 (Client) | Medium |
+| [WIN-TLS-003](../controls/index.md#win-tls-003) | Disable RC4 128/128 Cipher | High |
+| [WIN-TLS-004](../controls/index.md#win-tls-004) | Disable RC4 40/128 Cipher | High |
+| [WIN-TLS-005](../controls/index.md#win-tls-005) | Disable Triple DES 168 Cipher | Medium |
+| [WIN-FW-002](../controls/index.md#win-fw-002) | Block Inbound Connections by Default (Domain Profile) | Medium |
+| [WIN-DEF-009](../controls/index.md#win-def-009) | Enable Defender Behavior Monitoring | High |
 
 ## CloudInfra Secure Standard - Standard tier
 
 Recommended baseline adding logging, auditing and access hardening on top of Essential.
 
-**ID:** `CloudInfraSecure-Standard` &nbsp; **Controls:** 83 &nbsp; **Supported OS:** WindowsServer2022, WindowsServer2025
+**ID:** `CloudInfraSecure-Standard` &nbsp; **Controls:** 96 &nbsp; **Supported OS:** WindowsServer2022, WindowsServer2025
 
 | Control | Name | Severity |
 |---------|------|----------|
@@ -439,4 +486,17 @@ Recommended baseline adding logging, auditing and access hardening on top of Ess
 | [WIN-RDP-005](../controls/index.md#win-rdp-005) | Always Prompt for Password on RDP Connection | Medium |
 | [WIN-SMB-007](../controls/index.md#win-smb-007) | Disable SMB Client Insecure Guest Logons | Medium |
 | [WIN-UAC-006](../controls/index.md#win-uac-006) | Only Elevate UIAccess Apps in Secure Locations | Medium |
+| [WIN-DEF-007](../controls/index.md#win-def-007) | Scan Removable Drives During Full Scan | Low |
+| [WIN-DEF-008](../controls/index.md#win-def-008) | Enable Block at First Sight | Medium |
+| [WIN-DEF-009](../controls/index.md#win-def-009) | Enable Defender Behavior Monitoring | High |
+| [WIN-TLS-001](../controls/index.md#win-tls-001) | Enable TLS 1.2 (Server) | Medium |
+| [WIN-TLS-002](../controls/index.md#win-tls-002) | Enable TLS 1.2 (Client) | Medium |
+| [WIN-TLS-003](../controls/index.md#win-tls-003) | Disable RC4 128/128 Cipher | High |
+| [WIN-TLS-004](../controls/index.md#win-tls-004) | Disable RC4 40/128 Cipher | High |
+| [WIN-TLS-005](../controls/index.md#win-tls-005) | Disable Triple DES 168 Cipher | Medium |
+| [WIN-FW-002](../controls/index.md#win-fw-002) | Block Inbound Connections by Default (Domain Profile) | Medium |
+| [WIN-FW-003](../controls/index.md#win-fw-003) | Block Inbound Connections by Default (Private Profile) | Medium |
+| [WIN-FW-004](../controls/index.md#win-fw-004) | Block Inbound Connections by Default (Public Profile) | Medium |
+| [WIN-FW-005](../controls/index.md#win-fw-005) | Log Dropped Packets (Public Profile) | Low |
+| [WIN-WINRM-003](../controls/index.md#win-winrm-003) | Disable WinRM Client Digest Authentication | Medium |
 

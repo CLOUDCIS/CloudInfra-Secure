@@ -1,6 +1,6 @@
 # Controls
 
-The CloudInfra Secure control library (100 controls). Each control exists once and may be used by many baselines.
+The CloudInfra Secure control library (116 controls). Each control exists once and may be used by many baselines.
 
 !!! note "Compliance disclaimer"
     CloudInfra Secure controls are designed to help organisations implement technical security requirements commonly found in recognised security standards. They do not constitute certification or proof of compliance.
@@ -43,7 +43,16 @@ The CloudInfra Secure control library (100 controls). Each control exists once a
 | [WIN-DEF-002](#win-def-002) | Enable Potentially Unwanted Application (PUA) Protection | High | Endpoint Protection | Registry | No |
 | [WIN-DEF-003](#win-def-003) | Enable Defender Real-Time Protection | High | Endpoint Protection | Registry | No |
 | [WIN-DEF-004](#win-def-004) | Enable Cloud-Delivered Protection | Medium | Endpoint Protection | Registry | No |
+| [WIN-DEF-005](#win-def-005) | Enable Network Protection | Medium | Endpoint Protection | Registry | No |
+| [WIN-DEF-006](#win-def-006) | Enable Controlled Folder Access | Medium | Endpoint Protection | Registry | No |
+| [WIN-DEF-007](#win-def-007) | Scan Removable Drives During Full Scan | Low | Endpoint Protection | Registry | No |
+| [WIN-DEF-008](#win-def-008) | Enable Block at First Sight | Medium | Endpoint Protection | Registry | No |
+| [WIN-DEF-009](#win-def-009) | Enable Defender Behavior Monitoring | High | Endpoint Protection | Registry | No |
 | [WIN-FW-001](#win-fw-001) | Windows Firewall Enabled (All Profiles) | High | Host Firewall | Firewall | No |
+| [WIN-FW-002](#win-fw-002) | Block Inbound Connections by Default (Domain Profile) | Medium | Host Firewall | Registry | No |
+| [WIN-FW-003](#win-fw-003) | Block Inbound Connections by Default (Private Profile) | Medium | Host Firewall | Registry | No |
+| [WIN-FW-004](#win-fw-004) | Block Inbound Connections by Default (Public Profile) | Medium | Host Firewall | Registry | No |
+| [WIN-FW-005](#win-fw-005) | Log Dropped Packets (Public Profile) | Low | Host Firewall | Registry | No |
 | [WIN-INSTALL-001](#win-install-001) | Disable Always Install Elevated | High | Privilege Management | Registry | No |
 | [WIN-KRB-001](#win-krb-001) | Configure Kerberos Encryption Types (AES only) | Medium | Authentication | Registry | No |
 | [WIN-LDAP-001](#win-ldap-001) | LDAP Client Signing | Medium | Authentication | Registry | No |
@@ -96,6 +105,12 @@ The CloudInfra Secure control library (100 controls). Each control exists once a
 | [WIN-SMB-006](#win-smb-006) | Restrict Anonymous Access to Named Pipes and Shares | Medium | Network Protocols | Registry | No |
 | [WIN-SMB-007](#win-smb-007) | Disable SMB Client Insecure Guest Logons | Medium | Network Protocols | Registry | No |
 | [WIN-SVC-001](#win-svc-001) | Disable Remote Registry Service | Medium | Attack Surface Reduction | Service | No |
+| [WIN-SVC-002](#win-svc-002) | Disable Print Spooler Service | Medium | Attack Surface Reduction | Service | No |
+| [WIN-TLS-001](#win-tls-001) | Enable TLS 1.2 (Server) | Medium | Cryptography | Registry | Yes |
+| [WIN-TLS-002](#win-tls-002) | Enable TLS 1.2 (Client) | Medium | Cryptography | Registry | Yes |
+| [WIN-TLS-003](#win-tls-003) | Disable RC4 128/128 Cipher | High | Cryptography | Registry | Yes |
+| [WIN-TLS-004](#win-tls-004) | Disable RC4 40/128 Cipher | High | Cryptography | Registry | Yes |
+| [WIN-TLS-005](#win-tls-005) | Disable Triple DES 168 Cipher | Medium | Cryptography | Registry | Yes |
 | [WIN-TLS-010](#win-tls-010) | Disable TLS 1.0 (Server) | High | Cryptography | Registry | Yes |
 | [WIN-TLS-011](#win-tls-011) | Disable TLS 1.1 (Server) | High | Cryptography | Registry | Yes |
 | [WIN-TLS-012](#win-tls-012) | Disable SSL 3.0 (Server) | High | Cryptography | Registry | Yes |
@@ -109,6 +124,7 @@ The CloudInfra Secure control library (100 controls). Each control exists once a
 | [WIN-WDIGEST-001](#win-wdigest-001) | Disable WDigest Credential Caching | High | Credential Protection | Registry | No |
 | [WIN-WINRM-001](#win-winrm-001) | Disable WinRM Client Basic Authentication | Medium | Remote Management | Registry | No |
 | [WIN-WINRM-002](#win-winrm-002) | Disallow WinRM Unencrypted Traffic | Medium | Remote Management | Registry | No |
+| [WIN-WINRM-003](#win-winrm-003) | Disable WinRM Client Digest Authentication | Medium | Remote Management | Registry | No |
 
 ## Control reference
 
@@ -622,6 +638,81 @@ Microsoft Defender cloud-delivered protection (MAPS) must be enabled for faster 
 **References:**
 - [https://learn.microsoft.com/en-us/defender-endpoint/microsoft-defender-antivirus-windows](https://learn.microsoft.com/en-us/defender-endpoint/microsoft-defender-antivirus-windows)
 
+### WIN-DEF-005 - Enable Network Protection { #win-def-005 }
+
+**Severity:** Medium &nbsp; **Category:** Endpoint Protection &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Enterprise
+
+Enable Defender network protection to block connections to dangerous domains and IP addresses.
+
+**Rationale.** Without network protection, users and processes can reach phishing and exploit domains.
+
+**Remediation.** Set Exploit Guard Network Protection EnableNetworkProtection to 1 (block mode). On Windows Server, AllowNetworkProtectionOnWinServer must also be enabled.
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
+
+**References:**
+- [https://learn.microsoft.com/en-us/defender-endpoint/enable-network-protection](https://learn.microsoft.com/en-us/defender-endpoint/enable-network-protection)
+
+### WIN-DEF-006 - Enable Controlled Folder Access { #win-def-006 }
+
+**Severity:** Medium &nbsp; **Category:** Endpoint Protection &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Enterprise
+
+Enable controlled folder access to protect key folders from unauthorized changes by untrusted apps (ransomware).
+
+**Rationale.** Ransomware can encrypt files in unprotected folders.
+
+**Remediation.** Set Exploit Guard Controlled Folder Access EnableControlledFolderAccess to 1 (block mode).
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
+
+**References:**
+- [https://learn.microsoft.com/en-us/defender-endpoint/controlled-folder-access-configure](https://learn.microsoft.com/en-us/defender-endpoint/controlled-folder-access-configure)
+
+### WIN-DEF-007 - Scan Removable Drives During Full Scan { #win-def-007 }
+
+**Severity:** Low &nbsp; **Category:** Endpoint Protection &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+
+Scan removable drives (such as USB) during a full antivirus scan.
+
+**Rationale.** Malware on removable media can go undetected if such drives are skipped.
+
+**Remediation.** Set Windows Defender Scan DisableRemovableDriveScanning to 0.
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
+
+**References:**
+- [https://learn.microsoft.com/en-us/defender-endpoint/microsoft-defender-antivirus-windows](https://learn.microsoft.com/en-us/defender-endpoint/microsoft-defender-antivirus-windows)
+
+### WIN-DEF-008 - Enable Block at First Sight { #win-def-008 }
+
+**Severity:** Medium &nbsp; **Category:** Endpoint Protection &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+
+Enable Defender block-at-first-sight rapid cloud verdicts for newly seen files.
+
+**Rationale.** Novel malware may execute before traditional signatures are available.
+
+**Remediation.** Set Windows Defender Spynet DisableBlockAtFirstSeen to 0 (requires cloud-delivered protection).
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
+
+**References:**
+- [https://learn.microsoft.com/en-us/defender-endpoint/microsoft-defender-antivirus-windows](https://learn.microsoft.com/en-us/defender-endpoint/microsoft-defender-antivirus-windows)
+
+### WIN-DEF-009 - Enable Defender Behavior Monitoring { #win-def-009 }
+
+**Severity:** High &nbsp; **Category:** Endpoint Protection &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+
+Enable Defender behavior monitoring to detect malicious activity by behaviour, not just signatures.
+
+**Rationale.** Disabling behaviour monitoring removes detection of fileless and living-off-the-land attacks.
+
+**Remediation.** Set Windows Defender Real-Time Protection DisableBehaviorMonitoring to 0.
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
+
+**References:**
+- [https://learn.microsoft.com/en-us/defender-endpoint/microsoft-defender-antivirus-windows](https://learn.microsoft.com/en-us/defender-endpoint/microsoft-defender-antivirus-windows)
+
 ### WIN-FW-001 - Windows Firewall Enabled (All Profiles) { #win-fw-001 }
 
 **Severity:** High &nbsp; **Category:** Host Firewall &nbsp; **Provider:** Firewall &nbsp; **Reboot:** No &nbsp; **Tier:** Essential
@@ -633,6 +724,66 @@ The Windows Defender Firewall must be enabled for the Domain, Private and Public
 **Remediation.** Enable Windows Defender Firewall on the Domain, Private and Public profiles (Set-NetFirewallProfile -Enabled True).
 
 **Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `FedRAMP` `CMMC Level 2` `PCI DSS v4.0` `SOC 2` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
+
+**References:**
+- [https://learn.microsoft.com/en-us/windows/security/operating-system-security/network-security/windows-firewall/](https://learn.microsoft.com/en-us/windows/security/operating-system-security/network-security/windows-firewall/)
+
+### WIN-FW-002 - Block Inbound Connections by Default (Domain Profile) { #win-fw-002 }
+
+**Severity:** Medium &nbsp; **Category:** Host Firewall &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+
+The domain firewall profile must block inbound connections that do not match a rule.
+
+**Rationale.** A permissive default inbound action exposes unlisted services to the network.
+
+**Remediation.** Set WindowsFirewall DomainProfile DefaultInboundAction to 1 (Block).
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
+
+**References:**
+- [https://learn.microsoft.com/en-us/windows/security/operating-system-security/network-security/windows-firewall/](https://learn.microsoft.com/en-us/windows/security/operating-system-security/network-security/windows-firewall/)
+
+### WIN-FW-003 - Block Inbound Connections by Default (Private Profile) { #win-fw-003 }
+
+**Severity:** Medium &nbsp; **Category:** Host Firewall &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+
+The private firewall profile must block inbound connections that do not match a rule.
+
+**Rationale.** A permissive default inbound action exposes unlisted services to the network.
+
+**Remediation.** Set WindowsFirewall StandardProfile DefaultInboundAction to 1 (Block).
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
+
+**References:**
+- [https://learn.microsoft.com/en-us/windows/security/operating-system-security/network-security/windows-firewall/](https://learn.microsoft.com/en-us/windows/security/operating-system-security/network-security/windows-firewall/)
+
+### WIN-FW-004 - Block Inbound Connections by Default (Public Profile) { #win-fw-004 }
+
+**Severity:** Medium &nbsp; **Category:** Host Firewall &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+
+The public firewall profile must block inbound connections that do not match a rule.
+
+**Rationale.** A permissive default inbound action exposes unlisted services on untrusted networks.
+
+**Remediation.** Set WindowsFirewall PublicProfile DefaultInboundAction to 1 (Block).
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
+
+**References:**
+- [https://learn.microsoft.com/en-us/windows/security/operating-system-security/network-security/windows-firewall/](https://learn.microsoft.com/en-us/windows/security/operating-system-security/network-security/windows-firewall/)
+
+### WIN-FW-005 - Log Dropped Packets (Public Profile) { #win-fw-005 }
+
+**Severity:** Low &nbsp; **Category:** Host Firewall &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+
+The public firewall profile must log dropped packets for troubleshooting and detection.
+
+**Rationale.** Without firewall logging, blocked-connection attempts leave no forensic trail.
+
+**Remediation.** Set WindowsFirewall PublicProfile Logging LogDroppedPackets to 1.
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
 
 **References:**
 - [https://learn.microsoft.com/en-us/windows/security/operating-system-security/network-security/windows-firewall/](https://learn.microsoft.com/en-us/windows/security/operating-system-security/network-security/windows-firewall/)
@@ -1417,6 +1568,96 @@ The Remote Registry service must be stopped and disabled to reduce remote attack
 **References:**
 - [https://learn.microsoft.com/en-us/windows/security/operating-system-security/device-management/windows-security-configuration-framework/windows-security-baselines](https://learn.microsoft.com/en-us/windows/security/operating-system-security/device-management/windows-security-configuration-framework/windows-security-baselines)
 
+### WIN-SVC-002 - Disable Print Spooler Service { #win-svc-002 }
+
+**Severity:** Medium &nbsp; **Category:** Attack Surface Reduction &nbsp; **Provider:** Service &nbsp; **Reboot:** No &nbsp; **Tier:** Enterprise
+
+The Print Spooler service must be stopped and disabled on servers that do not print (PrintNightmare mitigation).
+
+**Rationale.** The Print Spooler has a history of critical remote code execution vulnerabilities.
+
+**Remediation.** Stop and disable the Spooler service. Do not apply to print servers.
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
+
+**References:**
+- [https://learn.microsoft.com/en-us/windows/security/operating-system-security/device-management/windows-security-configuration-framework/windows-security-baselines](https://learn.microsoft.com/en-us/windows/security/operating-system-security/device-management/windows-security-configuration-framework/windows-security-baselines)
+
+### WIN-TLS-001 - Enable TLS 1.2 (Server) { #win-tls-001 }
+
+**Severity:** Medium &nbsp; **Category:** Cryptography &nbsp; **Provider:** Registry &nbsp; **Reboot:** Yes &nbsp; **Tier:** Standard
+
+Explicitly enable the TLS 1.2 SCHANNEL server endpoint.
+
+**Rationale.** If TLS 1.2 is not enabled, services may negotiate weaker or no encryption.
+
+**Remediation.** Set SCHANNEL TLS 1.2 Server Enabled to 1. A reboot is required to take effect.
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `FedRAMP` `PCI DSS v4.0` `ISO/IEC 27001` `HIPAA Security Rule` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
+
+**References:**
+- [https://learn.microsoft.com/en-us/windows-server/security/tls/tls-registry-settings](https://learn.microsoft.com/en-us/windows-server/security/tls/tls-registry-settings)
+
+### WIN-TLS-002 - Enable TLS 1.2 (Client) { #win-tls-002 }
+
+**Severity:** Medium &nbsp; **Category:** Cryptography &nbsp; **Provider:** Registry &nbsp; **Reboot:** Yes &nbsp; **Tier:** Standard
+
+Explicitly enable the TLS 1.2 SCHANNEL client endpoint.
+
+**Rationale.** If TLS 1.2 is not enabled, outbound connections may negotiate weaker encryption.
+
+**Remediation.** Set SCHANNEL TLS 1.2 Client Enabled to 1. A reboot is required to take effect.
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `FedRAMP` `PCI DSS v4.0` `ISO/IEC 27001` `HIPAA Security Rule` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
+
+**References:**
+- [https://learn.microsoft.com/en-us/windows-server/security/tls/tls-registry-settings](https://learn.microsoft.com/en-us/windows-server/security/tls/tls-registry-settings)
+
+### WIN-TLS-003 - Disable RC4 128/128 Cipher { #win-tls-003 }
+
+**Severity:** High &nbsp; **Category:** Cryptography &nbsp; **Provider:** Registry &nbsp; **Reboot:** Yes &nbsp; **Tier:** Standard
+
+Disable the weak RC4 128/128 SCHANNEL cipher.
+
+**Rationale.** RC4 is a broken stream cipher vulnerable to practical attacks.
+
+**Remediation.** Set SCHANNEL Ciphers RC4 128/128 Enabled to 0. A reboot is required to take effect.
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `FedRAMP` `PCI DSS v4.0` `ISO/IEC 27001` `HIPAA Security Rule` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
+
+**References:**
+- [https://learn.microsoft.com/en-us/windows-server/security/tls/tls-registry-settings](https://learn.microsoft.com/en-us/windows-server/security/tls/tls-registry-settings)
+
+### WIN-TLS-004 - Disable RC4 40/128 Cipher { #win-tls-004 }
+
+**Severity:** High &nbsp; **Category:** Cryptography &nbsp; **Provider:** Registry &nbsp; **Reboot:** Yes &nbsp; **Tier:** Standard
+
+Disable the weak RC4 40/128 SCHANNEL cipher.
+
+**Rationale.** RC4 40-bit is trivially breakable.
+
+**Remediation.** Set SCHANNEL Ciphers RC4 40/128 Enabled to 0. A reboot is required to take effect.
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `FedRAMP` `PCI DSS v4.0` `ISO/IEC 27001` `HIPAA Security Rule` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
+
+**References:**
+- [https://learn.microsoft.com/en-us/windows-server/security/tls/tls-registry-settings](https://learn.microsoft.com/en-us/windows-server/security/tls/tls-registry-settings)
+
+### WIN-TLS-005 - Disable Triple DES 168 Cipher { #win-tls-005 }
+
+**Severity:** Medium &nbsp; **Category:** Cryptography &nbsp; **Provider:** Registry &nbsp; **Reboot:** Yes &nbsp; **Tier:** Standard
+
+Disable the legacy Triple DES 168 SCHANNEL cipher.
+
+**Rationale.** 3DES is vulnerable to birthday (Sweet32) attacks and is deprecated.
+
+**Remediation.** Set SCHANNEL Ciphers Triple DES 168 Enabled to 0. A reboot is required to take effect.
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `FedRAMP` `PCI DSS v4.0` `ISO/IEC 27001` `HIPAA Security Rule` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
+
+**References:**
+- [https://learn.microsoft.com/en-us/windows-server/security/tls/tls-registry-settings](https://learn.microsoft.com/en-us/windows-server/security/tls/tls-registry-settings)
+
 ### WIN-TLS-010 - Disable TLS 1.0 (Server) { #win-tls-010 }
 
 **Severity:** High &nbsp; **Category:** Cryptography &nbsp; **Provider:** Registry &nbsp; **Reboot:** Yes &nbsp; **Tier:** Essential
@@ -1606,6 +1847,21 @@ The WinRM service must not allow unencrypted traffic.
 **Rationale.** Unencrypted WinRM traffic exposes management data and credentials.
 
 **Remediation.** Set Policies Microsoft Windows WinRM Service AllowUnencryptedTraffic to 0.
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
+
+**References:**
+- [https://learn.microsoft.com/en-us/windows/security/operating-system-security/device-management/windows-security-configuration-framework/windows-security-baselines](https://learn.microsoft.com/en-us/windows/security/operating-system-security/device-management/windows-security-configuration-framework/windows-security-baselines)
+
+### WIN-WINRM-003 - Disable WinRM Client Digest Authentication { #win-winrm-003 }
+
+**Severity:** Medium &nbsp; **Category:** Remote Management &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+
+The WinRM client must not use Digest authentication.
+
+**Rationale.** Digest authentication is weaker than Kerberos/Negotiate and can expose credentials.
+
+**Remediation.** Set Policies Microsoft Windows WinRM Client AllowDigest to 0.
 
 **Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
 
