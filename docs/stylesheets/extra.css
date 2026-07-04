@@ -40,3 +40,35 @@
 /* Status pills reused from the product report */
 .pill-pass { color:#fff; background:#1a7f37; padding:1px 8px; border-radius:10px; font-size:.8em; }
 .pill-fail { color:#fff; background:#b91c1c; padding:1px 8px; border-radius:10px; font-size:.8em; }
+
+/* Compliance-coverage "browse controls by standard" filter */
+.cmpl-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .6rem;
+  margin: 1rem 0;
+}
+.cmpl-toolbar select {
+  padding: .35rem .5rem;
+  border: 1px solid var(--md-default-fg-color--lighter);
+  border-radius: 6px;
+  background: var(--md-default-bg-color);
+  color: var(--md-default-fg-color);
+  font-size: .85rem;
+  max-width: 100%;
+}
+.cmpl-count {
+  font-size: .8rem;
+  color: var(--md-default-fg-color--light);
+  background: rgba(0,164,239,.10);
+  padding: .2rem .6rem;
+  border-radius: 10px;
+}
+.cmpl-table { width: 100%; font-size: .8rem; }
+.cmpl-table th.cmpl-num,
+.cmpl-table td.cmpl-num {
+  width: 34px;
+  text-align: right;
+  color: var(--md-default-fg-color--light);
+}

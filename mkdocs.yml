@@ -42,6 +42,9 @@ theme:
 extra_css:
   - stylesheets/extra.css
 
+extra_javascript:
+  - javascripts/compliance-filter.js
+
 extra:
   social:
     - icon: fontawesome/solid/globe
@@ -78,7 +81,6 @@ nav:
       - Reporting: guide/reporting.md
       - Drift & Alerts: guide/drift-and-alerts.md
       - Configuration: guide/configuration.md
-      - Deployment (Packer): guide/deployment.md
   - Reference:
       - Controls: reference/controls/index.md
       - Baselines: reference/baselines/index.md
