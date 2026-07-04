@@ -50,6 +50,7 @@ Select a standard to list the controls that map to it. This shows technical alig
   <span class="cmpl-count" id="cmplCount">Showing 84 of 84 controls</span>
 </div>
 
+<div class="cmpl-tablewrap" markdown="0">
 <table class="cmpl-table" id="cmplTable">
   <thead><tr><th class="cmpl-num">#</th><th>ID</th><th>Name</th><th>Severity</th><th>Category</th></tr></thead>
   <tbody>
@@ -139,4 +140,5 @@ Select a standard to list the controls that map to it. This shows technical alig
     <tr data-standards="|DISA STIG|NIST CSF|NIST SP 800-53 Rev 5|NIST SP 800-171|PCI DSS v4.0|ISO/IEC 27001|Microsoft Cloud Security Benchmark|Microsoft Security Baselines|NIS2|UK Cyber Essentials|"><td class="cmpl-num"></td><td><a href="../controls/#win-winrm-002">WIN-WINRM-002</a></td><td>Disallow WinRM Unencrypted Traffic</td><td>Medium</td><td>Remote Management</td></tr>
   </tbody>
 </table>
+</div>
 

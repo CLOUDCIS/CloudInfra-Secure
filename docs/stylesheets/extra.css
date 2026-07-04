@@ -65,10 +65,41 @@
   padding: .2rem .6rem;
   border-radius: 10px;
 }
-.cmpl-table { width: 100%; font-size: .8rem; }
+/* Self-contained table styling so the raw-HTML table reads as a proper table
+   (Material only auto-styles tables it generates from Markdown). */
+.cmpl-tablewrap {
+  overflow-x: auto;
+  margin: 0 0 1.2rem;
+  border: 1px solid var(--md-default-fg-color--lighter);
+  border-radius: 6px;
+}
+.cmpl-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: .8rem;
+}
+.cmpl-table th,
+.cmpl-table td {
+  padding: .45rem .7rem;
+  border-bottom: 1px solid var(--md-default-fg-color--lightest);
+  text-align: left;
+  vertical-align: top;
+}
+.cmpl-table thead th {
+  background: var(--md-default-fg-color--lightest);
+  border-bottom: 2px solid var(--md-primary-fg-color);
+  font-weight: 700;
+  white-space: nowrap;
+}
+.cmpl-table tbody tr:nth-child(even) { background: rgba(0,164,239,.035); }
+.cmpl-table tbody tr:hover { background: rgba(0,164,239,.10); }
+.cmpl-table tbody tr:last-child td { border-bottom: 0; }
+/* ID column: never wrap the control id across lines */
+.cmpl-table td:nth-child(2) { white-space: nowrap; font-weight: 600; }
 .cmpl-table th.cmpl-num,
 .cmpl-table td.cmpl-num {
-  width: 34px;
+  width: 2.4rem;
   text-align: right;
   color: var(--md-default-fg-color--light);
+  font-variant-numeric: tabular-nums;
 }
