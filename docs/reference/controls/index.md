@@ -1,6 +1,6 @@
 # Controls
 
-The CloudInfra Secure control library (132 controls). Each control exists once and may be used by many baselines.
+The CloudInfra Secure control library (148 controls). Each control exists once and may be used by many baselines.
 
 !!! note "Compliance disclaimer"
     CloudInfra Secure controls are designed to help organisations implement technical security requirements commonly found in recognised security standards. They do not constitute certification or proof of compliance.
@@ -12,11 +12,11 @@ Controls tagged **GPO** are delivered through a Group Policy registry value that
 <div class="cmpl-toolbar">
   <label for="ctlDelivery"><strong>Filter by delivery:</strong></label>
   <select id="ctlDelivery">
-    <option value="__all">All controls (132)</option>
-    <option value="gpo">Group Policy-backed (54)</option>
-    <option value="direct">Direct system setting (78)</option>
+    <option value="__all">All controls (148)</option>
+    <option value="gpo">Group Policy-backed (62)</option>
+    <option value="direct">Direct system setting (86)</option>
   </select>
-  <span class="cmpl-count" id="ctlCount">Showing 132 of 132 controls</span>
+  <span class="cmpl-count" id="ctlCount">Showing 148 of 148 controls</span>
 </div>
 
 <div class="cmpl-tablewrap" markdown="0">
@@ -55,6 +55,10 @@ Controls tagged **GPO** are delivered through a Group Policy registry value that
     <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-aud-014">WIN-AUD-014</a></td><td>Audit Audit Policy Change</td><td>Medium</td><td>Logging and Monitoring</td><td>AuditPol</td><td><span class="muted-badge">Direct</span></td></tr>
     <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-aud-015">WIN-AUD-015</a></td><td>Audit Other Logon/Logoff Events</td><td>Medium</td><td>Logging and Monitoring</td><td>AuditPol</td><td><span class="muted-badge">Direct</span></td></tr>
     <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-aud-016">WIN-AUD-016</a></td><td>Audit MPSSVC Rule-Level Policy Change</td><td>Medium</td><td>Logging and Monitoring</td><td>AuditPol</td><td><span class="muted-badge">Direct</span></td></tr>
+    <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-aud-017">WIN-AUD-017</a></td><td>Audit PNP Activity</td><td>Medium</td><td>Logging and Monitoring</td><td>AuditPol</td><td><span class="muted-badge">Direct</span></td></tr>
+    <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-aud-018">WIN-AUD-018</a></td><td>Audit Group Membership</td><td>Medium</td><td>Logging and Monitoring</td><td>AuditPol</td><td><span class="muted-badge">Direct</span></td></tr>
+    <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-aud-019">WIN-AUD-019</a></td><td>Audit Other Object Access Events</td><td>Medium</td><td>Logging and Monitoring</td><td>AuditPol</td><td><span class="muted-badge">Direct</span></td></tr>
+    <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-aud-020">WIN-AUD-020</a></td><td>Audit Detailed File Share</td><td>Medium</td><td>Logging and Monitoring</td><td>AuditPol</td><td><span class="muted-badge">Direct</span></td></tr>
     <tr data-delivery="gpo"><td class="cmpl-num"></td><td><a href="#win-autorun-001">WIN-AUTORUN-001</a></td><td>Disable AutoRun on All Drives</td><td>Medium</td><td>Attack Surface Reduction</td><td>Registry</td><td><span class="gpo-badge" title="Delivered via a Group Policy registry value; a domain GPO can override it">GPO</span></td></tr>
     <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-cg-001">WIN-CG-001</a></td><td>Enable Credential Guard</td><td>High</td><td>Credential Protection</td><td>Registry</td><td><span class="muted-badge">Direct</span></td></tr>
     <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-def-001">WIN-DEF-001</a></td><td>Microsoft Defender Antivirus Enabled</td><td>High</td><td>Endpoint Protection</td><td>Defender</td><td><span class="muted-badge">Direct</span></td></tr>
@@ -66,6 +70,12 @@ Controls tagged **GPO** are delivered through a Group Policy registry value that
     <tr data-delivery="gpo"><td class="cmpl-num"></td><td><a href="#win-def-007">WIN-DEF-007</a></td><td>Scan Removable Drives During Full Scan</td><td>Low</td><td>Endpoint Protection</td><td>Registry</td><td><span class="gpo-badge" title="Delivered via a Group Policy registry value; a domain GPO can override it">GPO</span></td></tr>
     <tr data-delivery="gpo"><td class="cmpl-num"></td><td><a href="#win-def-008">WIN-DEF-008</a></td><td>Enable Block at First Sight</td><td>Medium</td><td>Endpoint Protection</td><td>Registry</td><td><span class="gpo-badge" title="Delivered via a Group Policy registry value; a domain GPO can override it">GPO</span></td></tr>
     <tr data-delivery="gpo"><td class="cmpl-num"></td><td><a href="#win-def-009">WIN-DEF-009</a></td><td>Enable Defender Behavior Monitoring</td><td>High</td><td>Endpoint Protection</td><td>Registry</td><td><span class="gpo-badge" title="Delivered via a Group Policy registry value; a domain GPO can override it">GPO</span></td></tr>
+    <tr data-delivery="gpo"><td class="cmpl-num"></td><td><a href="#win-def-010">WIN-DEF-010</a></td><td>Enable Email Scanning</td><td>Medium</td><td>Endpoint Protection</td><td>Registry</td><td><span class="gpo-badge" title="Delivered via a Group Policy registry value; a domain GPO can override it">GPO</span></td></tr>
+    <tr data-delivery="gpo"><td class="cmpl-num"></td><td><a href="#win-def-011">WIN-DEF-011</a></td><td>Enable Archive Scanning</td><td>Medium</td><td>Endpoint Protection</td><td>Registry</td><td><span class="gpo-badge" title="Delivered via a Group Policy registry value; a domain GPO can override it">GPO</span></td></tr>
+    <tr data-delivery="gpo"><td class="cmpl-num"></td><td><a href="#win-def-012">WIN-DEF-012</a></td><td>Scan Mapped Network Drives During Full Scan</td><td>Low</td><td>Endpoint Protection</td><td>Registry</td><td><span class="gpo-badge" title="Delivered via a Group Policy registry value; a domain GPO can override it">GPO</span></td></tr>
+    <tr data-delivery="gpo"><td class="cmpl-num"></td><td><a href="#win-def-013">WIN-DEF-013</a></td><td>Scan Downloaded Files and Attachments</td><td>High</td><td>Endpoint Protection</td><td>Registry</td><td><span class="gpo-badge" title="Delivered via a Group Policy registry value; a domain GPO can override it">GPO</span></td></tr>
+    <tr data-delivery="gpo"><td class="cmpl-num"></td><td><a href="#win-def-014">WIN-DEF-014</a></td><td>Disable Local Admin Merge of Defender Preferences</td><td>Medium</td><td>Endpoint Protection</td><td>Registry</td><td><span class="gpo-badge" title="Delivered via a Group Policy registry value; a domain GPO can override it">GPO</span></td></tr>
+    <tr data-delivery="gpo"><td class="cmpl-num"></td><td><a href="#win-def-015">WIN-DEF-015</a></td><td>Enable Real-Time Script Scanning</td><td>Medium</td><td>Endpoint Protection</td><td>Registry</td><td><span class="gpo-badge" title="Delivered via a Group Policy registry value; a domain GPO can override it">GPO</span></td></tr>
     <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-fw-001">WIN-FW-001</a></td><td>Windows Firewall Enabled (All Profiles)</td><td>High</td><td>Host Firewall</td><td>Firewall</td><td><span class="muted-badge">Direct</span></td></tr>
     <tr data-delivery="gpo"><td class="cmpl-num"></td><td><a href="#win-fw-002">WIN-FW-002</a></td><td>Block Inbound Connections by Default (Domain Profile)</td><td>Medium</td><td>Host Firewall</td><td>Registry</td><td><span class="gpo-badge" title="Delivered via a Group Policy registry value; a domain GPO can override it">GPO</span></td></tr>
     <tr data-delivery="gpo"><td class="cmpl-num"></td><td><a href="#win-fw-003">WIN-FW-003</a></td><td>Block Inbound Connections by Default (Private Profile)</td><td>Medium</td><td>Host Firewall</td><td>Registry</td><td><span class="gpo-badge" title="Delivered via a Group Policy registry value; a domain GPO can override it">GPO</span></td></tr>
@@ -93,15 +103,20 @@ Controls tagged **GPO** are delivered through a Group Policy registry value that
     <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-lsa-008">WIN-LSA-008</a></td><td>Restrict Clients Allowed to Make Remote SAM Calls</td><td>Medium</td><td>Access Control</td><td>Registry</td><td><span class="muted-badge">Direct</span></td></tr>
     <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-lsa-009">WIN-LSA-009</a></td><td>Limit Local Account Use of Blank Passwords</td><td>High</td><td>Access Control</td><td>Registry</td><td><span class="muted-badge">Direct</span></td></tr>
     <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-lsa-010">WIN-LSA-010</a></td><td>Sharing and Security Model for Local Accounts (Classic)</td><td>Medium</td><td>Access Control</td><td>Registry</td><td><span class="muted-badge">Direct</span></td></tr>
+    <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-lsa-011">WIN-LSA-011</a></td><td>Disallow LocalSystem NULL Session Fallback</td><td>Medium</td><td>Access Control</td><td>Registry</td><td><span class="muted-badge">Direct</span></td></tr>
+    <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-lsa-012">WIN-LSA-012</a></td><td>Strengthen Default Permissions of Internal System Objects</td><td>Low</td><td>Access Control</td><td>Registry</td><td><span class="muted-badge">Direct</span></td></tr>
     <tr data-delivery="gpo"><td class="cmpl-num"></td><td><a href="#win-net-001">WIN-NET-001</a></td><td>Disable LLMNR</td><td>Medium</td><td>Network Protocols</td><td>Registry</td><td><span class="gpo-badge" title="Delivered via a Group Policy registry value; a domain GPO can override it">GPO</span></td></tr>
     <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-net-002">WIN-NET-002</a></td><td>Disable IPv4 Source Routing</td><td>Medium</td><td>Network Protocols</td><td>Registry</td><td><span class="muted-badge">Direct</span></td></tr>
     <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-net-003">WIN-NET-003</a></td><td>Disable ICMP Redirects</td><td>Low</td><td>Network Protocols</td><td>Registry</td><td><span class="muted-badge">Direct</span></td></tr>
     <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-net-004">WIN-NET-004</a></td><td>Disable IPv6 Source Routing</td><td>Medium</td><td>Network Protocols</td><td>Registry</td><td><span class="muted-badge">Direct</span></td></tr>
     <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-net-005">WIN-NET-005</a></td><td>Ignore NetBIOS Name Release Requests</td><td>Low</td><td>Network Protocols</td><td>Registry</td><td><span class="muted-badge">Direct</span></td></tr>
     <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-net-006">WIN-NET-006</a></td><td>Disable mDNS</td><td>Medium</td><td>Network Protocols</td><td>Registry</td><td><span class="muted-badge">Direct</span></td></tr>
+    <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-net-007">WIN-NET-007</a></td><td>Enable Safe DLL Search Mode</td><td>Medium</td><td>Exploit Protection</td><td>Registry</td><td><span class="muted-badge">Direct</span></td></tr>
     <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-ntlm-001">WIN-NTLM-001</a></td><td>LAN Manager Authentication Level (NTLMv2 Only)</td><td>High</td><td>Authentication</td><td>Registry</td><td><span class="muted-badge">Direct</span></td></tr>
     <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-ntlm-002">WIN-NTLM-002</a></td><td>Minimum NTLM Session Security (Clients)</td><td>Medium</td><td>Authentication</td><td>Registry</td><td><span class="muted-badge">Direct</span></td></tr>
     <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-ntlm-003">WIN-NTLM-003</a></td><td>Minimum NTLM Session Security (Servers)</td><td>Medium</td><td>Authentication</td><td>Registry</td><td><span class="muted-badge">Direct</span></td></tr>
+    <tr data-delivery="gpo"><td class="cmpl-num"></td><td><a href="#win-print-001">WIN-PRINT-001</a></td><td>Restrict Point and Print Driver Installation to Administrators</td><td>High</td><td>Attack Surface Reduction</td><td>Registry</td><td><span class="gpo-badge" title="Delivered via a Group Policy registry value; a domain GPO can override it">GPO</span></td></tr>
+    <tr data-delivery="gpo"><td class="cmpl-num"></td><td><a href="#win-print-002">WIN-PRINT-002</a></td><td>Require Elevation for New Point and Print Connections</td><td>Medium</td><td>Attack Surface Reduction</td><td>Registry</td><td><span class="gpo-badge" title="Delivered via a Group Policy registry value; a domain GPO can override it">GPO</span></td></tr>
     <tr data-delivery="gpo"><td class="cmpl-num"></td><td><a href="#win-psl-001">WIN-PSL-001</a></td><td>Enable PowerShell Script Block Logging</td><td>Medium</td><td>Logging and Monitoring</td><td>Registry</td><td><span class="gpo-badge" title="Delivered via a Group Policy registry value; a domain GPO can override it">GPO</span></td></tr>
     <tr data-delivery="gpo"><td class="cmpl-num"></td><td><a href="#win-psl-002">WIN-PSL-002</a></td><td>Enable PowerShell Module Logging</td><td>Medium</td><td>Logging and Monitoring</td><td>Registry</td><td><span class="gpo-badge" title="Delivered via a Group Policy registry value; a domain GPO can override it">GPO</span></td></tr>
     <tr data-delivery="gpo"><td class="cmpl-num"></td><td><a href="#win-psl-003">WIN-PSL-003</a></td><td>Enable PowerShell Transcription</td><td>Medium</td><td>Logging and Monitoring</td><td>Registry</td><td><span class="gpo-badge" title="Delivered via a Group Policy registry value; a domain GPO can override it">GPO</span></td></tr>
@@ -126,6 +141,7 @@ Controls tagged **GPO** are delivered through a Group Policy registry value that
     <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-smb-005">WIN-SMB-005</a></td><td>Require SMB Client Signing</td><td>Medium</td><td>Network Protocols</td><td>Registry</td><td><span class="muted-badge">Direct</span></td></tr>
     <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-smb-006">WIN-SMB-006</a></td><td>Restrict Anonymous Access to Named Pipes and Shares</td><td>Medium</td><td>Network Protocols</td><td>Registry</td><td><span class="muted-badge">Direct</span></td></tr>
     <tr data-delivery="gpo"><td class="cmpl-num"></td><td><a href="#win-smb-007">WIN-SMB-007</a></td><td>Disable SMB Client Insecure Guest Logons</td><td>Medium</td><td>Network Protocols</td><td>Registry</td><td><span class="gpo-badge" title="Delivered via a Group Policy registry value; a domain GPO can override it">GPO</span></td></tr>
+    <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-smb-008">WIN-SMB-008</a></td><td>Do Not Send Unencrypted Password to Third-Party SMB Servers</td><td>Medium</td><td>Network Protocols</td><td>Registry</td><td><span class="muted-badge">Direct</span></td></tr>
     <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-svc-001">WIN-SVC-001</a></td><td>Disable Remote Registry Service</td><td>Medium</td><td>Attack Surface Reduction</td><td>Service</td><td><span class="muted-badge">Direct</span></td></tr>
     <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-svc-002">WIN-SVC-002</a></td><td>Disable Print Spooler Service</td><td>Medium</td><td>Attack Surface Reduction</td><td>Service</td><td><span class="muted-badge">Direct</span></td></tr>
     <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-tls-001">WIN-TLS-001</a></td><td>Enable TLS 1.2 (Server)</td><td>Medium</td><td>Cryptography</td><td>Registry</td><td><span class="muted-badge">Direct</span></td></tr>
@@ -641,6 +657,66 @@ Changes to Windows Firewall rules must be audited.
 **References:**
 - [https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/audit-mpssvc-rule-level-policy-change](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/audit-mpssvc-rule-level-policy-change)
 
+### WIN-AUD-017 - Audit PNP Activity { #win-aud-017 }
+
+**Severity:** Medium &nbsp; **Category:** Logging and Monitoring &nbsp; **Provider:** AuditPol &nbsp; **Delivery:** Direct &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+
+Audit when Plug and Play detects an external device (e.g. USB).
+
+**Rationale.** Unaudited device attachment hides data-exfiltration and rogue-hardware events.
+
+**Remediation.** Enable success auditing for the Plug and Play Events subcategory.
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `SOC 2` `ISO/IEC 27001` `Microsoft Security Baselines` `NIS2`
+
+**References:**
+- [https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/audit-pnp-activity](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/audit-pnp-activity)
+
+### WIN-AUD-018 - Audit Group Membership { #win-aud-018 }
+
+**Severity:** Medium &nbsp; **Category:** Logging and Monitoring &nbsp; **Provider:** AuditPol &nbsp; **Delivery:** Direct &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+
+Record the group memberships in each logon token.
+
+**Rationale.** Without group-membership auditing it is harder to detect privileged-group logons.
+
+**Remediation.** Enable success auditing for the Group Membership subcategory.
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `SOC 2` `ISO/IEC 27001` `Microsoft Security Baselines` `NIS2`
+
+**References:**
+- [https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/audit-group-membership](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/audit-group-membership)
+
+### WIN-AUD-019 - Audit Other Object Access Events { #win-aud-019 }
+
+**Severity:** Medium &nbsp; **Category:** Logging and Monitoring &nbsp; **Provider:** AuditPol &nbsp; **Delivery:** Direct &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+
+Audit scheduled-task and COM+ object operations.
+
+**Rationale.** Scheduled tasks and COM+ objects are common persistence mechanisms.
+
+**Remediation.** Enable success and failure auditing for the Other Object Access Events subcategory.
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `SOC 2` `ISO/IEC 27001` `Microsoft Security Baselines` `NIS2`
+
+**References:**
+- [https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/audit-other-object-access-events](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/audit-other-object-access-events)
+
+### WIN-AUD-020 - Audit Detailed File Share { #win-aud-020 }
+
+**Severity:** Medium &nbsp; **Category:** Logging and Monitoring &nbsp; **Provider:** AuditPol &nbsp; **Delivery:** Direct &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+
+Audit failed attempts to access files and folders on shared folders.
+
+**Rationale.** Failed share-access attempts can indicate reconnaissance or unauthorized access.
+
+**Remediation.** Enable failure auditing for the Detailed File Share subcategory.
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `SOC 2` `ISO/IEC 27001` `Microsoft Security Baselines` `NIS2`
+
+**References:**
+- [https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/audit-detailed-file-share](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/audit-detailed-file-share)
+
 ### WIN-AUTORUN-001 - Disable AutoRun on All Drives { #win-autorun-001 }
 
 **Severity:** Medium &nbsp; **Category:** Attack Surface Reduction &nbsp; **Provider:** Registry &nbsp; **Delivery:** Group Policy &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
@@ -800,6 +876,96 @@ Enable Defender behavior monitoring to detect malicious activity by behaviour, n
 **Rationale.** Disabling behaviour monitoring removes detection of fileless and living-off-the-land attacks.
 
 **Remediation.** Set Windows Defender Real-Time Protection DisableBehaviorMonitoring to 0.
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
+
+**References:**
+- [https://learn.microsoft.com/en-us/defender-endpoint/microsoft-defender-antivirus-windows](https://learn.microsoft.com/en-us/defender-endpoint/microsoft-defender-antivirus-windows)
+
+### WIN-DEF-010 - Enable Email Scanning { #win-def-010 }
+
+**Severity:** Medium &nbsp; **Category:** Endpoint Protection &nbsp; **Provider:** Registry &nbsp; **Delivery:** Group Policy &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+
+Scan email bodies and attachments for malware. Group Policy setting: this control checks the corresponding Group Policy registry value, so it can report non-compliant until the policy is explicitly configured (even where the effective Windows default is already secure), and a domain Group Policy applied after hardening can override it.
+
+**Rationale.** Malware delivered by email can go undetected if email scanning is off.
+
+**Remediation.** Set Windows Defender Scan DisableEmailScanning to 0.
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
+
+**References:**
+- [https://learn.microsoft.com/en-us/defender-endpoint/microsoft-defender-antivirus-windows](https://learn.microsoft.com/en-us/defender-endpoint/microsoft-defender-antivirus-windows)
+
+### WIN-DEF-011 - Enable Archive Scanning { #win-def-011 }
+
+**Severity:** Medium &nbsp; **Category:** Endpoint Protection &nbsp; **Provider:** Registry &nbsp; **Delivery:** Group Policy &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+
+Scan inside archive files (such as .zip and .rar) for malware. Group Policy setting: this control checks the corresponding Group Policy registry value, so it can report non-compliant until the policy is explicitly configured (even where the effective Windows default is already secure), and a domain Group Policy applied after hardening can override it.
+
+**Rationale.** Malware hidden in archives evades scanning if archive scanning is off.
+
+**Remediation.** Set Windows Defender Scan DisableArchiveScanning to 0.
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
+
+**References:**
+- [https://learn.microsoft.com/en-us/defender-endpoint/microsoft-defender-antivirus-windows](https://learn.microsoft.com/en-us/defender-endpoint/microsoft-defender-antivirus-windows)
+
+### WIN-DEF-012 - Scan Mapped Network Drives During Full Scan { #win-def-012 }
+
+**Severity:** Low &nbsp; **Category:** Endpoint Protection &nbsp; **Provider:** Registry &nbsp; **Delivery:** Group Policy &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+
+Include mapped network drives when running a full antivirus scan. Group Policy setting: this control checks the corresponding Group Policy registry value, so it can report non-compliant until the policy is explicitly configured (even where the effective Windows default is already secure), and a domain Group Policy applied after hardening can override it.
+
+**Rationale.** Malware staged on mapped drives can be missed by full scans.
+
+**Remediation.** Set Windows Defender Scan DisableScanningMappedNetworkDrivesForFullScan to 0.
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
+
+**References:**
+- [https://learn.microsoft.com/en-us/defender-endpoint/microsoft-defender-antivirus-windows](https://learn.microsoft.com/en-us/defender-endpoint/microsoft-defender-antivirus-windows)
+
+### WIN-DEF-013 - Scan Downloaded Files and Attachments { #win-def-013 }
+
+**Severity:** High &nbsp; **Category:** Endpoint Protection &nbsp; **Provider:** Registry &nbsp; **Delivery:** Group Policy &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+
+Scan downloaded files and attachments in real time (IOAV protection). Group Policy setting: this control checks the corresponding Group Policy registry value; a domain Group Policy applied after hardening can override the local configuration.
+
+**Rationale.** Disabling IOAV protection lets downloaded malware execute unscanned.
+
+**Remediation.** Set Windows Defender Real-Time Protection DisableIOAVProtection to 0.
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
+
+**References:**
+- [https://learn.microsoft.com/en-us/defender-endpoint/microsoft-defender-antivirus-windows](https://learn.microsoft.com/en-us/defender-endpoint/microsoft-defender-antivirus-windows)
+
+### WIN-DEF-014 - Disable Local Admin Merge of Defender Preferences { #win-def-014 }
+
+**Severity:** Medium &nbsp; **Category:** Endpoint Protection &nbsp; **Provider:** Registry &nbsp; **Delivery:** Group Policy &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+
+Prevent local administrators from merging their own Defender exclusions and preferences with policy. Group Policy setting: this control checks the corresponding Group Policy registry value, so it can report non-compliant until the policy is explicitly configured (even where the effective Windows default is already secure), and a domain Group Policy applied after hardening can override it.
+
+**Rationale.** Local admin merge lets an attacker with local admin hide exclusions from central policy.
+
+**Remediation.** Set Windows Defender DisableLocalAdminMerge to 1.
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
+
+**References:**
+- [https://learn.microsoft.com/en-us/defender-endpoint/microsoft-defender-antivirus-windows](https://learn.microsoft.com/en-us/defender-endpoint/microsoft-defender-antivirus-windows)
+
+### WIN-DEF-015 - Enable Real-Time Script Scanning { #win-def-015 }
+
+**Severity:** Medium &nbsp; **Category:** Endpoint Protection &nbsp; **Provider:** Registry &nbsp; **Delivery:** Group Policy &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+
+Scan scripts as they run (real-time script scanning). Group Policy setting: this control checks the corresponding Group Policy registry value; a domain Group Policy applied after hardening can override the local configuration.
+
+**Rationale.** Malicious scripts execute unscanned when script scanning is disabled.
+
+**Remediation.** Set Windows Defender Real-Time Protection DisableScriptScanning to 0.
 
 **Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
 
@@ -1211,6 +1377,36 @@ Local accounts authenticate as themselves (Classic), not mapped to Guest.
 **References:**
 - [https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/network-access-sharing-and-security-model-for-local-accounts](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/network-access-sharing-and-security-model-for-local-accounts)
 
+### WIN-LSA-011 - Disallow LocalSystem NULL Session Fallback { #win-lsa-011 }
+
+**Severity:** Medium &nbsp; **Category:** Access Control &nbsp; **Provider:** Registry &nbsp; **Delivery:** Direct &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+
+Prevent LocalSystem services from falling back to unprotected NULL-session authentication.
+
+**Rationale.** NULL-session fallback transmits data with a well-known key, providing no confidentiality or integrity.
+
+**Remediation.** Set Lsa MSV1_0 AllowNullSessionFallback to 0.
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
+
+**References:**
+- [https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/network-security-allow-localsystem-null-session-fallback](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/network-security-allow-localsystem-null-session-fallback)
+
+### WIN-LSA-012 - Strengthen Default Permissions of Internal System Objects { #win-lsa-012 }
+
+**Severity:** Low &nbsp; **Category:** Access Control &nbsp; **Provider:** Registry &nbsp; **Delivery:** Direct &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+
+Strengthen the default DACL on shared system objects so non-administrators cannot modify objects they did not create.
+
+**Rationale.** Weak default object permissions enable symbolic-link and predictable-name attacks.
+
+**Remediation.** Set Session Manager ProtectionMode to 1.
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
+
+**References:**
+- [https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/system-objects-strengthen-default-permissions-of-internal-system-objects](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/system-objects-strengthen-default-permissions-of-internal-system-objects)
+
 ### WIN-NET-001 - Disable LLMNR { #win-net-001 }
 
 **Severity:** Medium &nbsp; **Category:** Network Protocols &nbsp; **Provider:** Registry &nbsp; **Delivery:** Group Policy &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
@@ -1301,6 +1497,21 @@ Disable multicast DNS (mDNS) name resolution.
 **References:**
 - [https://learn.microsoft.com/en-us/windows/security/operating-system-security/device-management/windows-security-configuration-framework/windows-security-baselines](https://learn.microsoft.com/en-us/windows/security/operating-system-security/device-management/windows-security-configuration-framework/windows-security-baselines)
 
+### WIN-NET-007 - Enable Safe DLL Search Mode { #win-net-007 }
+
+**Severity:** Medium &nbsp; **Category:** Exploit Protection &nbsp; **Provider:** Registry &nbsp; **Delivery:** Direct &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+
+Use safe DLL search order so system locations are searched before the current directory.
+
+**Rationale.** Unsafe DLL search order enables DLL-planting (DLL hijacking) attacks.
+
+**Remediation.** Set Session Manager SafeDllSearchMode to 1.
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
+
+**References:**
+- [https://learn.microsoft.com/en-us/windows/security/operating-system-security/device-management/windows-security-configuration-framework/windows-security-baselines](https://learn.microsoft.com/en-us/windows/security/operating-system-security/device-management/windows-security-configuration-framework/windows-security-baselines)
+
 ### WIN-NTLM-001 - LAN Manager Authentication Level (NTLMv2 Only) { #win-ntlm-001 }
 
 **Severity:** High &nbsp; **Category:** Authentication &nbsp; **Provider:** Registry &nbsp; **Delivery:** Direct &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
@@ -1345,6 +1556,36 @@ NTLM SSP servers must require NTLMv2 session security and 128-bit encryption.
 
 **References:**
 - [https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/network-security-minimum-session-security-for-ntlm-ssp-based-including-secure-rpc-servers](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/network-security-minimum-session-security-for-ntlm-ssp-based-including-secure-rpc-servers)
+
+### WIN-PRINT-001 - Restrict Point and Print Driver Installation to Administrators { #win-print-001 }
+
+**Severity:** High &nbsp; **Category:** Attack Surface Reduction &nbsp; **Provider:** Registry &nbsp; **Delivery:** Group Policy &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+
+Only administrators may install printer drivers via Point and Print. Group Policy setting: this control checks the corresponding Group Policy registry value, so it can report non-compliant until the policy is explicitly configured (even where the effective Windows default is already secure), and a domain Group Policy applied after hardening can override it.
+
+**Rationale.** Unrestricted Point and Print driver installation was the basis of the PrintNightmare RCE.
+
+**Remediation.** Set Printers PointAndPrint RestrictDriverInstallationToAdministrators to 1.
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
+
+**References:**
+- [https://learn.microsoft.com/en-us/windows/security/operating-system-security/device-management/windows-security-configuration-framework/windows-security-baselines](https://learn.microsoft.com/en-us/windows/security/operating-system-security/device-management/windows-security-configuration-framework/windows-security-baselines)
+
+### WIN-PRINT-002 - Require Elevation for New Point and Print Connections { #win-print-002 }
+
+**Severity:** Medium &nbsp; **Category:** Attack Surface Reduction &nbsp; **Provider:** Registry &nbsp; **Delivery:** Group Policy &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+
+Warn and require elevation when installing drivers for a new Point and Print connection. Group Policy setting: this control checks the corresponding Group Policy registry value; a domain Group Policy applied after hardening can override the local configuration.
+
+**Rationale.** Silent driver installation lets a malicious print server push a driver without prompting.
+
+**Remediation.** Set Printers PointAndPrint NoWarningNoElevationOnInstall to 0.
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
+
+**References:**
+- [https://learn.microsoft.com/en-us/windows/security/operating-system-security/device-management/windows-security-configuration-framework/windows-security-baselines](https://learn.microsoft.com/en-us/windows/security/operating-system-security/device-management/windows-security-configuration-framework/windows-security-baselines)
 
 ### WIN-PSL-001 - Enable PowerShell Script Block Logging { #win-psl-001 }
 
@@ -1705,6 +1946,21 @@ Prevent the SMB client from making insecure guest logons to file servers. Group 
 
 **References:**
 - [https://learn.microsoft.com/en-us/windows/security/operating-system-security/device-management/windows-security-configuration-framework/windows-security-baselines](https://learn.microsoft.com/en-us/windows/security/operating-system-security/device-management/windows-security-configuration-framework/windows-security-baselines)
+
+### WIN-SMB-008 - Do Not Send Unencrypted Password to Third-Party SMB Servers { #win-smb-008 }
+
+**Severity:** Medium &nbsp; **Category:** Network Protocols &nbsp; **Provider:** Registry &nbsp; **Delivery:** Direct &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+
+Prevent the SMB client from sending plaintext passwords to non-Microsoft SMB servers.
+
+**Rationale.** Plaintext passwords on the wire can be captured by a network eavesdropper.
+
+**Remediation.** Set LanmanWorkstation Parameters EnablePlainTextPassword to 0.
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
+
+**References:**
+- [https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/microsoft-network-client-send-unencrypted-password-to-third-party-smb-servers](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/microsoft-network-client-send-unencrypted-password-to-third-party-smb-servers)
 
 ### WIN-SVC-001 - Disable Remote Registry Service { #win-svc-001 }
 

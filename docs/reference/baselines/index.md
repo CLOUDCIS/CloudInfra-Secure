@@ -6,7 +6,7 @@ CloudInfra Secure ships 7 baselines. Each is a curated collection of control IDs
 
 Baseline for Active Directory Domain Controllers.
 
-**ID:** `CloudInfraSecure-DomainController` &nbsp; **Controls:** 92 &nbsp; **Supported OS:** WindowsServer2022, WindowsServer2025
+**ID:** `CloudInfraSecure-DomainController` &nbsp; **Controls:** 100 &nbsp; **Supported OS:** WindowsServer2022, WindowsServer2025
 
 | Control | Name | Severity |
 |---------|------|----------|
@@ -102,12 +102,20 @@ Baseline for Active Directory Domain Controllers.
 | [WIN-TLS-009](../controls/index.md#win-tls-009) | Disable NULL Cipher | Medium |
 | [WIN-ACCT-001](../controls/index.md#win-acct-001) | Block Microsoft Accounts | Medium |
 | [WIN-UAC-007](../controls/index.md#win-uac-007) | Apply UAC Token Filtering to Remote Local Accounts | High |
+| [WIN-AUD-017](../controls/index.md#win-aud-017) | Audit PNP Activity | Medium |
+| [WIN-AUD-018](../controls/index.md#win-aud-018) | Audit Group Membership | Medium |
+| [WIN-AUD-019](../controls/index.md#win-aud-019) | Audit Other Object Access Events | Medium |
+| [WIN-AUD-020](../controls/index.md#win-aud-020) | Audit Detailed File Share | Medium |
+| [WIN-LSA-011](../controls/index.md#win-lsa-011) | Disallow LocalSystem NULL Session Fallback | Medium |
+| [WIN-LSA-012](../controls/index.md#win-lsa-012) | Strengthen Default Permissions of Internal System Objects | Low |
+| [WIN-NET-007](../controls/index.md#win-net-007) | Enable Safe DLL Search Mode | Medium |
+| [WIN-DEF-013](../controls/index.md#win-def-013) | Scan Downloaded Files and Attachments | High |
 
 ## CloudInfra Secure Enterprise - Enterprise tier
 
 Comprehensive baseline for regulated and high-assurance environments.
 
-**ID:** `CloudInfraSecure-Enterprise` &nbsp; **Controls:** 132 &nbsp; **Supported OS:** WindowsServer2022, WindowsServer2025
+**ID:** `CloudInfraSecure-Enterprise` &nbsp; **Controls:** 148 &nbsp; **Supported OS:** WindowsServer2022, WindowsServer2025
 
 | Control | Name | Severity |
 |---------|------|----------|
@@ -243,6 +251,22 @@ Comprehensive baseline for regulated and high-assurance environments.
 | [WIN-NET-006](../controls/index.md#win-net-006) | Disable mDNS | Medium |
 | [WIN-ASR-014](../controls/index.md#win-asr-014) | ASR: Block Webshell Creation for Servers | High |
 | [WIN-ASR-015](../controls/index.md#win-asr-015) | ASR: Block Rebooting Machine in Safe Mode | Medium |
+| [WIN-DEF-010](../controls/index.md#win-def-010) | Enable Email Scanning | Medium |
+| [WIN-DEF-011](../controls/index.md#win-def-011) | Enable Archive Scanning | Medium |
+| [WIN-DEF-012](../controls/index.md#win-def-012) | Scan Mapped Network Drives During Full Scan | Low |
+| [WIN-DEF-013](../controls/index.md#win-def-013) | Scan Downloaded Files and Attachments | High |
+| [WIN-DEF-014](../controls/index.md#win-def-014) | Disable Local Admin Merge of Defender Preferences | Medium |
+| [WIN-DEF-015](../controls/index.md#win-def-015) | Enable Real-Time Script Scanning | Medium |
+| [WIN-AUD-017](../controls/index.md#win-aud-017) | Audit PNP Activity | Medium |
+| [WIN-AUD-018](../controls/index.md#win-aud-018) | Audit Group Membership | Medium |
+| [WIN-AUD-019](../controls/index.md#win-aud-019) | Audit Other Object Access Events | Medium |
+| [WIN-AUD-020](../controls/index.md#win-aud-020) | Audit Detailed File Share | Medium |
+| [WIN-SMB-008](../controls/index.md#win-smb-008) | Do Not Send Unencrypted Password to Third-Party SMB Servers | Medium |
+| [WIN-LSA-011](../controls/index.md#win-lsa-011) | Disallow LocalSystem NULL Session Fallback | Medium |
+| [WIN-LSA-012](../controls/index.md#win-lsa-012) | Strengthen Default Permissions of Internal System Objects | Low |
+| [WIN-NET-007](../controls/index.md#win-net-007) | Enable Safe DLL Search Mode | Medium |
+| [WIN-PRINT-001](../controls/index.md#win-print-001) | Restrict Point and Print Driver Installation to Administrators | High |
+| [WIN-PRINT-002](../controls/index.md#win-print-002) | Require Elevation for New Point and Print Connections | Medium |
 
 ## CloudInfra Secure Essential - Essential tier
 
@@ -272,7 +296,7 @@ Baseline of essential hardening controls suitable for any Windows Server workloa
 
 Baseline for Internet Information Services (IIS) web servers.
 
-**ID:** `CloudInfraSecure-IISWebServer` &nbsp; **Controls:** 50 &nbsp; **Supported OS:** WindowsServer2022, WindowsServer2025
+**ID:** `CloudInfraSecure-IISWebServer` &nbsp; **Controls:** 56 &nbsp; **Supported OS:** WindowsServer2022, WindowsServer2025
 
 | Control | Name | Severity |
 |---------|------|----------|
@@ -326,12 +350,18 @@ Baseline for Internet Information Services (IIS) web servers.
 | [WIN-NET-006](../controls/index.md#win-net-006) | Disable mDNS | Medium |
 | [WIN-RDP-009](../controls/index.md#win-rdp-009) | Do Not Allow Saved RDP Passwords | Medium |
 | [WIN-ASR-014](../controls/index.md#win-asr-014) | ASR: Block Webshell Creation for Servers | High |
+| [WIN-DEF-010](../controls/index.md#win-def-010) | Enable Email Scanning | Medium |
+| [WIN-DEF-011](../controls/index.md#win-def-011) | Enable Archive Scanning | Medium |
+| [WIN-DEF-013](../controls/index.md#win-def-013) | Scan Downloaded Files and Attachments | High |
+| [WIN-NET-007](../controls/index.md#win-net-007) | Enable Safe DLL Search Mode | Medium |
+| [WIN-PRINT-001](../controls/index.md#win-print-001) | Restrict Point and Print Driver Installation to Administrators | High |
+| [WIN-AUD-020](../controls/index.md#win-aud-020) | Audit Detailed File Share | Medium |
 
 ## CloudInfra Secure Remote Desktop Server - Role tier
 
 Baseline for Remote Desktop Session Host servers.
 
-**ID:** `CloudInfraSecure-RemoteDesktopServer` &nbsp; **Controls:** 49 &nbsp; **Supported OS:** WindowsServer2022, WindowsServer2025
+**ID:** `CloudInfraSecure-RemoteDesktopServer` &nbsp; **Controls:** 55 &nbsp; **Supported OS:** WindowsServer2022, WindowsServer2025
 
 | Control | Name | Severity |
 |---------|------|----------|
@@ -384,12 +414,18 @@ Baseline for Remote Desktop Session Host servers.
 | [WIN-TLS-006](../controls/index.md#win-tls-006) | Disable RC4 56/128 Cipher | High |
 | [WIN-TLS-007](../controls/index.md#win-tls-007) | Disable RC4 64/128 Cipher | High |
 | [WIN-UAC-007](../controls/index.md#win-uac-007) | Apply UAC Token Filtering to Remote Local Accounts | High |
+| [WIN-DEF-010](../controls/index.md#win-def-010) | Enable Email Scanning | Medium |
+| [WIN-DEF-013](../controls/index.md#win-def-013) | Scan Downloaded Files and Attachments | High |
+| [WIN-SMB-008](../controls/index.md#win-smb-008) | Do Not Send Unencrypted Password to Third-Party SMB Servers | Medium |
+| [WIN-PRINT-001](../controls/index.md#win-print-001) | Restrict Point and Print Driver Installation to Administrators | High |
+| [WIN-PRINT-002](../controls/index.md#win-print-002) | Require Elevation for New Point and Print Connections | Medium |
+| [WIN-AUD-017](../controls/index.md#win-aud-017) | Audit PNP Activity | Medium |
 
 ## CloudInfra Secure SQL Server - Role tier
 
 Baseline for Microsoft SQL Server hosts.
 
-**ID:** `CloudInfraSecure-SQLServer` &nbsp; **Controls:** 46 &nbsp; **Supported OS:** WindowsServer2022, WindowsServer2025
+**ID:** `CloudInfraSecure-SQLServer` &nbsp; **Controls:** 52 &nbsp; **Supported OS:** WindowsServer2022, WindowsServer2025
 
 | Control | Name | Severity |
 |---------|------|----------|
@@ -439,12 +475,18 @@ Baseline for Microsoft SQL Server hosts.
 | [WIN-TLS-009](../controls/index.md#win-tls-009) | Disable NULL Cipher | Medium |
 | [WIN-VBS-001](../controls/index.md#win-vbs-001) | Enable Virtualization Based Security | High |
 | [WIN-CG-001](../controls/index.md#win-cg-001) | Enable Credential Guard | High |
+| [WIN-DEF-011](../controls/index.md#win-def-011) | Enable Archive Scanning | Medium |
+| [WIN-DEF-013](../controls/index.md#win-def-013) | Scan Downloaded Files and Attachments | High |
+| [WIN-LSA-011](../controls/index.md#win-lsa-011) | Disallow LocalSystem NULL Session Fallback | Medium |
+| [WIN-LSA-012](../controls/index.md#win-lsa-012) | Strengthen Default Permissions of Internal System Objects | Low |
+| [WIN-NET-007](../controls/index.md#win-net-007) | Enable Safe DLL Search Mode | Medium |
+| [WIN-AUD-019](../controls/index.md#win-aud-019) | Audit Other Object Access Events | Medium |
 
 ## CloudInfra Secure Standard - Standard tier
 
 Recommended baseline adding logging, auditing and access hardening on top of Essential.
 
-**ID:** `CloudInfraSecure-Standard` &nbsp; **Controls:** 106 &nbsp; **Supported OS:** WindowsServer2022, WindowsServer2025
+**ID:** `CloudInfraSecure-Standard` &nbsp; **Controls:** 122 &nbsp; **Supported OS:** WindowsServer2022, WindowsServer2025
 
 | Control | Name | Severity |
 |---------|------|----------|
@@ -554,4 +596,20 @@ Recommended baseline adding logging, auditing and access hardening on top of Ess
 | [WIN-UAC-007](../controls/index.md#win-uac-007) | Apply UAC Token Filtering to Remote Local Accounts | High |
 | [WIN-ACCT-001](../controls/index.md#win-acct-001) | Block Microsoft Accounts | Medium |
 | [WIN-NET-006](../controls/index.md#win-net-006) | Disable mDNS | Medium |
+| [WIN-DEF-010](../controls/index.md#win-def-010) | Enable Email Scanning | Medium |
+| [WIN-DEF-011](../controls/index.md#win-def-011) | Enable Archive Scanning | Medium |
+| [WIN-DEF-012](../controls/index.md#win-def-012) | Scan Mapped Network Drives During Full Scan | Low |
+| [WIN-DEF-013](../controls/index.md#win-def-013) | Scan Downloaded Files and Attachments | High |
+| [WIN-DEF-014](../controls/index.md#win-def-014) | Disable Local Admin Merge of Defender Preferences | Medium |
+| [WIN-DEF-015](../controls/index.md#win-def-015) | Enable Real-Time Script Scanning | Medium |
+| [WIN-AUD-017](../controls/index.md#win-aud-017) | Audit PNP Activity | Medium |
+| [WIN-AUD-018](../controls/index.md#win-aud-018) | Audit Group Membership | Medium |
+| [WIN-AUD-019](../controls/index.md#win-aud-019) | Audit Other Object Access Events | Medium |
+| [WIN-AUD-020](../controls/index.md#win-aud-020) | Audit Detailed File Share | Medium |
+| [WIN-SMB-008](../controls/index.md#win-smb-008) | Do Not Send Unencrypted Password to Third-Party SMB Servers | Medium |
+| [WIN-LSA-011](../controls/index.md#win-lsa-011) | Disallow LocalSystem NULL Session Fallback | Medium |
+| [WIN-LSA-012](../controls/index.md#win-lsa-012) | Strengthen Default Permissions of Internal System Objects | Low |
+| [WIN-NET-007](../controls/index.md#win-net-007) | Enable Safe DLL Search Mode | Medium |
+| [WIN-PRINT-001](../controls/index.md#win-print-001) | Restrict Point and Print Driver Installation to Administrators | High |
+| [WIN-PRINT-002](../controls/index.md#win-print-002) | Require Elevation for New Point and Print Connections | Medium |
 

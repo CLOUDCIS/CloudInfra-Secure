@@ -9,20 +9,20 @@ Number of controls whose technical requirements may help implement each standard
 
 | Standard | Controls |
 |----------|----------|
-| DISA STIG | 132 |
-| NIST CSF | 132 |
-| NIST SP 800-53 Rev 5 | 132 |
-| NIST SP 800-171 | 132 |
+| DISA STIG | 148 |
+| NIST CSF | 148 |
+| NIST SP 800-53 Rev 5 | 148 |
+| NIST SP 800-171 | 148 |
 | FedRAMP | 13 |
-| Microsoft Cloud Security Benchmark | 116 |
-| Microsoft Security Baselines | 132 |
+| Microsoft Cloud Security Benchmark | 128 |
+| Microsoft Security Baselines | 148 |
 | CMMC Level 2 | 19 |
-| PCI DSS v4.0 | 132 |
-| SOC 2 | 20 |
-| ISO/IEC 27001 | 132 |
+| PCI DSS v4.0 | 148 |
+| SOC 2 | 24 |
+| ISO/IEC 27001 | 148 |
 | HIPAA Security Rule | 27 |
-| UK Cyber Essentials | 113 |
-| NIS2 | 132 |
+| UK Cyber Essentials | 125 |
+| NIS2 | 148 |
 
 ## Browse controls by standard
 
@@ -31,23 +31,23 @@ Select a standard to list the controls that map to it. This shows technical alig
 <div class="cmpl-toolbar">
   <label for="cmplStd"><strong>Filter by standard:</strong></label>
   <select id="cmplStd">
-    <option value="__all">All standards (132 controls)</option>
-    <option value="DISA STIG">DISA STIG (132)</option>
-    <option value="NIST CSF">NIST CSF (132)</option>
-    <option value="NIST SP 800-53 Rev 5">NIST SP 800-53 Rev 5 (132)</option>
-    <option value="NIST SP 800-171">NIST SP 800-171 (132)</option>
+    <option value="__all">All standards (148 controls)</option>
+    <option value="DISA STIG">DISA STIG (148)</option>
+    <option value="NIST CSF">NIST CSF (148)</option>
+    <option value="NIST SP 800-53 Rev 5">NIST SP 800-53 Rev 5 (148)</option>
+    <option value="NIST SP 800-171">NIST SP 800-171 (148)</option>
     <option value="FedRAMP">FedRAMP (13)</option>
-    <option value="Microsoft Cloud Security Benchmark">Microsoft Cloud Security Benchmark (116)</option>
-    <option value="Microsoft Security Baselines">Microsoft Security Baselines (132)</option>
+    <option value="Microsoft Cloud Security Benchmark">Microsoft Cloud Security Benchmark (128)</option>
+    <option value="Microsoft Security Baselines">Microsoft Security Baselines (148)</option>
     <option value="CMMC Level 2">CMMC Level 2 (19)</option>
-    <option value="PCI DSS v4.0">PCI DSS v4.0 (132)</option>
-    <option value="SOC 2">SOC 2 (20)</option>
-    <option value="ISO/IEC 27001">ISO/IEC 27001 (132)</option>
+    <option value="PCI DSS v4.0">PCI DSS v4.0 (148)</option>
+    <option value="SOC 2">SOC 2 (24)</option>
+    <option value="ISO/IEC 27001">ISO/IEC 27001 (148)</option>
     <option value="HIPAA Security Rule">HIPAA Security Rule (27)</option>
-    <option value="UK Cyber Essentials">UK Cyber Essentials (113)</option>
-    <option value="NIS2">NIS2 (132)</option>
+    <option value="UK Cyber Essentials">UK Cyber Essentials (125)</option>
+    <option value="NIS2">NIS2 (148)</option>
   </select>
-  <span class="cmpl-count" id="cmplCount">Showing 132 of 132 controls</span>
+  <span class="cmpl-count" id="cmplCount">Showing 148 of 148 controls</span>
 </div>
 
 <div class="cmpl-tablewrap" markdown="0">
@@ -86,6 +86,10 @@ Select a standard to list the controls that map to it. This shows technical alig
     <tr data-standards="|DISA STIG|NIST CSF|NIST SP 800-53 Rev 5|NIST SP 800-171|PCI DSS v4.0|SOC 2|ISO/IEC 27001|Microsoft Security Baselines|NIS2|"><td class="cmpl-num"></td><td><a href="../controls/#win-aud-014">WIN-AUD-014</a></td><td>Audit Audit Policy Change</td><td>Medium</td><td>Logging and Monitoring</td></tr>
     <tr data-standards="|DISA STIG|NIST CSF|NIST SP 800-53 Rev 5|NIST SP 800-171|PCI DSS v4.0|SOC 2|ISO/IEC 27001|Microsoft Security Baselines|NIS2|"><td class="cmpl-num"></td><td><a href="../controls/#win-aud-015">WIN-AUD-015</a></td><td>Audit Other Logon/Logoff Events</td><td>Medium</td><td>Logging and Monitoring</td></tr>
     <tr data-standards="|DISA STIG|NIST CSF|NIST SP 800-53 Rev 5|NIST SP 800-171|PCI DSS v4.0|SOC 2|ISO/IEC 27001|Microsoft Security Baselines|NIS2|"><td class="cmpl-num"></td><td><a href="../controls/#win-aud-016">WIN-AUD-016</a></td><td>Audit MPSSVC Rule-Level Policy Change</td><td>Medium</td><td>Logging and Monitoring</td></tr>
+    <tr data-standards="|DISA STIG|NIST CSF|NIST SP 800-53 Rev 5|NIST SP 800-171|PCI DSS v4.0|SOC 2|ISO/IEC 27001|Microsoft Security Baselines|NIS2|"><td class="cmpl-num"></td><td><a href="../controls/#win-aud-017">WIN-AUD-017</a></td><td>Audit PNP Activity</td><td>Medium</td><td>Logging and Monitoring</td></tr>
+    <tr data-standards="|DISA STIG|NIST CSF|NIST SP 800-53 Rev 5|NIST SP 800-171|PCI DSS v4.0|SOC 2|ISO/IEC 27001|Microsoft Security Baselines|NIS2|"><td class="cmpl-num"></td><td><a href="../controls/#win-aud-018">WIN-AUD-018</a></td><td>Audit Group Membership</td><td>Medium</td><td>Logging and Monitoring</td></tr>
+    <tr data-standards="|DISA STIG|NIST CSF|NIST SP 800-53 Rev 5|NIST SP 800-171|PCI DSS v4.0|SOC 2|ISO/IEC 27001|Microsoft Security Baselines|NIS2|"><td class="cmpl-num"></td><td><a href="../controls/#win-aud-019">WIN-AUD-019</a></td><td>Audit Other Object Access Events</td><td>Medium</td><td>Logging and Monitoring</td></tr>
+    <tr data-standards="|DISA STIG|NIST CSF|NIST SP 800-53 Rev 5|NIST SP 800-171|PCI DSS v4.0|SOC 2|ISO/IEC 27001|Microsoft Security Baselines|NIS2|"><td class="cmpl-num"></td><td><a href="../controls/#win-aud-020">WIN-AUD-020</a></td><td>Audit Detailed File Share</td><td>Medium</td><td>Logging and Monitoring</td></tr>
     <tr data-standards="|DISA STIG|NIST CSF|NIST SP 800-53 Rev 5|NIST SP 800-171|PCI DSS v4.0|ISO/IEC 27001|Microsoft Cloud Security Benchmark|Microsoft Security Baselines|NIS2|UK Cyber Essentials|"><td class="cmpl-num"></td><td><a href="../controls/#win-autorun-001">WIN-AUTORUN-001</a></td><td>Disable AutoRun on All Drives</td><td>Medium</td><td>Attack Surface Reduction</td></tr>
     <tr data-standards="|DISA STIG|NIST CSF|NIST SP 800-53 Rev 5|NIST SP 800-171|PCI DSS v4.0|ISO/IEC 27001|Microsoft Cloud Security Benchmark|CMMC Level 2|HIPAA Security Rule|Microsoft Security Baselines|NIS2|UK Cyber Essentials|"><td class="cmpl-num"></td><td><a href="../controls/#win-cg-001">WIN-CG-001</a></td><td>Enable Credential Guard</td><td>High</td><td>Credential Protection</td></tr>
     <tr data-standards="|DISA STIG|NIST CSF|NIST SP 800-53 Rev 5|NIST SP 800-171|FedRAMP|CMMC Level 2|PCI DSS v4.0|ISO/IEC 27001|Microsoft Cloud Security Benchmark|Microsoft Security Baselines|NIS2|UK Cyber Essentials|"><td class="cmpl-num"></td><td><a href="../controls/#win-def-001">WIN-DEF-001</a></td><td>Microsoft Defender Antivirus Enabled</td><td>High</td><td>Endpoint Protection</td></tr>
@@ -97,6 +101,12 @@ Select a standard to list the controls that map to it. This shows technical alig
     <tr data-standards="|DISA STIG|NIST CSF|NIST SP 800-53 Rev 5|NIST SP 800-171|PCI DSS v4.0|ISO/IEC 27001|Microsoft Cloud Security Benchmark|Microsoft Security Baselines|NIS2|UK Cyber Essentials|"><td class="cmpl-num"></td><td><a href="../controls/#win-def-007">WIN-DEF-007</a></td><td>Scan Removable Drives During Full Scan</td><td>Low</td><td>Endpoint Protection</td></tr>
     <tr data-standards="|DISA STIG|NIST CSF|NIST SP 800-53 Rev 5|NIST SP 800-171|PCI DSS v4.0|ISO/IEC 27001|Microsoft Cloud Security Benchmark|Microsoft Security Baselines|NIS2|UK Cyber Essentials|"><td class="cmpl-num"></td><td><a href="../controls/#win-def-008">WIN-DEF-008</a></td><td>Enable Block at First Sight</td><td>Medium</td><td>Endpoint Protection</td></tr>
     <tr data-standards="|DISA STIG|NIST CSF|NIST SP 800-53 Rev 5|NIST SP 800-171|PCI DSS v4.0|ISO/IEC 27001|Microsoft Cloud Security Benchmark|Microsoft Security Baselines|NIS2|UK Cyber Essentials|"><td class="cmpl-num"></td><td><a href="../controls/#win-def-009">WIN-DEF-009</a></td><td>Enable Defender Behavior Monitoring</td><td>High</td><td>Endpoint Protection</td></tr>
+    <tr data-standards="|DISA STIG|NIST CSF|NIST SP 800-53 Rev 5|NIST SP 800-171|PCI DSS v4.0|ISO/IEC 27001|Microsoft Cloud Security Benchmark|Microsoft Security Baselines|NIS2|UK Cyber Essentials|"><td class="cmpl-num"></td><td><a href="../controls/#win-def-010">WIN-DEF-010</a></td><td>Enable Email Scanning</td><td>Medium</td><td>Endpoint Protection</td></tr>
+    <tr data-standards="|DISA STIG|NIST CSF|NIST SP 800-53 Rev 5|NIST SP 800-171|PCI DSS v4.0|ISO/IEC 27001|Microsoft Cloud Security Benchmark|Microsoft Security Baselines|NIS2|UK Cyber Essentials|"><td class="cmpl-num"></td><td><a href="../controls/#win-def-011">WIN-DEF-011</a></td><td>Enable Archive Scanning</td><td>Medium</td><td>Endpoint Protection</td></tr>
+    <tr data-standards="|DISA STIG|NIST CSF|NIST SP 800-53 Rev 5|NIST SP 800-171|PCI DSS v4.0|ISO/IEC 27001|Microsoft Cloud Security Benchmark|Microsoft Security Baselines|NIS2|UK Cyber Essentials|"><td class="cmpl-num"></td><td><a href="../controls/#win-def-012">WIN-DEF-012</a></td><td>Scan Mapped Network Drives During Full Scan</td><td>Low</td><td>Endpoint Protection</td></tr>
+    <tr data-standards="|DISA STIG|NIST CSF|NIST SP 800-53 Rev 5|NIST SP 800-171|PCI DSS v4.0|ISO/IEC 27001|Microsoft Cloud Security Benchmark|Microsoft Security Baselines|NIS2|UK Cyber Essentials|"><td class="cmpl-num"></td><td><a href="../controls/#win-def-013">WIN-DEF-013</a></td><td>Scan Downloaded Files and Attachments</td><td>High</td><td>Endpoint Protection</td></tr>
+    <tr data-standards="|DISA STIG|NIST CSF|NIST SP 800-53 Rev 5|NIST SP 800-171|PCI DSS v4.0|ISO/IEC 27001|Microsoft Cloud Security Benchmark|Microsoft Security Baselines|NIS2|UK Cyber Essentials|"><td class="cmpl-num"></td><td><a href="../controls/#win-def-014">WIN-DEF-014</a></td><td>Disable Local Admin Merge of Defender Preferences</td><td>Medium</td><td>Endpoint Protection</td></tr>
+    <tr data-standards="|DISA STIG|NIST CSF|NIST SP 800-53 Rev 5|NIST SP 800-171|PCI DSS v4.0|ISO/IEC 27001|Microsoft Cloud Security Benchmark|Microsoft Security Baselines|NIS2|UK Cyber Essentials|"><td class="cmpl-num"></td><td><a href="../controls/#win-def-015">WIN-DEF-015</a></td><td>Enable Real-Time Script Scanning</td><td>Medium</td><td>Endpoint Protection</td></tr>
     <tr data-standards="|DISA STIG|NIST CSF|NIST SP 800-53 Rev 5|NIST SP 800-171|FedRAMP|CMMC Level 2|PCI DSS v4.0|SOC 2|ISO/IEC 27001|Microsoft Cloud Security Benchmark|Microsoft Security Baselines|NIS2|UK Cyber Essentials|"><td class="cmpl-num"></td><td><a href="../controls/#win-fw-001">WIN-FW-001</a></td><td>Windows Firewall Enabled (All Profiles)</td><td>High</td><td>Host Firewall</td></tr>
     <tr data-standards="|DISA STIG|NIST CSF|NIST SP 800-53 Rev 5|NIST SP 800-171|PCI DSS v4.0|ISO/IEC 27001|Microsoft Cloud Security Benchmark|Microsoft Security Baselines|NIS2|UK Cyber Essentials|"><td class="cmpl-num"></td><td><a href="../controls/#win-fw-002">WIN-FW-002</a></td><td>Block Inbound Connections by Default (Domain Profile)</td><td>Medium</td><td>Host Firewall</td></tr>
     <tr data-standards="|DISA STIG|NIST CSF|NIST SP 800-53 Rev 5|NIST SP 800-171|PCI DSS v4.0|ISO/IEC 27001|Microsoft Cloud Security Benchmark|Microsoft Security Baselines|NIS2|UK Cyber Essentials|"><td class="cmpl-num"></td><td><a href="../controls/#win-fw-003">WIN-FW-003</a></td><td>Block Inbound Connections by Default (Private Profile)</td><td>Medium</td><td>Host Firewall</td></tr>
@@ -124,15 +134,20 @@ Select a standard to list the controls that map to it. This shows technical alig
     <tr data-standards="|DISA STIG|NIST CSF|NIST SP 800-53 Rev 5|NIST SP 800-171|PCI DSS v4.0|ISO/IEC 27001|Microsoft Cloud Security Benchmark|Microsoft Security Baselines|NIS2|UK Cyber Essentials|"><td class="cmpl-num"></td><td><a href="../controls/#win-lsa-008">WIN-LSA-008</a></td><td>Restrict Clients Allowed to Make Remote SAM Calls</td><td>Medium</td><td>Access Control</td></tr>
     <tr data-standards="|DISA STIG|NIST CSF|NIST SP 800-53 Rev 5|NIST SP 800-171|PCI DSS v4.0|ISO/IEC 27001|Microsoft Cloud Security Benchmark|Microsoft Security Baselines|NIS2|UK Cyber Essentials|"><td class="cmpl-num"></td><td><a href="../controls/#win-lsa-009">WIN-LSA-009</a></td><td>Limit Local Account Use of Blank Passwords</td><td>High</td><td>Access Control</td></tr>
     <tr data-standards="|DISA STIG|NIST CSF|NIST SP 800-53 Rev 5|NIST SP 800-171|PCI DSS v4.0|ISO/IEC 27001|Microsoft Cloud Security Benchmark|Microsoft Security Baselines|NIS2|UK Cyber Essentials|"><td class="cmpl-num"></td><td><a href="../controls/#win-lsa-010">WIN-LSA-010</a></td><td>Sharing and Security Model for Local Accounts (Classic)</td><td>Medium</td><td>Access Control</td></tr>
+    <tr data-standards="|DISA STIG|NIST CSF|NIST SP 800-53 Rev 5|NIST SP 800-171|PCI DSS v4.0|ISO/IEC 27001|Microsoft Cloud Security Benchmark|Microsoft Security Baselines|NIS2|UK Cyber Essentials|"><td class="cmpl-num"></td><td><a href="../controls/#win-lsa-011">WIN-LSA-011</a></td><td>Disallow LocalSystem NULL Session Fallback</td><td>Medium</td><td>Access Control</td></tr>
+    <tr data-standards="|DISA STIG|NIST CSF|NIST SP 800-53 Rev 5|NIST SP 800-171|PCI DSS v4.0|ISO/IEC 27001|Microsoft Cloud Security Benchmark|Microsoft Security Baselines|NIS2|UK Cyber Essentials|"><td class="cmpl-num"></td><td><a href="../controls/#win-lsa-012">WIN-LSA-012</a></td><td>Strengthen Default Permissions of Internal System Objects</td><td>Low</td><td>Access Control</td></tr>
     <tr data-standards="|DISA STIG|NIST CSF|NIST SP 800-53 Rev 5|NIST SP 800-171|PCI DSS v4.0|ISO/IEC 27001|Microsoft Cloud Security Benchmark|Microsoft Security Baselines|NIS2|UK Cyber Essentials|"><td class="cmpl-num"></td><td><a href="../controls/#win-net-001">WIN-NET-001</a></td><td>Disable LLMNR</td><td>Medium</td><td>Network Protocols</td></tr>
     <tr data-standards="|DISA STIG|NIST CSF|NIST SP 800-53 Rev 5|NIST SP 800-171|PCI DSS v4.0|ISO/IEC 27001|Microsoft Cloud Security Benchmark|Microsoft Security Baselines|NIS2|UK Cyber Essentials|"><td class="cmpl-num"></td><td><a href="../controls/#win-net-002">WIN-NET-002</a></td><td>Disable IPv4 Source Routing</td><td>Medium</td><td>Network Protocols</td></tr>
     <tr data-standards="|DISA STIG|NIST CSF|NIST SP 800-53 Rev 5|NIST SP 800-171|PCI DSS v4.0|ISO/IEC 27001|Microsoft Cloud Security Benchmark|Microsoft Security Baselines|NIS2|UK Cyber Essentials|"><td class="cmpl-num"></td><td><a href="../controls/#win-net-003">WIN-NET-003</a></td><td>Disable ICMP Redirects</td><td>Low</td><td>Network Protocols</td></tr>
     <tr data-standards="|DISA STIG|NIST CSF|NIST SP 800-53 Rev 5|NIST SP 800-171|PCI DSS v4.0|ISO/IEC 27001|Microsoft Cloud Security Benchmark|Microsoft Security Baselines|NIS2|UK Cyber Essentials|"><td class="cmpl-num"></td><td><a href="../controls/#win-net-004">WIN-NET-004</a></td><td>Disable IPv6 Source Routing</td><td>Medium</td><td>Network Protocols</td></tr>
     <tr data-standards="|DISA STIG|NIST CSF|NIST SP 800-53 Rev 5|NIST SP 800-171|PCI DSS v4.0|ISO/IEC 27001|Microsoft Cloud Security Benchmark|Microsoft Security Baselines|NIS2|UK Cyber Essentials|"><td class="cmpl-num"></td><td><a href="../controls/#win-net-005">WIN-NET-005</a></td><td>Ignore NetBIOS Name Release Requests</td><td>Low</td><td>Network Protocols</td></tr>
     <tr data-standards="|DISA STIG|NIST CSF|NIST SP 800-53 Rev 5|NIST SP 800-171|PCI DSS v4.0|ISO/IEC 27001|Microsoft Cloud Security Benchmark|Microsoft Security Baselines|NIS2|UK Cyber Essentials|"><td class="cmpl-num"></td><td><a href="../controls/#win-net-006">WIN-NET-006</a></td><td>Disable mDNS</td><td>Medium</td><td>Network Protocols</td></tr>
+    <tr data-standards="|DISA STIG|NIST CSF|NIST SP 800-53 Rev 5|NIST SP 800-171|PCI DSS v4.0|ISO/IEC 27001|Microsoft Cloud Security Benchmark|Microsoft Security Baselines|NIS2|UK Cyber Essentials|"><td class="cmpl-num"></td><td><a href="../controls/#win-net-007">WIN-NET-007</a></td><td>Enable Safe DLL Search Mode</td><td>Medium</td><td>Exploit Protection</td></tr>
     <tr data-standards="|DISA STIG|NIST CSF|NIST SP 800-53 Rev 5|NIST SP 800-171|PCI DSS v4.0|ISO/IEC 27001|Microsoft Cloud Security Benchmark|CMMC Level 2|HIPAA Security Rule|Microsoft Security Baselines|NIS2|UK Cyber Essentials|"><td class="cmpl-num"></td><td><a href="../controls/#win-ntlm-001">WIN-NTLM-001</a></td><td>LAN Manager Authentication Level (NTLMv2 Only)</td><td>High</td><td>Authentication</td></tr>
     <tr data-standards="|DISA STIG|NIST CSF|NIST SP 800-53 Rev 5|NIST SP 800-171|PCI DSS v4.0|ISO/IEC 27001|Microsoft Cloud Security Benchmark|Microsoft Security Baselines|NIS2|UK Cyber Essentials|"><td class="cmpl-num"></td><td><a href="../controls/#win-ntlm-002">WIN-NTLM-002</a></td><td>Minimum NTLM Session Security (Clients)</td><td>Medium</td><td>Authentication</td></tr>
     <tr data-standards="|DISA STIG|NIST CSF|NIST SP 800-53 Rev 5|NIST SP 800-171|PCI DSS v4.0|ISO/IEC 27001|Microsoft Cloud Security Benchmark|Microsoft Security Baselines|NIS2|UK Cyber Essentials|"><td class="cmpl-num"></td><td><a href="../controls/#win-ntlm-003">WIN-NTLM-003</a></td><td>Minimum NTLM Session Security (Servers)</td><td>Medium</td><td>Authentication</td></tr>
+    <tr data-standards="|DISA STIG|NIST CSF|NIST SP 800-53 Rev 5|NIST SP 800-171|PCI DSS v4.0|ISO/IEC 27001|Microsoft Cloud Security Benchmark|Microsoft Security Baselines|NIS2|UK Cyber Essentials|"><td class="cmpl-num"></td><td><a href="../controls/#win-print-001">WIN-PRINT-001</a></td><td>Restrict Point and Print Driver Installation to Administrators</td><td>High</td><td>Attack Surface Reduction</td></tr>
+    <tr data-standards="|DISA STIG|NIST CSF|NIST SP 800-53 Rev 5|NIST SP 800-171|PCI DSS v4.0|ISO/IEC 27001|Microsoft Cloud Security Benchmark|Microsoft Security Baselines|NIS2|UK Cyber Essentials|"><td class="cmpl-num"></td><td><a href="../controls/#win-print-002">WIN-PRINT-002</a></td><td>Require Elevation for New Point and Print Connections</td><td>Medium</td><td>Attack Surface Reduction</td></tr>
     <tr data-standards="|DISA STIG|NIST CSF|NIST SP 800-53 Rev 5|NIST SP 800-171|PCI DSS v4.0|SOC 2|ISO/IEC 27001|Microsoft Cloud Security Benchmark|Microsoft Security Baselines|NIS2|"><td class="cmpl-num"></td><td><a href="../controls/#win-psl-001">WIN-PSL-001</a></td><td>Enable PowerShell Script Block Logging</td><td>Medium</td><td>Logging and Monitoring</td></tr>
     <tr data-standards="|DISA STIG|NIST CSF|NIST SP 800-53 Rev 5|NIST SP 800-171|PCI DSS v4.0|SOC 2|ISO/IEC 27001|Microsoft Cloud Security Benchmark|Microsoft Security Baselines|NIS2|"><td class="cmpl-num"></td><td><a href="../controls/#win-psl-002">WIN-PSL-002</a></td><td>Enable PowerShell Module Logging</td><td>Medium</td><td>Logging and Monitoring</td></tr>
     <tr data-standards="|DISA STIG|NIST CSF|NIST SP 800-53 Rev 5|NIST SP 800-171|PCI DSS v4.0|SOC 2|ISO/IEC 27001|Microsoft Security Baselines|NIS2|"><td class="cmpl-num"></td><td><a href="../controls/#win-psl-003">WIN-PSL-003</a></td><td>Enable PowerShell Transcription</td><td>Medium</td><td>Logging and Monitoring</td></tr>
@@ -157,6 +172,7 @@ Select a standard to list the controls that map to it. This shows technical alig
     <tr data-standards="|DISA STIG|NIST CSF|NIST SP 800-53 Rev 5|NIST SP 800-171|PCI DSS v4.0|ISO/IEC 27001|Microsoft Cloud Security Benchmark|Microsoft Security Baselines|NIS2|UK Cyber Essentials|"><td class="cmpl-num"></td><td><a href="../controls/#win-smb-005">WIN-SMB-005</a></td><td>Require SMB Client Signing</td><td>Medium</td><td>Network Protocols</td></tr>
     <tr data-standards="|DISA STIG|NIST CSF|NIST SP 800-53 Rev 5|NIST SP 800-171|PCI DSS v4.0|ISO/IEC 27001|Microsoft Cloud Security Benchmark|Microsoft Security Baselines|NIS2|UK Cyber Essentials|"><td class="cmpl-num"></td><td><a href="../controls/#win-smb-006">WIN-SMB-006</a></td><td>Restrict Anonymous Access to Named Pipes and Shares</td><td>Medium</td><td>Network Protocols</td></tr>
     <tr data-standards="|DISA STIG|NIST CSF|NIST SP 800-53 Rev 5|NIST SP 800-171|PCI DSS v4.0|ISO/IEC 27001|Microsoft Cloud Security Benchmark|Microsoft Security Baselines|NIS2|UK Cyber Essentials|"><td class="cmpl-num"></td><td><a href="../controls/#win-smb-007">WIN-SMB-007</a></td><td>Disable SMB Client Insecure Guest Logons</td><td>Medium</td><td>Network Protocols</td></tr>
+    <tr data-standards="|DISA STIG|NIST CSF|NIST SP 800-53 Rev 5|NIST SP 800-171|PCI DSS v4.0|ISO/IEC 27001|Microsoft Cloud Security Benchmark|Microsoft Security Baselines|NIS2|UK Cyber Essentials|"><td class="cmpl-num"></td><td><a href="../controls/#win-smb-008">WIN-SMB-008</a></td><td>Do Not Send Unencrypted Password to Third-Party SMB Servers</td><td>Medium</td><td>Network Protocols</td></tr>
     <tr data-standards="|DISA STIG|NIST CSF|NIST SP 800-53 Rev 5|NIST SP 800-171|PCI DSS v4.0|ISO/IEC 27001|Microsoft Cloud Security Benchmark|Microsoft Security Baselines|NIS2|UK Cyber Essentials|"><td class="cmpl-num"></td><td><a href="../controls/#win-svc-001">WIN-SVC-001</a></td><td>Disable Remote Registry Service</td><td>Medium</td><td>Attack Surface Reduction</td></tr>
     <tr data-standards="|DISA STIG|NIST CSF|NIST SP 800-53 Rev 5|NIST SP 800-171|PCI DSS v4.0|ISO/IEC 27001|Microsoft Cloud Security Benchmark|Microsoft Security Baselines|NIS2|UK Cyber Essentials|"><td class="cmpl-num"></td><td><a href="../controls/#win-svc-002">WIN-SVC-002</a></td><td>Disable Print Spooler Service</td><td>Medium</td><td>Attack Surface Reduction</td></tr>
     <tr data-standards="|DISA STIG|NIST CSF|NIST SP 800-53 Rev 5|NIST SP 800-171|FedRAMP|PCI DSS v4.0|ISO/IEC 27001|HIPAA Security Rule|Microsoft Cloud Security Benchmark|Microsoft Security Baselines|NIS2|UK Cyber Essentials|"><td class="cmpl-num"></td><td><a href="../controls/#win-tls-001">WIN-TLS-001</a></td><td>Enable TLS 1.2 (Server)</td><td>Medium</td><td>Cryptography</td></tr>
