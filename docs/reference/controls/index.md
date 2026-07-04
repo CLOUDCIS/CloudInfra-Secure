@@ -132,7 +132,7 @@ The CloudInfra Secure control library (116 controls). Each control exists once a
 
 **Severity:** High &nbsp; **Category:** Attack Surface Reduction &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Enterprise
 
-The Attack Surface Reduction rule blocking credential theft from the LSASS process must be enabled in block mode.
+The Attack Surface Reduction rule blocking credential theft from the LSASS process must be enabled in block mode. Group Policy setting: this control checks the corresponding Group Policy registry value, so it can report non-compliant until the policy is explicitly configured (even where the effective Windows default is already secure), and a domain Group Policy applied after hardening can override it.
 
 **Rationale.** Credential theft from LSASS enables lateral movement and privilege escalation.
 
@@ -147,7 +147,7 @@ The Attack Surface Reduction rule blocking credential theft from the LSASS proce
 
 **Severity:** Medium &nbsp; **Category:** Attack Surface Reduction &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Enterprise
 
-The Attack Surface Reduction rule blocking Office applications from creating child processes must be enabled.
+The Attack Surface Reduction rule blocking Office applications from creating child processes must be enabled. Group Policy setting: this control checks the corresponding Group Policy registry value, so it can report non-compliant until the policy is explicitly configured (even where the effective Windows default is already secure), and a domain Group Policy applied after hardening can override it.
 
 **Rationale.** Office child-process creation is a common malware/macro execution technique.
 
@@ -162,7 +162,7 @@ The Attack Surface Reduction rule blocking Office applications from creating chi
 
 **Severity:** Medium &nbsp; **Category:** Attack Surface Reduction &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Enterprise
 
-The Attack Surface Reduction rule blocking executable content from email and webmail must be enabled.
+The Attack Surface Reduction rule blocking executable content from email and webmail must be enabled. Group Policy setting: this control checks the corresponding Group Policy registry value, so it can report non-compliant until the policy is explicitly configured (even where the effective Windows default is already secure), and a domain Group Policy applied after hardening can override it.
 
 **Rationale.** Executable email attachments are a primary malware delivery vector.
 
@@ -177,7 +177,7 @@ The Attack Surface Reduction rule blocking executable content from email and web
 
 **Severity:** Medium &nbsp; **Category:** Attack Surface Reduction &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Enterprise
 
-Block execution of potentially obfuscated scripts, a common malware evasion technique.
+Block execution of potentially obfuscated scripts, a common malware evasion technique. Group Policy setting: this control checks the corresponding Group Policy registry value, so it can report non-compliant until the policy is explicitly configured (even where the effective Windows default is already secure), and a domain Group Policy applied after hardening can override it.
 
 **Rationale.** Obfuscated scripts hide malicious behaviour from analysis and detection.
 
@@ -192,7 +192,7 @@ Block execution of potentially obfuscated scripts, a common malware evasion tech
 
 **Severity:** Medium &nbsp; **Category:** Attack Surface Reduction &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Enterprise
 
-Block untrusted and unsigned executables from running from USB removable media.
+Block untrusted and unsigned executables from running from USB removable media. Group Policy setting: this control checks the corresponding Group Policy registry value, so it can report non-compliant until the policy is explicitly configured (even where the effective Windows default is already secure), and a domain Group Policy applied after hardening can override it.
 
 **Rationale.** Removable media is a common malware ingress vector.
 
@@ -207,7 +207,7 @@ Block untrusted and unsigned executables from running from USB removable media.
 
 **Severity:** Medium &nbsp; **Category:** Attack Surface Reduction &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Enterprise
 
-Block processes created via PsExec and WMI commands, commonly used for lateral movement.
+Block processes created via PsExec and WMI commands, commonly used for lateral movement. Group Policy setting: this control checks the corresponding Group Policy registry value, so it can report non-compliant until the policy is explicitly configured (even where the effective Windows default is already secure), and a domain Group Policy applied after hardening can override it.
 
 **Rationale.** PsExec/WMI process creation enables remote code execution and lateral movement.
 
@@ -222,7 +222,7 @@ Block processes created via PsExec and WMI commands, commonly used for lateral m
 
 **Severity:** High &nbsp; **Category:** Attack Surface Reduction &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Enterprise
 
-Enable advanced heuristic and cloud protection against ransomware.
+Enable advanced heuristic and cloud protection against ransomware. Group Policy setting: this control checks the corresponding Group Policy registry value, so it can report non-compliant until the policy is explicitly configured (even where the effective Windows default is already secure), and a domain Group Policy applied after hardening can override it.
 
 **Rationale.** Ransomware can rapidly encrypt data across the host and network.
 
@@ -237,7 +237,7 @@ Enable advanced heuristic and cloud protection against ransomware.
 
 **Severity:** Medium &nbsp; **Category:** Attack Surface Reduction &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Enterprise
 
-Block Office applications from injecting code into other processes.
+Block Office applications from injecting code into other processes. Group Policy setting: this control checks the corresponding Group Policy registry value, so it can report non-compliant until the policy is explicitly configured (even where the effective Windows default is already secure), and a domain Group Policy applied after hardening can override it.
 
 **Rationale.** Code injection from Office lets malware masquerade as trusted processes.
 
@@ -252,7 +252,7 @@ Block Office applications from injecting code into other processes.
 
 **Severity:** Medium &nbsp; **Category:** Attack Surface Reduction &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Enterprise
 
-Block Office applications from writing executable content to disk.
+Block Office applications from writing executable content to disk. Group Policy setting: this control checks the corresponding Group Policy registry value, so it can report non-compliant until the policy is explicitly configured (even where the effective Windows default is already secure), and a domain Group Policy applied after hardening can override it.
 
 **Rationale.** Office-dropped executables are used for persistence and payload delivery.
 
@@ -267,7 +267,7 @@ Block Office applications from writing executable content to disk.
 
 **Severity:** Medium &nbsp; **Category:** Attack Surface Reduction &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Enterprise
 
-Block malware from establishing persistence via WMI event subscription.
+Block malware from establishing persistence via WMI event subscription. Group Policy setting: this control checks the corresponding Group Policy registry value, so it can report non-compliant until the policy is explicitly configured (even where the effective Windows default is already secure), and a domain Group Policy applied after hardening can override it.
 
 **Rationale.** WMI event subscriptions are a stealthy, fileless persistence mechanism.
 
@@ -282,7 +282,7 @@ Block malware from establishing persistence via WMI event subscription.
 
 **Severity:** Medium &nbsp; **Category:** Attack Surface Reduction &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Enterprise
 
-Block Office macros from calling Win32 APIs.
+Block Office macros from calling Win32 APIs. Group Policy setting: this control checks the corresponding Group Policy registry value, so it can report non-compliant until the policy is explicitly configured (even where the effective Windows default is already secure), and a domain Group Policy applied after hardening can override it.
 
 **Rationale.** Macro Win32 API calls are used to download and execute malware.
 
@@ -297,7 +297,7 @@ Block Office macros from calling Win32 APIs.
 
 **Severity:** Medium &nbsp; **Category:** Attack Surface Reduction &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Enterprise
 
-Block executable files from running unless they meet a prevalence, age, or trusted-list criterion.
+Block executable files from running unless they meet a prevalence, age, or trusted-list criterion. Group Policy setting: this control checks the corresponding Group Policy registry value, so it can report non-compliant until the policy is explicitly configured (even where the effective Windows default is already secure), and a domain Group Policy applied after hardening can override it.
 
 **Rationale.** Newly seen, low-prevalence executables are frequently malware.
 
@@ -312,7 +312,7 @@ Block executable files from running unless they meet a prevalence, age, or trust
 
 **Severity:** Medium &nbsp; **Category:** Attack Surface Reduction &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Enterprise
 
-Block Adobe Reader from spawning child processes.
+Block Adobe Reader from spawning child processes. Group Policy setting: this control checks the corresponding Group Policy registry value, so it can report non-compliant until the policy is explicitly configured (even where the effective Windows default is already secure), and a domain Group Policy applied after hardening can override it.
 
 **Rationale.** Malicious PDFs abuse Adobe Reader to launch payloads.
 
@@ -567,7 +567,7 @@ Changes to Windows Firewall rules must be audited.
 
 **Severity:** Medium &nbsp; **Category:** Attack Surface Reduction &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
 
-AutoRun/AutoPlay must be disabled on all drive types to prevent automatic execution from removable media.
+AutoRun/AutoPlay must be disabled on all drive types to prevent automatic execution from removable media. Group Policy setting: this control checks the corresponding Group Policy registry value, so it can report non-compliant until the policy is explicitly configured (even where the effective Windows default is already secure), and a domain Group Policy applied after hardening can override it.
 
 **Rationale.** AutoRun can automatically execute malware from removable or network media.
 
@@ -597,7 +597,7 @@ Microsoft Defender Antivirus must be enabled and providing real-time protection.
 
 **Severity:** High &nbsp; **Category:** Endpoint Protection &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Essential
 
-Microsoft Defender must block potentially unwanted applications (PUA) such as adware and bundled software.
+Microsoft Defender must block potentially unwanted applications (PUA) such as adware and bundled software. Group Policy setting: this control checks the corresponding Group Policy registry value, so it can report non-compliant until the policy is explicitly configured (even where the effective Windows default is already secure), and a domain Group Policy applied after hardening can override it.
 
 **Rationale.** PUAs degrade performance and can be a foothold for further compromise.
 
@@ -612,7 +612,7 @@ Microsoft Defender must block potentially unwanted applications (PUA) such as ad
 
 **Severity:** High &nbsp; **Category:** Endpoint Protection &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Essential
 
-Microsoft Defender real-time protection must not be disabled by policy.
+Microsoft Defender real-time protection must not be disabled by policy. Group Policy setting: this control checks the corresponding Group Policy registry value; a domain Group Policy applied after hardening can override the local configuration.
 
 **Rationale.** Disabling real-time protection removes continuous malware scanning.
 
@@ -627,7 +627,7 @@ Microsoft Defender real-time protection must not be disabled by policy.
 
 **Severity:** Medium &nbsp; **Category:** Endpoint Protection &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
 
-Microsoft Defender cloud-delivered protection (MAPS) must be enabled for faster protection against new threats.
+Microsoft Defender cloud-delivered protection (MAPS) must be enabled for faster protection against new threats. Group Policy setting: this control checks the corresponding Group Policy registry value, so it can report non-compliant until the policy is explicitly configured (even where the effective Windows default is already secure), and a domain Group Policy applied after hardening can override it.
 
 **Rationale.** Without cloud protection, response to emerging threats is slower.
 
@@ -642,7 +642,7 @@ Microsoft Defender cloud-delivered protection (MAPS) must be enabled for faster 
 
 **Severity:** Medium &nbsp; **Category:** Endpoint Protection &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Enterprise
 
-Enable Defender network protection to block connections to dangerous domains and IP addresses.
+Enable Defender network protection to block connections to dangerous domains and IP addresses. Group Policy setting: this control checks the corresponding Group Policy registry value, so it can report non-compliant until the policy is explicitly configured (even where the effective Windows default is already secure), and a domain Group Policy applied after hardening can override it.
 
 **Rationale.** Without network protection, users and processes can reach phishing and exploit domains.
 
@@ -657,7 +657,7 @@ Enable Defender network protection to block connections to dangerous domains and
 
 **Severity:** Medium &nbsp; **Category:** Endpoint Protection &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Enterprise
 
-Enable controlled folder access to protect key folders from unauthorized changes by untrusted apps (ransomware).
+Enable controlled folder access to protect key folders from unauthorized changes by untrusted apps (ransomware). Group Policy setting: this control checks the corresponding Group Policy registry value, so it can report non-compliant until the policy is explicitly configured (even where the effective Windows default is already secure), and a domain Group Policy applied after hardening can override it.
 
 **Rationale.** Ransomware can encrypt files in unprotected folders.
 
@@ -672,7 +672,7 @@ Enable controlled folder access to protect key folders from unauthorized changes
 
 **Severity:** Low &nbsp; **Category:** Endpoint Protection &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
 
-Scan removable drives (such as USB) during a full antivirus scan.
+Scan removable drives (such as USB) during a full antivirus scan. Group Policy setting: this control checks the corresponding Group Policy registry value, so it can report non-compliant until the policy is explicitly configured (even where the effective Windows default is already secure), and a domain Group Policy applied after hardening can override it.
 
 **Rationale.** Malware on removable media can go undetected if such drives are skipped.
 
@@ -687,7 +687,7 @@ Scan removable drives (such as USB) during a full antivirus scan.
 
 **Severity:** Medium &nbsp; **Category:** Endpoint Protection &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
 
-Enable Defender block-at-first-sight rapid cloud verdicts for newly seen files.
+Enable Defender block-at-first-sight rapid cloud verdicts for newly seen files. Group Policy setting: this control checks the corresponding Group Policy registry value, so it can report non-compliant until the policy is explicitly configured (even where the effective Windows default is already secure), and a domain Group Policy applied after hardening can override it.
 
 **Rationale.** Novel malware may execute before traditional signatures are available.
 
@@ -702,7 +702,7 @@ Enable Defender block-at-first-sight rapid cloud verdicts for newly seen files.
 
 **Severity:** High &nbsp; **Category:** Endpoint Protection &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
 
-Enable Defender behavior monitoring to detect malicious activity by behaviour, not just signatures.
+Enable Defender behavior monitoring to detect malicious activity by behaviour, not just signatures. Group Policy setting: this control checks the corresponding Group Policy registry value; a domain Group Policy applied after hardening can override the local configuration.
 
 **Rationale.** Disabling behaviour monitoring removes detection of fileless and living-off-the-land attacks.
 
@@ -732,7 +732,7 @@ The Windows Defender Firewall must be enabled for the Domain, Private and Public
 
 **Severity:** Medium &nbsp; **Category:** Host Firewall &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
 
-The domain firewall profile must block inbound connections that do not match a rule.
+The domain firewall profile must block inbound connections that do not match a rule. Group Policy setting: this control checks the corresponding Group Policy registry value, so it can report non-compliant until the policy is explicitly configured (even where the effective Windows default is already secure), and a domain Group Policy applied after hardening can override it.
 
 **Rationale.** A permissive default inbound action exposes unlisted services to the network.
 
@@ -747,7 +747,7 @@ The domain firewall profile must block inbound connections that do not match a r
 
 **Severity:** Medium &nbsp; **Category:** Host Firewall &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
 
-The private firewall profile must block inbound connections that do not match a rule.
+The private firewall profile must block inbound connections that do not match a rule. Group Policy setting: this control checks the corresponding Group Policy registry value, so it can report non-compliant until the policy is explicitly configured (even where the effective Windows default is already secure), and a domain Group Policy applied after hardening can override it.
 
 **Rationale.** A permissive default inbound action exposes unlisted services to the network.
 
@@ -762,7 +762,7 @@ The private firewall profile must block inbound connections that do not match a 
 
 **Severity:** Medium &nbsp; **Category:** Host Firewall &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
 
-The public firewall profile must block inbound connections that do not match a rule.
+The public firewall profile must block inbound connections that do not match a rule. Group Policy setting: this control checks the corresponding Group Policy registry value, so it can report non-compliant until the policy is explicitly configured (even where the effective Windows default is already secure), and a domain Group Policy applied after hardening can override it.
 
 **Rationale.** A permissive default inbound action exposes unlisted services on untrusted networks.
 
@@ -777,7 +777,7 @@ The public firewall profile must block inbound connections that do not match a r
 
 **Severity:** Low &nbsp; **Category:** Host Firewall &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
 
-The public firewall profile must log dropped packets for troubleshooting and detection.
+The public firewall profile must log dropped packets for troubleshooting and detection. Group Policy setting: this control checks the corresponding Group Policy registry value, so it can report non-compliant until the policy is explicitly configured (even where the effective Windows default is already secure), and a domain Group Policy applied after hardening can override it.
 
 **Rationale.** Without firewall logging, blocked-connection attempts leave no forensic trail.
 
@@ -792,7 +792,7 @@ The public firewall profile must log dropped packets for troubleshooting and det
 
 **Severity:** High &nbsp; **Category:** Privilege Management &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
 
-Windows Installer must not install packages with elevated privileges for standard users.
+Windows Installer must not install packages with elevated privileges for standard users. Group Policy setting: this control checks the corresponding Group Policy registry value; a domain Group Policy applied after hardening can override the local configuration.
 
 **Rationale.** AlwaysInstallElevated lets any user install software as SYSTEM - a privilege-escalation path.
 
@@ -807,7 +807,7 @@ Windows Installer must not install packages with elevated privileges for standar
 
 **Severity:** Medium &nbsp; **Category:** Authentication &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
 
-Allow only AES (and future) encryption types for Kerberos, disabling weak DES and RC4.
+Allow only AES (and future) encryption types for Kerberos, disabling weak DES and RC4. Group Policy setting: this control checks the corresponding Group Policy registry value, so it can report non-compliant until the policy is explicitly configured (even where the effective Windows default is already secure), and a domain Group Policy applied after hardening can override it.
 
 **Rationale.** Weak Kerberos ciphers (DES, RC4) are susceptible to Kerberoasting and cracking.
 
@@ -882,7 +882,7 @@ The failed-logon counter should persist long enough to make lockout thresholds e
 
 **Severity:** Medium &nbsp; **Category:** Access Control &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
 
-The machine must lock after a period of inactivity to protect unattended sessions.
+The machine must lock after a period of inactivity to protect unattended sessions. Group Policy setting: this control checks the corresponding Group Policy registry value, so it can report non-compliant until the policy is explicitly configured (even where the effective Windows default is already secure), and a domain Group Policy applied after hardening can override it.
 
 **Rationale.** Unattended, unlocked sessions can be hijacked by anyone with physical or console access.
 
@@ -897,7 +897,7 @@ The machine must lock after a period of inactivity to protect unattended session
 
 **Severity:** Low &nbsp; **Category:** Access Control &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
 
-The last signed-in username must not be displayed at the logon screen.
+The last signed-in username must not be displayed at the logon screen. Group Policy setting: this control checks the corresponding Group Policy registry value, so it can report non-compliant until the policy is explicitly configured (even where the effective Windows default is already secure), and a domain Group Policy applied after hardening can override it.
 
 **Rationale.** Displaying the last user discloses a valid account name to attackers.
 
@@ -927,7 +927,7 @@ The number of cached domain logon credentials must be limited to reduce offline 
 
 **Severity:** Low &nbsp; **Category:** Access Control &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
 
-Users must press Ctrl+Alt+Del before signing in to guarantee a trusted logon path.
+Users must press Ctrl+Alt+Del before signing in to guarantee a trusted logon path. Group Policy setting: this control checks the corresponding Group Policy registry value; a domain Group Policy applied after hardening can override the local configuration.
 
 **Rationale.** Without the secure attention sequence, credential-harvesting spoofed logon screens are possible.
 
@@ -1122,7 +1122,7 @@ Local accounts authenticate as themselves (Classic), not mapped to Guest.
 
 **Severity:** Medium &nbsp; **Category:** Network Protocols &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
 
-Link-Local Multicast Name Resolution (LLMNR) must be disabled to prevent name-resolution poisoning and credential capture.
+Link-Local Multicast Name Resolution (LLMNR) must be disabled to prevent name-resolution poisoning and credential capture. Group Policy setting: this control checks the corresponding Group Policy registry value, so it can report non-compliant until the policy is explicitly configured (even where the effective Windows default is already secure), and a domain Group Policy applied after hardening can override it.
 
 **Rationale.** LLMNR enables responder-style spoofing and NTLM credential theft.
 
@@ -1242,7 +1242,7 @@ NTLM SSP servers must require NTLMv2 session security and 128-bit encryption.
 
 **Severity:** Medium &nbsp; **Category:** Logging and Monitoring &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
 
-PowerShell Script Block Logging must be enabled to record the content of executed script blocks for detection and forensics.
+PowerShell Script Block Logging must be enabled to record the content of executed script blocks for detection and forensics. Group Policy setting: this control checks the corresponding Group Policy registry value, so it can report non-compliant until the policy is explicitly configured (even where the effective Windows default is already secure), and a domain Group Policy applied after hardening can override it.
 
 **Rationale.** Reduced visibility of malicious PowerShell activity.
 
@@ -1257,7 +1257,7 @@ PowerShell Script Block Logging must be enabled to record the content of execute
 
 **Severity:** Medium &nbsp; **Category:** Logging and Monitoring &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
 
-PowerShell Module Logging must be enabled to record pipeline execution details of PowerShell modules.
+PowerShell Module Logging must be enabled to record pipeline execution details of PowerShell modules. Group Policy setting: this control checks the corresponding Group Policy registry value, so it can report non-compliant until the policy is explicitly configured (even where the effective Windows default is already secure), and a domain Group Policy applied after hardening can override it.
 
 **Rationale.** Reduced visibility of malicious PowerShell module activity.
 
@@ -1272,7 +1272,7 @@ PowerShell Module Logging must be enabled to record pipeline execution details o
 
 **Severity:** Medium &nbsp; **Category:** Logging and Monitoring &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
 
-Capture a transcript of every PowerShell session.
+Capture a transcript of every PowerShell session. Group Policy setting: this control checks the corresponding Group Policy registry value, so it can report non-compliant until the policy is explicitly configured (even where the effective Windows default is already secure), and a domain Group Policy applied after hardening can override it.
 
 **Rationale.** Transcripts provide a forensic record of interactive and scripted PowerShell use.
 
@@ -1437,7 +1437,7 @@ Client drive redirection over RDP must be disabled to prevent data exfiltration 
 
 **Severity:** Medium &nbsp; **Category:** Remote Access &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
 
-Require Remote Desktop clients to provide a password at connection time.
+Require Remote Desktop clients to provide a password at connection time. Group Policy setting: this control checks the corresponding Group Policy registry value, so it can report non-compliant until the policy is explicitly configured (even where the effective Windows default is already secure), and a domain Group Policy applied after hardening can override it.
 
 **Rationale.** Saved credentials let a stolen client session reconnect without authentication.
 
@@ -1452,7 +1452,7 @@ Require Remote Desktop clients to provide a password at connection time.
 
 **Severity:** Low &nbsp; **Category:** Remote Access &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Enterprise
 
-Disable clipboard redirection in Remote Desktop sessions.
+Disable clipboard redirection in Remote Desktop sessions. Group Policy setting: this control checks the corresponding Group Policy registry value, so it can report non-compliant until the policy is explicitly configured (even where the effective Windows default is already secure), and a domain Group Policy applied after hardening can override it.
 
 **Rationale.** Clipboard redirection can exfiltrate data between the session and the client.
 
@@ -1542,7 +1542,7 @@ Anonymous (null session) access to named pipes and shares must be restricted.
 
 **Severity:** Medium &nbsp; **Category:** Network Protocols &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
 
-Prevent the SMB client from making insecure guest logons to file servers.
+Prevent the SMB client from making insecure guest logons to file servers. Group Policy setting: this control checks the corresponding Group Policy registry value, so it can report non-compliant until the policy is explicitly configured (even where the effective Windows default is already secure), and a domain Group Policy applied after hardening can override it.
 
 **Rationale.** Insecure guest access exposes clients to rogue/man-in-the-middle SMB servers.
 
@@ -1722,7 +1722,7 @@ The obsolete SSL 2.0 protocol must be disabled on the SCHANNEL server endpoint.
 
 **Severity:** High &nbsp; **Category:** Privilege Management &nbsp; **Provider:** Registry &nbsp; **Reboot:** Yes &nbsp; **Tier:** Essential
 
-User Account Control (UAC) must be enabled (EnableLUA = 1) to enforce administrative elevation prompts.
+User Account Control (UAC) must be enabled (EnableLUA = 1) to enforce administrative elevation prompts. Group Policy setting: this control checks the corresponding Group Policy registry value, so it can report non-compliant until the policy is explicitly configured (even where the effective Windows default is already secure), and a domain Group Policy applied after hardening can override it.
 
 **Rationale.** Disabling UAC allows silent privilege escalation by malicious code.
 
@@ -1737,7 +1737,7 @@ User Account Control (UAC) must be enabled (EnableLUA = 1) to enforce administra
 
 **Severity:** Medium &nbsp; **Category:** Privilege Management &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
 
-Administrator elevation must prompt for consent on the secure desktop.
+Administrator elevation must prompt for consent on the secure desktop. Group Policy setting: this control checks the corresponding Group Policy registry value, so it can report non-compliant until the policy is explicitly configured (even where the effective Windows default is already secure), and a domain Group Policy applied after hardening can override it.
 
 **Rationale.** Weak elevation prompts allow silent or spoofed privilege escalation.
 
@@ -1752,7 +1752,7 @@ Administrator elevation must prompt for consent on the secure desktop.
 
 **Severity:** Medium &nbsp; **Category:** Privilege Management &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
 
-UAC must detect application installations and prompt for elevation.
+UAC must detect application installations and prompt for elevation. Group Policy setting: this control checks the corresponding Group Policy registry value, so it can report non-compliant until the policy is explicitly configured (even where the effective Windows default is already secure), and a domain Group Policy applied after hardening can override it.
 
 **Rationale.** Silent installer elevation allows privilege escalation via installers.
 
@@ -1767,7 +1767,7 @@ UAC must detect application installations and prompt for elevation.
 
 **Severity:** Medium &nbsp; **Category:** Privilege Management &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
 
-Standard users must not be prompted to elevate; elevation requests are automatically denied.
+Standard users must not be prompted to elevate; elevation requests are automatically denied. Group Policy setting: this control checks the corresponding Group Policy registry value, so it can report non-compliant until the policy is explicitly configured (even where the effective Windows default is already secure), and a domain Group Policy applied after hardening can override it.
 
 **Rationale.** Prompting standard users to elevate encourages credential sharing and misuse.
 
@@ -1782,7 +1782,7 @@ Standard users must not be prompted to elevate; elevation requests are automatic
 
 **Severity:** Medium &nbsp; **Category:** Privilege Management &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
 
-Elevation prompts must be shown on the secure desktop to resist spoofing.
+Elevation prompts must be shown on the secure desktop to resist spoofing. Group Policy setting: this control checks the corresponding Group Policy registry value; a domain Group Policy applied after hardening can override the local configuration.
 
 **Rationale.** Elevation prompts on the interactive desktop can be spoofed to capture credentials.
 
@@ -1797,7 +1797,7 @@ Elevation prompts must be shown on the secure desktop to resist spoofing.
 
 **Severity:** Medium &nbsp; **Category:** Privilege Management &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
 
-Only allow UIAccess applications installed in secure file-system locations to elevate.
+Only allow UIAccess applications installed in secure file-system locations to elevate. Group Policy setting: this control checks the corresponding Group Policy registry value; a domain Group Policy applied after hardening can override the local configuration.
 
 **Rationale.** UIAccess apps outside secure paths can bypass UI privilege isolation.
 
@@ -1827,7 +1827,7 @@ WDigest must not cache plaintext credentials in memory.
 
 **Severity:** Medium &nbsp; **Category:** Remote Management &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
 
-The WinRM client must not allow Basic authentication.
+The WinRM client must not allow Basic authentication. Group Policy setting: this control checks the corresponding Group Policy registry value, so it can report non-compliant until the policy is explicitly configured (even where the effective Windows default is already secure), and a domain Group Policy applied after hardening can override it.
 
 **Rationale.** WinRM Basic auth transmits credentials with weak protection.
 
@@ -1842,7 +1842,7 @@ The WinRM client must not allow Basic authentication.
 
 **Severity:** Medium &nbsp; **Category:** Remote Management &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
 
-The WinRM service must not allow unencrypted traffic.
+The WinRM service must not allow unencrypted traffic. Group Policy setting: this control checks the corresponding Group Policy registry value, so it can report non-compliant until the policy is explicitly configured (even where the effective Windows default is already secure), and a domain Group Policy applied after hardening can override it.
 
 **Rationale.** Unencrypted WinRM traffic exposes management data and credentials.
 
@@ -1857,7 +1857,7 @@ The WinRM service must not allow unencrypted traffic.
 
 **Severity:** Medium &nbsp; **Category:** Remote Management &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
 
-The WinRM client must not use Digest authentication.
+The WinRM client must not use Digest authentication. Group Policy setting: this control checks the corresponding Group Policy registry value, so it can report non-compliant until the policy is explicitly configured (even where the effective Windows default is already secure), and a domain Group Policy applied after hardening can override it.
 
 **Rationale.** Digest authentication is weaker than Kerberos/Negotiate and can expose credentials.
 
