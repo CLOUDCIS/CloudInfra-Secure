@@ -6,7 +6,7 @@ CloudInfra Secure ships 7 baselines. Each is a curated collection of control IDs
 
 Baseline for Active Directory Domain Controllers.
 
-**ID:** `CloudInfraSecure-DomainController` &nbsp; **Controls:** 64 &nbsp; **Supported OS:** WindowsServer2022, WindowsServer2025
+**ID:** `CloudInfraSecure-DomainController` &nbsp; **Controls:** 72 &nbsp; **Supported OS:** WindowsServer2022, WindowsServer2025
 
 | Control | Name | Severity |
 |---------|------|----------|
@@ -74,12 +74,20 @@ Baseline for Active Directory Domain Controllers.
 | [WIN-LOGON-004](../controls/index.md#win-logon-004) | Require Ctrl+Alt+Del at Logon | Low |
 | [WIN-WINRM-001](../controls/index.md#win-winrm-001) | Disable WinRM Client Basic Authentication | Medium |
 | [WIN-WINRM-002](../controls/index.md#win-winrm-002) | Disallow WinRM Unencrypted Traffic | Medium |
+| [WIN-LSA-008](../controls/index.md#win-lsa-008) | Restrict Clients Allowed to Make Remote SAM Calls | Medium |
+| [WIN-LSA-009](../controls/index.md#win-lsa-009) | Limit Local Account Use of Blank Passwords | High |
+| [WIN-LSA-010](../controls/index.md#win-lsa-010) | Sharing and Security Model for Local Accounts (Classic) | Medium |
+| [WIN-KRB-001](../controls/index.md#win-krb-001) | Configure Kerberos Encryption Types (AES only) | Medium |
+| [WIN-NET-005](../controls/index.md#win-net-005) | Ignore NetBIOS Name Release Requests | Low |
+| [WIN-PSL-003](../controls/index.md#win-psl-003) | Enable PowerShell Transcription | Medium |
+| [WIN-UAC-006](../controls/index.md#win-uac-006) | Only Elevate UIAccess Apps in Secure Locations | Medium |
+| [WIN-LOGON-006](../controls/index.md#win-logon-006) | Disable Automatic Logon | Medium |
 
 ## CloudInfra Secure Enterprise - Enterprise tier
 
 Comprehensive baseline for regulated and high-assurance environments.
 
-**ID:** `CloudInfraSecure-Enterprise` &nbsp; **Controls:** 84 &nbsp; **Supported OS:** WindowsServer2022, WindowsServer2025
+**ID:** `CloudInfraSecure-Enterprise` &nbsp; **Controls:** 100 &nbsp; **Supported OS:** WindowsServer2022, WindowsServer2025
 
 | Control | Name | Severity |
 |---------|------|----------|
@@ -167,6 +175,22 @@ Comprehensive baseline for regulated and high-assurance environments.
 | [WIN-LSA-007](../controls/index.md#win-lsa-007) | Do Not Apply Everyone Permissions to Anonymous Users | Medium |
 | [WIN-WINRM-001](../controls/index.md#win-winrm-001) | Disable WinRM Client Basic Authentication | Medium |
 | [WIN-WINRM-002](../controls/index.md#win-winrm-002) | Disallow WinRM Unencrypted Traffic | Medium |
+| [WIN-ASR-010](../controls/index.md#win-asr-010) | ASR: Block Persistence Through WMI Event Subscription | Medium |
+| [WIN-ASR-011](../controls/index.md#win-asr-011) | ASR: Block Win32 API Calls from Office Macros | Medium |
+| [WIN-ASR-012](../controls/index.md#win-asr-012) | ASR: Block Untrusted Executables by Prevalence, Age, or Trust | Medium |
+| [WIN-ASR-013](../controls/index.md#win-asr-013) | ASR: Block Adobe Reader from Creating Child Processes | Medium |
+| [WIN-LSA-008](../controls/index.md#win-lsa-008) | Restrict Clients Allowed to Make Remote SAM Calls | Medium |
+| [WIN-LSA-009](../controls/index.md#win-lsa-009) | Limit Local Account Use of Blank Passwords | High |
+| [WIN-LSA-010](../controls/index.md#win-lsa-010) | Sharing and Security Model for Local Accounts (Classic) | Medium |
+| [WIN-KRB-001](../controls/index.md#win-krb-001) | Configure Kerberos Encryption Types (AES only) | Medium |
+| [WIN-LOGON-005](../controls/index.md#win-logon-005) | Smart Card Removal Behavior (Lock Workstation) | Low |
+| [WIN-LOGON-006](../controls/index.md#win-logon-006) | Disable Automatic Logon | Medium |
+| [WIN-NET-005](../controls/index.md#win-net-005) | Ignore NetBIOS Name Release Requests | Low |
+| [WIN-PSL-003](../controls/index.md#win-psl-003) | Enable PowerShell Transcription | Medium |
+| [WIN-RDP-005](../controls/index.md#win-rdp-005) | Always Prompt for Password on RDP Connection | Medium |
+| [WIN-RDP-006](../controls/index.md#win-rdp-006) | Disable RDP Clipboard Redirection | Low |
+| [WIN-SMB-007](../controls/index.md#win-smb-007) | Disable SMB Client Insecure Guest Logons | Medium |
+| [WIN-UAC-006](../controls/index.md#win-uac-006) | Only Elevate UIAccess Apps in Secure Locations | Medium |
 
 ## CloudInfra Secure Essential - Essential tier
 
@@ -196,7 +220,7 @@ Baseline of essential hardening controls suitable for any Windows Server workloa
 
 Baseline for Internet Information Services (IIS) web servers.
 
-**ID:** `CloudInfraSecure-IISWebServer` &nbsp; **Controls:** 30 &nbsp; **Supported OS:** WindowsServer2022, WindowsServer2025
+**ID:** `CloudInfraSecure-IISWebServer` &nbsp; **Controls:** 35 &nbsp; **Supported OS:** WindowsServer2022, WindowsServer2025
 
 | Control | Name | Severity |
 |---------|------|----------|
@@ -230,12 +254,17 @@ Baseline for Internet Information Services (IIS) web servers.
 | [WIN-WINRM-001](../controls/index.md#win-winrm-001) | Disable WinRM Client Basic Authentication | Medium |
 | [WIN-WINRM-002](../controls/index.md#win-winrm-002) | Disallow WinRM Unencrypted Traffic | Medium |
 | [WIN-AUD-016](../controls/index.md#win-aud-016) | Audit MPSSVC Rule-Level Policy Change | Medium |
+| [WIN-LSA-008](../controls/index.md#win-lsa-008) | Restrict Clients Allowed to Make Remote SAM Calls | Medium |
+| [WIN-NET-005](../controls/index.md#win-net-005) | Ignore NetBIOS Name Release Requests | Low |
+| [WIN-PSL-003](../controls/index.md#win-psl-003) | Enable PowerShell Transcription | Medium |
+| [WIN-SMB-007](../controls/index.md#win-smb-007) | Disable SMB Client Insecure Guest Logons | Medium |
+| [WIN-UAC-006](../controls/index.md#win-uac-006) | Only Elevate UIAccess Apps in Secure Locations | Medium |
 
 ## CloudInfra Secure Remote Desktop Server - Role tier
 
 Baseline for Remote Desktop Session Host servers.
 
-**ID:** `CloudInfraSecure-RemoteDesktopServer` &nbsp; **Controls:** 32 &nbsp; **Supported OS:** WindowsServer2022, WindowsServer2025
+**ID:** `CloudInfraSecure-RemoteDesktopServer` &nbsp; **Controls:** 37 &nbsp; **Supported OS:** WindowsServer2022, WindowsServer2025
 
 | Control | Name | Severity |
 |---------|------|----------|
@@ -271,12 +300,17 @@ Baseline for Remote Desktop Session Host servers.
 | [WIN-WINRM-001](../controls/index.md#win-winrm-001) | Disable WinRM Client Basic Authentication | Medium |
 | [WIN-WINRM-002](../controls/index.md#win-winrm-002) | Disallow WinRM Unencrypted Traffic | Medium |
 | [WIN-AUD-015](../controls/index.md#win-aud-015) | Audit Other Logon/Logoff Events | Medium |
+| [WIN-LOGON-005](../controls/index.md#win-logon-005) | Smart Card Removal Behavior (Lock Workstation) | Low |
+| [WIN-RDP-005](../controls/index.md#win-rdp-005) | Always Prompt for Password on RDP Connection | Medium |
+| [WIN-RDP-006](../controls/index.md#win-rdp-006) | Disable RDP Clipboard Redirection | Low |
+| [WIN-PSL-003](../controls/index.md#win-psl-003) | Enable PowerShell Transcription | Medium |
+| [WIN-SMB-007](../controls/index.md#win-smb-007) | Disable SMB Client Insecure Guest Logons | Medium |
 
 ## CloudInfra Secure SQL Server - Role tier
 
 Baseline for Microsoft SQL Server hosts.
 
-**ID:** `CloudInfraSecure-SQLServer` &nbsp; **Controls:** 28 &nbsp; **Supported OS:** WindowsServer2022, WindowsServer2025
+**ID:** `CloudInfraSecure-SQLServer` &nbsp; **Controls:** 33 &nbsp; **Supported OS:** WindowsServer2022, WindowsServer2025
 
 | Control | Name | Severity |
 |---------|------|----------|
@@ -308,12 +342,17 @@ Baseline for Microsoft SQL Server hosts.
 | [WIN-WINRM-001](../controls/index.md#win-winrm-001) | Disable WinRM Client Basic Authentication | Medium |
 | [WIN-WINRM-002](../controls/index.md#win-winrm-002) | Disallow WinRM Unencrypted Traffic | Medium |
 | [WIN-LSA-007](../controls/index.md#win-lsa-007) | Do Not Apply Everyone Permissions to Anonymous Users | Medium |
+| [WIN-LSA-008](../controls/index.md#win-lsa-008) | Restrict Clients Allowed to Make Remote SAM Calls | Medium |
+| [WIN-LSA-009](../controls/index.md#win-lsa-009) | Limit Local Account Use of Blank Passwords | High |
+| [WIN-LSA-010](../controls/index.md#win-lsa-010) | Sharing and Security Model for Local Accounts (Classic) | Medium |
+| [WIN-KRB-001](../controls/index.md#win-krb-001) | Configure Kerberos Encryption Types (AES only) | Medium |
+| [WIN-PSL-003](../controls/index.md#win-psl-003) | Enable PowerShell Transcription | Medium |
 
 ## CloudInfra Secure Standard - Standard tier
 
 Recommended baseline adding logging, auditing and access hardening on top of Essential.
 
-**ID:** `CloudInfraSecure-Standard` &nbsp; **Controls:** 73 &nbsp; **Supported OS:** WindowsServer2022, WindowsServer2025
+**ID:** `CloudInfraSecure-Standard` &nbsp; **Controls:** 83 &nbsp; **Supported OS:** WindowsServer2022, WindowsServer2025
 
 | Control | Name | Severity |
 |---------|------|----------|
@@ -390,4 +429,14 @@ Recommended baseline adding logging, auditing and access hardening on top of Ess
 | [WIN-LSA-007](../controls/index.md#win-lsa-007) | Do Not Apply Everyone Permissions to Anonymous Users | Medium |
 | [WIN-WINRM-001](../controls/index.md#win-winrm-001) | Disable WinRM Client Basic Authentication | Medium |
 | [WIN-WINRM-002](../controls/index.md#win-winrm-002) | Disallow WinRM Unencrypted Traffic | Medium |
+| [WIN-LSA-008](../controls/index.md#win-lsa-008) | Restrict Clients Allowed to Make Remote SAM Calls | Medium |
+| [WIN-LSA-009](../controls/index.md#win-lsa-009) | Limit Local Account Use of Blank Passwords | High |
+| [WIN-LSA-010](../controls/index.md#win-lsa-010) | Sharing and Security Model for Local Accounts (Classic) | Medium |
+| [WIN-KRB-001](../controls/index.md#win-krb-001) | Configure Kerberos Encryption Types (AES only) | Medium |
+| [WIN-LOGON-006](../controls/index.md#win-logon-006) | Disable Automatic Logon | Medium |
+| [WIN-NET-005](../controls/index.md#win-net-005) | Ignore NetBIOS Name Release Requests | Low |
+| [WIN-PSL-003](../controls/index.md#win-psl-003) | Enable PowerShell Transcription | Medium |
+| [WIN-RDP-005](../controls/index.md#win-rdp-005) | Always Prompt for Password on RDP Connection | Medium |
+| [WIN-SMB-007](../controls/index.md#win-smb-007) | Disable SMB Client Insecure Guest Logons | Medium |
+| [WIN-UAC-006](../controls/index.md#win-uac-006) | Only Elevate UIAccess Apps in Secure Locations | Medium |
 

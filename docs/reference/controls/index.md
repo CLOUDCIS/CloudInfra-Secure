@@ -1,6 +1,6 @@
 # Controls
 
-The CloudInfra Secure control library (84 controls). Each control exists once and may be used by many baselines.
+The CloudInfra Secure control library (100 controls). Each control exists once and may be used by many baselines.
 
 !!! note "Compliance disclaimer"
     CloudInfra Secure controls are designed to help organisations implement technical security requirements commonly found in recognised security standards. They do not constitute certification or proof of compliance.
@@ -18,6 +18,10 @@ The CloudInfra Secure control library (84 controls). Each control exists once an
 | [WIN-ASR-007](#win-asr-007) | ASR: Advanced Protection Against Ransomware | High | Attack Surface Reduction | Registry | No |
 | [WIN-ASR-008](#win-asr-008) | ASR: Block Office Apps Injecting Code into Other Processes | Medium | Attack Surface Reduction | Registry | No |
 | [WIN-ASR-009](#win-asr-009) | ASR: Block Office Apps Creating Executable Content | Medium | Attack Surface Reduction | Registry | No |
+| [WIN-ASR-010](#win-asr-010) | ASR: Block Persistence Through WMI Event Subscription | Medium | Attack Surface Reduction | Registry | No |
+| [WIN-ASR-011](#win-asr-011) | ASR: Block Win32 API Calls from Office Macros | Medium | Attack Surface Reduction | Registry | No |
+| [WIN-ASR-012](#win-asr-012) | ASR: Block Untrusted Executables by Prevalence, Age, or Trust | Medium | Attack Surface Reduction | Registry | No |
+| [WIN-ASR-013](#win-asr-013) | ASR: Block Adobe Reader from Creating Child Processes | Medium | Attack Surface Reduction | Registry | No |
 | [WIN-AUD-001](#win-aud-001) | Audit Logon Failures | Medium | Logging and Monitoring | AuditPol | No |
 | [WIN-AUD-002](#win-aud-002) | Audit Account Lockout Events | Medium | Logging and Monitoring | AuditPol | No |
 | [WIN-AUD-003](#win-aud-003) | Audit Process Creation | Medium | Logging and Monitoring | AuditPol | No |
@@ -41,6 +45,7 @@ The CloudInfra Secure control library (84 controls). Each control exists once an
 | [WIN-DEF-004](#win-def-004) | Enable Cloud-Delivered Protection | Medium | Endpoint Protection | Registry | No |
 | [WIN-FW-001](#win-fw-001) | Windows Firewall Enabled (All Profiles) | High | Host Firewall | Firewall | No |
 | [WIN-INSTALL-001](#win-install-001) | Disable Always Install Elevated | High | Privilege Management | Registry | No |
+| [WIN-KRB-001](#win-krb-001) | Configure Kerberos Encryption Types (AES only) | Medium | Authentication | Registry | No |
 | [WIN-LDAP-001](#win-ldap-001) | LDAP Client Signing | Medium | Authentication | Registry | No |
 | [WIN-LOCK-001](#win-lock-001) | Account Lockout Threshold | Medium | Account Policy | SecEdit | No |
 | [WIN-LOCK-002](#win-lock-002) | Account Lockout Duration | Medium | Account Policy | SecEdit | No |
@@ -49,6 +54,8 @@ The CloudInfra Secure control library (84 controls). Each control exists once an
 | [WIN-LOGON-002](#win-logon-002) | Do Not Display Last Signed-In User | Low | Access Control | Registry | No |
 | [WIN-LOGON-003](#win-logon-003) | Limit Number of Cached Logons | Medium | Access Control | Registry | No |
 | [WIN-LOGON-004](#win-logon-004) | Require Ctrl+Alt+Del at Logon | Low | Access Control | Registry | No |
+| [WIN-LOGON-005](#win-logon-005) | Smart Card Removal Behavior (Lock Workstation) | Low | Access Control | Registry | No |
+| [WIN-LOGON-006](#win-logon-006) | Disable Automatic Logon | Medium | Access Control | Registry | No |
 | [WIN-LSA-001](#win-lsa-001) | Do Not Store LAN Manager Hash | High | Credential Protection | Registry | No |
 | [WIN-LSA-002](#win-lsa-002) | Restrict Anonymous SID Enumeration | Medium | Access Control | Registry | No |
 | [WIN-LSA-003](#win-lsa-003) | Enable LSASS Protection (RunAsPPL) | High | Credential Protection | Registry | Yes |
@@ -56,15 +63,20 @@ The CloudInfra Secure control library (84 controls). Each control exists once an
 | [WIN-LSA-005](#win-lsa-005) | Enable Structured Exception Handling Overwrite Protection (SEHOP) | Medium | Exploit Protection | Registry | No |
 | [WIN-LSA-006](#win-lsa-006) | Digitally Encrypt or Sign Secure Channel Data (Always) | Medium | Authentication | Registry | No |
 | [WIN-LSA-007](#win-lsa-007) | Do Not Apply Everyone Permissions to Anonymous Users | Medium | Access Control | Registry | No |
+| [WIN-LSA-008](#win-lsa-008) | Restrict Clients Allowed to Make Remote SAM Calls | Medium | Access Control | Registry | No |
+| [WIN-LSA-009](#win-lsa-009) | Limit Local Account Use of Blank Passwords | High | Access Control | Registry | No |
+| [WIN-LSA-010](#win-lsa-010) | Sharing and Security Model for Local Accounts (Classic) | Medium | Access Control | Registry | No |
 | [WIN-NET-001](#win-net-001) | Disable LLMNR | Medium | Network Protocols | Registry | No |
 | [WIN-NET-002](#win-net-002) | Disable IPv4 Source Routing | Medium | Network Protocols | Registry | No |
 | [WIN-NET-003](#win-net-003) | Disable ICMP Redirects | Low | Network Protocols | Registry | No |
 | [WIN-NET-004](#win-net-004) | Disable IPv6 Source Routing | Medium | Network Protocols | Registry | No |
+| [WIN-NET-005](#win-net-005) | Ignore NetBIOS Name Release Requests | Low | Network Protocols | Registry | No |
 | [WIN-NTLM-001](#win-ntlm-001) | LAN Manager Authentication Level (NTLMv2 Only) | High | Authentication | Registry | No |
 | [WIN-NTLM-002](#win-ntlm-002) | Minimum NTLM Session Security (Clients) | Medium | Authentication | Registry | No |
 | [WIN-NTLM-003](#win-ntlm-003) | Minimum NTLM Session Security (Servers) | Medium | Authentication | Registry | No |
 | [WIN-PSL-001](#win-psl-001) | Enable PowerShell Script Block Logging | Medium | Logging and Monitoring | Registry | No |
 | [WIN-PSL-002](#win-psl-002) | Enable PowerShell Module Logging | Medium | Logging and Monitoring | Registry | No |
+| [WIN-PSL-003](#win-psl-003) | Enable PowerShell Transcription | Medium | Logging and Monitoring | Registry | No |
 | [WIN-PWD-001](#win-pwd-001) | Minimum Password Length | High | Account Policy | SecEdit | No |
 | [WIN-PWD-002](#win-pwd-002) | Password Complexity Enabled | High | Account Policy | SecEdit | No |
 | [WIN-PWD-003](#win-pwd-003) | Maximum Password Age | Medium | Account Policy | SecEdit | No |
@@ -75,11 +87,14 @@ The CloudInfra Secure control library (84 controls). Each control exists once an
 | [WIN-RDP-002](#win-rdp-002) | RDP Minimum Encryption Level (High) | Medium | Remote Access | Registry | No |
 | [WIN-RDP-003](#win-rdp-003) | RDP Security Layer (TLS) | Medium | Remote Access | Registry | No |
 | [WIN-RDP-004](#win-rdp-004) | Disable RDP Drive Redirection | Medium | Remote Access | Registry | No |
+| [WIN-RDP-005](#win-rdp-005) | Always Prompt for Password on RDP Connection | Medium | Remote Access | Registry | No |
+| [WIN-RDP-006](#win-rdp-006) | Disable RDP Clipboard Redirection | Low | Remote Access | Registry | No |
 | [WIN-SMB-001](#win-smb-001) | Disable SMBv1 | High | Network Protocols | Registry | No |
 | [WIN-SMB-003](#win-smb-003) | Require SMB Signing (Server) | High | Network Protocols | Registry | No |
 | [WIN-SMB-004](#win-smb-004) | Disable SMBv1 Client | High | Network Protocols | Registry | No |
 | [WIN-SMB-005](#win-smb-005) | Require SMB Client Signing | Medium | Network Protocols | Registry | No |
 | [WIN-SMB-006](#win-smb-006) | Restrict Anonymous Access to Named Pipes and Shares | Medium | Network Protocols | Registry | No |
+| [WIN-SMB-007](#win-smb-007) | Disable SMB Client Insecure Guest Logons | Medium | Network Protocols | Registry | No |
 | [WIN-SVC-001](#win-svc-001) | Disable Remote Registry Service | Medium | Attack Surface Reduction | Service | No |
 | [WIN-TLS-010](#win-tls-010) | Disable TLS 1.0 (Server) | High | Cryptography | Registry | Yes |
 | [WIN-TLS-011](#win-tls-011) | Disable TLS 1.1 (Server) | High | Cryptography | Registry | Yes |
@@ -90,6 +105,7 @@ The CloudInfra Secure control library (84 controls). Each control exists once an
 | [WIN-UAC-003](#win-uac-003) | UAC Detect Application Installations | Medium | Privilege Management | Registry | No |
 | [WIN-UAC-004](#win-uac-004) | Deny UAC Elevation Prompt for Standard Users | Medium | Privilege Management | Registry | No |
 | [WIN-UAC-005](#win-uac-005) | UAC Switch to the Secure Desktop for Elevation | Medium | Privilege Management | Registry | No |
+| [WIN-UAC-006](#win-uac-006) | Only Elevate UIAccess Apps in Secure Locations | Medium | Privilege Management | Registry | No |
 | [WIN-WDIGEST-001](#win-wdigest-001) | Disable WDigest Credential Caching | High | Credential Protection | Registry | No |
 | [WIN-WINRM-001](#win-winrm-001) | Disable WinRM Client Basic Authentication | Medium | Remote Management | Registry | No |
 | [WIN-WINRM-002](#win-winrm-002) | Disallow WinRM Unencrypted Traffic | Medium | Remote Management | Registry | No |
@@ -225,6 +241,66 @@ Block Office applications from writing executable content to disk.
 **Rationale.** Office-dropped executables are used for persistence and payload delivery.
 
 **Remediation.** Enable ASR rule 3b576869-a4ec-4529-8536-b80a7769e899 in block mode (1).
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
+
+**References:**
+- [https://learn.microsoft.com/en-us/defender-endpoint/attack-surface-reduction-rules-reference](https://learn.microsoft.com/en-us/defender-endpoint/attack-surface-reduction-rules-reference)
+
+### WIN-ASR-010 - ASR: Block Persistence Through WMI Event Subscription { #win-asr-010 }
+
+**Severity:** Medium &nbsp; **Category:** Attack Surface Reduction &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Enterprise
+
+Block malware from establishing persistence via WMI event subscription.
+
+**Rationale.** WMI event subscriptions are a stealthy, fileless persistence mechanism.
+
+**Remediation.** Enable ASR rule e6db77e5-3df2-4cf1-b95a-636979351e5b in block mode (1).
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
+
+**References:**
+- [https://learn.microsoft.com/en-us/defender-endpoint/attack-surface-reduction-rules-reference](https://learn.microsoft.com/en-us/defender-endpoint/attack-surface-reduction-rules-reference)
+
+### WIN-ASR-011 - ASR: Block Win32 API Calls from Office Macros { #win-asr-011 }
+
+**Severity:** Medium &nbsp; **Category:** Attack Surface Reduction &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Enterprise
+
+Block Office macros from calling Win32 APIs.
+
+**Rationale.** Macro Win32 API calls are used to download and execute malware.
+
+**Remediation.** Enable ASR rule 92e97fa1-2edf-4476-bdd6-9dd0b4dddc7b in block mode (1).
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
+
+**References:**
+- [https://learn.microsoft.com/en-us/defender-endpoint/attack-surface-reduction-rules-reference](https://learn.microsoft.com/en-us/defender-endpoint/attack-surface-reduction-rules-reference)
+
+### WIN-ASR-012 - ASR: Block Untrusted Executables by Prevalence, Age, or Trust { #win-asr-012 }
+
+**Severity:** Medium &nbsp; **Category:** Attack Surface Reduction &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Enterprise
+
+Block executable files from running unless they meet a prevalence, age, or trusted-list criterion.
+
+**Rationale.** Newly seen, low-prevalence executables are frequently malware.
+
+**Remediation.** Enable ASR rule 01443614-cd74-433a-b99e-2ecdc07bfc25 in block mode (1).
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
+
+**References:**
+- [https://learn.microsoft.com/en-us/defender-endpoint/attack-surface-reduction-rules-reference](https://learn.microsoft.com/en-us/defender-endpoint/attack-surface-reduction-rules-reference)
+
+### WIN-ASR-013 - ASR: Block Adobe Reader from Creating Child Processes { #win-asr-013 }
+
+**Severity:** Medium &nbsp; **Category:** Attack Surface Reduction &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Enterprise
+
+Block Adobe Reader from spawning child processes.
+
+**Rationale.** Malicious PDFs abuse Adobe Reader to launch payloads.
+
+**Remediation.** Enable ASR rule 7674ba52-37eb-4a4f-a9a1-f0f9a1619a2c in block mode (1).
 
 **Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
 
@@ -576,6 +652,21 @@ Windows Installer must not install packages with elevated privileges for standar
 **References:**
 - [https://learn.microsoft.com/en-us/windows/security/operating-system-security/device-management/windows-security-configuration-framework/windows-security-baselines](https://learn.microsoft.com/en-us/windows/security/operating-system-security/device-management/windows-security-configuration-framework/windows-security-baselines)
 
+### WIN-KRB-001 - Configure Kerberos Encryption Types (AES only) { #win-krb-001 }
+
+**Severity:** Medium &nbsp; **Category:** Authentication &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+
+Allow only AES (and future) encryption types for Kerberos, disabling weak DES and RC4.
+
+**Rationale.** Weak Kerberos ciphers (DES, RC4) are susceptible to Kerberoasting and cracking.
+
+**Remediation.** Set Kerberos Parameters SupportedEncryptionTypes to 2147483640 (AES128, AES256, future types).
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
+
+**References:**
+- [https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/network-security-configure-encryption-types-allowed-for-kerberos](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/network-security-configure-encryption-types-allowed-for-kerberos)
+
 ### WIN-LDAP-001 - LDAP Client Signing { #win-ldap-001 }
 
 **Severity:** Medium &nbsp; **Category:** Authentication &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
@@ -696,6 +787,36 @@ Users must press Ctrl+Alt+Del before signing in to guarantee a trusted logon pat
 **References:**
 - [https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/interactive-logon-do-not-require-ctrl-alt-del](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/interactive-logon-do-not-require-ctrl-alt-del)
 
+### WIN-LOGON-005 - Smart Card Removal Behavior (Lock Workstation) { #win-logon-005 }
+
+**Severity:** Low &nbsp; **Category:** Access Control &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Enterprise
+
+Lock the workstation when a logged-on user removes their smart card.
+
+**Rationale.** An unlocked, unattended session after card removal is open to misuse.
+
+**Remediation.** Set Winlogon ScRemoveOption to 1 (Lock Workstation).
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
+
+**References:**
+- [https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/interactive-logon-smart-card-removal-behavior](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/interactive-logon-smart-card-removal-behavior)
+
+### WIN-LOGON-006 - Disable Automatic Logon { #win-logon-006 }
+
+**Severity:** Medium &nbsp; **Category:** Access Control &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+
+Disable automatic logon, which stores a plaintext password in the registry.
+
+**Rationale.** AutoAdminLogon stores credentials in cleartext and logs in without authentication.
+
+**Remediation.** Set Winlogon AutoAdminLogon to 0.
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
+
+**References:**
+- [https://learn.microsoft.com/en-us/windows/security/operating-system-security/device-management/windows-security-configuration-framework/windows-security-baselines](https://learn.microsoft.com/en-us/windows/security/operating-system-security/device-management/windows-security-configuration-framework/windows-security-baselines)
+
 ### WIN-LSA-001 - Do Not Store LAN Manager Hash { #win-lsa-001 }
 
 **Severity:** High &nbsp; **Category:** Credential Protection &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Essential
@@ -801,6 +922,51 @@ The Everyone SID must not be applied to anonymous connections.
 **References:**
 - [https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/network-access-let-everyone-permissions-apply-to-anonymous-users](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/network-access-let-everyone-permissions-apply-to-anonymous-users)
 
+### WIN-LSA-008 - Restrict Clients Allowed to Make Remote SAM Calls { #win-lsa-008 }
+
+**Severity:** Medium &nbsp; **Category:** Access Control &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+
+Restrict remote SAM (SAMRPC) enumeration to the local Administrators group.
+
+**Rationale.** Remote SAM enumeration lets low-privilege attackers map users, groups, and admins.
+
+**Remediation.** Set Lsa RestrictRemoteSam to the SDDL O:SYG:SYD:(A;;RC;;;BA) (Administrators only).
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
+
+**References:**
+- [https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/network-access-restrict-clients-allowed-to-make-remote-sam-calls](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/network-access-restrict-clients-allowed-to-make-remote-sam-calls)
+
+### WIN-LSA-009 - Limit Local Account Use of Blank Passwords { #win-lsa-009 }
+
+**Severity:** High &nbsp; **Category:** Access Control &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+
+Restrict local accounts with blank passwords to console logon only (no remote/network logon).
+
+**Rationale.** Blank-password local accounts allow trivial remote access if guessed or known.
+
+**Remediation.** Set Lsa LimitBlankPasswordUse to 1.
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
+
+**References:**
+- [https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/accounts-limit-local-account-use-of-blank-passwords-to-console-logon-only](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/accounts-limit-local-account-use-of-blank-passwords-to-console-logon-only)
+
+### WIN-LSA-010 - Sharing and Security Model for Local Accounts (Classic) { #win-lsa-010 }
+
+**Severity:** Medium &nbsp; **Category:** Access Control &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+
+Local accounts authenticate as themselves (Classic), not mapped to Guest.
+
+**Rationale.** The Guest-only model weakens access control by treating all local network logons equally.
+
+**Remediation.** Set Lsa ForceGuest to 0 (Classic - local users authenticate as themselves).
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
+
+**References:**
+- [https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/network-access-sharing-and-security-model-for-local-accounts](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/network-access-sharing-and-security-model-for-local-accounts)
+
 ### WIN-NET-001 - Disable LLMNR { #win-net-001 }
 
 **Severity:** Medium &nbsp; **Category:** Network Protocols &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
@@ -855,6 +1021,21 @@ IPv6 source routing must be disabled to prevent source-routed packet spoofing.
 **Rationale.** IPv6 source routing enables path manipulation and spoofing.
 
 **Remediation.** Set Tcpip6 Parameters DisableIPSourceRouting to 2.
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
+
+**References:**
+- [https://learn.microsoft.com/en-us/windows/security/operating-system-security/device-management/windows-security-configuration-framework/windows-security-baselines](https://learn.microsoft.com/en-us/windows/security/operating-system-security/device-management/windows-security-configuration-framework/windows-security-baselines)
+
+### WIN-NET-005 - Ignore NetBIOS Name Release Requests { #win-net-005 }
+
+**Severity:** Low &nbsp; **Category:** Network Protocols &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+
+Ignore NetBIOS name-release requests except from WINS servers.
+
+**Rationale.** Malicious name-release requests enable NetBIOS denial-of-service and spoofing.
+
+**Remediation.** Set Netbt Parameters NoNameReleaseOnDemand to 1.
 
 **Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
 
@@ -932,6 +1113,21 @@ PowerShell Module Logging must be enabled to record pipeline execution details o
 **Remediation.** Enable PowerShell Module Logging by setting EnableModuleLogging to 1 under the ModuleLogging policy key.
 
 **Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `SOC 2` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2`
+
+**References:**
+- [https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_logging_windows](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_logging_windows)
+
+### WIN-PSL-003 - Enable PowerShell Transcription { #win-psl-003 }
+
+**Severity:** Medium &nbsp; **Category:** Logging and Monitoring &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+
+Capture a transcript of every PowerShell session.
+
+**Rationale.** Transcripts provide a forensic record of interactive and scripted PowerShell use.
+
+**Remediation.** Set PowerShell Transcription EnableTranscripting to 1.
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `SOC 2` `ISO/IEC 27001` `Microsoft Security Baselines` `NIS2`
 
 **References:**
 - [https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_logging_windows](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_logging_windows)
@@ -1086,6 +1282,36 @@ Client drive redirection over RDP must be disabled to prevent data exfiltration 
 **References:**
 - [https://learn.microsoft.com/en-us/windows/security/operating-system-security/device-management/windows-security-configuration-framework/windows-security-baselines](https://learn.microsoft.com/en-us/windows/security/operating-system-security/device-management/windows-security-configuration-framework/windows-security-baselines)
 
+### WIN-RDP-005 - Always Prompt for Password on RDP Connection { #win-rdp-005 }
+
+**Severity:** Medium &nbsp; **Category:** Remote Access &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+
+Require Remote Desktop clients to provide a password at connection time.
+
+**Rationale.** Saved credentials let a stolen client session reconnect without authentication.
+
+**Remediation.** Set Terminal Services fPromptForPassword to 1.
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
+
+**References:**
+- [https://learn.microsoft.com/en-us/windows/security/operating-system-security/device-management/windows-security-configuration-framework/windows-security-baselines](https://learn.microsoft.com/en-us/windows/security/operating-system-security/device-management/windows-security-configuration-framework/windows-security-baselines)
+
+### WIN-RDP-006 - Disable RDP Clipboard Redirection { #win-rdp-006 }
+
+**Severity:** Low &nbsp; **Category:** Remote Access &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Enterprise
+
+Disable clipboard redirection in Remote Desktop sessions.
+
+**Rationale.** Clipboard redirection can exfiltrate data between the session and the client.
+
+**Remediation.** Set Terminal Services fDisableClip to 1.
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
+
+**References:**
+- [https://learn.microsoft.com/en-us/windows/security/operating-system-security/device-management/windows-security-configuration-framework/windows-security-baselines](https://learn.microsoft.com/en-us/windows/security/operating-system-security/device-management/windows-security-configuration-framework/windows-security-baselines)
+
 ### WIN-SMB-001 - Disable SMBv1 { #win-smb-001 }
 
 **Severity:** High &nbsp; **Category:** Network Protocols &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Essential
@@ -1160,6 +1386,21 @@ Anonymous (null session) access to named pipes and shares must be restricted.
 
 **References:**
 - [https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/network-access-restrict-anonymous-access-to-named-pipes-and-shares](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/network-access-restrict-anonymous-access-to-named-pipes-and-shares)
+
+### WIN-SMB-007 - Disable SMB Client Insecure Guest Logons { #win-smb-007 }
+
+**Severity:** Medium &nbsp; **Category:** Network Protocols &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+
+Prevent the SMB client from making insecure guest logons to file servers.
+
+**Rationale.** Insecure guest access exposes clients to rogue/man-in-the-middle SMB servers.
+
+**Remediation.** Set LanmanWorkstation AllowInsecureGuestAuth to 0.
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
+
+**References:**
+- [https://learn.microsoft.com/en-us/windows/security/operating-system-security/device-management/windows-security-configuration-framework/windows-security-baselines](https://learn.microsoft.com/en-us/windows/security/operating-system-security/device-management/windows-security-configuration-framework/windows-security-baselines)
 
 ### WIN-SVC-001 - Disable Remote Registry Service { #win-svc-001 }
 
@@ -1310,6 +1551,21 @@ Elevation prompts must be shown on the secure desktop to resist spoofing.
 
 **References:**
 - [https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/user-account-control-switch-to-the-secure-desktop-when-prompting-for-elevation](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/user-account-control-switch-to-the-secure-desktop-when-prompting-for-elevation)
+
+### WIN-UAC-006 - Only Elevate UIAccess Apps in Secure Locations { #win-uac-006 }
+
+**Severity:** Medium &nbsp; **Category:** Privilege Management &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+
+Only allow UIAccess applications installed in secure file-system locations to elevate.
+
+**Rationale.** UIAccess apps outside secure paths can bypass UI privilege isolation.
+
+**Remediation.** Set Policies System EnableSecureUIAPaths to 1.
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
+
+**References:**
+- [https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/user-account-control-only-elevate-uiaccess-applications-that-are-installed-in-secure-locations](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/user-account-control-only-elevate-uiaccess-applications-that-are-installed-in-secure-locations)
 
 ### WIN-WDIGEST-001 - Disable WDigest Credential Caching { #win-wdigest-001 }
 
