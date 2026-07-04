@@ -7,130 +7,147 @@ The CloudInfra Secure control library (116 controls). Each control exists once a
 
 ## Coverage summary
 
-| ID | Name | Severity | Category | Provider | Reboot |
-|----|------|----------|----------|----------|--------|
-| [WIN-ASR-001](#win-asr-001) | ASR: Block Credential Stealing from LSASS | High | Attack Surface Reduction | Registry | No |
-| [WIN-ASR-002](#win-asr-002) | ASR: Block Office Apps Creating Child Processes | Medium | Attack Surface Reduction | Registry | No |
-| [WIN-ASR-003](#win-asr-003) | ASR: Block Executable Content from Email and Webmail | Medium | Attack Surface Reduction | Registry | No |
-| [WIN-ASR-004](#win-asr-004) | ASR: Block Obfuscated Scripts | Medium | Attack Surface Reduction | Registry | No |
-| [WIN-ASR-005](#win-asr-005) | ASR: Block Untrusted Processes from USB | Medium | Attack Surface Reduction | Registry | No |
-| [WIN-ASR-006](#win-asr-006) | ASR: Block Process Creation from PSExec and WMI | Medium | Attack Surface Reduction | Registry | No |
-| [WIN-ASR-007](#win-asr-007) | ASR: Advanced Protection Against Ransomware | High | Attack Surface Reduction | Registry | No |
-| [WIN-ASR-008](#win-asr-008) | ASR: Block Office Apps Injecting Code into Other Processes | Medium | Attack Surface Reduction | Registry | No |
-| [WIN-ASR-009](#win-asr-009) | ASR: Block Office Apps Creating Executable Content | Medium | Attack Surface Reduction | Registry | No |
-| [WIN-ASR-010](#win-asr-010) | ASR: Block Persistence Through WMI Event Subscription | Medium | Attack Surface Reduction | Registry | No |
-| [WIN-ASR-011](#win-asr-011) | ASR: Block Win32 API Calls from Office Macros | Medium | Attack Surface Reduction | Registry | No |
-| [WIN-ASR-012](#win-asr-012) | ASR: Block Untrusted Executables by Prevalence, Age, or Trust | Medium | Attack Surface Reduction | Registry | No |
-| [WIN-ASR-013](#win-asr-013) | ASR: Block Adobe Reader from Creating Child Processes | Medium | Attack Surface Reduction | Registry | No |
-| [WIN-AUD-001](#win-aud-001) | Audit Logon Failures | Medium | Logging and Monitoring | AuditPol | No |
-| [WIN-AUD-002](#win-aud-002) | Audit Account Lockout Events | Medium | Logging and Monitoring | AuditPol | No |
-| [WIN-AUD-003](#win-aud-003) | Audit Process Creation | Medium | Logging and Monitoring | AuditPol | No |
-| [WIN-AUD-004](#win-aud-004) | Audit Credential Validation | Medium | Logging and Monitoring | AuditPol | No |
-| [WIN-AUD-005](#win-aud-005) | Audit Security Group Management | Medium | Logging and Monitoring | AuditPol | No |
-| [WIN-AUD-006](#win-aud-006) | Audit Special Logon | Medium | Logging and Monitoring | AuditPol | No |
-| [WIN-AUD-007](#win-aud-007) | Audit Sensitive Privilege Use | Medium | Logging and Monitoring | AuditPol | No |
-| [WIN-AUD-008](#win-aud-008) | Audit System Integrity | Medium | Logging and Monitoring | AuditPol | No |
-| [WIN-AUD-009](#win-aud-009) | Audit Logoff | Medium | Logging and Monitoring | AuditPol | No |
-| [WIN-AUD-010](#win-aud-010) | Audit Removable Storage | Medium | Logging and Monitoring | AuditPol | No |
-| [WIN-AUD-011](#win-aud-011) | Audit Authentication Policy Change | Medium | Logging and Monitoring | AuditPol | No |
-| [WIN-AUD-012](#win-aud-012) | Audit User Account Management | Medium | Logging and Monitoring | AuditPol | No |
-| [WIN-AUD-013](#win-aud-013) | Audit Computer Account Management | Medium | Logging and Monitoring | AuditPol | No |
-| [WIN-AUD-014](#win-aud-014) | Audit Audit Policy Change | Medium | Logging and Monitoring | AuditPol | No |
-| [WIN-AUD-015](#win-aud-015) | Audit Other Logon/Logoff Events | Medium | Logging and Monitoring | AuditPol | No |
-| [WIN-AUD-016](#win-aud-016) | Audit MPSSVC Rule-Level Policy Change | Medium | Logging and Monitoring | AuditPol | No |
-| [WIN-AUTORUN-001](#win-autorun-001) | Disable AutoRun on All Drives | Medium | Attack Surface Reduction | Registry | No |
-| [WIN-DEF-001](#win-def-001) | Microsoft Defender Antivirus Enabled | High | Endpoint Protection | Defender | No |
-| [WIN-DEF-002](#win-def-002) | Enable Potentially Unwanted Application (PUA) Protection | High | Endpoint Protection | Registry | No |
-| [WIN-DEF-003](#win-def-003) | Enable Defender Real-Time Protection | High | Endpoint Protection | Registry | No |
-| [WIN-DEF-004](#win-def-004) | Enable Cloud-Delivered Protection | Medium | Endpoint Protection | Registry | No |
-| [WIN-DEF-005](#win-def-005) | Enable Network Protection | Medium | Endpoint Protection | Registry | No |
-| [WIN-DEF-006](#win-def-006) | Enable Controlled Folder Access | Medium | Endpoint Protection | Registry | No |
-| [WIN-DEF-007](#win-def-007) | Scan Removable Drives During Full Scan | Low | Endpoint Protection | Registry | No |
-| [WIN-DEF-008](#win-def-008) | Enable Block at First Sight | Medium | Endpoint Protection | Registry | No |
-| [WIN-DEF-009](#win-def-009) | Enable Defender Behavior Monitoring | High | Endpoint Protection | Registry | No |
-| [WIN-FW-001](#win-fw-001) | Windows Firewall Enabled (All Profiles) | High | Host Firewall | Firewall | No |
-| [WIN-FW-002](#win-fw-002) | Block Inbound Connections by Default (Domain Profile) | Medium | Host Firewall | Registry | No |
-| [WIN-FW-003](#win-fw-003) | Block Inbound Connections by Default (Private Profile) | Medium | Host Firewall | Registry | No |
-| [WIN-FW-004](#win-fw-004) | Block Inbound Connections by Default (Public Profile) | Medium | Host Firewall | Registry | No |
-| [WIN-FW-005](#win-fw-005) | Log Dropped Packets (Public Profile) | Low | Host Firewall | Registry | No |
-| [WIN-INSTALL-001](#win-install-001) | Disable Always Install Elevated | High | Privilege Management | Registry | No |
-| [WIN-KRB-001](#win-krb-001) | Configure Kerberos Encryption Types (AES only) | Medium | Authentication | Registry | No |
-| [WIN-LDAP-001](#win-ldap-001) | LDAP Client Signing | Medium | Authentication | Registry | No |
-| [WIN-LOCK-001](#win-lock-001) | Account Lockout Threshold | Medium | Account Policy | SecEdit | No |
-| [WIN-LOCK-002](#win-lock-002) | Account Lockout Duration | Medium | Account Policy | SecEdit | No |
-| [WIN-LOCK-003](#win-lock-003) | Reset Account Lockout Counter | Medium | Account Policy | SecEdit | No |
-| [WIN-LOGON-001](#win-logon-001) | Machine Inactivity Limit | Medium | Access Control | Registry | No |
-| [WIN-LOGON-002](#win-logon-002) | Do Not Display Last Signed-In User | Low | Access Control | Registry | No |
-| [WIN-LOGON-003](#win-logon-003) | Limit Number of Cached Logons | Medium | Access Control | Registry | No |
-| [WIN-LOGON-004](#win-logon-004) | Require Ctrl+Alt+Del at Logon | Low | Access Control | Registry | No |
-| [WIN-LOGON-005](#win-logon-005) | Smart Card Removal Behavior (Lock Workstation) | Low | Access Control | Registry | No |
-| [WIN-LOGON-006](#win-logon-006) | Disable Automatic Logon | Medium | Access Control | Registry | No |
-| [WIN-LSA-001](#win-lsa-001) | Do Not Store LAN Manager Hash | High | Credential Protection | Registry | No |
-| [WIN-LSA-002](#win-lsa-002) | Restrict Anonymous SID Enumeration | Medium | Access Control | Registry | No |
-| [WIN-LSA-003](#win-lsa-003) | Enable LSASS Protection (RunAsPPL) | High | Credential Protection | Registry | Yes |
-| [WIN-LSA-004](#win-lsa-004) | Do Not Allow Anonymous Enumeration of SAM Accounts | Medium | Access Control | Registry | No |
-| [WIN-LSA-005](#win-lsa-005) | Enable Structured Exception Handling Overwrite Protection (SEHOP) | Medium | Exploit Protection | Registry | No |
-| [WIN-LSA-006](#win-lsa-006) | Digitally Encrypt or Sign Secure Channel Data (Always) | Medium | Authentication | Registry | No |
-| [WIN-LSA-007](#win-lsa-007) | Do Not Apply Everyone Permissions to Anonymous Users | Medium | Access Control | Registry | No |
-| [WIN-LSA-008](#win-lsa-008) | Restrict Clients Allowed to Make Remote SAM Calls | Medium | Access Control | Registry | No |
-| [WIN-LSA-009](#win-lsa-009) | Limit Local Account Use of Blank Passwords | High | Access Control | Registry | No |
-| [WIN-LSA-010](#win-lsa-010) | Sharing and Security Model for Local Accounts (Classic) | Medium | Access Control | Registry | No |
-| [WIN-NET-001](#win-net-001) | Disable LLMNR | Medium | Network Protocols | Registry | No |
-| [WIN-NET-002](#win-net-002) | Disable IPv4 Source Routing | Medium | Network Protocols | Registry | No |
-| [WIN-NET-003](#win-net-003) | Disable ICMP Redirects | Low | Network Protocols | Registry | No |
-| [WIN-NET-004](#win-net-004) | Disable IPv6 Source Routing | Medium | Network Protocols | Registry | No |
-| [WIN-NET-005](#win-net-005) | Ignore NetBIOS Name Release Requests | Low | Network Protocols | Registry | No |
-| [WIN-NTLM-001](#win-ntlm-001) | LAN Manager Authentication Level (NTLMv2 Only) | High | Authentication | Registry | No |
-| [WIN-NTLM-002](#win-ntlm-002) | Minimum NTLM Session Security (Clients) | Medium | Authentication | Registry | No |
-| [WIN-NTLM-003](#win-ntlm-003) | Minimum NTLM Session Security (Servers) | Medium | Authentication | Registry | No |
-| [WIN-PSL-001](#win-psl-001) | Enable PowerShell Script Block Logging | Medium | Logging and Monitoring | Registry | No |
-| [WIN-PSL-002](#win-psl-002) | Enable PowerShell Module Logging | Medium | Logging and Monitoring | Registry | No |
-| [WIN-PSL-003](#win-psl-003) | Enable PowerShell Transcription | Medium | Logging and Monitoring | Registry | No |
-| [WIN-PWD-001](#win-pwd-001) | Minimum Password Length | High | Account Policy | SecEdit | No |
-| [WIN-PWD-002](#win-pwd-002) | Password Complexity Enabled | High | Account Policy | SecEdit | No |
-| [WIN-PWD-003](#win-pwd-003) | Maximum Password Age | Medium | Account Policy | SecEdit | No |
-| [WIN-PWD-004](#win-pwd-004) | Minimum Password Age | Low | Account Policy | SecEdit | No |
-| [WIN-PWD-005](#win-pwd-005) | Enforce Password History | Medium | Account Policy | SecEdit | No |
-| [WIN-PWD-006](#win-pwd-006) | Disable Reversible Password Encryption | High | Account Policy | SecEdit | No |
-| [WIN-RDP-001](#win-rdp-001) | Require Network Level Authentication for RDP | High | Remote Access | Registry | No |
-| [WIN-RDP-002](#win-rdp-002) | RDP Minimum Encryption Level (High) | Medium | Remote Access | Registry | No |
-| [WIN-RDP-003](#win-rdp-003) | RDP Security Layer (TLS) | Medium | Remote Access | Registry | No |
-| [WIN-RDP-004](#win-rdp-004) | Disable RDP Drive Redirection | Medium | Remote Access | Registry | No |
-| [WIN-RDP-005](#win-rdp-005) | Always Prompt for Password on RDP Connection | Medium | Remote Access | Registry | No |
-| [WIN-RDP-006](#win-rdp-006) | Disable RDP Clipboard Redirection | Low | Remote Access | Registry | No |
-| [WIN-SMB-001](#win-smb-001) | Disable SMBv1 | High | Network Protocols | Registry | No |
-| [WIN-SMB-003](#win-smb-003) | Require SMB Signing (Server) | High | Network Protocols | Registry | No |
-| [WIN-SMB-004](#win-smb-004) | Disable SMBv1 Client | High | Network Protocols | Registry | No |
-| [WIN-SMB-005](#win-smb-005) | Require SMB Client Signing | Medium | Network Protocols | Registry | No |
-| [WIN-SMB-006](#win-smb-006) | Restrict Anonymous Access to Named Pipes and Shares | Medium | Network Protocols | Registry | No |
-| [WIN-SMB-007](#win-smb-007) | Disable SMB Client Insecure Guest Logons | Medium | Network Protocols | Registry | No |
-| [WIN-SVC-001](#win-svc-001) | Disable Remote Registry Service | Medium | Attack Surface Reduction | Service | No |
-| [WIN-SVC-002](#win-svc-002) | Disable Print Spooler Service | Medium | Attack Surface Reduction | Service | No |
-| [WIN-TLS-001](#win-tls-001) | Enable TLS 1.2 (Server) | Medium | Cryptography | Registry | Yes |
-| [WIN-TLS-002](#win-tls-002) | Enable TLS 1.2 (Client) | Medium | Cryptography | Registry | Yes |
-| [WIN-TLS-003](#win-tls-003) | Disable RC4 128/128 Cipher | High | Cryptography | Registry | Yes |
-| [WIN-TLS-004](#win-tls-004) | Disable RC4 40/128 Cipher | High | Cryptography | Registry | Yes |
-| [WIN-TLS-005](#win-tls-005) | Disable Triple DES 168 Cipher | Medium | Cryptography | Registry | Yes |
-| [WIN-TLS-010](#win-tls-010) | Disable TLS 1.0 (Server) | High | Cryptography | Registry | Yes |
-| [WIN-TLS-011](#win-tls-011) | Disable TLS 1.1 (Server) | High | Cryptography | Registry | Yes |
-| [WIN-TLS-012](#win-tls-012) | Disable SSL 3.0 (Server) | High | Cryptography | Registry | Yes |
-| [WIN-TLS-013](#win-tls-013) | Disable SSL 2.0 (Server) | High | Cryptography | Registry | Yes |
-| [WIN-UAC-001](#win-uac-001) | User Account Control Enabled | High | Privilege Management | Registry | Yes |
-| [WIN-UAC-002](#win-uac-002) | UAC Elevation Prompt for Administrators | Medium | Privilege Management | Registry | No |
-| [WIN-UAC-003](#win-uac-003) | UAC Detect Application Installations | Medium | Privilege Management | Registry | No |
-| [WIN-UAC-004](#win-uac-004) | Deny UAC Elevation Prompt for Standard Users | Medium | Privilege Management | Registry | No |
-| [WIN-UAC-005](#win-uac-005) | UAC Switch to the Secure Desktop for Elevation | Medium | Privilege Management | Registry | No |
-| [WIN-UAC-006](#win-uac-006) | Only Elevate UIAccess Apps in Secure Locations | Medium | Privilege Management | Registry | No |
-| [WIN-WDIGEST-001](#win-wdigest-001) | Disable WDigest Credential Caching | High | Credential Protection | Registry | No |
-| [WIN-WINRM-001](#win-winrm-001) | Disable WinRM Client Basic Authentication | Medium | Remote Management | Registry | No |
-| [WIN-WINRM-002](#win-winrm-002) | Disallow WinRM Unencrypted Traffic | Medium | Remote Management | Registry | No |
-| [WIN-WINRM-003](#win-winrm-003) | Disable WinRM Client Digest Authentication | Medium | Remote Management | Registry | No |
+Controls tagged **GPO** are delivered through a Group Policy registry value that a domain policy can override; the rest are direct system settings.
+
+<div class="cmpl-toolbar">
+  <label for="ctlDelivery"><strong>Filter by delivery:</strong></label>
+  <select id="ctlDelivery">
+    <option value="__all">All controls (116)</option>
+    <option value="gpo">Group Policy-backed (47)</option>
+    <option value="direct">Direct system setting (69)</option>
+  </select>
+  <span class="cmpl-count" id="ctlCount">Showing 116 of 116 controls</span>
+</div>
+
+<div class="cmpl-tablewrap" markdown="0">
+<table class="cmpl-table" id="ctlTable">
+  <thead><tr><th class="cmpl-num">#</th><th>ID</th><th>Name</th><th>Severity</th><th>Category</th><th>Provider</th><th>Delivery</th></tr></thead>
+  <tbody>
+    <tr data-delivery="gpo"><td class="cmpl-num"></td><td><a href="#win-asr-001">WIN-ASR-001</a></td><td>ASR: Block Credential Stealing from LSASS</td><td>High</td><td>Attack Surface Reduction</td><td>Registry</td><td><span class="gpo-badge" title="Delivered via a Group Policy registry value; a domain GPO can override it">GPO</span></td></tr>
+    <tr data-delivery="gpo"><td class="cmpl-num"></td><td><a href="#win-asr-002">WIN-ASR-002</a></td><td>ASR: Block Office Apps Creating Child Processes</td><td>Medium</td><td>Attack Surface Reduction</td><td>Registry</td><td><span class="gpo-badge" title="Delivered via a Group Policy registry value; a domain GPO can override it">GPO</span></td></tr>
+    <tr data-delivery="gpo"><td class="cmpl-num"></td><td><a href="#win-asr-003">WIN-ASR-003</a></td><td>ASR: Block Executable Content from Email and Webmail</td><td>Medium</td><td>Attack Surface Reduction</td><td>Registry</td><td><span class="gpo-badge" title="Delivered via a Group Policy registry value; a domain GPO can override it">GPO</span></td></tr>
+    <tr data-delivery="gpo"><td class="cmpl-num"></td><td><a href="#win-asr-004">WIN-ASR-004</a></td><td>ASR: Block Obfuscated Scripts</td><td>Medium</td><td>Attack Surface Reduction</td><td>Registry</td><td><span class="gpo-badge" title="Delivered via a Group Policy registry value; a domain GPO can override it">GPO</span></td></tr>
+    <tr data-delivery="gpo"><td class="cmpl-num"></td><td><a href="#win-asr-005">WIN-ASR-005</a></td><td>ASR: Block Untrusted Processes from USB</td><td>Medium</td><td>Attack Surface Reduction</td><td>Registry</td><td><span class="gpo-badge" title="Delivered via a Group Policy registry value; a domain GPO can override it">GPO</span></td></tr>
+    <tr data-delivery="gpo"><td class="cmpl-num"></td><td><a href="#win-asr-006">WIN-ASR-006</a></td><td>ASR: Block Process Creation from PSExec and WMI</td><td>Medium</td><td>Attack Surface Reduction</td><td>Registry</td><td><span class="gpo-badge" title="Delivered via a Group Policy registry value; a domain GPO can override it">GPO</span></td></tr>
+    <tr data-delivery="gpo"><td class="cmpl-num"></td><td><a href="#win-asr-007">WIN-ASR-007</a></td><td>ASR: Advanced Protection Against Ransomware</td><td>High</td><td>Attack Surface Reduction</td><td>Registry</td><td><span class="gpo-badge" title="Delivered via a Group Policy registry value; a domain GPO can override it">GPO</span></td></tr>
+    <tr data-delivery="gpo"><td class="cmpl-num"></td><td><a href="#win-asr-008">WIN-ASR-008</a></td><td>ASR: Block Office Apps Injecting Code into Other Processes</td><td>Medium</td><td>Attack Surface Reduction</td><td>Registry</td><td><span class="gpo-badge" title="Delivered via a Group Policy registry value; a domain GPO can override it">GPO</span></td></tr>
+    <tr data-delivery="gpo"><td class="cmpl-num"></td><td><a href="#win-asr-009">WIN-ASR-009</a></td><td>ASR: Block Office Apps Creating Executable Content</td><td>Medium</td><td>Attack Surface Reduction</td><td>Registry</td><td><span class="gpo-badge" title="Delivered via a Group Policy registry value; a domain GPO can override it">GPO</span></td></tr>
+    <tr data-delivery="gpo"><td class="cmpl-num"></td><td><a href="#win-asr-010">WIN-ASR-010</a></td><td>ASR: Block Persistence Through WMI Event Subscription</td><td>Medium</td><td>Attack Surface Reduction</td><td>Registry</td><td><span class="gpo-badge" title="Delivered via a Group Policy registry value; a domain GPO can override it">GPO</span></td></tr>
+    <tr data-delivery="gpo"><td class="cmpl-num"></td><td><a href="#win-asr-011">WIN-ASR-011</a></td><td>ASR: Block Win32 API Calls from Office Macros</td><td>Medium</td><td>Attack Surface Reduction</td><td>Registry</td><td><span class="gpo-badge" title="Delivered via a Group Policy registry value; a domain GPO can override it">GPO</span></td></tr>
+    <tr data-delivery="gpo"><td class="cmpl-num"></td><td><a href="#win-asr-012">WIN-ASR-012</a></td><td>ASR: Block Untrusted Executables by Prevalence, Age, or Trust</td><td>Medium</td><td>Attack Surface Reduction</td><td>Registry</td><td><span class="gpo-badge" title="Delivered via a Group Policy registry value; a domain GPO can override it">GPO</span></td></tr>
+    <tr data-delivery="gpo"><td class="cmpl-num"></td><td><a href="#win-asr-013">WIN-ASR-013</a></td><td>ASR: Block Adobe Reader from Creating Child Processes</td><td>Medium</td><td>Attack Surface Reduction</td><td>Registry</td><td><span class="gpo-badge" title="Delivered via a Group Policy registry value; a domain GPO can override it">GPO</span></td></tr>
+    <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-aud-001">WIN-AUD-001</a></td><td>Audit Logon Failures</td><td>Medium</td><td>Logging and Monitoring</td><td>AuditPol</td><td><span class="muted-badge">Direct</span></td></tr>
+    <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-aud-002">WIN-AUD-002</a></td><td>Audit Account Lockout Events</td><td>Medium</td><td>Logging and Monitoring</td><td>AuditPol</td><td><span class="muted-badge">Direct</span></td></tr>
+    <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-aud-003">WIN-AUD-003</a></td><td>Audit Process Creation</td><td>Medium</td><td>Logging and Monitoring</td><td>AuditPol</td><td><span class="muted-badge">Direct</span></td></tr>
+    <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-aud-004">WIN-AUD-004</a></td><td>Audit Credential Validation</td><td>Medium</td><td>Logging and Monitoring</td><td>AuditPol</td><td><span class="muted-badge">Direct</span></td></tr>
+    <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-aud-005">WIN-AUD-005</a></td><td>Audit Security Group Management</td><td>Medium</td><td>Logging and Monitoring</td><td>AuditPol</td><td><span class="muted-badge">Direct</span></td></tr>
+    <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-aud-006">WIN-AUD-006</a></td><td>Audit Special Logon</td><td>Medium</td><td>Logging and Monitoring</td><td>AuditPol</td><td><span class="muted-badge">Direct</span></td></tr>
+    <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-aud-007">WIN-AUD-007</a></td><td>Audit Sensitive Privilege Use</td><td>Medium</td><td>Logging and Monitoring</td><td>AuditPol</td><td><span class="muted-badge">Direct</span></td></tr>
+    <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-aud-008">WIN-AUD-008</a></td><td>Audit System Integrity</td><td>Medium</td><td>Logging and Monitoring</td><td>AuditPol</td><td><span class="muted-badge">Direct</span></td></tr>
+    <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-aud-009">WIN-AUD-009</a></td><td>Audit Logoff</td><td>Medium</td><td>Logging and Monitoring</td><td>AuditPol</td><td><span class="muted-badge">Direct</span></td></tr>
+    <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-aud-010">WIN-AUD-010</a></td><td>Audit Removable Storage</td><td>Medium</td><td>Logging and Monitoring</td><td>AuditPol</td><td><span class="muted-badge">Direct</span></td></tr>
+    <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-aud-011">WIN-AUD-011</a></td><td>Audit Authentication Policy Change</td><td>Medium</td><td>Logging and Monitoring</td><td>AuditPol</td><td><span class="muted-badge">Direct</span></td></tr>
+    <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-aud-012">WIN-AUD-012</a></td><td>Audit User Account Management</td><td>Medium</td><td>Logging and Monitoring</td><td>AuditPol</td><td><span class="muted-badge">Direct</span></td></tr>
+    <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-aud-013">WIN-AUD-013</a></td><td>Audit Computer Account Management</td><td>Medium</td><td>Logging and Monitoring</td><td>AuditPol</td><td><span class="muted-badge">Direct</span></td></tr>
+    <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-aud-014">WIN-AUD-014</a></td><td>Audit Audit Policy Change</td><td>Medium</td><td>Logging and Monitoring</td><td>AuditPol</td><td><span class="muted-badge">Direct</span></td></tr>
+    <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-aud-015">WIN-AUD-015</a></td><td>Audit Other Logon/Logoff Events</td><td>Medium</td><td>Logging and Monitoring</td><td>AuditPol</td><td><span class="muted-badge">Direct</span></td></tr>
+    <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-aud-016">WIN-AUD-016</a></td><td>Audit MPSSVC Rule-Level Policy Change</td><td>Medium</td><td>Logging and Monitoring</td><td>AuditPol</td><td><span class="muted-badge">Direct</span></td></tr>
+    <tr data-delivery="gpo"><td class="cmpl-num"></td><td><a href="#win-autorun-001">WIN-AUTORUN-001</a></td><td>Disable AutoRun on All Drives</td><td>Medium</td><td>Attack Surface Reduction</td><td>Registry</td><td><span class="gpo-badge" title="Delivered via a Group Policy registry value; a domain GPO can override it">GPO</span></td></tr>
+    <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-def-001">WIN-DEF-001</a></td><td>Microsoft Defender Antivirus Enabled</td><td>High</td><td>Endpoint Protection</td><td>Defender</td><td><span class="muted-badge">Direct</span></td></tr>
+    <tr data-delivery="gpo"><td class="cmpl-num"></td><td><a href="#win-def-002">WIN-DEF-002</a></td><td>Enable Potentially Unwanted Application (PUA) Protection</td><td>High</td><td>Endpoint Protection</td><td>Registry</td><td><span class="gpo-badge" title="Delivered via a Group Policy registry value; a domain GPO can override it">GPO</span></td></tr>
+    <tr data-delivery="gpo"><td class="cmpl-num"></td><td><a href="#win-def-003">WIN-DEF-003</a></td><td>Enable Defender Real-Time Protection</td><td>High</td><td>Endpoint Protection</td><td>Registry</td><td><span class="gpo-badge" title="Delivered via a Group Policy registry value; a domain GPO can override it">GPO</span></td></tr>
+    <tr data-delivery="gpo"><td class="cmpl-num"></td><td><a href="#win-def-004">WIN-DEF-004</a></td><td>Enable Cloud-Delivered Protection</td><td>Medium</td><td>Endpoint Protection</td><td>Registry</td><td><span class="gpo-badge" title="Delivered via a Group Policy registry value; a domain GPO can override it">GPO</span></td></tr>
+    <tr data-delivery="gpo"><td class="cmpl-num"></td><td><a href="#win-def-005">WIN-DEF-005</a></td><td>Enable Network Protection</td><td>Medium</td><td>Endpoint Protection</td><td>Registry</td><td><span class="gpo-badge" title="Delivered via a Group Policy registry value; a domain GPO can override it">GPO</span></td></tr>
+    <tr data-delivery="gpo"><td class="cmpl-num"></td><td><a href="#win-def-006">WIN-DEF-006</a></td><td>Enable Controlled Folder Access</td><td>Medium</td><td>Endpoint Protection</td><td>Registry</td><td><span class="gpo-badge" title="Delivered via a Group Policy registry value; a domain GPO can override it">GPO</span></td></tr>
+    <tr data-delivery="gpo"><td class="cmpl-num"></td><td><a href="#win-def-007">WIN-DEF-007</a></td><td>Scan Removable Drives During Full Scan</td><td>Low</td><td>Endpoint Protection</td><td>Registry</td><td><span class="gpo-badge" title="Delivered via a Group Policy registry value; a domain GPO can override it">GPO</span></td></tr>
+    <tr data-delivery="gpo"><td class="cmpl-num"></td><td><a href="#win-def-008">WIN-DEF-008</a></td><td>Enable Block at First Sight</td><td>Medium</td><td>Endpoint Protection</td><td>Registry</td><td><span class="gpo-badge" title="Delivered via a Group Policy registry value; a domain GPO can override it">GPO</span></td></tr>
+    <tr data-delivery="gpo"><td class="cmpl-num"></td><td><a href="#win-def-009">WIN-DEF-009</a></td><td>Enable Defender Behavior Monitoring</td><td>High</td><td>Endpoint Protection</td><td>Registry</td><td><span class="gpo-badge" title="Delivered via a Group Policy registry value; a domain GPO can override it">GPO</span></td></tr>
+    <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-fw-001">WIN-FW-001</a></td><td>Windows Firewall Enabled (All Profiles)</td><td>High</td><td>Host Firewall</td><td>Firewall</td><td><span class="muted-badge">Direct</span></td></tr>
+    <tr data-delivery="gpo"><td class="cmpl-num"></td><td><a href="#win-fw-002">WIN-FW-002</a></td><td>Block Inbound Connections by Default (Domain Profile)</td><td>Medium</td><td>Host Firewall</td><td>Registry</td><td><span class="gpo-badge" title="Delivered via a Group Policy registry value; a domain GPO can override it">GPO</span></td></tr>
+    <tr data-delivery="gpo"><td class="cmpl-num"></td><td><a href="#win-fw-003">WIN-FW-003</a></td><td>Block Inbound Connections by Default (Private Profile)</td><td>Medium</td><td>Host Firewall</td><td>Registry</td><td><span class="gpo-badge" title="Delivered via a Group Policy registry value; a domain GPO can override it">GPO</span></td></tr>
+    <tr data-delivery="gpo"><td class="cmpl-num"></td><td><a href="#win-fw-004">WIN-FW-004</a></td><td>Block Inbound Connections by Default (Public Profile)</td><td>Medium</td><td>Host Firewall</td><td>Registry</td><td><span class="gpo-badge" title="Delivered via a Group Policy registry value; a domain GPO can override it">GPO</span></td></tr>
+    <tr data-delivery="gpo"><td class="cmpl-num"></td><td><a href="#win-fw-005">WIN-FW-005</a></td><td>Log Dropped Packets (Public Profile)</td><td>Low</td><td>Host Firewall</td><td>Registry</td><td><span class="gpo-badge" title="Delivered via a Group Policy registry value; a domain GPO can override it">GPO</span></td></tr>
+    <tr data-delivery="gpo"><td class="cmpl-num"></td><td><a href="#win-install-001">WIN-INSTALL-001</a></td><td>Disable Always Install Elevated</td><td>High</td><td>Privilege Management</td><td>Registry</td><td><span class="gpo-badge" title="Delivered via a Group Policy registry value; a domain GPO can override it">GPO</span></td></tr>
+    <tr data-delivery="gpo"><td class="cmpl-num"></td><td><a href="#win-krb-001">WIN-KRB-001</a></td><td>Configure Kerberos Encryption Types (AES only)</td><td>Medium</td><td>Authentication</td><td>Registry</td><td><span class="gpo-badge" title="Delivered via a Group Policy registry value; a domain GPO can override it">GPO</span></td></tr>
+    <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-ldap-001">WIN-LDAP-001</a></td><td>LDAP Client Signing</td><td>Medium</td><td>Authentication</td><td>Registry</td><td><span class="muted-badge">Direct</span></td></tr>
+    <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-lock-001">WIN-LOCK-001</a></td><td>Account Lockout Threshold</td><td>Medium</td><td>Account Policy</td><td>SecEdit</td><td><span class="muted-badge">Direct</span></td></tr>
+    <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-lock-002">WIN-LOCK-002</a></td><td>Account Lockout Duration</td><td>Medium</td><td>Account Policy</td><td>SecEdit</td><td><span class="muted-badge">Direct</span></td></tr>
+    <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-lock-003">WIN-LOCK-003</a></td><td>Reset Account Lockout Counter</td><td>Medium</td><td>Account Policy</td><td>SecEdit</td><td><span class="muted-badge">Direct</span></td></tr>
+    <tr data-delivery="gpo"><td class="cmpl-num"></td><td><a href="#win-logon-001">WIN-LOGON-001</a></td><td>Machine Inactivity Limit</td><td>Medium</td><td>Access Control</td><td>Registry</td><td><span class="gpo-badge" title="Delivered via a Group Policy registry value; a domain GPO can override it">GPO</span></td></tr>
+    <tr data-delivery="gpo"><td class="cmpl-num"></td><td><a href="#win-logon-002">WIN-LOGON-002</a></td><td>Do Not Display Last Signed-In User</td><td>Low</td><td>Access Control</td><td>Registry</td><td><span class="gpo-badge" title="Delivered via a Group Policy registry value; a domain GPO can override it">GPO</span></td></tr>
+    <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-logon-003">WIN-LOGON-003</a></td><td>Limit Number of Cached Logons</td><td>Medium</td><td>Access Control</td><td>Registry</td><td><span class="muted-badge">Direct</span></td></tr>
+    <tr data-delivery="gpo"><td class="cmpl-num"></td><td><a href="#win-logon-004">WIN-LOGON-004</a></td><td>Require Ctrl+Alt+Del at Logon</td><td>Low</td><td>Access Control</td><td>Registry</td><td><span class="gpo-badge" title="Delivered via a Group Policy registry value; a domain GPO can override it">GPO</span></td></tr>
+    <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-logon-005">WIN-LOGON-005</a></td><td>Smart Card Removal Behavior (Lock Workstation)</td><td>Low</td><td>Access Control</td><td>Registry</td><td><span class="muted-badge">Direct</span></td></tr>
+    <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-logon-006">WIN-LOGON-006</a></td><td>Disable Automatic Logon</td><td>Medium</td><td>Access Control</td><td>Registry</td><td><span class="muted-badge">Direct</span></td></tr>
+    <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-lsa-001">WIN-LSA-001</a></td><td>Do Not Store LAN Manager Hash</td><td>High</td><td>Credential Protection</td><td>Registry</td><td><span class="muted-badge">Direct</span></td></tr>
+    <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-lsa-002">WIN-LSA-002</a></td><td>Restrict Anonymous SID Enumeration</td><td>Medium</td><td>Access Control</td><td>Registry</td><td><span class="muted-badge">Direct</span></td></tr>
+    <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-lsa-003">WIN-LSA-003</a></td><td>Enable LSASS Protection (RunAsPPL)</td><td>High</td><td>Credential Protection</td><td>Registry</td><td><span class="muted-badge">Direct</span></td></tr>
+    <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-lsa-004">WIN-LSA-004</a></td><td>Do Not Allow Anonymous Enumeration of SAM Accounts</td><td>Medium</td><td>Access Control</td><td>Registry</td><td><span class="muted-badge">Direct</span></td></tr>
+    <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-lsa-005">WIN-LSA-005</a></td><td>Enable Structured Exception Handling Overwrite Protection (SEHOP)</td><td>Medium</td><td>Exploit Protection</td><td>Registry</td><td><span class="muted-badge">Direct</span></td></tr>
+    <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-lsa-006">WIN-LSA-006</a></td><td>Digitally Encrypt or Sign Secure Channel Data (Always)</td><td>Medium</td><td>Authentication</td><td>Registry</td><td><span class="muted-badge">Direct</span></td></tr>
+    <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-lsa-007">WIN-LSA-007</a></td><td>Do Not Apply Everyone Permissions to Anonymous Users</td><td>Medium</td><td>Access Control</td><td>Registry</td><td><span class="muted-badge">Direct</span></td></tr>
+    <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-lsa-008">WIN-LSA-008</a></td><td>Restrict Clients Allowed to Make Remote SAM Calls</td><td>Medium</td><td>Access Control</td><td>Registry</td><td><span class="muted-badge">Direct</span></td></tr>
+    <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-lsa-009">WIN-LSA-009</a></td><td>Limit Local Account Use of Blank Passwords</td><td>High</td><td>Access Control</td><td>Registry</td><td><span class="muted-badge">Direct</span></td></tr>
+    <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-lsa-010">WIN-LSA-010</a></td><td>Sharing and Security Model for Local Accounts (Classic)</td><td>Medium</td><td>Access Control</td><td>Registry</td><td><span class="muted-badge">Direct</span></td></tr>
+    <tr data-delivery="gpo"><td class="cmpl-num"></td><td><a href="#win-net-001">WIN-NET-001</a></td><td>Disable LLMNR</td><td>Medium</td><td>Network Protocols</td><td>Registry</td><td><span class="gpo-badge" title="Delivered via a Group Policy registry value; a domain GPO can override it">GPO</span></td></tr>
+    <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-net-002">WIN-NET-002</a></td><td>Disable IPv4 Source Routing</td><td>Medium</td><td>Network Protocols</td><td>Registry</td><td><span class="muted-badge">Direct</span></td></tr>
+    <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-net-003">WIN-NET-003</a></td><td>Disable ICMP Redirects</td><td>Low</td><td>Network Protocols</td><td>Registry</td><td><span class="muted-badge">Direct</span></td></tr>
+    <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-net-004">WIN-NET-004</a></td><td>Disable IPv6 Source Routing</td><td>Medium</td><td>Network Protocols</td><td>Registry</td><td><span class="muted-badge">Direct</span></td></tr>
+    <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-net-005">WIN-NET-005</a></td><td>Ignore NetBIOS Name Release Requests</td><td>Low</td><td>Network Protocols</td><td>Registry</td><td><span class="muted-badge">Direct</span></td></tr>
+    <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-ntlm-001">WIN-NTLM-001</a></td><td>LAN Manager Authentication Level (NTLMv2 Only)</td><td>High</td><td>Authentication</td><td>Registry</td><td><span class="muted-badge">Direct</span></td></tr>
+    <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-ntlm-002">WIN-NTLM-002</a></td><td>Minimum NTLM Session Security (Clients)</td><td>Medium</td><td>Authentication</td><td>Registry</td><td><span class="muted-badge">Direct</span></td></tr>
+    <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-ntlm-003">WIN-NTLM-003</a></td><td>Minimum NTLM Session Security (Servers)</td><td>Medium</td><td>Authentication</td><td>Registry</td><td><span class="muted-badge">Direct</span></td></tr>
+    <tr data-delivery="gpo"><td class="cmpl-num"></td><td><a href="#win-psl-001">WIN-PSL-001</a></td><td>Enable PowerShell Script Block Logging</td><td>Medium</td><td>Logging and Monitoring</td><td>Registry</td><td><span class="gpo-badge" title="Delivered via a Group Policy registry value; a domain GPO can override it">GPO</span></td></tr>
+    <tr data-delivery="gpo"><td class="cmpl-num"></td><td><a href="#win-psl-002">WIN-PSL-002</a></td><td>Enable PowerShell Module Logging</td><td>Medium</td><td>Logging and Monitoring</td><td>Registry</td><td><span class="gpo-badge" title="Delivered via a Group Policy registry value; a domain GPO can override it">GPO</span></td></tr>
+    <tr data-delivery="gpo"><td class="cmpl-num"></td><td><a href="#win-psl-003">WIN-PSL-003</a></td><td>Enable PowerShell Transcription</td><td>Medium</td><td>Logging and Monitoring</td><td>Registry</td><td><span class="gpo-badge" title="Delivered via a Group Policy registry value; a domain GPO can override it">GPO</span></td></tr>
+    <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-pwd-001">WIN-PWD-001</a></td><td>Minimum Password Length</td><td>High</td><td>Account Policy</td><td>SecEdit</td><td><span class="muted-badge">Direct</span></td></tr>
+    <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-pwd-002">WIN-PWD-002</a></td><td>Password Complexity Enabled</td><td>High</td><td>Account Policy</td><td>SecEdit</td><td><span class="muted-badge">Direct</span></td></tr>
+    <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-pwd-003">WIN-PWD-003</a></td><td>Maximum Password Age</td><td>Medium</td><td>Account Policy</td><td>SecEdit</td><td><span class="muted-badge">Direct</span></td></tr>
+    <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-pwd-004">WIN-PWD-004</a></td><td>Minimum Password Age</td><td>Low</td><td>Account Policy</td><td>SecEdit</td><td><span class="muted-badge">Direct</span></td></tr>
+    <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-pwd-005">WIN-PWD-005</a></td><td>Enforce Password History</td><td>Medium</td><td>Account Policy</td><td>SecEdit</td><td><span class="muted-badge">Direct</span></td></tr>
+    <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-pwd-006">WIN-PWD-006</a></td><td>Disable Reversible Password Encryption</td><td>High</td><td>Account Policy</td><td>SecEdit</td><td><span class="muted-badge">Direct</span></td></tr>
+    <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-rdp-001">WIN-RDP-001</a></td><td>Require Network Level Authentication for RDP</td><td>High</td><td>Remote Access</td><td>Registry</td><td><span class="muted-badge">Direct</span></td></tr>
+    <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-rdp-002">WIN-RDP-002</a></td><td>RDP Minimum Encryption Level (High)</td><td>Medium</td><td>Remote Access</td><td>Registry</td><td><span class="muted-badge">Direct</span></td></tr>
+    <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-rdp-003">WIN-RDP-003</a></td><td>RDP Security Layer (TLS)</td><td>Medium</td><td>Remote Access</td><td>Registry</td><td><span class="muted-badge">Direct</span></td></tr>
+    <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-rdp-004">WIN-RDP-004</a></td><td>Disable RDP Drive Redirection</td><td>Medium</td><td>Remote Access</td><td>Registry</td><td><span class="muted-badge">Direct</span></td></tr>
+    <tr data-delivery="gpo"><td class="cmpl-num"></td><td><a href="#win-rdp-005">WIN-RDP-005</a></td><td>Always Prompt for Password on RDP Connection</td><td>Medium</td><td>Remote Access</td><td>Registry</td><td><span class="gpo-badge" title="Delivered via a Group Policy registry value; a domain GPO can override it">GPO</span></td></tr>
+    <tr data-delivery="gpo"><td class="cmpl-num"></td><td><a href="#win-rdp-006">WIN-RDP-006</a></td><td>Disable RDP Clipboard Redirection</td><td>Low</td><td>Remote Access</td><td>Registry</td><td><span class="gpo-badge" title="Delivered via a Group Policy registry value; a domain GPO can override it">GPO</span></td></tr>
+    <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-smb-001">WIN-SMB-001</a></td><td>Disable SMBv1</td><td>High</td><td>Network Protocols</td><td>Registry</td><td><span class="muted-badge">Direct</span></td></tr>
+    <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-smb-003">WIN-SMB-003</a></td><td>Require SMB Signing (Server)</td><td>High</td><td>Network Protocols</td><td>Registry</td><td><span class="muted-badge">Direct</span></td></tr>
+    <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-smb-004">WIN-SMB-004</a></td><td>Disable SMBv1 Client</td><td>High</td><td>Network Protocols</td><td>Registry</td><td><span class="muted-badge">Direct</span></td></tr>
+    <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-smb-005">WIN-SMB-005</a></td><td>Require SMB Client Signing</td><td>Medium</td><td>Network Protocols</td><td>Registry</td><td><span class="muted-badge">Direct</span></td></tr>
+    <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-smb-006">WIN-SMB-006</a></td><td>Restrict Anonymous Access to Named Pipes and Shares</td><td>Medium</td><td>Network Protocols</td><td>Registry</td><td><span class="muted-badge">Direct</span></td></tr>
+    <tr data-delivery="gpo"><td class="cmpl-num"></td><td><a href="#win-smb-007">WIN-SMB-007</a></td><td>Disable SMB Client Insecure Guest Logons</td><td>Medium</td><td>Network Protocols</td><td>Registry</td><td><span class="gpo-badge" title="Delivered via a Group Policy registry value; a domain GPO can override it">GPO</span></td></tr>
+    <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-svc-001">WIN-SVC-001</a></td><td>Disable Remote Registry Service</td><td>Medium</td><td>Attack Surface Reduction</td><td>Service</td><td><span class="muted-badge">Direct</span></td></tr>
+    <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-svc-002">WIN-SVC-002</a></td><td>Disable Print Spooler Service</td><td>Medium</td><td>Attack Surface Reduction</td><td>Service</td><td><span class="muted-badge">Direct</span></td></tr>
+    <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-tls-001">WIN-TLS-001</a></td><td>Enable TLS 1.2 (Server)</td><td>Medium</td><td>Cryptography</td><td>Registry</td><td><span class="muted-badge">Direct</span></td></tr>
+    <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-tls-002">WIN-TLS-002</a></td><td>Enable TLS 1.2 (Client)</td><td>Medium</td><td>Cryptography</td><td>Registry</td><td><span class="muted-badge">Direct</span></td></tr>
+    <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-tls-003">WIN-TLS-003</a></td><td>Disable RC4 128/128 Cipher</td><td>High</td><td>Cryptography</td><td>Registry</td><td><span class="muted-badge">Direct</span></td></tr>
+    <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-tls-004">WIN-TLS-004</a></td><td>Disable RC4 40/128 Cipher</td><td>High</td><td>Cryptography</td><td>Registry</td><td><span class="muted-badge">Direct</span></td></tr>
+    <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-tls-005">WIN-TLS-005</a></td><td>Disable Triple DES 168 Cipher</td><td>Medium</td><td>Cryptography</td><td>Registry</td><td><span class="muted-badge">Direct</span></td></tr>
+    <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-tls-010">WIN-TLS-010</a></td><td>Disable TLS 1.0 (Server)</td><td>High</td><td>Cryptography</td><td>Registry</td><td><span class="muted-badge">Direct</span></td></tr>
+    <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-tls-011">WIN-TLS-011</a></td><td>Disable TLS 1.1 (Server)</td><td>High</td><td>Cryptography</td><td>Registry</td><td><span class="muted-badge">Direct</span></td></tr>
+    <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-tls-012">WIN-TLS-012</a></td><td>Disable SSL 3.0 (Server)</td><td>High</td><td>Cryptography</td><td>Registry</td><td><span class="muted-badge">Direct</span></td></tr>
+    <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-tls-013">WIN-TLS-013</a></td><td>Disable SSL 2.0 (Server)</td><td>High</td><td>Cryptography</td><td>Registry</td><td><span class="muted-badge">Direct</span></td></tr>
+    <tr data-delivery="gpo"><td class="cmpl-num"></td><td><a href="#win-uac-001">WIN-UAC-001</a></td><td>User Account Control Enabled</td><td>High</td><td>Privilege Management</td><td>Registry</td><td><span class="gpo-badge" title="Delivered via a Group Policy registry value; a domain GPO can override it">GPO</span></td></tr>
+    <tr data-delivery="gpo"><td class="cmpl-num"></td><td><a href="#win-uac-002">WIN-UAC-002</a></td><td>UAC Elevation Prompt for Administrators</td><td>Medium</td><td>Privilege Management</td><td>Registry</td><td><span class="gpo-badge" title="Delivered via a Group Policy registry value; a domain GPO can override it">GPO</span></td></tr>
+    <tr data-delivery="gpo"><td class="cmpl-num"></td><td><a href="#win-uac-003">WIN-UAC-003</a></td><td>UAC Detect Application Installations</td><td>Medium</td><td>Privilege Management</td><td>Registry</td><td><span class="gpo-badge" title="Delivered via a Group Policy registry value; a domain GPO can override it">GPO</span></td></tr>
+    <tr data-delivery="gpo"><td class="cmpl-num"></td><td><a href="#win-uac-004">WIN-UAC-004</a></td><td>Deny UAC Elevation Prompt for Standard Users</td><td>Medium</td><td>Privilege Management</td><td>Registry</td><td><span class="gpo-badge" title="Delivered via a Group Policy registry value; a domain GPO can override it">GPO</span></td></tr>
+    <tr data-delivery="gpo"><td class="cmpl-num"></td><td><a href="#win-uac-005">WIN-UAC-005</a></td><td>UAC Switch to the Secure Desktop for Elevation</td><td>Medium</td><td>Privilege Management</td><td>Registry</td><td><span class="gpo-badge" title="Delivered via a Group Policy registry value; a domain GPO can override it">GPO</span></td></tr>
+    <tr data-delivery="gpo"><td class="cmpl-num"></td><td><a href="#win-uac-006">WIN-UAC-006</a></td><td>Only Elevate UIAccess Apps in Secure Locations</td><td>Medium</td><td>Privilege Management</td><td>Registry</td><td><span class="gpo-badge" title="Delivered via a Group Policy registry value; a domain GPO can override it">GPO</span></td></tr>
+    <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-wdigest-001">WIN-WDIGEST-001</a></td><td>Disable WDigest Credential Caching</td><td>High</td><td>Credential Protection</td><td>Registry</td><td><span class="muted-badge">Direct</span></td></tr>
+    <tr data-delivery="gpo"><td class="cmpl-num"></td><td><a href="#win-winrm-001">WIN-WINRM-001</a></td><td>Disable WinRM Client Basic Authentication</td><td>Medium</td><td>Remote Management</td><td>Registry</td><td><span class="gpo-badge" title="Delivered via a Group Policy registry value; a domain GPO can override it">GPO</span></td></tr>
+    <tr data-delivery="gpo"><td class="cmpl-num"></td><td><a href="#win-winrm-002">WIN-WINRM-002</a></td><td>Disallow WinRM Unencrypted Traffic</td><td>Medium</td><td>Remote Management</td><td>Registry</td><td><span class="gpo-badge" title="Delivered via a Group Policy registry value; a domain GPO can override it">GPO</span></td></tr>
+    <tr data-delivery="gpo"><td class="cmpl-num"></td><td><a href="#win-winrm-003">WIN-WINRM-003</a></td><td>Disable WinRM Client Digest Authentication</td><td>Medium</td><td>Remote Management</td><td>Registry</td><td><span class="gpo-badge" title="Delivered via a Group Policy registry value; a domain GPO can override it">GPO</span></td></tr>
+  </tbody>
+</table>
+</div>
 
 ## Control reference
 
 ### WIN-ASR-001 - ASR: Block Credential Stealing from LSASS { #win-asr-001 }
 
-**Severity:** High &nbsp; **Category:** Attack Surface Reduction &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Enterprise
+**Severity:** High &nbsp; **Category:** Attack Surface Reduction &nbsp; **Provider:** Registry &nbsp; **Delivery:** Group Policy &nbsp; **Reboot:** No &nbsp; **Tier:** Enterprise
 
 The Attack Surface Reduction rule blocking credential theft from the LSASS process must be enabled in block mode. Group Policy setting: this control checks the corresponding Group Policy registry value, so it can report non-compliant until the policy is explicitly configured (even where the effective Windows default is already secure), and a domain Group Policy applied after hardening can override it.
 
@@ -145,7 +162,7 @@ The Attack Surface Reduction rule blocking credential theft from the LSASS proce
 
 ### WIN-ASR-002 - ASR: Block Office Apps Creating Child Processes { #win-asr-002 }
 
-**Severity:** Medium &nbsp; **Category:** Attack Surface Reduction &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Enterprise
+**Severity:** Medium &nbsp; **Category:** Attack Surface Reduction &nbsp; **Provider:** Registry &nbsp; **Delivery:** Group Policy &nbsp; **Reboot:** No &nbsp; **Tier:** Enterprise
 
 The Attack Surface Reduction rule blocking Office applications from creating child processes must be enabled. Group Policy setting: this control checks the corresponding Group Policy registry value, so it can report non-compliant until the policy is explicitly configured (even where the effective Windows default is already secure), and a domain Group Policy applied after hardening can override it.
 
@@ -160,7 +177,7 @@ The Attack Surface Reduction rule blocking Office applications from creating chi
 
 ### WIN-ASR-003 - ASR: Block Executable Content from Email and Webmail { #win-asr-003 }
 
-**Severity:** Medium &nbsp; **Category:** Attack Surface Reduction &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Enterprise
+**Severity:** Medium &nbsp; **Category:** Attack Surface Reduction &nbsp; **Provider:** Registry &nbsp; **Delivery:** Group Policy &nbsp; **Reboot:** No &nbsp; **Tier:** Enterprise
 
 The Attack Surface Reduction rule blocking executable content from email and webmail must be enabled. Group Policy setting: this control checks the corresponding Group Policy registry value, so it can report non-compliant until the policy is explicitly configured (even where the effective Windows default is already secure), and a domain Group Policy applied after hardening can override it.
 
@@ -175,7 +192,7 @@ The Attack Surface Reduction rule blocking executable content from email and web
 
 ### WIN-ASR-004 - ASR: Block Obfuscated Scripts { #win-asr-004 }
 
-**Severity:** Medium &nbsp; **Category:** Attack Surface Reduction &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Enterprise
+**Severity:** Medium &nbsp; **Category:** Attack Surface Reduction &nbsp; **Provider:** Registry &nbsp; **Delivery:** Group Policy &nbsp; **Reboot:** No &nbsp; **Tier:** Enterprise
 
 Block execution of potentially obfuscated scripts, a common malware evasion technique. Group Policy setting: this control checks the corresponding Group Policy registry value, so it can report non-compliant until the policy is explicitly configured (even where the effective Windows default is already secure), and a domain Group Policy applied after hardening can override it.
 
@@ -190,7 +207,7 @@ Block execution of potentially obfuscated scripts, a common malware evasion tech
 
 ### WIN-ASR-005 - ASR: Block Untrusted Processes from USB { #win-asr-005 }
 
-**Severity:** Medium &nbsp; **Category:** Attack Surface Reduction &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Enterprise
+**Severity:** Medium &nbsp; **Category:** Attack Surface Reduction &nbsp; **Provider:** Registry &nbsp; **Delivery:** Group Policy &nbsp; **Reboot:** No &nbsp; **Tier:** Enterprise
 
 Block untrusted and unsigned executables from running from USB removable media. Group Policy setting: this control checks the corresponding Group Policy registry value, so it can report non-compliant until the policy is explicitly configured (even where the effective Windows default is already secure), and a domain Group Policy applied after hardening can override it.
 
@@ -205,7 +222,7 @@ Block untrusted and unsigned executables from running from USB removable media. 
 
 ### WIN-ASR-006 - ASR: Block Process Creation from PSExec and WMI { #win-asr-006 }
 
-**Severity:** Medium &nbsp; **Category:** Attack Surface Reduction &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Enterprise
+**Severity:** Medium &nbsp; **Category:** Attack Surface Reduction &nbsp; **Provider:** Registry &nbsp; **Delivery:** Group Policy &nbsp; **Reboot:** No &nbsp; **Tier:** Enterprise
 
 Block processes created via PsExec and WMI commands, commonly used for lateral movement. Group Policy setting: this control checks the corresponding Group Policy registry value, so it can report non-compliant until the policy is explicitly configured (even where the effective Windows default is already secure), and a domain Group Policy applied after hardening can override it.
 
@@ -220,7 +237,7 @@ Block processes created via PsExec and WMI commands, commonly used for lateral m
 
 ### WIN-ASR-007 - ASR: Advanced Protection Against Ransomware { #win-asr-007 }
 
-**Severity:** High &nbsp; **Category:** Attack Surface Reduction &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Enterprise
+**Severity:** High &nbsp; **Category:** Attack Surface Reduction &nbsp; **Provider:** Registry &nbsp; **Delivery:** Group Policy &nbsp; **Reboot:** No &nbsp; **Tier:** Enterprise
 
 Enable advanced heuristic and cloud protection against ransomware. Group Policy setting: this control checks the corresponding Group Policy registry value, so it can report non-compliant until the policy is explicitly configured (even where the effective Windows default is already secure), and a domain Group Policy applied after hardening can override it.
 
@@ -235,7 +252,7 @@ Enable advanced heuristic and cloud protection against ransomware. Group Policy 
 
 ### WIN-ASR-008 - ASR: Block Office Apps Injecting Code into Other Processes { #win-asr-008 }
 
-**Severity:** Medium &nbsp; **Category:** Attack Surface Reduction &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Enterprise
+**Severity:** Medium &nbsp; **Category:** Attack Surface Reduction &nbsp; **Provider:** Registry &nbsp; **Delivery:** Group Policy &nbsp; **Reboot:** No &nbsp; **Tier:** Enterprise
 
 Block Office applications from injecting code into other processes. Group Policy setting: this control checks the corresponding Group Policy registry value, so it can report non-compliant until the policy is explicitly configured (even where the effective Windows default is already secure), and a domain Group Policy applied after hardening can override it.
 
@@ -250,7 +267,7 @@ Block Office applications from injecting code into other processes. Group Policy
 
 ### WIN-ASR-009 - ASR: Block Office Apps Creating Executable Content { #win-asr-009 }
 
-**Severity:** Medium &nbsp; **Category:** Attack Surface Reduction &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Enterprise
+**Severity:** Medium &nbsp; **Category:** Attack Surface Reduction &nbsp; **Provider:** Registry &nbsp; **Delivery:** Group Policy &nbsp; **Reboot:** No &nbsp; **Tier:** Enterprise
 
 Block Office applications from writing executable content to disk. Group Policy setting: this control checks the corresponding Group Policy registry value, so it can report non-compliant until the policy is explicitly configured (even where the effective Windows default is already secure), and a domain Group Policy applied after hardening can override it.
 
@@ -265,7 +282,7 @@ Block Office applications from writing executable content to disk. Group Policy 
 
 ### WIN-ASR-010 - ASR: Block Persistence Through WMI Event Subscription { #win-asr-010 }
 
-**Severity:** Medium &nbsp; **Category:** Attack Surface Reduction &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Enterprise
+**Severity:** Medium &nbsp; **Category:** Attack Surface Reduction &nbsp; **Provider:** Registry &nbsp; **Delivery:** Group Policy &nbsp; **Reboot:** No &nbsp; **Tier:** Enterprise
 
 Block malware from establishing persistence via WMI event subscription. Group Policy setting: this control checks the corresponding Group Policy registry value, so it can report non-compliant until the policy is explicitly configured (even where the effective Windows default is already secure), and a domain Group Policy applied after hardening can override it.
 
@@ -280,7 +297,7 @@ Block malware from establishing persistence via WMI event subscription. Group Po
 
 ### WIN-ASR-011 - ASR: Block Win32 API Calls from Office Macros { #win-asr-011 }
 
-**Severity:** Medium &nbsp; **Category:** Attack Surface Reduction &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Enterprise
+**Severity:** Medium &nbsp; **Category:** Attack Surface Reduction &nbsp; **Provider:** Registry &nbsp; **Delivery:** Group Policy &nbsp; **Reboot:** No &nbsp; **Tier:** Enterprise
 
 Block Office macros from calling Win32 APIs. Group Policy setting: this control checks the corresponding Group Policy registry value, so it can report non-compliant until the policy is explicitly configured (even where the effective Windows default is already secure), and a domain Group Policy applied after hardening can override it.
 
@@ -295,7 +312,7 @@ Block Office macros from calling Win32 APIs. Group Policy setting: this control 
 
 ### WIN-ASR-012 - ASR: Block Untrusted Executables by Prevalence, Age, or Trust { #win-asr-012 }
 
-**Severity:** Medium &nbsp; **Category:** Attack Surface Reduction &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Enterprise
+**Severity:** Medium &nbsp; **Category:** Attack Surface Reduction &nbsp; **Provider:** Registry &nbsp; **Delivery:** Group Policy &nbsp; **Reboot:** No &nbsp; **Tier:** Enterprise
 
 Block executable files from running unless they meet a prevalence, age, or trusted-list criterion. Group Policy setting: this control checks the corresponding Group Policy registry value, so it can report non-compliant until the policy is explicitly configured (even where the effective Windows default is already secure), and a domain Group Policy applied after hardening can override it.
 
@@ -310,7 +327,7 @@ Block executable files from running unless they meet a prevalence, age, or trust
 
 ### WIN-ASR-013 - ASR: Block Adobe Reader from Creating Child Processes { #win-asr-013 }
 
-**Severity:** Medium &nbsp; **Category:** Attack Surface Reduction &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Enterprise
+**Severity:** Medium &nbsp; **Category:** Attack Surface Reduction &nbsp; **Provider:** Registry &nbsp; **Delivery:** Group Policy &nbsp; **Reboot:** No &nbsp; **Tier:** Enterprise
 
 Block Adobe Reader from spawning child processes. Group Policy setting: this control checks the corresponding Group Policy registry value, so it can report non-compliant until the policy is explicitly configured (even where the effective Windows default is already secure), and a domain Group Policy applied after hardening can override it.
 
@@ -325,7 +342,7 @@ Block Adobe Reader from spawning child processes. Group Policy setting: this con
 
 ### WIN-AUD-001 - Audit Logon Failures { #win-aud-001 }
 
-**Severity:** Medium &nbsp; **Category:** Logging and Monitoring &nbsp; **Provider:** AuditPol &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+**Severity:** Medium &nbsp; **Category:** Logging and Monitoring &nbsp; **Provider:** AuditPol &nbsp; **Delivery:** Direct &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
 
 The advanced audit policy must log failed logon events (subcategory 'Logon') to support detection of unauthorized access attempts.
 
@@ -340,7 +357,7 @@ The advanced audit policy must log failed logon events (subcategory 'Logon') to 
 
 ### WIN-AUD-002 - Audit Account Lockout Events { #win-aud-002 }
 
-**Severity:** Medium &nbsp; **Category:** Logging and Monitoring &nbsp; **Provider:** AuditPol &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+**Severity:** Medium &nbsp; **Category:** Logging and Monitoring &nbsp; **Provider:** AuditPol &nbsp; **Delivery:** Direct &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
 
 The advanced audit policy must log account lockout events (subcategory 'Account Lockout') to support detection of brute-force activity.
 
@@ -355,7 +372,7 @@ The advanced audit policy must log account lockout events (subcategory 'Account 
 
 ### WIN-AUD-003 - Audit Process Creation { #win-aud-003 }
 
-**Severity:** Medium &nbsp; **Category:** Logging and Monitoring &nbsp; **Provider:** AuditPol &nbsp; **Reboot:** No &nbsp; **Tier:** Enterprise
+**Severity:** Medium &nbsp; **Category:** Logging and Monitoring &nbsp; **Provider:** AuditPol &nbsp; **Delivery:** Direct &nbsp; **Reboot:** No &nbsp; **Tier:** Enterprise
 
 Process creation events must be audited to support detection and forensic investigation.
 
@@ -370,7 +387,7 @@ Process creation events must be audited to support detection and forensic invest
 
 ### WIN-AUD-004 - Audit Credential Validation { #win-aud-004 }
 
-**Severity:** Medium &nbsp; **Category:** Logging and Monitoring &nbsp; **Provider:** AuditPol &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+**Severity:** Medium &nbsp; **Category:** Logging and Monitoring &nbsp; **Provider:** AuditPol &nbsp; **Delivery:** Direct &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
 
 Credential validation events must be audited to detect authentication attacks.
 
@@ -385,7 +402,7 @@ Credential validation events must be audited to detect authentication attacks.
 
 ### WIN-AUD-005 - Audit Security Group Management { #win-aud-005 }
 
-**Severity:** Medium &nbsp; **Category:** Logging and Monitoring &nbsp; **Provider:** AuditPol &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+**Severity:** Medium &nbsp; **Category:** Logging and Monitoring &nbsp; **Provider:** AuditPol &nbsp; **Delivery:** Direct &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
 
 Changes to security groups must be audited to detect privilege escalation via group membership.
 
@@ -400,7 +417,7 @@ Changes to security groups must be audited to detect privilege escalation via gr
 
 ### WIN-AUD-006 - Audit Special Logon { #win-aud-006 }
 
-**Severity:** Medium &nbsp; **Category:** Logging and Monitoring &nbsp; **Provider:** AuditPol &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+**Severity:** Medium &nbsp; **Category:** Logging and Monitoring &nbsp; **Provider:** AuditPol &nbsp; **Delivery:** Direct &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
 
 Special logon events (privileged logons) must be audited.
 
@@ -415,7 +432,7 @@ Special logon events (privileged logons) must be audited.
 
 ### WIN-AUD-007 - Audit Sensitive Privilege Use { #win-aud-007 }
 
-**Severity:** Medium &nbsp; **Category:** Logging and Monitoring &nbsp; **Provider:** AuditPol &nbsp; **Reboot:** No &nbsp; **Tier:** Enterprise
+**Severity:** Medium &nbsp; **Category:** Logging and Monitoring &nbsp; **Provider:** AuditPol &nbsp; **Delivery:** Direct &nbsp; **Reboot:** No &nbsp; **Tier:** Enterprise
 
 Use of sensitive privileges must be audited to detect privilege abuse.
 
@@ -430,7 +447,7 @@ Use of sensitive privileges must be audited to detect privilege abuse.
 
 ### WIN-AUD-008 - Audit System Integrity { #win-aud-008 }
 
-**Severity:** Medium &nbsp; **Category:** Logging and Monitoring &nbsp; **Provider:** AuditPol &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+**Severity:** Medium &nbsp; **Category:** Logging and Monitoring &nbsp; **Provider:** AuditPol &nbsp; **Delivery:** Direct &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
 
 System integrity events (audit subsystem failures, driver issues) must be audited.
 
@@ -445,7 +462,7 @@ System integrity events (audit subsystem failures, driver issues) must be audite
 
 ### WIN-AUD-009 - Audit Logoff { #win-aud-009 }
 
-**Severity:** Medium &nbsp; **Category:** Logging and Monitoring &nbsp; **Provider:** AuditPol &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+**Severity:** Medium &nbsp; **Category:** Logging and Monitoring &nbsp; **Provider:** AuditPol &nbsp; **Delivery:** Direct &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
 
 Logoff events must be audited to correlate session activity.
 
@@ -460,7 +477,7 @@ Logoff events must be audited to correlate session activity.
 
 ### WIN-AUD-010 - Audit Removable Storage { #win-aud-010 }
 
-**Severity:** Medium &nbsp; **Category:** Logging and Monitoring &nbsp; **Provider:** AuditPol &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+**Severity:** Medium &nbsp; **Category:** Logging and Monitoring &nbsp; **Provider:** AuditPol &nbsp; **Delivery:** Direct &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
 
 Access to removable storage must be audited to detect data exfiltration.
 
@@ -475,7 +492,7 @@ Access to removable storage must be audited to detect data exfiltration.
 
 ### WIN-AUD-011 - Audit Authentication Policy Change { #win-aud-011 }
 
-**Severity:** Medium &nbsp; **Category:** Logging and Monitoring &nbsp; **Provider:** AuditPol &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+**Severity:** Medium &nbsp; **Category:** Logging and Monitoring &nbsp; **Provider:** AuditPol &nbsp; **Delivery:** Direct &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
 
 Changes to authentication policy must be audited.
 
@@ -490,7 +507,7 @@ Changes to authentication policy must be audited.
 
 ### WIN-AUD-012 - Audit User Account Management { #win-aud-012 }
 
-**Severity:** Medium &nbsp; **Category:** Logging and Monitoring &nbsp; **Provider:** AuditPol &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+**Severity:** Medium &nbsp; **Category:** Logging and Monitoring &nbsp; **Provider:** AuditPol &nbsp; **Delivery:** Direct &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
 
 Changes to user accounts (create, delete, enable, password reset) must be audited.
 
@@ -505,7 +522,7 @@ Changes to user accounts (create, delete, enable, password reset) must be audite
 
 ### WIN-AUD-013 - Audit Computer Account Management { #win-aud-013 }
 
-**Severity:** Medium &nbsp; **Category:** Logging and Monitoring &nbsp; **Provider:** AuditPol &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+**Severity:** Medium &nbsp; **Category:** Logging and Monitoring &nbsp; **Provider:** AuditPol &nbsp; **Delivery:** Direct &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
 
 Changes to computer accounts must be audited.
 
@@ -520,7 +537,7 @@ Changes to computer accounts must be audited.
 
 ### WIN-AUD-014 - Audit Audit Policy Change { #win-aud-014 }
 
-**Severity:** Medium &nbsp; **Category:** Logging and Monitoring &nbsp; **Provider:** AuditPol &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+**Severity:** Medium &nbsp; **Category:** Logging and Monitoring &nbsp; **Provider:** AuditPol &nbsp; **Delivery:** Direct &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
 
 Changes to the audit policy itself must be audited.
 
@@ -535,7 +552,7 @@ Changes to the audit policy itself must be audited.
 
 ### WIN-AUD-015 - Audit Other Logon/Logoff Events { #win-aud-015 }
 
-**Severity:** Medium &nbsp; **Category:** Logging and Monitoring &nbsp; **Provider:** AuditPol &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+**Severity:** Medium &nbsp; **Category:** Logging and Monitoring &nbsp; **Provider:** AuditPol &nbsp; **Delivery:** Direct &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
 
 Other logon/logoff events (RDP reconnects, workstation lock/unlock) must be audited.
 
@@ -550,7 +567,7 @@ Other logon/logoff events (RDP reconnects, workstation lock/unlock) must be audi
 
 ### WIN-AUD-016 - Audit MPSSVC Rule-Level Policy Change { #win-aud-016 }
 
-**Severity:** Medium &nbsp; **Category:** Logging and Monitoring &nbsp; **Provider:** AuditPol &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+**Severity:** Medium &nbsp; **Category:** Logging and Monitoring &nbsp; **Provider:** AuditPol &nbsp; **Delivery:** Direct &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
 
 Changes to Windows Firewall rules must be audited.
 
@@ -565,7 +582,7 @@ Changes to Windows Firewall rules must be audited.
 
 ### WIN-AUTORUN-001 - Disable AutoRun on All Drives { #win-autorun-001 }
 
-**Severity:** Medium &nbsp; **Category:** Attack Surface Reduction &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+**Severity:** Medium &nbsp; **Category:** Attack Surface Reduction &nbsp; **Provider:** Registry &nbsp; **Delivery:** Group Policy &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
 
 AutoRun/AutoPlay must be disabled on all drive types to prevent automatic execution from removable media. Group Policy setting: this control checks the corresponding Group Policy registry value, so it can report non-compliant until the policy is explicitly configured (even where the effective Windows default is already secure), and a domain Group Policy applied after hardening can override it.
 
@@ -580,7 +597,7 @@ AutoRun/AutoPlay must be disabled on all drive types to prevent automatic execut
 
 ### WIN-DEF-001 - Microsoft Defender Antivirus Enabled { #win-def-001 }
 
-**Severity:** High &nbsp; **Category:** Endpoint Protection &nbsp; **Provider:** Defender &nbsp; **Reboot:** No &nbsp; **Tier:** Essential
+**Severity:** High &nbsp; **Category:** Endpoint Protection &nbsp; **Provider:** Defender &nbsp; **Delivery:** Direct &nbsp; **Reboot:** No &nbsp; **Tier:** Essential
 
 Microsoft Defender Antivirus must be enabled and providing real-time protection.
 
@@ -595,7 +612,7 @@ Microsoft Defender Antivirus must be enabled and providing real-time protection.
 
 ### WIN-DEF-002 - Enable Potentially Unwanted Application (PUA) Protection { #win-def-002 }
 
-**Severity:** High &nbsp; **Category:** Endpoint Protection &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Essential
+**Severity:** High &nbsp; **Category:** Endpoint Protection &nbsp; **Provider:** Registry &nbsp; **Delivery:** Group Policy &nbsp; **Reboot:** No &nbsp; **Tier:** Essential
 
 Microsoft Defender must block potentially unwanted applications (PUA) such as adware and bundled software. Group Policy setting: this control checks the corresponding Group Policy registry value, so it can report non-compliant until the policy is explicitly configured (even where the effective Windows default is already secure), and a domain Group Policy applied after hardening can override it.
 
@@ -610,7 +627,7 @@ Microsoft Defender must block potentially unwanted applications (PUA) such as ad
 
 ### WIN-DEF-003 - Enable Defender Real-Time Protection { #win-def-003 }
 
-**Severity:** High &nbsp; **Category:** Endpoint Protection &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Essential
+**Severity:** High &nbsp; **Category:** Endpoint Protection &nbsp; **Provider:** Registry &nbsp; **Delivery:** Group Policy &nbsp; **Reboot:** No &nbsp; **Tier:** Essential
 
 Microsoft Defender real-time protection must not be disabled by policy. Group Policy setting: this control checks the corresponding Group Policy registry value; a domain Group Policy applied after hardening can override the local configuration.
 
@@ -625,7 +642,7 @@ Microsoft Defender real-time protection must not be disabled by policy. Group Po
 
 ### WIN-DEF-004 - Enable Cloud-Delivered Protection { #win-def-004 }
 
-**Severity:** Medium &nbsp; **Category:** Endpoint Protection &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+**Severity:** Medium &nbsp; **Category:** Endpoint Protection &nbsp; **Provider:** Registry &nbsp; **Delivery:** Group Policy &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
 
 Microsoft Defender cloud-delivered protection (MAPS) must be enabled for faster protection against new threats. Group Policy setting: this control checks the corresponding Group Policy registry value, so it can report non-compliant until the policy is explicitly configured (even where the effective Windows default is already secure), and a domain Group Policy applied after hardening can override it.
 
@@ -640,7 +657,7 @@ Microsoft Defender cloud-delivered protection (MAPS) must be enabled for faster 
 
 ### WIN-DEF-005 - Enable Network Protection { #win-def-005 }
 
-**Severity:** Medium &nbsp; **Category:** Endpoint Protection &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Enterprise
+**Severity:** Medium &nbsp; **Category:** Endpoint Protection &nbsp; **Provider:** Registry &nbsp; **Delivery:** Group Policy &nbsp; **Reboot:** No &nbsp; **Tier:** Enterprise
 
 Enable Defender network protection to block connections to dangerous domains and IP addresses. Group Policy setting: this control checks the corresponding Group Policy registry value, so it can report non-compliant until the policy is explicitly configured (even where the effective Windows default is already secure), and a domain Group Policy applied after hardening can override it.
 
@@ -655,7 +672,7 @@ Enable Defender network protection to block connections to dangerous domains and
 
 ### WIN-DEF-006 - Enable Controlled Folder Access { #win-def-006 }
 
-**Severity:** Medium &nbsp; **Category:** Endpoint Protection &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Enterprise
+**Severity:** Medium &nbsp; **Category:** Endpoint Protection &nbsp; **Provider:** Registry &nbsp; **Delivery:** Group Policy &nbsp; **Reboot:** No &nbsp; **Tier:** Enterprise
 
 Enable controlled folder access to protect key folders from unauthorized changes by untrusted apps (ransomware). Group Policy setting: this control checks the corresponding Group Policy registry value, so it can report non-compliant until the policy is explicitly configured (even where the effective Windows default is already secure), and a domain Group Policy applied after hardening can override it.
 
@@ -670,7 +687,7 @@ Enable controlled folder access to protect key folders from unauthorized changes
 
 ### WIN-DEF-007 - Scan Removable Drives During Full Scan { #win-def-007 }
 
-**Severity:** Low &nbsp; **Category:** Endpoint Protection &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+**Severity:** Low &nbsp; **Category:** Endpoint Protection &nbsp; **Provider:** Registry &nbsp; **Delivery:** Group Policy &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
 
 Scan removable drives (such as USB) during a full antivirus scan. Group Policy setting: this control checks the corresponding Group Policy registry value, so it can report non-compliant until the policy is explicitly configured (even where the effective Windows default is already secure), and a domain Group Policy applied after hardening can override it.
 
@@ -685,7 +702,7 @@ Scan removable drives (such as USB) during a full antivirus scan. Group Policy s
 
 ### WIN-DEF-008 - Enable Block at First Sight { #win-def-008 }
 
-**Severity:** Medium &nbsp; **Category:** Endpoint Protection &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+**Severity:** Medium &nbsp; **Category:** Endpoint Protection &nbsp; **Provider:** Registry &nbsp; **Delivery:** Group Policy &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
 
 Enable Defender block-at-first-sight rapid cloud verdicts for newly seen files. Group Policy setting: this control checks the corresponding Group Policy registry value, so it can report non-compliant until the policy is explicitly configured (even where the effective Windows default is already secure), and a domain Group Policy applied after hardening can override it.
 
@@ -700,7 +717,7 @@ Enable Defender block-at-first-sight rapid cloud verdicts for newly seen files. 
 
 ### WIN-DEF-009 - Enable Defender Behavior Monitoring { #win-def-009 }
 
-**Severity:** High &nbsp; **Category:** Endpoint Protection &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+**Severity:** High &nbsp; **Category:** Endpoint Protection &nbsp; **Provider:** Registry &nbsp; **Delivery:** Group Policy &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
 
 Enable Defender behavior monitoring to detect malicious activity by behaviour, not just signatures. Group Policy setting: this control checks the corresponding Group Policy registry value; a domain Group Policy applied after hardening can override the local configuration.
 
@@ -715,7 +732,7 @@ Enable Defender behavior monitoring to detect malicious activity by behaviour, n
 
 ### WIN-FW-001 - Windows Firewall Enabled (All Profiles) { #win-fw-001 }
 
-**Severity:** High &nbsp; **Category:** Host Firewall &nbsp; **Provider:** Firewall &nbsp; **Reboot:** No &nbsp; **Tier:** Essential
+**Severity:** High &nbsp; **Category:** Host Firewall &nbsp; **Provider:** Firewall &nbsp; **Delivery:** Direct &nbsp; **Reboot:** No &nbsp; **Tier:** Essential
 
 The Windows Defender Firewall must be enabled for the Domain, Private and Public profiles to enforce host-based network filtering.
 
@@ -730,7 +747,7 @@ The Windows Defender Firewall must be enabled for the Domain, Private and Public
 
 ### WIN-FW-002 - Block Inbound Connections by Default (Domain Profile) { #win-fw-002 }
 
-**Severity:** Medium &nbsp; **Category:** Host Firewall &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+**Severity:** Medium &nbsp; **Category:** Host Firewall &nbsp; **Provider:** Registry &nbsp; **Delivery:** Group Policy &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
 
 The domain firewall profile must block inbound connections that do not match a rule. Group Policy setting: this control checks the corresponding Group Policy registry value, so it can report non-compliant until the policy is explicitly configured (even where the effective Windows default is already secure), and a domain Group Policy applied after hardening can override it.
 
@@ -745,7 +762,7 @@ The domain firewall profile must block inbound connections that do not match a r
 
 ### WIN-FW-003 - Block Inbound Connections by Default (Private Profile) { #win-fw-003 }
 
-**Severity:** Medium &nbsp; **Category:** Host Firewall &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+**Severity:** Medium &nbsp; **Category:** Host Firewall &nbsp; **Provider:** Registry &nbsp; **Delivery:** Group Policy &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
 
 The private firewall profile must block inbound connections that do not match a rule. Group Policy setting: this control checks the corresponding Group Policy registry value, so it can report non-compliant until the policy is explicitly configured (even where the effective Windows default is already secure), and a domain Group Policy applied after hardening can override it.
 
@@ -760,7 +777,7 @@ The private firewall profile must block inbound connections that do not match a 
 
 ### WIN-FW-004 - Block Inbound Connections by Default (Public Profile) { #win-fw-004 }
 
-**Severity:** Medium &nbsp; **Category:** Host Firewall &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+**Severity:** Medium &nbsp; **Category:** Host Firewall &nbsp; **Provider:** Registry &nbsp; **Delivery:** Group Policy &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
 
 The public firewall profile must block inbound connections that do not match a rule. Group Policy setting: this control checks the corresponding Group Policy registry value, so it can report non-compliant until the policy is explicitly configured (even where the effective Windows default is already secure), and a domain Group Policy applied after hardening can override it.
 
@@ -775,7 +792,7 @@ The public firewall profile must block inbound connections that do not match a r
 
 ### WIN-FW-005 - Log Dropped Packets (Public Profile) { #win-fw-005 }
 
-**Severity:** Low &nbsp; **Category:** Host Firewall &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+**Severity:** Low &nbsp; **Category:** Host Firewall &nbsp; **Provider:** Registry &nbsp; **Delivery:** Group Policy &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
 
 The public firewall profile must log dropped packets for troubleshooting and detection. Group Policy setting: this control checks the corresponding Group Policy registry value, so it can report non-compliant until the policy is explicitly configured (even where the effective Windows default is already secure), and a domain Group Policy applied after hardening can override it.
 
@@ -790,7 +807,7 @@ The public firewall profile must log dropped packets for troubleshooting and det
 
 ### WIN-INSTALL-001 - Disable Always Install Elevated { #win-install-001 }
 
-**Severity:** High &nbsp; **Category:** Privilege Management &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+**Severity:** High &nbsp; **Category:** Privilege Management &nbsp; **Provider:** Registry &nbsp; **Delivery:** Group Policy &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
 
 Windows Installer must not install packages with elevated privileges for standard users. Group Policy setting: this control checks the corresponding Group Policy registry value; a domain Group Policy applied after hardening can override the local configuration.
 
@@ -805,7 +822,7 @@ Windows Installer must not install packages with elevated privileges for standar
 
 ### WIN-KRB-001 - Configure Kerberos Encryption Types (AES only) { #win-krb-001 }
 
-**Severity:** Medium &nbsp; **Category:** Authentication &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+**Severity:** Medium &nbsp; **Category:** Authentication &nbsp; **Provider:** Registry &nbsp; **Delivery:** Group Policy &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
 
 Allow only AES (and future) encryption types for Kerberos, disabling weak DES and RC4. Group Policy setting: this control checks the corresponding Group Policy registry value, so it can report non-compliant until the policy is explicitly configured (even where the effective Windows default is already secure), and a domain Group Policy applied after hardening can override it.
 
@@ -820,7 +837,7 @@ Allow only AES (and future) encryption types for Kerberos, disabling weak DES an
 
 ### WIN-LDAP-001 - LDAP Client Signing { #win-ldap-001 }
 
-**Severity:** Medium &nbsp; **Category:** Authentication &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+**Severity:** Medium &nbsp; **Category:** Authentication &nbsp; **Provider:** Registry &nbsp; **Delivery:** Direct &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
 
 The LDAP client must negotiate signing to protect directory queries from tampering and relay.
 
@@ -835,7 +852,7 @@ The LDAP client must negotiate signing to protect directory queries from tamperi
 
 ### WIN-LOCK-001 - Account Lockout Threshold { #win-lock-001 }
 
-**Severity:** Medium &nbsp; **Category:** Account Policy &nbsp; **Provider:** SecEdit &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+**Severity:** Medium &nbsp; **Category:** Account Policy &nbsp; **Provider:** SecEdit &nbsp; **Delivery:** Direct &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
 
 The account lockout threshold must be set to a non-zero value of 5 or fewer invalid logon attempts to resist password guessing.
 
@@ -850,7 +867,7 @@ The account lockout threshold must be set to a non-zero value of 5 or fewer inva
 
 ### WIN-LOCK-002 - Account Lockout Duration { #win-lock-002 }
 
-**Severity:** Medium &nbsp; **Category:** Account Policy &nbsp; **Provider:** SecEdit &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+**Severity:** Medium &nbsp; **Category:** Account Policy &nbsp; **Provider:** SecEdit &nbsp; **Delivery:** Direct &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
 
 A locked account should remain locked long enough to slow automated password guessing.
 
@@ -865,7 +882,7 @@ A locked account should remain locked long enough to slow automated password gue
 
 ### WIN-LOCK-003 - Reset Account Lockout Counter { #win-lock-003 }
 
-**Severity:** Medium &nbsp; **Category:** Account Policy &nbsp; **Provider:** SecEdit &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+**Severity:** Medium &nbsp; **Category:** Account Policy &nbsp; **Provider:** SecEdit &nbsp; **Delivery:** Direct &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
 
 The failed-logon counter should persist long enough to make lockout thresholds effective.
 
@@ -880,7 +897,7 @@ The failed-logon counter should persist long enough to make lockout thresholds e
 
 ### WIN-LOGON-001 - Machine Inactivity Limit { #win-logon-001 }
 
-**Severity:** Medium &nbsp; **Category:** Access Control &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+**Severity:** Medium &nbsp; **Category:** Access Control &nbsp; **Provider:** Registry &nbsp; **Delivery:** Group Policy &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
 
 The machine must lock after a period of inactivity to protect unattended sessions. Group Policy setting: this control checks the corresponding Group Policy registry value, so it can report non-compliant until the policy is explicitly configured (even where the effective Windows default is already secure), and a domain Group Policy applied after hardening can override it.
 
@@ -895,7 +912,7 @@ The machine must lock after a period of inactivity to protect unattended session
 
 ### WIN-LOGON-002 - Do Not Display Last Signed-In User { #win-logon-002 }
 
-**Severity:** Low &nbsp; **Category:** Access Control &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+**Severity:** Low &nbsp; **Category:** Access Control &nbsp; **Provider:** Registry &nbsp; **Delivery:** Group Policy &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
 
 The last signed-in username must not be displayed at the logon screen. Group Policy setting: this control checks the corresponding Group Policy registry value, so it can report non-compliant until the policy is explicitly configured (even where the effective Windows default is already secure), and a domain Group Policy applied after hardening can override it.
 
@@ -910,7 +927,7 @@ The last signed-in username must not be displayed at the logon screen. Group Pol
 
 ### WIN-LOGON-003 - Limit Number of Cached Logons { #win-logon-003 }
 
-**Severity:** Medium &nbsp; **Category:** Access Control &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+**Severity:** Medium &nbsp; **Category:** Access Control &nbsp; **Provider:** Registry &nbsp; **Delivery:** Direct &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
 
 The number of cached domain logon credentials must be limited to reduce offline credential-theft exposure.
 
@@ -925,7 +942,7 @@ The number of cached domain logon credentials must be limited to reduce offline 
 
 ### WIN-LOGON-004 - Require Ctrl+Alt+Del at Logon { #win-logon-004 }
 
-**Severity:** Low &nbsp; **Category:** Access Control &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+**Severity:** Low &nbsp; **Category:** Access Control &nbsp; **Provider:** Registry &nbsp; **Delivery:** Group Policy &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
 
 Users must press Ctrl+Alt+Del before signing in to guarantee a trusted logon path. Group Policy setting: this control checks the corresponding Group Policy registry value; a domain Group Policy applied after hardening can override the local configuration.
 
@@ -940,7 +957,7 @@ Users must press Ctrl+Alt+Del before signing in to guarantee a trusted logon pat
 
 ### WIN-LOGON-005 - Smart Card Removal Behavior (Lock Workstation) { #win-logon-005 }
 
-**Severity:** Low &nbsp; **Category:** Access Control &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Enterprise
+**Severity:** Low &nbsp; **Category:** Access Control &nbsp; **Provider:** Registry &nbsp; **Delivery:** Direct &nbsp; **Reboot:** No &nbsp; **Tier:** Enterprise
 
 Lock the workstation when a logged-on user removes their smart card.
 
@@ -955,7 +972,7 @@ Lock the workstation when a logged-on user removes their smart card.
 
 ### WIN-LOGON-006 - Disable Automatic Logon { #win-logon-006 }
 
-**Severity:** Medium &nbsp; **Category:** Access Control &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+**Severity:** Medium &nbsp; **Category:** Access Control &nbsp; **Provider:** Registry &nbsp; **Delivery:** Direct &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
 
 Disable automatic logon, which stores a plaintext password in the registry.
 
@@ -970,7 +987,7 @@ Disable automatic logon, which stores a plaintext password in the registry.
 
 ### WIN-LSA-001 - Do Not Store LAN Manager Hash { #win-lsa-001 }
 
-**Severity:** High &nbsp; **Category:** Credential Protection &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Essential
+**Severity:** High &nbsp; **Category:** Credential Protection &nbsp; **Provider:** Registry &nbsp; **Delivery:** Direct &nbsp; **Reboot:** No &nbsp; **Tier:** Essential
 
 The weak LAN Manager hash of passwords must not be stored on next password change.
 
@@ -985,7 +1002,7 @@ The weak LAN Manager hash of passwords must not be stored on next password chang
 
 ### WIN-LSA-002 - Restrict Anonymous SID Enumeration { #win-lsa-002 }
 
-**Severity:** Medium &nbsp; **Category:** Access Control &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+**Severity:** Medium &nbsp; **Category:** Access Control &nbsp; **Provider:** Registry &nbsp; **Delivery:** Direct &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
 
 Anonymous users must not be able to enumerate SIDs and account names.
 
@@ -1000,7 +1017,7 @@ Anonymous users must not be able to enumerate SIDs and account names.
 
 ### WIN-LSA-003 - Enable LSASS Protection (RunAsPPL) { #win-lsa-003 }
 
-**Severity:** High &nbsp; **Category:** Credential Protection &nbsp; **Provider:** Registry &nbsp; **Reboot:** Yes &nbsp; **Tier:** Enterprise
+**Severity:** High &nbsp; **Category:** Credential Protection &nbsp; **Provider:** Registry &nbsp; **Delivery:** Direct &nbsp; **Reboot:** Yes &nbsp; **Tier:** Enterprise
 
 LSASS must run as a protected process (PPL) to resist credential theft tools.
 
@@ -1015,7 +1032,7 @@ LSASS must run as a protected process (PPL) to resist credential theft tools.
 
 ### WIN-LSA-004 - Do Not Allow Anonymous Enumeration of SAM Accounts { #win-lsa-004 }
 
-**Severity:** Medium &nbsp; **Category:** Access Control &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+**Severity:** Medium &nbsp; **Category:** Access Control &nbsp; **Provider:** Registry &nbsp; **Delivery:** Direct &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
 
 Anonymous users must not be able to enumerate SAM accounts.
 
@@ -1030,7 +1047,7 @@ Anonymous users must not be able to enumerate SAM accounts.
 
 ### WIN-LSA-005 - Enable Structured Exception Handling Overwrite Protection (SEHOP) { #win-lsa-005 }
 
-**Severity:** Medium &nbsp; **Category:** Exploit Protection &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+**Severity:** Medium &nbsp; **Category:** Exploit Protection &nbsp; **Provider:** Registry &nbsp; **Delivery:** Direct &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
 
 SEHOP must be enabled to block Structured Exception Handler overwrite exploitation.
 
@@ -1045,7 +1062,7 @@ SEHOP must be enabled to block Structured Exception Handler overwrite exploitati
 
 ### WIN-LSA-006 - Digitally Encrypt or Sign Secure Channel Data (Always) { #win-lsa-006 }
 
-**Severity:** Medium &nbsp; **Category:** Authentication &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+**Severity:** Medium &nbsp; **Category:** Authentication &nbsp; **Provider:** Registry &nbsp; **Delivery:** Direct &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
 
 All domain secure-channel traffic must be signed or encrypted.
 
@@ -1060,7 +1077,7 @@ All domain secure-channel traffic must be signed or encrypted.
 
 ### WIN-LSA-007 - Do Not Apply Everyone Permissions to Anonymous Users { #win-lsa-007 }
 
-**Severity:** Medium &nbsp; **Category:** Access Control &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+**Severity:** Medium &nbsp; **Category:** Access Control &nbsp; **Provider:** Registry &nbsp; **Delivery:** Direct &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
 
 The Everyone SID must not be applied to anonymous connections.
 
@@ -1075,7 +1092,7 @@ The Everyone SID must not be applied to anonymous connections.
 
 ### WIN-LSA-008 - Restrict Clients Allowed to Make Remote SAM Calls { #win-lsa-008 }
 
-**Severity:** Medium &nbsp; **Category:** Access Control &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+**Severity:** Medium &nbsp; **Category:** Access Control &nbsp; **Provider:** Registry &nbsp; **Delivery:** Direct &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
 
 Restrict remote SAM (SAMRPC) enumeration to the local Administrators group.
 
@@ -1090,7 +1107,7 @@ Restrict remote SAM (SAMRPC) enumeration to the local Administrators group.
 
 ### WIN-LSA-009 - Limit Local Account Use of Blank Passwords { #win-lsa-009 }
 
-**Severity:** High &nbsp; **Category:** Access Control &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+**Severity:** High &nbsp; **Category:** Access Control &nbsp; **Provider:** Registry &nbsp; **Delivery:** Direct &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
 
 Restrict local accounts with blank passwords to console logon only (no remote/network logon).
 
@@ -1105,7 +1122,7 @@ Restrict local accounts with blank passwords to console logon only (no remote/ne
 
 ### WIN-LSA-010 - Sharing and Security Model for Local Accounts (Classic) { #win-lsa-010 }
 
-**Severity:** Medium &nbsp; **Category:** Access Control &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+**Severity:** Medium &nbsp; **Category:** Access Control &nbsp; **Provider:** Registry &nbsp; **Delivery:** Direct &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
 
 Local accounts authenticate as themselves (Classic), not mapped to Guest.
 
@@ -1120,7 +1137,7 @@ Local accounts authenticate as themselves (Classic), not mapped to Guest.
 
 ### WIN-NET-001 - Disable LLMNR { #win-net-001 }
 
-**Severity:** Medium &nbsp; **Category:** Network Protocols &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+**Severity:** Medium &nbsp; **Category:** Network Protocols &nbsp; **Provider:** Registry &nbsp; **Delivery:** Group Policy &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
 
 Link-Local Multicast Name Resolution (LLMNR) must be disabled to prevent name-resolution poisoning and credential capture. Group Policy setting: this control checks the corresponding Group Policy registry value, so it can report non-compliant until the policy is explicitly configured (even where the effective Windows default is already secure), and a domain Group Policy applied after hardening can override it.
 
@@ -1135,7 +1152,7 @@ Link-Local Multicast Name Resolution (LLMNR) must be disabled to prevent name-re
 
 ### WIN-NET-002 - Disable IPv4 Source Routing { #win-net-002 }
 
-**Severity:** Medium &nbsp; **Category:** Network Protocols &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+**Severity:** Medium &nbsp; **Category:** Network Protocols &nbsp; **Provider:** Registry &nbsp; **Delivery:** Direct &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
 
 IPv4 source routing must be disabled to prevent source-routed packet spoofing.
 
@@ -1150,7 +1167,7 @@ IPv4 source routing must be disabled to prevent source-routed packet spoofing.
 
 ### WIN-NET-003 - Disable ICMP Redirects { #win-net-003 }
 
-**Severity:** Low &nbsp; **Category:** Network Protocols &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+**Severity:** Low &nbsp; **Category:** Network Protocols &nbsp; **Provider:** Registry &nbsp; **Delivery:** Direct &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
 
 ICMP redirects must not override OSPF-generated routes.
 
@@ -1165,7 +1182,7 @@ ICMP redirects must not override OSPF-generated routes.
 
 ### WIN-NET-004 - Disable IPv6 Source Routing { #win-net-004 }
 
-**Severity:** Medium &nbsp; **Category:** Network Protocols &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+**Severity:** Medium &nbsp; **Category:** Network Protocols &nbsp; **Provider:** Registry &nbsp; **Delivery:** Direct &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
 
 IPv6 source routing must be disabled to prevent source-routed packet spoofing.
 
@@ -1180,7 +1197,7 @@ IPv6 source routing must be disabled to prevent source-routed packet spoofing.
 
 ### WIN-NET-005 - Ignore NetBIOS Name Release Requests { #win-net-005 }
 
-**Severity:** Low &nbsp; **Category:** Network Protocols &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+**Severity:** Low &nbsp; **Category:** Network Protocols &nbsp; **Provider:** Registry &nbsp; **Delivery:** Direct &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
 
 Ignore NetBIOS name-release requests except from WINS servers.
 
@@ -1195,7 +1212,7 @@ Ignore NetBIOS name-release requests except from WINS servers.
 
 ### WIN-NTLM-001 - LAN Manager Authentication Level (NTLMv2 Only) { #win-ntlm-001 }
 
-**Severity:** High &nbsp; **Category:** Authentication &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+**Severity:** High &nbsp; **Category:** Authentication &nbsp; **Provider:** Registry &nbsp; **Delivery:** Direct &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
 
 The system must send NTLMv2 responses only and refuse LM and NTLM, resisting downgrade and relay attacks.
 
@@ -1210,7 +1227,7 @@ The system must send NTLMv2 responses only and refuse LM and NTLM, resisting dow
 
 ### WIN-NTLM-002 - Minimum NTLM Session Security (Clients) { #win-ntlm-002 }
 
-**Severity:** Medium &nbsp; **Category:** Authentication &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+**Severity:** Medium &nbsp; **Category:** Authentication &nbsp; **Provider:** Registry &nbsp; **Delivery:** Direct &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
 
 NTLM SSP clients must require NTLMv2 session security and 128-bit encryption.
 
@@ -1225,7 +1242,7 @@ NTLM SSP clients must require NTLMv2 session security and 128-bit encryption.
 
 ### WIN-NTLM-003 - Minimum NTLM Session Security (Servers) { #win-ntlm-003 }
 
-**Severity:** Medium &nbsp; **Category:** Authentication &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+**Severity:** Medium &nbsp; **Category:** Authentication &nbsp; **Provider:** Registry &nbsp; **Delivery:** Direct &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
 
 NTLM SSP servers must require NTLMv2 session security and 128-bit encryption.
 
@@ -1240,7 +1257,7 @@ NTLM SSP servers must require NTLMv2 session security and 128-bit encryption.
 
 ### WIN-PSL-001 - Enable PowerShell Script Block Logging { #win-psl-001 }
 
-**Severity:** Medium &nbsp; **Category:** Logging and Monitoring &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+**Severity:** Medium &nbsp; **Category:** Logging and Monitoring &nbsp; **Provider:** Registry &nbsp; **Delivery:** Group Policy &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
 
 PowerShell Script Block Logging must be enabled to record the content of executed script blocks for detection and forensics. Group Policy setting: this control checks the corresponding Group Policy registry value, so it can report non-compliant until the policy is explicitly configured (even where the effective Windows default is already secure), and a domain Group Policy applied after hardening can override it.
 
@@ -1255,7 +1272,7 @@ PowerShell Script Block Logging must be enabled to record the content of execute
 
 ### WIN-PSL-002 - Enable PowerShell Module Logging { #win-psl-002 }
 
-**Severity:** Medium &nbsp; **Category:** Logging and Monitoring &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+**Severity:** Medium &nbsp; **Category:** Logging and Monitoring &nbsp; **Provider:** Registry &nbsp; **Delivery:** Group Policy &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
 
 PowerShell Module Logging must be enabled to record pipeline execution details of PowerShell modules. Group Policy setting: this control checks the corresponding Group Policy registry value, so it can report non-compliant until the policy is explicitly configured (even where the effective Windows default is already secure), and a domain Group Policy applied after hardening can override it.
 
@@ -1270,7 +1287,7 @@ PowerShell Module Logging must be enabled to record pipeline execution details o
 
 ### WIN-PSL-003 - Enable PowerShell Transcription { #win-psl-003 }
 
-**Severity:** Medium &nbsp; **Category:** Logging and Monitoring &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+**Severity:** Medium &nbsp; **Category:** Logging and Monitoring &nbsp; **Provider:** Registry &nbsp; **Delivery:** Group Policy &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
 
 Capture a transcript of every PowerShell session. Group Policy setting: this control checks the corresponding Group Policy registry value, so it can report non-compliant until the policy is explicitly configured (even where the effective Windows default is already secure), and a domain Group Policy applied after hardening can override it.
 
@@ -1285,7 +1302,7 @@ Capture a transcript of every PowerShell session. Group Policy setting: this con
 
 ### WIN-PWD-001 - Minimum Password Length { #win-pwd-001 }
 
-**Severity:** High &nbsp; **Category:** Account Policy &nbsp; **Provider:** SecEdit &nbsp; **Reboot:** No &nbsp; **Tier:** Essential
+**Severity:** High &nbsp; **Category:** Account Policy &nbsp; **Provider:** SecEdit &nbsp; **Delivery:** Direct &nbsp; **Reboot:** No &nbsp; **Tier:** Essential
 
 The local security policy must require a minimum password length of at least 14 characters.
 
@@ -1300,7 +1317,7 @@ The local security policy must require a minimum password length of at least 14 
 
 ### WIN-PWD-002 - Password Complexity Enabled { #win-pwd-002 }
 
-**Severity:** High &nbsp; **Category:** Account Policy &nbsp; **Provider:** SecEdit &nbsp; **Reboot:** No &nbsp; **Tier:** Essential
+**Severity:** High &nbsp; **Category:** Account Policy &nbsp; **Provider:** SecEdit &nbsp; **Delivery:** Direct &nbsp; **Reboot:** No &nbsp; **Tier:** Essential
 
 The local security policy must enforce password complexity requirements.
 
@@ -1315,7 +1332,7 @@ The local security policy must enforce password complexity requirements.
 
 ### WIN-PWD-003 - Maximum Password Age { #win-pwd-003 }
 
-**Severity:** Medium &nbsp; **Category:** Account Policy &nbsp; **Provider:** SecEdit &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+**Severity:** Medium &nbsp; **Category:** Account Policy &nbsp; **Provider:** SecEdit &nbsp; **Delivery:** Direct &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
 
 Passwords must expire within a defined period so that compromised credentials have a limited useful lifetime.
 
@@ -1330,7 +1347,7 @@ Passwords must expire within a defined period so that compromised credentials ha
 
 ### WIN-PWD-004 - Minimum Password Age { #win-pwd-004 }
 
-**Severity:** Low &nbsp; **Category:** Account Policy &nbsp; **Provider:** SecEdit &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+**Severity:** Low &nbsp; **Category:** Account Policy &nbsp; **Provider:** SecEdit &nbsp; **Delivery:** Direct &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
 
 A minimum password age prevents users from cycling rapidly through passwords to defeat history enforcement.
 
@@ -1345,7 +1362,7 @@ A minimum password age prevents users from cycling rapidly through passwords to 
 
 ### WIN-PWD-005 - Enforce Password History { #win-pwd-005 }
 
-**Severity:** Medium &nbsp; **Category:** Account Policy &nbsp; **Provider:** SecEdit &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+**Severity:** Medium &nbsp; **Category:** Account Policy &nbsp; **Provider:** SecEdit &nbsp; **Delivery:** Direct &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
 
 Remembering previous passwords prevents reuse of recently used credentials.
 
@@ -1360,7 +1377,7 @@ Remembering previous passwords prevents reuse of recently used credentials.
 
 ### WIN-PWD-006 - Disable Reversible Password Encryption { #win-pwd-006 }
 
-**Severity:** High &nbsp; **Category:** Account Policy &nbsp; **Provider:** SecEdit &nbsp; **Reboot:** No &nbsp; **Tier:** Essential
+**Severity:** High &nbsp; **Category:** Account Policy &nbsp; **Provider:** SecEdit &nbsp; **Delivery:** Direct &nbsp; **Reboot:** No &nbsp; **Tier:** Essential
 
 Storing passwords using reversible encryption is equivalent to storing plaintext passwords and must be disabled.
 
@@ -1375,7 +1392,7 @@ Storing passwords using reversible encryption is equivalent to storing plaintext
 
 ### WIN-RDP-001 - Require Network Level Authentication for RDP { #win-rdp-001 }
 
-**Severity:** High &nbsp; **Category:** Remote Access &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+**Severity:** High &nbsp; **Category:** Remote Access &nbsp; **Provider:** Registry &nbsp; **Delivery:** Direct &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
 
 Remote Desktop connections must require Network Level Authentication (NLA) so users authenticate before a session is established.
 
@@ -1390,7 +1407,7 @@ Remote Desktop connections must require Network Level Authentication (NLA) so us
 
 ### WIN-RDP-002 - RDP Minimum Encryption Level (High) { #win-rdp-002 }
 
-**Severity:** Medium &nbsp; **Category:** Remote Access &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+**Severity:** Medium &nbsp; **Category:** Remote Access &nbsp; **Provider:** Registry &nbsp; **Delivery:** Direct &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
 
 Remote Desktop sessions must use a High minimum encryption level.
 
@@ -1405,7 +1422,7 @@ Remote Desktop sessions must use a High minimum encryption level.
 
 ### WIN-RDP-003 - RDP Security Layer (TLS) { #win-rdp-003 }
 
-**Severity:** Medium &nbsp; **Category:** Remote Access &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+**Severity:** Medium &nbsp; **Category:** Remote Access &nbsp; **Provider:** Registry &nbsp; **Delivery:** Direct &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
 
 Remote Desktop must use the SSL/TLS security layer for connection security.
 
@@ -1420,7 +1437,7 @@ Remote Desktop must use the SSL/TLS security layer for connection security.
 
 ### WIN-RDP-004 - Disable RDP Drive Redirection { #win-rdp-004 }
 
-**Severity:** Medium &nbsp; **Category:** Remote Access &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+**Severity:** Medium &nbsp; **Category:** Remote Access &nbsp; **Provider:** Registry &nbsp; **Delivery:** Direct &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
 
 Client drive redirection over RDP must be disabled to prevent data exfiltration and malware ingress.
 
@@ -1435,7 +1452,7 @@ Client drive redirection over RDP must be disabled to prevent data exfiltration 
 
 ### WIN-RDP-005 - Always Prompt for Password on RDP Connection { #win-rdp-005 }
 
-**Severity:** Medium &nbsp; **Category:** Remote Access &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+**Severity:** Medium &nbsp; **Category:** Remote Access &nbsp; **Provider:** Registry &nbsp; **Delivery:** Group Policy &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
 
 Require Remote Desktop clients to provide a password at connection time. Group Policy setting: this control checks the corresponding Group Policy registry value, so it can report non-compliant until the policy is explicitly configured (even where the effective Windows default is already secure), and a domain Group Policy applied after hardening can override it.
 
@@ -1450,7 +1467,7 @@ Require Remote Desktop clients to provide a password at connection time. Group P
 
 ### WIN-RDP-006 - Disable RDP Clipboard Redirection { #win-rdp-006 }
 
-**Severity:** Low &nbsp; **Category:** Remote Access &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Enterprise
+**Severity:** Low &nbsp; **Category:** Remote Access &nbsp; **Provider:** Registry &nbsp; **Delivery:** Group Policy &nbsp; **Reboot:** No &nbsp; **Tier:** Enterprise
 
 Disable clipboard redirection in Remote Desktop sessions. Group Policy setting: this control checks the corresponding Group Policy registry value, so it can report non-compliant until the policy is explicitly configured (even where the effective Windows default is already secure), and a domain Group Policy applied after hardening can override it.
 
@@ -1465,7 +1482,7 @@ Disable clipboard redirection in Remote Desktop sessions. Group Policy setting: 
 
 ### WIN-SMB-001 - Disable SMBv1 { #win-smb-001 }
 
-**Severity:** High &nbsp; **Category:** Network Protocols &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Essential
+**Severity:** High &nbsp; **Category:** Network Protocols &nbsp; **Provider:** Registry &nbsp; **Delivery:** Direct &nbsp; **Reboot:** No &nbsp; **Tier:** Essential
 
 SMBv1 is a deprecated protocol vulnerable to EternalBlue-class remote code execution and lateral movement. It must be disabled on the server.
 
@@ -1480,7 +1497,7 @@ SMBv1 is a deprecated protocol vulnerable to EternalBlue-class remote code execu
 
 ### WIN-SMB-003 - Require SMB Signing (Server) { #win-smb-003 }
 
-**Severity:** High &nbsp; **Category:** Network Protocols &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+**Severity:** High &nbsp; **Category:** Network Protocols &nbsp; **Provider:** Registry &nbsp; **Delivery:** Direct &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
 
 The SMB server must require packet signing to prevent tampering and man-in-the-middle attacks on file traffic.
 
@@ -1495,7 +1512,7 @@ The SMB server must require packet signing to prevent tampering and man-in-the-m
 
 ### WIN-SMB-004 - Disable SMBv1 Client { #win-smb-004 }
 
-**Severity:** High &nbsp; **Category:** Network Protocols &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+**Severity:** High &nbsp; **Category:** Network Protocols &nbsp; **Provider:** Registry &nbsp; **Delivery:** Direct &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
 
 The SMBv1 client driver (mrxsmb10) must be disabled to prevent the host connecting over the vulnerable SMBv1 protocol.
 
@@ -1510,7 +1527,7 @@ The SMBv1 client driver (mrxsmb10) must be disabled to prevent the host connecti
 
 ### WIN-SMB-005 - Require SMB Client Signing { #win-smb-005 }
 
-**Severity:** Medium &nbsp; **Category:** Network Protocols &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+**Severity:** Medium &nbsp; **Category:** Network Protocols &nbsp; **Provider:** Registry &nbsp; **Delivery:** Direct &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
 
 The SMB client must require packet signing to protect outbound file traffic from tampering.
 
@@ -1525,7 +1542,7 @@ The SMB client must require packet signing to protect outbound file traffic from
 
 ### WIN-SMB-006 - Restrict Anonymous Access to Named Pipes and Shares { #win-smb-006 }
 
-**Severity:** Medium &nbsp; **Category:** Network Protocols &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+**Severity:** Medium &nbsp; **Category:** Network Protocols &nbsp; **Provider:** Registry &nbsp; **Delivery:** Direct &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
 
 Anonymous (null session) access to named pipes and shares must be restricted.
 
@@ -1540,7 +1557,7 @@ Anonymous (null session) access to named pipes and shares must be restricted.
 
 ### WIN-SMB-007 - Disable SMB Client Insecure Guest Logons { #win-smb-007 }
 
-**Severity:** Medium &nbsp; **Category:** Network Protocols &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+**Severity:** Medium &nbsp; **Category:** Network Protocols &nbsp; **Provider:** Registry &nbsp; **Delivery:** Group Policy &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
 
 Prevent the SMB client from making insecure guest logons to file servers. Group Policy setting: this control checks the corresponding Group Policy registry value, so it can report non-compliant until the policy is explicitly configured (even where the effective Windows default is already secure), and a domain Group Policy applied after hardening can override it.
 
@@ -1555,7 +1572,7 @@ Prevent the SMB client from making insecure guest logons to file servers. Group 
 
 ### WIN-SVC-001 - Disable Remote Registry Service { #win-svc-001 }
 
-**Severity:** Medium &nbsp; **Category:** Attack Surface Reduction &nbsp; **Provider:** Service &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+**Severity:** Medium &nbsp; **Category:** Attack Surface Reduction &nbsp; **Provider:** Service &nbsp; **Delivery:** Direct &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
 
 The Remote Registry service must be stopped and disabled to reduce remote attack surface.
 
@@ -1570,7 +1587,7 @@ The Remote Registry service must be stopped and disabled to reduce remote attack
 
 ### WIN-SVC-002 - Disable Print Spooler Service { #win-svc-002 }
 
-**Severity:** Medium &nbsp; **Category:** Attack Surface Reduction &nbsp; **Provider:** Service &nbsp; **Reboot:** No &nbsp; **Tier:** Enterprise
+**Severity:** Medium &nbsp; **Category:** Attack Surface Reduction &nbsp; **Provider:** Service &nbsp; **Delivery:** Direct &nbsp; **Reboot:** No &nbsp; **Tier:** Enterprise
 
 The Print Spooler service must be stopped and disabled on servers that do not print (PrintNightmare mitigation).
 
@@ -1585,7 +1602,7 @@ The Print Spooler service must be stopped and disabled on servers that do not pr
 
 ### WIN-TLS-001 - Enable TLS 1.2 (Server) { #win-tls-001 }
 
-**Severity:** Medium &nbsp; **Category:** Cryptography &nbsp; **Provider:** Registry &nbsp; **Reboot:** Yes &nbsp; **Tier:** Standard
+**Severity:** Medium &nbsp; **Category:** Cryptography &nbsp; **Provider:** Registry &nbsp; **Delivery:** Direct &nbsp; **Reboot:** Yes &nbsp; **Tier:** Standard
 
 Explicitly enable the TLS 1.2 SCHANNEL server endpoint.
 
@@ -1600,7 +1617,7 @@ Explicitly enable the TLS 1.2 SCHANNEL server endpoint.
 
 ### WIN-TLS-002 - Enable TLS 1.2 (Client) { #win-tls-002 }
 
-**Severity:** Medium &nbsp; **Category:** Cryptography &nbsp; **Provider:** Registry &nbsp; **Reboot:** Yes &nbsp; **Tier:** Standard
+**Severity:** Medium &nbsp; **Category:** Cryptography &nbsp; **Provider:** Registry &nbsp; **Delivery:** Direct &nbsp; **Reboot:** Yes &nbsp; **Tier:** Standard
 
 Explicitly enable the TLS 1.2 SCHANNEL client endpoint.
 
@@ -1615,7 +1632,7 @@ Explicitly enable the TLS 1.2 SCHANNEL client endpoint.
 
 ### WIN-TLS-003 - Disable RC4 128/128 Cipher { #win-tls-003 }
 
-**Severity:** High &nbsp; **Category:** Cryptography &nbsp; **Provider:** Registry &nbsp; **Reboot:** Yes &nbsp; **Tier:** Standard
+**Severity:** High &nbsp; **Category:** Cryptography &nbsp; **Provider:** Registry &nbsp; **Delivery:** Direct &nbsp; **Reboot:** Yes &nbsp; **Tier:** Standard
 
 Disable the weak RC4 128/128 SCHANNEL cipher.
 
@@ -1630,7 +1647,7 @@ Disable the weak RC4 128/128 SCHANNEL cipher.
 
 ### WIN-TLS-004 - Disable RC4 40/128 Cipher { #win-tls-004 }
 
-**Severity:** High &nbsp; **Category:** Cryptography &nbsp; **Provider:** Registry &nbsp; **Reboot:** Yes &nbsp; **Tier:** Standard
+**Severity:** High &nbsp; **Category:** Cryptography &nbsp; **Provider:** Registry &nbsp; **Delivery:** Direct &nbsp; **Reboot:** Yes &nbsp; **Tier:** Standard
 
 Disable the weak RC4 40/128 SCHANNEL cipher.
 
@@ -1645,7 +1662,7 @@ Disable the weak RC4 40/128 SCHANNEL cipher.
 
 ### WIN-TLS-005 - Disable Triple DES 168 Cipher { #win-tls-005 }
 
-**Severity:** Medium &nbsp; **Category:** Cryptography &nbsp; **Provider:** Registry &nbsp; **Reboot:** Yes &nbsp; **Tier:** Standard
+**Severity:** Medium &nbsp; **Category:** Cryptography &nbsp; **Provider:** Registry &nbsp; **Delivery:** Direct &nbsp; **Reboot:** Yes &nbsp; **Tier:** Standard
 
 Disable the legacy Triple DES 168 SCHANNEL cipher.
 
@@ -1660,7 +1677,7 @@ Disable the legacy Triple DES 168 SCHANNEL cipher.
 
 ### WIN-TLS-010 - Disable TLS 1.0 (Server) { #win-tls-010 }
 
-**Severity:** High &nbsp; **Category:** Cryptography &nbsp; **Provider:** Registry &nbsp; **Reboot:** Yes &nbsp; **Tier:** Essential
+**Severity:** High &nbsp; **Category:** Cryptography &nbsp; **Provider:** Registry &nbsp; **Delivery:** Direct &nbsp; **Reboot:** Yes &nbsp; **Tier:** Essential
 
 TLS 1.0 is a deprecated protocol with known weaknesses. The SCHANNEL server endpoint for TLS 1.0 must be disabled.
 
@@ -1675,7 +1692,7 @@ TLS 1.0 is a deprecated protocol with known weaknesses. The SCHANNEL server endp
 
 ### WIN-TLS-011 - Disable TLS 1.1 (Server) { #win-tls-011 }
 
-**Severity:** High &nbsp; **Category:** Cryptography &nbsp; **Provider:** Registry &nbsp; **Reboot:** Yes &nbsp; **Tier:** Essential
+**Severity:** High &nbsp; **Category:** Cryptography &nbsp; **Provider:** Registry &nbsp; **Delivery:** Direct &nbsp; **Reboot:** Yes &nbsp; **Tier:** Essential
 
 TLS 1.1 is a deprecated protocol. The SCHANNEL server endpoint for TLS 1.1 must be disabled.
 
@@ -1690,7 +1707,7 @@ TLS 1.1 is a deprecated protocol. The SCHANNEL server endpoint for TLS 1.1 must 
 
 ### WIN-TLS-012 - Disable SSL 3.0 (Server) { #win-tls-012 }
 
-**Severity:** High &nbsp; **Category:** Cryptography &nbsp; **Provider:** Registry &nbsp; **Reboot:** Yes &nbsp; **Tier:** Essential
+**Severity:** High &nbsp; **Category:** Cryptography &nbsp; **Provider:** Registry &nbsp; **Delivery:** Direct &nbsp; **Reboot:** Yes &nbsp; **Tier:** Essential
 
 The deprecated SSL 3.0 protocol must be disabled on the SCHANNEL server endpoint.
 
@@ -1705,7 +1722,7 @@ The deprecated SSL 3.0 protocol must be disabled on the SCHANNEL server endpoint
 
 ### WIN-TLS-013 - Disable SSL 2.0 (Server) { #win-tls-013 }
 
-**Severity:** High &nbsp; **Category:** Cryptography &nbsp; **Provider:** Registry &nbsp; **Reboot:** Yes &nbsp; **Tier:** Essential
+**Severity:** High &nbsp; **Category:** Cryptography &nbsp; **Provider:** Registry &nbsp; **Delivery:** Direct &nbsp; **Reboot:** Yes &nbsp; **Tier:** Essential
 
 The obsolete SSL 2.0 protocol must be disabled on the SCHANNEL server endpoint.
 
@@ -1720,7 +1737,7 @@ The obsolete SSL 2.0 protocol must be disabled on the SCHANNEL server endpoint.
 
 ### WIN-UAC-001 - User Account Control Enabled { #win-uac-001 }
 
-**Severity:** High &nbsp; **Category:** Privilege Management &nbsp; **Provider:** Registry &nbsp; **Reboot:** Yes &nbsp; **Tier:** Essential
+**Severity:** High &nbsp; **Category:** Privilege Management &nbsp; **Provider:** Registry &nbsp; **Delivery:** Group Policy &nbsp; **Reboot:** Yes &nbsp; **Tier:** Essential
 
 User Account Control (UAC) must be enabled (EnableLUA = 1) to enforce administrative elevation prompts. Group Policy setting: this control checks the corresponding Group Policy registry value, so it can report non-compliant until the policy is explicitly configured (even where the effective Windows default is already secure), and a domain Group Policy applied after hardening can override it.
 
@@ -1735,7 +1752,7 @@ User Account Control (UAC) must be enabled (EnableLUA = 1) to enforce administra
 
 ### WIN-UAC-002 - UAC Elevation Prompt for Administrators { #win-uac-002 }
 
-**Severity:** Medium &nbsp; **Category:** Privilege Management &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+**Severity:** Medium &nbsp; **Category:** Privilege Management &nbsp; **Provider:** Registry &nbsp; **Delivery:** Group Policy &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
 
 Administrator elevation must prompt for consent on the secure desktop. Group Policy setting: this control checks the corresponding Group Policy registry value, so it can report non-compliant until the policy is explicitly configured (even where the effective Windows default is already secure), and a domain Group Policy applied after hardening can override it.
 
@@ -1750,7 +1767,7 @@ Administrator elevation must prompt for consent on the secure desktop. Group Pol
 
 ### WIN-UAC-003 - UAC Detect Application Installations { #win-uac-003 }
 
-**Severity:** Medium &nbsp; **Category:** Privilege Management &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+**Severity:** Medium &nbsp; **Category:** Privilege Management &nbsp; **Provider:** Registry &nbsp; **Delivery:** Group Policy &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
 
 UAC must detect application installations and prompt for elevation. Group Policy setting: this control checks the corresponding Group Policy registry value, so it can report non-compliant until the policy is explicitly configured (even where the effective Windows default is already secure), and a domain Group Policy applied after hardening can override it.
 
@@ -1765,7 +1782,7 @@ UAC must detect application installations and prompt for elevation. Group Policy
 
 ### WIN-UAC-004 - Deny UAC Elevation Prompt for Standard Users { #win-uac-004 }
 
-**Severity:** Medium &nbsp; **Category:** Privilege Management &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+**Severity:** Medium &nbsp; **Category:** Privilege Management &nbsp; **Provider:** Registry &nbsp; **Delivery:** Group Policy &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
 
 Standard users must not be prompted to elevate; elevation requests are automatically denied. Group Policy setting: this control checks the corresponding Group Policy registry value, so it can report non-compliant until the policy is explicitly configured (even where the effective Windows default is already secure), and a domain Group Policy applied after hardening can override it.
 
@@ -1780,7 +1797,7 @@ Standard users must not be prompted to elevate; elevation requests are automatic
 
 ### WIN-UAC-005 - UAC Switch to the Secure Desktop for Elevation { #win-uac-005 }
 
-**Severity:** Medium &nbsp; **Category:** Privilege Management &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+**Severity:** Medium &nbsp; **Category:** Privilege Management &nbsp; **Provider:** Registry &nbsp; **Delivery:** Group Policy &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
 
 Elevation prompts must be shown on the secure desktop to resist spoofing. Group Policy setting: this control checks the corresponding Group Policy registry value; a domain Group Policy applied after hardening can override the local configuration.
 
@@ -1795,7 +1812,7 @@ Elevation prompts must be shown on the secure desktop to resist spoofing. Group 
 
 ### WIN-UAC-006 - Only Elevate UIAccess Apps in Secure Locations { #win-uac-006 }
 
-**Severity:** Medium &nbsp; **Category:** Privilege Management &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+**Severity:** Medium &nbsp; **Category:** Privilege Management &nbsp; **Provider:** Registry &nbsp; **Delivery:** Group Policy &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
 
 Only allow UIAccess applications installed in secure file-system locations to elevate. Group Policy setting: this control checks the corresponding Group Policy registry value; a domain Group Policy applied after hardening can override the local configuration.
 
@@ -1810,7 +1827,7 @@ Only allow UIAccess applications installed in secure file-system locations to el
 
 ### WIN-WDIGEST-001 - Disable WDigest Credential Caching { #win-wdigest-001 }
 
-**Severity:** High &nbsp; **Category:** Credential Protection &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Essential
+**Severity:** High &nbsp; **Category:** Credential Protection &nbsp; **Provider:** Registry &nbsp; **Delivery:** Direct &nbsp; **Reboot:** No &nbsp; **Tier:** Essential
 
 WDigest must not cache plaintext credentials in memory.
 
@@ -1825,7 +1842,7 @@ WDigest must not cache plaintext credentials in memory.
 
 ### WIN-WINRM-001 - Disable WinRM Client Basic Authentication { #win-winrm-001 }
 
-**Severity:** Medium &nbsp; **Category:** Remote Management &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+**Severity:** Medium &nbsp; **Category:** Remote Management &nbsp; **Provider:** Registry &nbsp; **Delivery:** Group Policy &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
 
 The WinRM client must not allow Basic authentication. Group Policy setting: this control checks the corresponding Group Policy registry value, so it can report non-compliant until the policy is explicitly configured (even where the effective Windows default is already secure), and a domain Group Policy applied after hardening can override it.
 
@@ -1840,7 +1857,7 @@ The WinRM client must not allow Basic authentication. Group Policy setting: this
 
 ### WIN-WINRM-002 - Disallow WinRM Unencrypted Traffic { #win-winrm-002 }
 
-**Severity:** Medium &nbsp; **Category:** Remote Management &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+**Severity:** Medium &nbsp; **Category:** Remote Management &nbsp; **Provider:** Registry &nbsp; **Delivery:** Group Policy &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
 
 The WinRM service must not allow unencrypted traffic. Group Policy setting: this control checks the corresponding Group Policy registry value, so it can report non-compliant until the policy is explicitly configured (even where the effective Windows default is already secure), and a domain Group Policy applied after hardening can override it.
 
@@ -1855,7 +1872,7 @@ The WinRM service must not allow unencrypted traffic. Group Policy setting: this
 
 ### WIN-WINRM-003 - Disable WinRM Client Digest Authentication { #win-winrm-003 }
 
-**Severity:** Medium &nbsp; **Category:** Remote Management &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+**Severity:** Medium &nbsp; **Category:** Remote Management &nbsp; **Provider:** Registry &nbsp; **Delivery:** Group Policy &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
 
 The WinRM client must not use Digest authentication. Group Policy setting: this control checks the corresponding Group Policy registry value, so it can report non-compliant until the policy is explicitly configured (even where the effective Windows default is already secure), and a domain Group Policy applied after hardening can override it.
 

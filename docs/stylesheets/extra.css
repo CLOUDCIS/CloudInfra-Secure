@@ -103,3 +103,22 @@
   color: var(--md-default-fg-color--light);
   font-variant-numeric: tabular-nums;
 }
+
+/* Delivery badges (GPO-backed vs direct) */
+.gpo-badge {
+  display: inline-block;
+  background: #eaf5ec;
+  color: #1a7f37;
+  border: 1px solid #b7dfc0;
+  border-radius: 9px;
+  padding: 1px 7px;
+  font-size: .72rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+[data-md-color-scheme="slate"] .gpo-badge {
+  background: rgba(26,127,55,.18);
+  color: #7ee2a0;
+  border-color: rgba(126,226,160,.4);
+}
+.muted-badge { color: var(--md-default-fg-color--light); font-size: .72rem; }

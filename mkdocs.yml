@@ -44,6 +44,7 @@ extra_css:
 
 extra_javascript:
   - javascripts/compliance-filter.js
+  - javascripts/controls-filter.js
 
 extra:
   social:
