@@ -1,6 +1,6 @@
 # Controls
 
-The CloudInfra Secure control library (48 controls). Each control exists once and may be used by many baselines.
+The CloudInfra Secure control library (66 controls). Each control exists once and may be used by many baselines.
 
 !!! note "Compliance disclaimer"
     CloudInfra Secure controls are designed to help organisations implement technical security requirements commonly found in recognised security standards. They do not constitute certification or proof of compliance.
@@ -9,6 +9,9 @@ The CloudInfra Secure control library (48 controls). Each control exists once an
 
 | ID | Name | Severity | Category | Provider | Reboot |
 |----|------|----------|----------|----------|--------|
+| [WIN-ASR-001](#win-asr-001) | ASR: Block Credential Stealing from LSASS | High | Attack Surface Reduction | Registry | No |
+| [WIN-ASR-002](#win-asr-002) | ASR: Block Office Apps Creating Child Processes | Medium | Attack Surface Reduction | Registry | No |
+| [WIN-ASR-003](#win-asr-003) | ASR: Block Executable Content from Email and Webmail | Medium | Attack Surface Reduction | Registry | No |
 | [WIN-AUD-001](#win-aud-001) | Audit Logon Failures | Medium | Logging and Monitoring | AuditPol | No |
 | [WIN-AUD-002](#win-aud-002) | Audit Account Lockout Events | Medium | Logging and Monitoring | AuditPol | No |
 | [WIN-AUD-003](#win-aud-003) | Audit Process Creation | Medium | Logging and Monitoring | AuditPol | No |
@@ -17,8 +20,14 @@ The CloudInfra Secure control library (48 controls). Each control exists once an
 | [WIN-AUD-006](#win-aud-006) | Audit Special Logon | Medium | Logging and Monitoring | AuditPol | No |
 | [WIN-AUD-007](#win-aud-007) | Audit Sensitive Privilege Use | Medium | Logging and Monitoring | AuditPol | No |
 | [WIN-AUD-008](#win-aud-008) | Audit System Integrity | Medium | Logging and Monitoring | AuditPol | No |
+| [WIN-AUD-009](#win-aud-009) | Audit Logoff | Medium | Logging and Monitoring | AuditPol | No |
+| [WIN-AUD-010](#win-aud-010) | Audit Removable Storage | Medium | Logging and Monitoring | AuditPol | No |
+| [WIN-AUD-011](#win-aud-011) | Audit Authentication Policy Change | Medium | Logging and Monitoring | AuditPol | No |
 | [WIN-AUTORUN-001](#win-autorun-001) | Disable AutoRun on All Drives | Medium | Attack Surface Reduction | Registry | No |
 | [WIN-DEF-001](#win-def-001) | Microsoft Defender Antivirus Enabled | High | Endpoint Protection | Defender | No |
+| [WIN-DEF-002](#win-def-002) | Enable Potentially Unwanted Application (PUA) Protection | High | Endpoint Protection | Registry | No |
+| [WIN-DEF-003](#win-def-003) | Enable Defender Real-Time Protection | High | Endpoint Protection | Registry | No |
+| [WIN-DEF-004](#win-def-004) | Enable Cloud-Delivered Protection | Medium | Endpoint Protection | Registry | No |
 | [WIN-FW-001](#win-fw-001) | Windows Firewall Enabled (All Profiles) | High | Host Firewall | Firewall | No |
 | [WIN-INSTALL-001](#win-install-001) | Disable Always Install Elevated | High | Privilege Management | Registry | No |
 | [WIN-LDAP-001](#win-ldap-001) | LDAP Client Signing | Medium | Authentication | Registry | No |
@@ -27,10 +36,16 @@ The CloudInfra Secure control library (48 controls). Each control exists once an
 | [WIN-LOCK-003](#win-lock-003) | Reset Account Lockout Counter | Medium | Account Policy | SecEdit | No |
 | [WIN-LOGON-001](#win-logon-001) | Machine Inactivity Limit | Medium | Access Control | Registry | No |
 | [WIN-LOGON-002](#win-logon-002) | Do Not Display Last Signed-In User | Low | Access Control | Registry | No |
+| [WIN-LOGON-003](#win-logon-003) | Limit Number of Cached Logons | Medium | Access Control | Registry | No |
 | [WIN-LSA-001](#win-lsa-001) | Do Not Store LAN Manager Hash | High | Credential Protection | Registry | No |
 | [WIN-LSA-002](#win-lsa-002) | Restrict Anonymous SID Enumeration | Medium | Access Control | Registry | No |
 | [WIN-LSA-003](#win-lsa-003) | Enable LSASS Protection (RunAsPPL) | High | Credential Protection | Registry | Yes |
+| [WIN-LSA-004](#win-lsa-004) | Do Not Allow Anonymous Enumeration of SAM Accounts | Medium | Access Control | Registry | No |
+| [WIN-LSA-005](#win-lsa-005) | Enable Structured Exception Handling Overwrite Protection (SEHOP) | Medium | Exploit Protection | Registry | No |
 | [WIN-NET-001](#win-net-001) | Disable LLMNR | Medium | Network Protocols | Registry | No |
+| [WIN-NET-002](#win-net-002) | Disable IPv4 Source Routing | Medium | Network Protocols | Registry | No |
+| [WIN-NET-003](#win-net-003) | Disable ICMP Redirects | Low | Network Protocols | Registry | No |
+| [WIN-NET-004](#win-net-004) | Disable IPv6 Source Routing | Medium | Network Protocols | Registry | No |
 | [WIN-NTLM-001](#win-ntlm-001) | LAN Manager Authentication Level (NTLMv2 Only) | High | Authentication | Registry | No |
 | [WIN-PSL-001](#win-psl-001) | Enable PowerShell Script Block Logging | Medium | Logging and Monitoring | Registry | No |
 | [WIN-PSL-002](#win-psl-002) | Enable PowerShell Module Logging | Medium | Logging and Monitoring | Registry | No |
@@ -48,6 +63,7 @@ The CloudInfra Secure control library (48 controls). Each control exists once an
 | [WIN-SMB-003](#win-smb-003) | Require SMB Signing (Server) | High | Network Protocols | Registry | No |
 | [WIN-SMB-004](#win-smb-004) | Disable SMBv1 Client | High | Network Protocols | Registry | No |
 | [WIN-SMB-005](#win-smb-005) | Require SMB Client Signing | Medium | Network Protocols | Registry | No |
+| [WIN-SMB-006](#win-smb-006) | Restrict Anonymous Access to Named Pipes and Shares | Medium | Network Protocols | Registry | No |
 | [WIN-SVC-001](#win-svc-001) | Disable Remote Registry Service | Medium | Attack Surface Reduction | Service | No |
 | [WIN-TLS-010](#win-tls-010) | Disable TLS 1.0 (Server) | High | Cryptography | Registry | Yes |
 | [WIN-TLS-011](#win-tls-011) | Disable TLS 1.1 (Server) | High | Cryptography | Registry | Yes |
@@ -56,9 +72,56 @@ The CloudInfra Secure control library (48 controls). Each control exists once an
 | [WIN-UAC-001](#win-uac-001) | User Account Control Enabled | High | Privilege Management | Registry | Yes |
 | [WIN-UAC-002](#win-uac-002) | UAC Elevation Prompt for Administrators | Medium | Privilege Management | Registry | No |
 | [WIN-UAC-003](#win-uac-003) | UAC Detect Application Installations | Medium | Privilege Management | Registry | No |
+| [WIN-UAC-004](#win-uac-004) | Deny UAC Elevation Prompt for Standard Users | Medium | Privilege Management | Registry | No |
+| [WIN-UAC-005](#win-uac-005) | UAC Switch to the Secure Desktop for Elevation | Medium | Privilege Management | Registry | No |
 | [WIN-WDIGEST-001](#win-wdigest-001) | Disable WDigest Credential Caching | High | Credential Protection | Registry | No |
 
 ## Control reference
+
+### WIN-ASR-001 - ASR: Block Credential Stealing from LSASS { #win-asr-001 }
+
+**Severity:** High &nbsp; **Category:** Attack Surface Reduction &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Enterprise
+
+The Attack Surface Reduction rule blocking credential theft from the LSASS process must be enabled in block mode.
+
+**Rationale.** Credential theft from LSASS enables lateral movement and privilege escalation.
+
+**Remediation.** Enable ASR rule 9e6c4e1f-7d60-472f-ba1a-a39ef669e4b2 in block mode (1).
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
+
+**References:**
+- [https://learn.microsoft.com/en-us/defender-endpoint/attack-surface-reduction-rules-reference](https://learn.microsoft.com/en-us/defender-endpoint/attack-surface-reduction-rules-reference)
+
+### WIN-ASR-002 - ASR: Block Office Apps Creating Child Processes { #win-asr-002 }
+
+**Severity:** Medium &nbsp; **Category:** Attack Surface Reduction &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Enterprise
+
+The Attack Surface Reduction rule blocking Office applications from creating child processes must be enabled.
+
+**Rationale.** Office child-process creation is a common malware/macro execution technique.
+
+**Remediation.** Enable ASR rule d4f940ab-401b-4efc-aadc-ad5f3c50688a in block mode (1).
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
+
+**References:**
+- [https://learn.microsoft.com/en-us/defender-endpoint/attack-surface-reduction-rules-reference](https://learn.microsoft.com/en-us/defender-endpoint/attack-surface-reduction-rules-reference)
+
+### WIN-ASR-003 - ASR: Block Executable Content from Email and Webmail { #win-asr-003 }
+
+**Severity:** Medium &nbsp; **Category:** Attack Surface Reduction &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Enterprise
+
+The Attack Surface Reduction rule blocking executable content from email and webmail must be enabled.
+
+**Rationale.** Executable email attachments are a primary malware delivery vector.
+
+**Remediation.** Enable ASR rule be9ba2d9-53ea-4cdc-84e5-9b1eeee46550 in block mode (1).
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
+
+**References:**
+- [https://learn.microsoft.com/en-us/defender-endpoint/attack-surface-reduction-rules-reference](https://learn.microsoft.com/en-us/defender-endpoint/attack-surface-reduction-rules-reference)
 
 ### WIN-AUD-001 - Audit Logon Failures { #win-aud-001 }
 
@@ -180,6 +243,51 @@ System integrity events (audit subsystem failures, driver issues) must be audite
 **References:**
 - [https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/audit-system-integrity](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/audit-system-integrity)
 
+### WIN-AUD-009 - Audit Logoff { #win-aud-009 }
+
+**Severity:** Medium &nbsp; **Category:** Logging and Monitoring &nbsp; **Provider:** AuditPol &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+
+Logoff events must be audited to correlate session activity.
+
+**Rationale.** Unaudited logoffs leave gaps in the session timeline.
+
+**Remediation.** Enable success auditing for the Logoff subcategory.
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `SOC 2` `ISO/IEC 27001` `Microsoft Security Baselines` `NIS2`
+
+**References:**
+- [https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/audit-logoff](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/audit-logoff)
+
+### WIN-AUD-010 - Audit Removable Storage { #win-aud-010 }
+
+**Severity:** Medium &nbsp; **Category:** Logging and Monitoring &nbsp; **Provider:** AuditPol &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+
+Access to removable storage must be audited to detect data exfiltration.
+
+**Rationale.** Unaudited removable-storage use hides data theft.
+
+**Remediation.** Enable success and failure auditing for the Removable Storage subcategory.
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `SOC 2` `ISO/IEC 27001` `Microsoft Security Baselines` `NIS2`
+
+**References:**
+- [https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/audit-removable-storage](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/audit-removable-storage)
+
+### WIN-AUD-011 - Audit Authentication Policy Change { #win-aud-011 }
+
+**Severity:** Medium &nbsp; **Category:** Logging and Monitoring &nbsp; **Provider:** AuditPol &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+
+Changes to authentication policy must be audited.
+
+**Rationale.** Unaudited authentication-policy changes hide tampering with security controls.
+
+**Remediation.** Enable success auditing for the Authentication Policy Change subcategory.
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `SOC 2` `ISO/IEC 27001` `Microsoft Security Baselines` `NIS2`
+
+**References:**
+- [https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/audit-authentication-policy-change](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/audit-authentication-policy-change)
+
 ### WIN-AUTORUN-001 - Disable AutoRun on All Drives { #win-autorun-001 }
 
 **Severity:** Medium &nbsp; **Category:** Attack Surface Reduction &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
@@ -206,6 +314,51 @@ Microsoft Defender Antivirus must be enabled and providing real-time protection.
 **Remediation.** Ensure Microsoft Defender Antivirus is enabled with real-time protection. Managed by platform/AV policy; enable via Windows Security or Group Policy (not auto-applied by CloudInfra Secure).
 
 **Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `FedRAMP` `CMMC Level 2` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
+
+**References:**
+- [https://learn.microsoft.com/en-us/defender-endpoint/microsoft-defender-antivirus-windows](https://learn.microsoft.com/en-us/defender-endpoint/microsoft-defender-antivirus-windows)
+
+### WIN-DEF-002 - Enable Potentially Unwanted Application (PUA) Protection { #win-def-002 }
+
+**Severity:** High &nbsp; **Category:** Endpoint Protection &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Essential
+
+Microsoft Defender must block potentially unwanted applications (PUA) such as adware and bundled software.
+
+**Rationale.** PUAs degrade performance and can be a foothold for further compromise.
+
+**Remediation.** Set Windows Defender PUAProtection policy value to 1 (block).
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
+
+**References:**
+- [https://learn.microsoft.com/en-us/defender-endpoint/microsoft-defender-antivirus-windows](https://learn.microsoft.com/en-us/defender-endpoint/microsoft-defender-antivirus-windows)
+
+### WIN-DEF-003 - Enable Defender Real-Time Protection { #win-def-003 }
+
+**Severity:** High &nbsp; **Category:** Endpoint Protection &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Essential
+
+Microsoft Defender real-time protection must not be disabled by policy.
+
+**Rationale.** Disabling real-time protection removes continuous malware scanning.
+
+**Remediation.** Ensure Real-Time Protection DisableRealtimeMonitoring is 0 (or absent).
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
+
+**References:**
+- [https://learn.microsoft.com/en-us/defender-endpoint/microsoft-defender-antivirus-windows](https://learn.microsoft.com/en-us/defender-endpoint/microsoft-defender-antivirus-windows)
+
+### WIN-DEF-004 - Enable Cloud-Delivered Protection { #win-def-004 }
+
+**Severity:** Medium &nbsp; **Category:** Endpoint Protection &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+
+Microsoft Defender cloud-delivered protection (MAPS) must be enabled for faster protection against new threats.
+
+**Rationale.** Without cloud protection, response to emerging threats is slower.
+
+**Remediation.** Set Windows Defender Spynet SpynetReporting to 2 (Advanced MAPS).
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
 
 **References:**
 - [https://learn.microsoft.com/en-us/defender-endpoint/microsoft-defender-antivirus-windows](https://learn.microsoft.com/en-us/defender-endpoint/microsoft-defender-antivirus-windows)
@@ -330,6 +483,21 @@ The last signed-in username must not be displayed at the logon screen.
 **References:**
 - [https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/interactive-logon-do-not-display-last-user-name](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/interactive-logon-do-not-display-last-user-name)
 
+### WIN-LOGON-003 - Limit Number of Cached Logons { #win-logon-003 }
+
+**Severity:** Medium &nbsp; **Category:** Access Control &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+
+The number of cached domain logon credentials must be limited to reduce offline credential-theft exposure.
+
+**Rationale.** Cached credentials can be extracted and cracked offline.
+
+**Remediation.** Set Winlogon CachedLogonsCount to 4 or fewer.
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
+
+**References:**
+- [https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/interactive-logon-number-of-previous-logons-to-cache-in-case-domain-controller-is-not-available](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/interactive-logon-number-of-previous-logons-to-cache-in-case-domain-controller-is-not-available)
+
 ### WIN-LSA-001 - Do Not Store LAN Manager Hash { #win-lsa-001 }
 
 **Severity:** High &nbsp; **Category:** Credential Protection &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Essential
@@ -375,6 +543,36 @@ LSASS must run as a protected process (PPL) to resist credential theft tools.
 **References:**
 - [https://learn.microsoft.com/en-us/windows/security/operating-system-security/device-management/windows-security-configuration-framework/windows-security-baselines](https://learn.microsoft.com/en-us/windows/security/operating-system-security/device-management/windows-security-configuration-framework/windows-security-baselines)
 
+### WIN-LSA-004 - Do Not Allow Anonymous Enumeration of SAM Accounts { #win-lsa-004 }
+
+**Severity:** Medium &nbsp; **Category:** Access Control &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+
+Anonymous users must not be able to enumerate SAM accounts.
+
+**Rationale.** Anonymous SAM enumeration aids account discovery and password attacks.
+
+**Remediation.** Set Lsa RestrictAnonymousSAM to 1.
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
+
+**References:**
+- [https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/network-access-do-not-allow-anonymous-enumeration-of-sam-accounts](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/network-access-do-not-allow-anonymous-enumeration-of-sam-accounts)
+
+### WIN-LSA-005 - Enable Structured Exception Handling Overwrite Protection (SEHOP) { #win-lsa-005 }
+
+**Severity:** Medium &nbsp; **Category:** Exploit Protection &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+
+SEHOP must be enabled to block Structured Exception Handler overwrite exploitation.
+
+**Rationale.** SEH overwrite is a common memory-corruption exploitation technique.
+
+**Remediation.** Ensure Session Manager kernel DisableExceptionChainValidation is 0 (SEHOP enabled).
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
+
+**References:**
+- [https://learn.microsoft.com/en-us/windows/security/operating-system-security/device-management/windows-security-configuration-framework/windows-security-baselines](https://learn.microsoft.com/en-us/windows/security/operating-system-security/device-management/windows-security-configuration-framework/windows-security-baselines)
+
 ### WIN-NET-001 - Disable LLMNR { #win-net-001 }
 
 **Severity:** Medium &nbsp; **Category:** Network Protocols &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
@@ -384,6 +582,51 @@ Link-Local Multicast Name Resolution (LLMNR) must be disabled to prevent name-re
 **Rationale.** LLMNR enables responder-style spoofing and NTLM credential theft.
 
 **Remediation.** Set DNSClient EnableMulticast to 0 to disable LLMNR.
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
+
+**References:**
+- [https://learn.microsoft.com/en-us/windows/security/operating-system-security/device-management/windows-security-configuration-framework/windows-security-baselines](https://learn.microsoft.com/en-us/windows/security/operating-system-security/device-management/windows-security-configuration-framework/windows-security-baselines)
+
+### WIN-NET-002 - Disable IPv4 Source Routing { #win-net-002 }
+
+**Severity:** Medium &nbsp; **Category:** Network Protocols &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+
+IPv4 source routing must be disabled to prevent source-routed packet spoofing.
+
+**Rationale.** Source routing lets attackers dictate the network path of packets, aiding spoofing.
+
+**Remediation.** Set Tcpip Parameters DisableIPSourceRouting to 2 (highest protection).
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
+
+**References:**
+- [https://learn.microsoft.com/en-us/windows/security/operating-system-security/device-management/windows-security-configuration-framework/windows-security-baselines](https://learn.microsoft.com/en-us/windows/security/operating-system-security/device-management/windows-security-configuration-framework/windows-security-baselines)
+
+### WIN-NET-003 - Disable ICMP Redirects { #win-net-003 }
+
+**Severity:** Low &nbsp; **Category:** Network Protocols &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+
+ICMP redirects must not override OSPF-generated routes.
+
+**Rationale.** ICMP redirects can be abused to reroute traffic through an attacker.
+
+**Remediation.** Set Tcpip Parameters EnableICMPRedirect to 0.
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
+
+**References:**
+- [https://learn.microsoft.com/en-us/windows/security/operating-system-security/device-management/windows-security-configuration-framework/windows-security-baselines](https://learn.microsoft.com/en-us/windows/security/operating-system-security/device-management/windows-security-configuration-framework/windows-security-baselines)
+
+### WIN-NET-004 - Disable IPv6 Source Routing { #win-net-004 }
+
+**Severity:** Medium &nbsp; **Category:** Network Protocols &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+
+IPv6 source routing must be disabled to prevent source-routed packet spoofing.
+
+**Rationale.** IPv6 source routing enables path manipulation and spoofing.
+
+**Remediation.** Set Tcpip6 Parameters DisableIPSourceRouting to 2.
 
 **Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
 
@@ -645,6 +888,21 @@ The SMB client must require packet signing to protect outbound file traffic from
 **References:**
 - [https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/microsoft-network-client-digitally-sign-communications-always](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/microsoft-network-client-digitally-sign-communications-always)
 
+### WIN-SMB-006 - Restrict Anonymous Access to Named Pipes and Shares { #win-smb-006 }
+
+**Severity:** Medium &nbsp; **Category:** Network Protocols &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+
+Anonymous (null session) access to named pipes and shares must be restricted.
+
+**Rationale.** Null sessions can enumerate and access shares without authentication.
+
+**Remediation.** Set LanmanServer Parameters RestrictNullSessAccess to 1.
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
+
+**References:**
+- [https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/network-access-restrict-anonymous-access-to-named-pipes-and-shares](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/network-access-restrict-anonymous-access-to-named-pipes-and-shares)
+
 ### WIN-SVC-001 - Disable Remote Registry Service { #win-svc-001 }
 
 **Severity:** Medium &nbsp; **Category:** Attack Surface Reduction &nbsp; **Provider:** Service &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
@@ -764,6 +1022,36 @@ UAC must detect application installations and prompt for elevation.
 
 **References:**
 - [https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/user-account-control-detect-application-installations-and-prompt-for-elevation](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/user-account-control-detect-application-installations-and-prompt-for-elevation)
+
+### WIN-UAC-004 - Deny UAC Elevation Prompt for Standard Users { #win-uac-004 }
+
+**Severity:** Medium &nbsp; **Category:** Privilege Management &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+
+Standard users must not be prompted to elevate; elevation requests are automatically denied.
+
+**Rationale.** Prompting standard users to elevate encourages credential sharing and misuse.
+
+**Remediation.** Set Policies System ConsentPromptBehaviorUser to 0 (automatically deny).
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
+
+**References:**
+- [https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/user-account-control-behavior-of-the-elevation-prompt-for-standard-users](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/user-account-control-behavior-of-the-elevation-prompt-for-standard-users)
+
+### WIN-UAC-005 - UAC Switch to the Secure Desktop for Elevation { #win-uac-005 }
+
+**Severity:** Medium &nbsp; **Category:** Privilege Management &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+
+Elevation prompts must be shown on the secure desktop to resist spoofing.
+
+**Rationale.** Elevation prompts on the interactive desktop can be spoofed to capture credentials.
+
+**Remediation.** Set Policies System PromptOnSecureDesktop to 1.
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
+
+**References:**
+- [https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/user-account-control-switch-to-the-secure-desktop-when-prompting-for-elevation](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/user-account-control-switch-to-the-secure-desktop-when-prompting-for-elevation)
 
 ### WIN-WDIGEST-001 - Disable WDigest Credential Caching { #win-wdigest-001 }
 

@@ -6,7 +6,7 @@ CloudInfra Secure ships 7 baselines. Each is a curated collection of control IDs
 
 Baseline for Active Directory Domain Controllers.
 
-**ID:** `CloudInfraSecure-DomainController` &nbsp; **Controls:** 37 &nbsp; **Supported OS:** WindowsServer2022, WindowsServer2025
+**ID:** `CloudInfraSecure-DomainController` &nbsp; **Controls:** 52 &nbsp; **Supported OS:** WindowsServer2022, WindowsServer2025
 
 | Control | Name | Severity |
 |---------|------|----------|
@@ -47,12 +47,27 @@ Baseline for Active Directory Domain Controllers.
 | [WIN-AUD-007](../controls/index.md#win-aud-007) | Audit Sensitive Privilege Use | Medium |
 | [WIN-AUD-008](../controls/index.md#win-aud-008) | Audit System Integrity | Medium |
 | [WIN-SVC-001](../controls/index.md#win-svc-001) | Disable Remote Registry Service | Medium |
+| [WIN-DEF-002](../controls/index.md#win-def-002) | Enable Potentially Unwanted Application (PUA) Protection | High |
+| [WIN-DEF-003](../controls/index.md#win-def-003) | Enable Defender Real-Time Protection | High |
+| [WIN-DEF-004](../controls/index.md#win-def-004) | Enable Cloud-Delivered Protection | Medium |
+| [WIN-NET-002](../controls/index.md#win-net-002) | Disable IPv4 Source Routing | Medium |
+| [WIN-NET-003](../controls/index.md#win-net-003) | Disable ICMP Redirects | Low |
+| [WIN-NET-004](../controls/index.md#win-net-004) | Disable IPv6 Source Routing | Medium |
+| [WIN-SMB-006](../controls/index.md#win-smb-006) | Restrict Anonymous Access to Named Pipes and Shares | Medium |
+| [WIN-LSA-004](../controls/index.md#win-lsa-004) | Do Not Allow Anonymous Enumeration of SAM Accounts | Medium |
+| [WIN-LSA-005](../controls/index.md#win-lsa-005) | Enable Structured Exception Handling Overwrite Protection (SEHOP) | Medium |
+| [WIN-LOGON-003](../controls/index.md#win-logon-003) | Limit Number of Cached Logons | Medium |
+| [WIN-UAC-004](../controls/index.md#win-uac-004) | Deny UAC Elevation Prompt for Standard Users | Medium |
+| [WIN-UAC-005](../controls/index.md#win-uac-005) | UAC Switch to the Secure Desktop for Elevation | Medium |
+| [WIN-AUD-009](../controls/index.md#win-aud-009) | Audit Logoff | Medium |
+| [WIN-AUD-010](../controls/index.md#win-aud-010) | Audit Removable Storage | Medium |
+| [WIN-AUD-011](../controls/index.md#win-aud-011) | Audit Authentication Policy Change | Medium |
 
 ## CloudInfra Secure Enterprise - Enterprise tier
 
 Comprehensive baseline for regulated and high-assurance environments.
 
-**ID:** `CloudInfraSecure-Enterprise` &nbsp; **Controls:** 48 &nbsp; **Supported OS:** WindowsServer2022, WindowsServer2025
+**ID:** `CloudInfraSecure-Enterprise` &nbsp; **Controls:** 66 &nbsp; **Supported OS:** WindowsServer2022, WindowsServer2025
 
 | Control | Name | Severity |
 |---------|------|----------|
@@ -104,12 +119,30 @@ Comprehensive baseline for regulated and high-assurance environments.
 | [WIN-AUD-006](../controls/index.md#win-aud-006) | Audit Special Logon | Medium |
 | [WIN-AUD-007](../controls/index.md#win-aud-007) | Audit Sensitive Privilege Use | Medium |
 | [WIN-AUD-008](../controls/index.md#win-aud-008) | Audit System Integrity | Medium |
+| [WIN-DEF-002](../controls/index.md#win-def-002) | Enable Potentially Unwanted Application (PUA) Protection | High |
+| [WIN-DEF-003](../controls/index.md#win-def-003) | Enable Defender Real-Time Protection | High |
+| [WIN-DEF-004](../controls/index.md#win-def-004) | Enable Cloud-Delivered Protection | Medium |
+| [WIN-ASR-001](../controls/index.md#win-asr-001) | ASR: Block Credential Stealing from LSASS | High |
+| [WIN-ASR-002](../controls/index.md#win-asr-002) | ASR: Block Office Apps Creating Child Processes | Medium |
+| [WIN-ASR-003](../controls/index.md#win-asr-003) | ASR: Block Executable Content from Email and Webmail | Medium |
+| [WIN-NET-002](../controls/index.md#win-net-002) | Disable IPv4 Source Routing | Medium |
+| [WIN-NET-003](../controls/index.md#win-net-003) | Disable ICMP Redirects | Low |
+| [WIN-NET-004](../controls/index.md#win-net-004) | Disable IPv6 Source Routing | Medium |
+| [WIN-SMB-006](../controls/index.md#win-smb-006) | Restrict Anonymous Access to Named Pipes and Shares | Medium |
+| [WIN-LSA-004](../controls/index.md#win-lsa-004) | Do Not Allow Anonymous Enumeration of SAM Accounts | Medium |
+| [WIN-LSA-005](../controls/index.md#win-lsa-005) | Enable Structured Exception Handling Overwrite Protection (SEHOP) | Medium |
+| [WIN-LOGON-003](../controls/index.md#win-logon-003) | Limit Number of Cached Logons | Medium |
+| [WIN-UAC-004](../controls/index.md#win-uac-004) | Deny UAC Elevation Prompt for Standard Users | Medium |
+| [WIN-UAC-005](../controls/index.md#win-uac-005) | UAC Switch to the Secure Desktop for Elevation | Medium |
+| [WIN-AUD-009](../controls/index.md#win-aud-009) | Audit Logoff | Medium |
+| [WIN-AUD-010](../controls/index.md#win-aud-010) | Audit Removable Storage | Medium |
+| [WIN-AUD-011](../controls/index.md#win-aud-011) | Audit Authentication Policy Change | Medium |
 
 ## CloudInfra Secure Essential - Essential tier
 
 Baseline of essential hardening controls suitable for any Windows Server workload.
 
-**ID:** `CloudInfraSecure-Essential` &nbsp; **Controls:** 13 &nbsp; **Supported OS:** WindowsServer2022, WindowsServer2025
+**ID:** `CloudInfraSecure-Essential` &nbsp; **Controls:** 15 &nbsp; **Supported OS:** WindowsServer2022, WindowsServer2025
 
 | Control | Name | Severity |
 |---------|------|----------|
@@ -126,12 +159,14 @@ Baseline of essential hardening controls suitable for any Windows Server workloa
 | [WIN-WDIGEST-001](../controls/index.md#win-wdigest-001) | Disable WDigest Credential Caching | High |
 | [WIN-TLS-012](../controls/index.md#win-tls-012) | Disable SSL 3.0 (Server) | High |
 | [WIN-TLS-013](../controls/index.md#win-tls-013) | Disable SSL 2.0 (Server) | High |
+| [WIN-DEF-002](../controls/index.md#win-def-002) | Enable Potentially Unwanted Application (PUA) Protection | High |
+| [WIN-DEF-003](../controls/index.md#win-def-003) | Enable Defender Real-Time Protection | High |
 
 ## CloudInfra Secure IIS Web Server - Role tier
 
 Baseline for Internet Information Services (IIS) web servers.
 
-**ID:** `CloudInfraSecure-IISWebServer` &nbsp; **Controls:** 18 &nbsp; **Supported OS:** WindowsServer2022, WindowsServer2025
+**ID:** `CloudInfraSecure-IISWebServer` &nbsp; **Controls:** 25 &nbsp; **Supported OS:** WindowsServer2022, WindowsServer2025
 
 | Control | Name | Severity |
 |---------|------|----------|
@@ -153,12 +188,19 @@ Baseline for Internet Information Services (IIS) web servers.
 | [WIN-SMB-004](../controls/index.md#win-smb-004) | Disable SMBv1 Client | High |
 | [WIN-NET-001](../controls/index.md#win-net-001) | Disable LLMNR | Medium |
 | [WIN-SVC-001](../controls/index.md#win-svc-001) | Disable Remote Registry Service | Medium |
+| [WIN-DEF-002](../controls/index.md#win-def-002) | Enable Potentially Unwanted Application (PUA) Protection | High |
+| [WIN-DEF-003](../controls/index.md#win-def-003) | Enable Defender Real-Time Protection | High |
+| [WIN-NET-002](../controls/index.md#win-net-002) | Disable IPv4 Source Routing | Medium |
+| [WIN-NET-003](../controls/index.md#win-net-003) | Disable ICMP Redirects | Low |
+| [WIN-NET-004](../controls/index.md#win-net-004) | Disable IPv6 Source Routing | Medium |
+| [WIN-SMB-006](../controls/index.md#win-smb-006) | Restrict Anonymous Access to Named Pipes and Shares | Medium |
+| [WIN-ASR-003](../controls/index.md#win-asr-003) | ASR: Block Executable Content from Email and Webmail | Medium |
 
 ## CloudInfra Secure Remote Desktop Server - Role tier
 
 Baseline for Remote Desktop Session Host servers.
 
-**ID:** `CloudInfraSecure-RemoteDesktopServer` &nbsp; **Controls:** 20 &nbsp; **Supported OS:** WindowsServer2022, WindowsServer2025
+**ID:** `CloudInfraSecure-RemoteDesktopServer` &nbsp; **Controls:** 26 &nbsp; **Supported OS:** WindowsServer2022, WindowsServer2025
 
 | Control | Name | Severity |
 |---------|------|----------|
@@ -182,12 +224,18 @@ Baseline for Remote Desktop Session Host servers.
 | [WIN-TLS-013](../controls/index.md#win-tls-013) | Disable SSL 2.0 (Server) | High |
 | [WIN-NET-001](../controls/index.md#win-net-001) | Disable LLMNR | Medium |
 | [WIN-LOGON-001](../controls/index.md#win-logon-001) | Machine Inactivity Limit | Medium |
+| [WIN-DEF-002](../controls/index.md#win-def-002) | Enable Potentially Unwanted Application (PUA) Protection | High |
+| [WIN-DEF-003](../controls/index.md#win-def-003) | Enable Defender Real-Time Protection | High |
+| [WIN-UAC-004](../controls/index.md#win-uac-004) | Deny UAC Elevation Prompt for Standard Users | Medium |
+| [WIN-UAC-005](../controls/index.md#win-uac-005) | UAC Switch to the Secure Desktop for Elevation | Medium |
+| [WIN-LOGON-003](../controls/index.md#win-logon-003) | Limit Number of Cached Logons | Medium |
+| [WIN-AUD-009](../controls/index.md#win-aud-009) | Audit Logoff | Medium |
 
 ## CloudInfra Secure SQL Server - Role tier
 
 Baseline for Microsoft SQL Server hosts.
 
-**ID:** `CloudInfraSecure-SQLServer` &nbsp; **Controls:** 17 &nbsp; **Supported OS:** WindowsServer2022, WindowsServer2025
+**ID:** `CloudInfraSecure-SQLServer` &nbsp; **Controls:** 23 &nbsp; **Supported OS:** WindowsServer2022, WindowsServer2025
 
 | Control | Name | Severity |
 |---------|------|----------|
@@ -208,12 +256,18 @@ Baseline for Microsoft SQL Server hosts.
 | [WIN-LDAP-001](../controls/index.md#win-ldap-001) | LDAP Client Signing | Medium |
 | [WIN-NET-001](../controls/index.md#win-net-001) | Disable LLMNR | Medium |
 | [WIN-SMB-004](../controls/index.md#win-smb-004) | Disable SMBv1 Client | High |
+| [WIN-DEF-002](../controls/index.md#win-def-002) | Enable Potentially Unwanted Application (PUA) Protection | High |
+| [WIN-DEF-003](../controls/index.md#win-def-003) | Enable Defender Real-Time Protection | High |
+| [WIN-NET-002](../controls/index.md#win-net-002) | Disable IPv4 Source Routing | Medium |
+| [WIN-NET-004](../controls/index.md#win-net-004) | Disable IPv6 Source Routing | Medium |
+| [WIN-SMB-006](../controls/index.md#win-smb-006) | Restrict Anonymous Access to Named Pipes and Shares | Medium |
+| [WIN-LSA-004](../controls/index.md#win-lsa-004) | Do Not Allow Anonymous Enumeration of SAM Accounts | Medium |
 
 ## CloudInfra Secure Standard - Standard tier
 
 Recommended baseline adding logging, auditing and access hardening on top of Essential.
 
-**ID:** `CloudInfraSecure-Standard` &nbsp; **Controls:** 46 &nbsp; **Supported OS:** WindowsServer2022, WindowsServer2025
+**ID:** `CloudInfraSecure-Standard` &nbsp; **Controls:** 61 &nbsp; **Supported OS:** WindowsServer2022, WindowsServer2025
 
 | Control | Name | Severity |
 |---------|------|----------|
@@ -263,4 +317,19 @@ Recommended baseline adding logging, auditing and access hardening on top of Ess
 | [WIN-UAC-003](../controls/index.md#win-uac-003) | UAC Detect Application Installations | Medium |
 | [WIN-AUD-006](../controls/index.md#win-aud-006) | Audit Special Logon | Medium |
 | [WIN-AUD-008](../controls/index.md#win-aud-008) | Audit System Integrity | Medium |
+| [WIN-DEF-002](../controls/index.md#win-def-002) | Enable Potentially Unwanted Application (PUA) Protection | High |
+| [WIN-DEF-003](../controls/index.md#win-def-003) | Enable Defender Real-Time Protection | High |
+| [WIN-DEF-004](../controls/index.md#win-def-004) | Enable Cloud-Delivered Protection | Medium |
+| [WIN-NET-002](../controls/index.md#win-net-002) | Disable IPv4 Source Routing | Medium |
+| [WIN-NET-003](../controls/index.md#win-net-003) | Disable ICMP Redirects | Low |
+| [WIN-NET-004](../controls/index.md#win-net-004) | Disable IPv6 Source Routing | Medium |
+| [WIN-SMB-006](../controls/index.md#win-smb-006) | Restrict Anonymous Access to Named Pipes and Shares | Medium |
+| [WIN-LSA-004](../controls/index.md#win-lsa-004) | Do Not Allow Anonymous Enumeration of SAM Accounts | Medium |
+| [WIN-LSA-005](../controls/index.md#win-lsa-005) | Enable Structured Exception Handling Overwrite Protection (SEHOP) | Medium |
+| [WIN-LOGON-003](../controls/index.md#win-logon-003) | Limit Number of Cached Logons | Medium |
+| [WIN-UAC-004](../controls/index.md#win-uac-004) | Deny UAC Elevation Prompt for Standard Users | Medium |
+| [WIN-UAC-005](../controls/index.md#win-uac-005) | UAC Switch to the Secure Desktop for Elevation | Medium |
+| [WIN-AUD-009](../controls/index.md#win-aud-009) | Audit Logoff | Medium |
+| [WIN-AUD-010](../controls/index.md#win-aud-010) | Audit Removable Storage | Medium |
+| [WIN-AUD-011](../controls/index.md#win-aud-011) | Audit Authentication Policy Change | Medium |
 
