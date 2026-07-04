@@ -1,6 +1,6 @@
 # Controls
 
-The CloudInfra Secure control library (164 controls). Each control exists once and may be used by many baselines.
+The CloudInfra Secure control library (187 controls). Each control exists once and may be used by many baselines.
 
 !!! note "Compliance disclaimer"
     CloudInfra Secure controls are designed to help organisations implement technical security requirements commonly found in recognised security standards. They do not constitute certification or proof of compliance.
@@ -12,11 +12,11 @@ Controls tagged **GPO** are delivered through a Group Policy registry value that
 <div class="cmpl-toolbar">
   <label for="ctlDelivery"><strong>Filter by delivery:</strong></label>
   <select id="ctlDelivery">
-    <option value="__all">All controls (164)</option>
+    <option value="__all">All controls (187)</option>
     <option value="gpo">Group Policy-backed (62)</option>
-    <option value="direct">Direct system setting (102)</option>
+    <option value="direct">Direct system setting (125)</option>
   </select>
-  <span class="cmpl-count" id="ctlCount">Showing 164 of 164 controls</span>
+  <span class="cmpl-count" id="ctlCount">Showing 187 of 187 controls</span>
 </div>
 
 <div class="cmpl-tablewrap" markdown="0">
@@ -180,6 +180,29 @@ Controls tagged **GPO** are delivered through a Group Policy registry value that
     <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-ura-014">WIN-URA-014</a></td><td>Load and Unload Device Drivers = Administrators Only</td><td>Medium</td><td>User Rights Assignment</td><td>SecEdit</td><td><span class="muted-badge">Direct</span></td></tr>
     <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-ura-015">WIN-URA-015</a></td><td>Manage Auditing and Security Log = Administrators Only</td><td>Medium</td><td>User Rights Assignment</td><td>SecEdit</td><td><span class="muted-badge">Direct</span></td></tr>
     <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-ura-016">WIN-URA-016</a></td><td>Take Ownership of Files or Other Objects = Administrators Only</td><td>Medium</td><td>User Rights Assignment</td><td>SecEdit</td><td><span class="muted-badge">Direct</span></td></tr>
+    <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-ura-017">WIN-URA-017</a></td><td>Access This Computer From the Network = Administrators, Authenticated Users</td><td>High</td><td>User Rights Assignment</td><td>SecEdit</td><td><span class="muted-badge">Direct</span></td></tr>
+    <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-ura-018">WIN-URA-018</a></td><td>Allow Log On Locally = Administrators</td><td>Medium</td><td>User Rights Assignment</td><td>SecEdit</td><td><span class="muted-badge">Direct</span></td></tr>
+    <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-ura-019">WIN-URA-019</a></td><td>Allow Log On Through Remote Desktop Services = Administrators, Remote Desktop Users</td><td>Medium</td><td>User Rights Assignment</td><td>SecEdit</td><td><span class="muted-badge">Direct</span></td></tr>
+    <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-ura-020">WIN-URA-020</a></td><td>Back Up Files and Directories = Administrators</td><td>Medium</td><td>User Rights Assignment</td><td>SecEdit</td><td><span class="muted-badge">Direct</span></td></tr>
+    <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-ura-021">WIN-URA-021</a></td><td>Restore Files and Directories = Administrators</td><td>Medium</td><td>User Rights Assignment</td><td>SecEdit</td><td><span class="muted-badge">Direct</span></td></tr>
+    <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-ura-022">WIN-URA-022</a></td><td>Change the System Time = Administrators, Local Service</td><td>Medium</td><td>User Rights Assignment</td><td>SecEdit</td><td><span class="muted-badge">Direct</span></td></tr>
+    <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-ura-023">WIN-URA-023</a></td><td>Change the Time Zone = Administrators, Local Service, Users</td><td>Low</td><td>User Rights Assignment</td><td>SecEdit</td><td><span class="muted-badge">Direct</span></td></tr>
+    <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-ura-024">WIN-URA-024</a></td><td>Create a Pagefile = Administrators</td><td>Low</td><td>User Rights Assignment</td><td>SecEdit</td><td><span class="muted-badge">Direct</span></td></tr>
+    <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-ura-025">WIN-URA-025</a></td><td>Create Global Objects = Administrators and Service Accounts</td><td>Medium</td><td>User Rights Assignment</td><td>SecEdit</td><td><span class="muted-badge">Direct</span></td></tr>
+    <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-ura-026">WIN-URA-026</a></td><td>Create Symbolic Links = Administrators</td><td>Medium</td><td>User Rights Assignment</td><td>SecEdit</td><td><span class="muted-badge">Direct</span></td></tr>
+    <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-ura-027">WIN-URA-027</a></td><td>Adjust Memory Quotas for a Process = Administrators and Service Accounts</td><td>Low</td><td>User Rights Assignment</td><td>SecEdit</td><td><span class="muted-badge">Direct</span></td></tr>
+    <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-ura-028">WIN-URA-028</a></td><td>Increase Scheduling Priority = Administrators, Window Manager</td><td>Low</td><td>User Rights Assignment</td><td>SecEdit</td><td><span class="muted-badge">Direct</span></td></tr>
+    <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-ura-029">WIN-URA-029</a></td><td>Lock Pages in Memory = No One</td><td>Medium</td><td>User Rights Assignment</td><td>SecEdit</td><td><span class="muted-badge">Direct</span></td></tr>
+    <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-ura-030">WIN-URA-030</a></td><td>Perform Volume Maintenance Tasks = Administrators</td><td>Medium</td><td>User Rights Assignment</td><td>SecEdit</td><td><span class="muted-badge">Direct</span></td></tr>
+    <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-ura-031">WIN-URA-031</a></td><td>Profile Single Process = Administrators</td><td>Low</td><td>User Rights Assignment</td><td>SecEdit</td><td><span class="muted-badge">Direct</span></td></tr>
+    <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-ura-032">WIN-URA-032</a></td><td>Replace a Process Level Token = Local Service, Network Service</td><td>Medium</td><td>User Rights Assignment</td><td>SecEdit</td><td><span class="muted-badge">Direct</span></td></tr>
+    <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-ura-033">WIN-URA-033</a></td><td>Shut Down the System = Administrators</td><td>Low</td><td>User Rights Assignment</td><td>SecEdit</td><td><span class="muted-badge">Direct</span></td></tr>
+    <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-ura-034">WIN-URA-034</a></td><td>Modify Firmware Environment Values = Administrators</td><td>Medium</td><td>User Rights Assignment</td><td>SecEdit</td><td><span class="muted-badge">Direct</span></td></tr>
+    <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-ura-035">WIN-URA-035</a></td><td>Enable Accounts to Be Trusted for Delegation = No One</td><td>High</td><td>User Rights Assignment</td><td>SecEdit</td><td><span class="muted-badge">Direct</span></td></tr>
+    <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-ura-036">WIN-URA-036</a></td><td>Obtain an Impersonation Token for Another User = No One</td><td>Medium</td><td>User Rights Assignment</td><td>SecEdit</td><td><span class="muted-badge">Direct</span></td></tr>
+    <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-ura-037">WIN-URA-037</a></td><td>Modify an Object Label = No One</td><td>Low</td><td>User Rights Assignment</td><td>SecEdit</td><td><span class="muted-badge">Direct</span></td></tr>
+    <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-ura-038">WIN-URA-038</a></td><td>Synchronize Directory Service Data = No One</td><td>Medium</td><td>User Rights Assignment</td><td>SecEdit</td><td><span class="muted-badge">Direct</span></td></tr>
+    <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-ura-039">WIN-URA-039</a></td><td>Profile System Performance = Administrators, WdiServiceHost</td><td>Low</td><td>User Rights Assignment</td><td>SecEdit</td><td><span class="muted-badge">Direct</span></td></tr>
     <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-vbs-001">WIN-VBS-001</a></td><td>Enable Virtualization Based Security</td><td>High</td><td>Credential Protection</td><td>Registry</td><td><span class="muted-badge">Direct</span></td></tr>
     <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-vbs-002">WIN-VBS-002</a></td><td>Require Secure Boot for VBS</td><td>Medium</td><td>Credential Protection</td><td>Registry</td><td><span class="muted-badge">Direct</span></td></tr>
     <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-vbs-003">WIN-VBS-003</a></td><td>Enable Memory Integrity (HVCI)</td><td>High</td><td>Exploit Protection</td><td>Registry</td><td><span class="muted-badge">Direct</span></td></tr>
@@ -2542,6 +2565,351 @@ Only Administrators should be able to take ownership of objects.
 **Rationale.** Taking ownership lets a user override object permissions and access any resource.
 
 **Remediation.** Assign the 'SeTakeOwnershipPrivilege' user right to exactly the expected principals.
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
+
+**References:**
+- [https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/user-rights-assignment](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/user-rights-assignment)
+
+### WIN-URA-017 - Access This Computer From the Network = Administrators, Authenticated Users { #win-ura-017 }
+
+**Severity:** High &nbsp; **Category:** User Rights Assignment &nbsp; **Provider:** SecEdit &nbsp; **Delivery:** Direct &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+
+Only Administrators and Authenticated Users should be able to access this computer from the network.
+
+**Rationale.** Over-broad network logon rights widen the remote attack surface.
+
+**Remediation.** Assign the 'SeNetworkLogonRight' user right to exactly the expected principals.
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
+
+**References:**
+- [https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/user-rights-assignment](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/user-rights-assignment)
+
+### WIN-URA-018 - Allow Log On Locally = Administrators { #win-ura-018 }
+
+**Severity:** Medium &nbsp; **Category:** User Rights Assignment &nbsp; **Provider:** SecEdit &nbsp; **Delivery:** Direct &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+
+Only Administrators should be able to log on locally to a server.
+
+**Rationale.** Broad local logon rights allow non-administrators console access.
+
+**Remediation.** Assign the 'SeInteractiveLogonRight' user right to exactly the expected principals.
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
+
+**References:**
+- [https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/user-rights-assignment](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/user-rights-assignment)
+
+### WIN-URA-019 - Allow Log On Through Remote Desktop Services = Administrators, Remote Desktop Users { #win-ura-019 }
+
+**Severity:** Medium &nbsp; **Category:** User Rights Assignment &nbsp; **Provider:** SecEdit &nbsp; **Delivery:** Direct &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+
+Only Administrators and Remote Desktop Users should log on through Remote Desktop Services.
+
+**Rationale.** Excess RDS logon rights expand remote-access exposure.
+
+**Remediation.** Assign the 'SeRemoteInteractiveLogonRight' user right to exactly the expected principals.
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
+
+**References:**
+- [https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/user-rights-assignment](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/user-rights-assignment)
+
+### WIN-URA-020 - Back Up Files and Directories = Administrators { #win-ura-020 }
+
+**Severity:** Medium &nbsp; **Category:** User Rights Assignment &nbsp; **Provider:** SecEdit &nbsp; **Delivery:** Direct &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+
+Only Administrators should hold the Back up files and directories right.
+
+**Rationale.** This right bypasses file permissions to read any file on the system.
+
+**Remediation.** Assign the 'SeBackupPrivilege' user right to exactly the expected principals.
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
+
+**References:**
+- [https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/user-rights-assignment](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/user-rights-assignment)
+
+### WIN-URA-021 - Restore Files and Directories = Administrators { #win-ura-021 }
+
+**Severity:** Medium &nbsp; **Category:** User Rights Assignment &nbsp; **Provider:** SecEdit &nbsp; **Delivery:** Direct &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+
+Only Administrators should hold the Restore files and directories right.
+
+**Rationale.** This right bypasses file permissions to overwrite any file, enabling privilege escalation.
+
+**Remediation.** Assign the 'SeRestorePrivilege' user right to exactly the expected principals.
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
+
+**References:**
+- [https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/user-rights-assignment](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/user-rights-assignment)
+
+### WIN-URA-022 - Change the System Time = Administrators, Local Service { #win-ura-022 }
+
+**Severity:** Medium &nbsp; **Category:** User Rights Assignment &nbsp; **Provider:** SecEdit &nbsp; **Delivery:** Direct &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+
+Only Administrators and Local Service should be able to change the system time.
+
+**Rationale.** Altering the clock can defeat time-based security and corrupt audit timelines.
+
+**Remediation.** Assign the 'SeSystemtimePrivilege' user right to exactly the expected principals.
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
+
+**References:**
+- [https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/user-rights-assignment](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/user-rights-assignment)
+
+### WIN-URA-023 - Change the Time Zone = Administrators, Local Service, Users { #win-ura-023 }
+
+**Severity:** Low &nbsp; **Category:** User Rights Assignment &nbsp; **Provider:** SecEdit &nbsp; **Delivery:** Direct &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+
+Restrict the Change the time zone right to Administrators, Local Service, and Users.
+
+**Rationale.** Time-zone changes can confuse local log interpretation if granted too broadly.
+
+**Remediation.** Assign the 'SeTimeZonePrivilege' user right to exactly the expected principals.
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
+
+**References:**
+- [https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/user-rights-assignment](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/user-rights-assignment)
+
+### WIN-URA-024 - Create a Pagefile = Administrators { #win-ura-024 }
+
+**Severity:** Low &nbsp; **Category:** User Rights Assignment &nbsp; **Provider:** SecEdit &nbsp; **Delivery:** Direct &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+
+Only Administrators should be able to create a pagefile.
+
+**Rationale.** Pagefile manipulation can be used to affect system performance or memory forensics.
+
+**Remediation.** Assign the 'SeCreatePagefilePrivilege' user right to exactly the expected principals.
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
+
+**References:**
+- [https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/user-rights-assignment](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/user-rights-assignment)
+
+### WIN-URA-025 - Create Global Objects = Administrators and Service Accounts { #win-ura-025 }
+
+**Severity:** Medium &nbsp; **Category:** User Rights Assignment &nbsp; **Provider:** SecEdit &nbsp; **Delivery:** Direct &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+
+Only Administrators and the built-in service accounts should create global objects.
+
+**Rationale.** Global object creation can be abused for cross-session attacks and escalation.
+
+**Remediation.** Assign the 'SeCreateGlobalPrivilege' user right to exactly the expected principals.
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
+
+**References:**
+- [https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/user-rights-assignment](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/user-rights-assignment)
+
+### WIN-URA-026 - Create Symbolic Links = Administrators { #win-ura-026 }
+
+**Severity:** Medium &nbsp; **Category:** User Rights Assignment &nbsp; **Provider:** SecEdit &nbsp; **Delivery:** Direct &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+
+Only Administrators should be able to create symbolic links (add Virtual Machines on Hyper-V hosts).
+
+**Rationale.** Symbolic-link creation enables link-following attacks against privileged processes.
+
+**Remediation.** Assign the 'SeCreateSymbolicLinkPrivilege' user right to exactly the expected principals.
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
+
+**References:**
+- [https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/user-rights-assignment](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/user-rights-assignment)
+
+### WIN-URA-027 - Adjust Memory Quotas for a Process = Administrators and Service Accounts { #win-ura-027 }
+
+**Severity:** Low &nbsp; **Category:** User Rights Assignment &nbsp; **Provider:** SecEdit &nbsp; **Delivery:** Direct &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+
+Restrict Adjust memory quotas for a process to Administrators, Local Service, and Network Service.
+
+**Rationale.** This right can be used to starve other processes of memory (denial of service).
+
+**Remediation.** Assign the 'SeIncreaseQuotaPrivilege' user right to exactly the expected principals.
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
+
+**References:**
+- [https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/user-rights-assignment](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/user-rights-assignment)
+
+### WIN-URA-028 - Increase Scheduling Priority = Administrators, Window Manager { #win-ura-028 }
+
+**Severity:** Low &nbsp; **Category:** User Rights Assignment &nbsp; **Provider:** SecEdit &nbsp; **Delivery:** Direct &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+
+Restrict Increase scheduling priority to Administrators and Window Manager.
+
+**Rationale.** Raising process priority can be used to degrade or monopolise system responsiveness.
+
+**Remediation.** Assign the 'SeIncreaseBasePriorityPrivilege' user right to exactly the expected principals.
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
+
+**References:**
+- [https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/user-rights-assignment](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/user-rights-assignment)
+
+### WIN-URA-029 - Lock Pages in Memory = No One { #win-ura-029 }
+
+**Severity:** Medium &nbsp; **Category:** User Rights Assignment &nbsp; **Provider:** SecEdit &nbsp; **Delivery:** Direct &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+
+No account should hold the Lock pages in memory right.
+
+**Rationale.** Locking pages in physical memory can be abused to cause denial of service.
+
+**Remediation.** Configure the 'SeLockMemoryPrivilege' user right so that no account holds it.
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
+
+**References:**
+- [https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/user-rights-assignment](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/user-rights-assignment)
+
+### WIN-URA-030 - Perform Volume Maintenance Tasks = Administrators { #win-ura-030 }
+
+**Severity:** Medium &nbsp; **Category:** User Rights Assignment &nbsp; **Provider:** SecEdit &nbsp; **Delivery:** Direct &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+
+Only Administrators should be able to perform volume maintenance tasks.
+
+**Rationale.** This right permits raw disk access that can bypass file-level security.
+
+**Remediation.** Assign the 'SeManageVolumePrivilege' user right to exactly the expected principals.
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
+
+**References:**
+- [https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/user-rights-assignment](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/user-rights-assignment)
+
+### WIN-URA-031 - Profile Single Process = Administrators { #win-ura-031 }
+
+**Severity:** Low &nbsp; **Category:** User Rights Assignment &nbsp; **Provider:** SecEdit &nbsp; **Delivery:** Direct &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+
+Only Administrators should be able to profile a single process.
+
+**Rationale.** Process profiling can reveal sensitive information about running software.
+
+**Remediation.** Assign the 'SeProfileSingleProcessPrivilege' user right to exactly the expected principals.
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
+
+**References:**
+- [https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/user-rights-assignment](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/user-rights-assignment)
+
+### WIN-URA-032 - Replace a Process Level Token = Local Service, Network Service { #win-ura-032 }
+
+**Severity:** Medium &nbsp; **Category:** User Rights Assignment &nbsp; **Provider:** SecEdit &nbsp; **Delivery:** Direct &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+
+Only Local Service and Network Service should hold the Replace a process-level token right.
+
+**Rationale.** This right can be used to launch processes under a different identity.
+
+**Remediation.** Assign the 'SeAssignPrimaryTokenPrivilege' user right to exactly the expected principals.
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
+
+**References:**
+- [https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/user-rights-assignment](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/user-rights-assignment)
+
+### WIN-URA-033 - Shut Down the System = Administrators { #win-ura-033 }
+
+**Severity:** Low &nbsp; **Category:** User Rights Assignment &nbsp; **Provider:** SecEdit &nbsp; **Delivery:** Direct &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+
+Only Administrators should be able to shut down the system.
+
+**Rationale.** Broad shutdown rights allow non-administrators to cause an availability outage.
+
+**Remediation.** Assign the 'SeShutdownPrivilege' user right to exactly the expected principals.
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
+
+**References:**
+- [https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/user-rights-assignment](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/user-rights-assignment)
+
+### WIN-URA-034 - Modify Firmware Environment Values = Administrators { #win-ura-034 }
+
+**Severity:** Medium &nbsp; **Category:** User Rights Assignment &nbsp; **Provider:** SecEdit &nbsp; **Delivery:** Direct &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+
+Only Administrators should be able to modify firmware environment values.
+
+**Rationale.** Firmware/boot variable changes can undermine platform boot integrity.
+
+**Remediation.** Assign the 'SeSystemEnvironmentPrivilege' user right to exactly the expected principals.
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
+
+**References:**
+- [https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/user-rights-assignment](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/user-rights-assignment)
+
+### WIN-URA-035 - Enable Accounts to Be Trusted for Delegation = No One { #win-ura-035 }
+
+**Severity:** High &nbsp; **Category:** User Rights Assignment &nbsp; **Provider:** SecEdit &nbsp; **Delivery:** Direct &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+
+On member servers, no account should be able to enable accounts to be trusted for delegation.
+
+**Rationale.** Delegation trust can be abused to impersonate users across services.
+
+**Remediation.** Configure the 'SeEnableDelegationPrivilege' user right so that no account holds it.
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
+
+**References:**
+- [https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/user-rights-assignment](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/user-rights-assignment)
+
+### WIN-URA-036 - Obtain an Impersonation Token for Another User = No One { #win-ura-036 }
+
+**Severity:** Medium &nbsp; **Category:** User Rights Assignment &nbsp; **Provider:** SecEdit &nbsp; **Delivery:** Direct &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+
+No account should be able to obtain an impersonation token for another user in the same session.
+
+**Rationale.** Session impersonation tokens can be used to escalate to another user context.
+
+**Remediation.** Configure the 'SeDelegateSessionUserImpersonatePrivilege' user right so that no account holds it.
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
+
+**References:**
+- [https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/user-rights-assignment](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/user-rights-assignment)
+
+### WIN-URA-037 - Modify an Object Label = No One { #win-ura-037 }
+
+**Severity:** Low &nbsp; **Category:** User Rights Assignment &nbsp; **Provider:** SecEdit &nbsp; **Delivery:** Direct &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+
+No account should be able to modify an object integrity label.
+
+**Rationale.** Relabeling objects can subvert mandatory integrity control protections.
+
+**Remediation.** Configure the 'SeRelabelPrivilege' user right so that no account holds it.
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
+
+**References:**
+- [https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/user-rights-assignment](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/user-rights-assignment)
+
+### WIN-URA-038 - Synchronize Directory Service Data = No One { #win-ura-038 }
+
+**Severity:** Medium &nbsp; **Category:** User Rights Assignment &nbsp; **Provider:** SecEdit &nbsp; **Delivery:** Direct &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+
+On member servers, no account should hold the Synchronize directory service data right.
+
+**Rationale.** This right allows bulk reading of directory data (a DCSync-style exposure).
+
+**Remediation.** Configure the 'SeSyncAgentPrivilege' user right so that no account holds it.
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
+
+**References:**
+- [https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/user-rights-assignment](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/user-rights-assignment)
+
+### WIN-URA-039 - Profile System Performance = Administrators, WdiServiceHost { #win-ura-039 }
+
+**Severity:** Low &nbsp; **Category:** User Rights Assignment &nbsp; **Provider:** SecEdit &nbsp; **Delivery:** Direct &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+
+Restrict Profile system performance to Administrators and the WdiServiceHost service.
+
+**Rationale.** System profiling can expose timing and workload information about the host.
+
+**Remediation.** Assign the 'SeSystemProfilePrivilege' user right to exactly the expected principals.
 
 **Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
 

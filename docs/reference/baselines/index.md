@@ -6,7 +6,7 @@ CloudInfra Secure ships 7 baselines. Each is a curated collection of control IDs
 
 Baseline for Active Directory Domain Controllers.
 
-**ID:** `CloudInfraSecure-DomainController` &nbsp; **Controls:** 109 &nbsp; **Supported OS:** WindowsServer2022, WindowsServer2025
+**ID:** `CloudInfraSecure-DomainController` &nbsp; **Controls:** 112 &nbsp; **Supported OS:** WindowsServer2022, WindowsServer2025
 
 | Control | Name | Severity |
 |---------|------|----------|
@@ -119,12 +119,15 @@ Baseline for Active Directory Domain Controllers.
 | [WIN-URA-008](../controls/index.md#win-ura-008) | Deny Log On as a Service (includes Guests) | Low |
 | [WIN-URA-009](../controls/index.md#win-ura-009) | Deny Log On Locally (includes Guests) | Medium |
 | [WIN-URA-010](../controls/index.md#win-ura-010) | Deny Log On Through Remote Desktop Services (includes Guests) | Medium |
+| [WIN-URA-029](../controls/index.md#win-ura-029) | Lock Pages in Memory = No One | Medium |
+| [WIN-URA-036](../controls/index.md#win-ura-036) | Obtain an Impersonation Token for Another User = No One | Medium |
+| [WIN-URA-037](../controls/index.md#win-ura-037) | Modify an Object Label = No One | Low |
 
 ## CloudInfra Secure Enterprise - Enterprise tier
 
 Comprehensive baseline for regulated and high-assurance environments.
 
-**ID:** `CloudInfraSecure-Enterprise` &nbsp; **Controls:** 164 &nbsp; **Supported OS:** WindowsServer2022, WindowsServer2025
+**ID:** `CloudInfraSecure-Enterprise` &nbsp; **Controls:** 187 &nbsp; **Supported OS:** WindowsServer2022, WindowsServer2025
 
 | Control | Name | Severity |
 |---------|------|----------|
@@ -292,6 +295,29 @@ Comprehensive baseline for regulated and high-assurance environments.
 | [WIN-URA-014](../controls/index.md#win-ura-014) | Load and Unload Device Drivers = Administrators Only | Medium |
 | [WIN-URA-015](../controls/index.md#win-ura-015) | Manage Auditing and Security Log = Administrators Only | Medium |
 | [WIN-URA-016](../controls/index.md#win-ura-016) | Take Ownership of Files or Other Objects = Administrators Only | Medium |
+| [WIN-URA-017](../controls/index.md#win-ura-017) | Access This Computer From the Network = Administrators, Authenticated Users | High |
+| [WIN-URA-018](../controls/index.md#win-ura-018) | Allow Log On Locally = Administrators | Medium |
+| [WIN-URA-019](../controls/index.md#win-ura-019) | Allow Log On Through Remote Desktop Services = Administrators, Remote Desktop Users | Medium |
+| [WIN-URA-020](../controls/index.md#win-ura-020) | Back Up Files and Directories = Administrators | Medium |
+| [WIN-URA-021](../controls/index.md#win-ura-021) | Restore Files and Directories = Administrators | Medium |
+| [WIN-URA-022](../controls/index.md#win-ura-022) | Change the System Time = Administrators, Local Service | Medium |
+| [WIN-URA-023](../controls/index.md#win-ura-023) | Change the Time Zone = Administrators, Local Service, Users | Low |
+| [WIN-URA-024](../controls/index.md#win-ura-024) | Create a Pagefile = Administrators | Low |
+| [WIN-URA-025](../controls/index.md#win-ura-025) | Create Global Objects = Administrators and Service Accounts | Medium |
+| [WIN-URA-026](../controls/index.md#win-ura-026) | Create Symbolic Links = Administrators | Medium |
+| [WIN-URA-027](../controls/index.md#win-ura-027) | Adjust Memory Quotas for a Process = Administrators and Service Accounts | Low |
+| [WIN-URA-028](../controls/index.md#win-ura-028) | Increase Scheduling Priority = Administrators, Window Manager | Low |
+| [WIN-URA-029](../controls/index.md#win-ura-029) | Lock Pages in Memory = No One | Medium |
+| [WIN-URA-030](../controls/index.md#win-ura-030) | Perform Volume Maintenance Tasks = Administrators | Medium |
+| [WIN-URA-031](../controls/index.md#win-ura-031) | Profile Single Process = Administrators | Low |
+| [WIN-URA-032](../controls/index.md#win-ura-032) | Replace a Process Level Token = Local Service, Network Service | Medium |
+| [WIN-URA-033](../controls/index.md#win-ura-033) | Shut Down the System = Administrators | Low |
+| [WIN-URA-034](../controls/index.md#win-ura-034) | Modify Firmware Environment Values = Administrators | Medium |
+| [WIN-URA-035](../controls/index.md#win-ura-035) | Enable Accounts to Be Trusted for Delegation = No One | High |
+| [WIN-URA-036](../controls/index.md#win-ura-036) | Obtain an Impersonation Token for Another User = No One | Medium |
+| [WIN-URA-037](../controls/index.md#win-ura-037) | Modify an Object Label = No One | Low |
+| [WIN-URA-038](../controls/index.md#win-ura-038) | Synchronize Directory Service Data = No One | Medium |
+| [WIN-URA-039](../controls/index.md#win-ura-039) | Profile System Performance = Administrators, WdiServiceHost | Low |
 
 ## CloudInfra Secure Essential - Essential tier
 
@@ -321,7 +347,7 @@ Baseline of essential hardening controls suitable for any Windows Server workloa
 
 Baseline for Internet Information Services (IIS) web servers.
 
-**ID:** `CloudInfraSecure-IISWebServer` &nbsp; **Controls:** 65 &nbsp; **Supported OS:** WindowsServer2022, WindowsServer2025
+**ID:** `CloudInfraSecure-IISWebServer` &nbsp; **Controls:** 70 &nbsp; **Supported OS:** WindowsServer2022, WindowsServer2025
 
 | Control | Name | Severity |
 |---------|------|----------|
@@ -390,12 +416,17 @@ Baseline for Internet Information Services (IIS) web servers.
 | [WIN-URA-008](../controls/index.md#win-ura-008) | Deny Log On as a Service (includes Guests) | Low |
 | [WIN-URA-009](../controls/index.md#win-ura-009) | Deny Log On Locally (includes Guests) | Medium |
 | [WIN-URA-010](../controls/index.md#win-ura-010) | Deny Log On Through Remote Desktop Services (includes Guests) | Medium |
+| [WIN-URA-029](../controls/index.md#win-ura-029) | Lock Pages in Memory = No One | Medium |
+| [WIN-URA-035](../controls/index.md#win-ura-035) | Enable Accounts to Be Trusted for Delegation = No One | High |
+| [WIN-URA-036](../controls/index.md#win-ura-036) | Obtain an Impersonation Token for Another User = No One | Medium |
+| [WIN-URA-037](../controls/index.md#win-ura-037) | Modify an Object Label = No One | Low |
+| [WIN-URA-038](../controls/index.md#win-ura-038) | Synchronize Directory Service Data = No One | Medium |
 
 ## CloudInfra Secure Remote Desktop Server - Role tier
 
 Baseline for Remote Desktop Session Host servers.
 
-**ID:** `CloudInfraSecure-RemoteDesktopServer` &nbsp; **Controls:** 64 &nbsp; **Supported OS:** WindowsServer2022, WindowsServer2025
+**ID:** `CloudInfraSecure-RemoteDesktopServer` &nbsp; **Controls:** 70 &nbsp; **Supported OS:** WindowsServer2022, WindowsServer2025
 
 | Control | Name | Severity |
 |---------|------|----------|
@@ -463,12 +494,18 @@ Baseline for Remote Desktop Session Host servers.
 | [WIN-URA-008](../controls/index.md#win-ura-008) | Deny Log On as a Service (includes Guests) | Low |
 | [WIN-URA-009](../controls/index.md#win-ura-009) | Deny Log On Locally (includes Guests) | Medium |
 | [WIN-URA-010](../controls/index.md#win-ura-010) | Deny Log On Through Remote Desktop Services (includes Guests) | Medium |
+| [WIN-URA-029](../controls/index.md#win-ura-029) | Lock Pages in Memory = No One | Medium |
+| [WIN-URA-035](../controls/index.md#win-ura-035) | Enable Accounts to Be Trusted for Delegation = No One | High |
+| [WIN-URA-036](../controls/index.md#win-ura-036) | Obtain an Impersonation Token for Another User = No One | Medium |
+| [WIN-URA-037](../controls/index.md#win-ura-037) | Modify an Object Label = No One | Low |
+| [WIN-URA-038](../controls/index.md#win-ura-038) | Synchronize Directory Service Data = No One | Medium |
+| [WIN-URA-019](../controls/index.md#win-ura-019) | Allow Log On Through Remote Desktop Services = Administrators, Remote Desktop Users | Medium |
 
 ## CloudInfra Secure SQL Server - Role tier
 
 Baseline for Microsoft SQL Server hosts.
 
-**ID:** `CloudInfraSecure-SQLServer` &nbsp; **Controls:** 61 &nbsp; **Supported OS:** WindowsServer2022, WindowsServer2025
+**ID:** `CloudInfraSecure-SQLServer` &nbsp; **Controls:** 66 &nbsp; **Supported OS:** WindowsServer2022, WindowsServer2025
 
 | Control | Name | Severity |
 |---------|------|----------|
@@ -533,12 +570,17 @@ Baseline for Microsoft SQL Server hosts.
 | [WIN-URA-008](../controls/index.md#win-ura-008) | Deny Log On as a Service (includes Guests) | Low |
 | [WIN-URA-009](../controls/index.md#win-ura-009) | Deny Log On Locally (includes Guests) | Medium |
 | [WIN-URA-010](../controls/index.md#win-ura-010) | Deny Log On Through Remote Desktop Services (includes Guests) | Medium |
+| [WIN-URA-029](../controls/index.md#win-ura-029) | Lock Pages in Memory = No One | Medium |
+| [WIN-URA-035](../controls/index.md#win-ura-035) | Enable Accounts to Be Trusted for Delegation = No One | High |
+| [WIN-URA-036](../controls/index.md#win-ura-036) | Obtain an Impersonation Token for Another User = No One | Medium |
+| [WIN-URA-037](../controls/index.md#win-ura-037) | Modify an Object Label = No One | Low |
+| [WIN-URA-038](../controls/index.md#win-ura-038) | Synchronize Directory Service Data = No One | Medium |
 
 ## CloudInfra Secure Standard - Standard tier
 
 Recommended baseline adding logging, auditing and access hardening on top of Essential.
 
-**ID:** `CloudInfraSecure-Standard` &nbsp; **Controls:** 138 &nbsp; **Supported OS:** WindowsServer2022, WindowsServer2025
+**ID:** `CloudInfraSecure-Standard` &nbsp; **Controls:** 161 &nbsp; **Supported OS:** WindowsServer2022, WindowsServer2025
 
 | Control | Name | Severity |
 |---------|------|----------|
@@ -680,4 +722,27 @@ Recommended baseline adding logging, auditing and access hardening on top of Ess
 | [WIN-URA-014](../controls/index.md#win-ura-014) | Load and Unload Device Drivers = Administrators Only | Medium |
 | [WIN-URA-015](../controls/index.md#win-ura-015) | Manage Auditing and Security Log = Administrators Only | Medium |
 | [WIN-URA-016](../controls/index.md#win-ura-016) | Take Ownership of Files or Other Objects = Administrators Only | Medium |
+| [WIN-URA-017](../controls/index.md#win-ura-017) | Access This Computer From the Network = Administrators, Authenticated Users | High |
+| [WIN-URA-018](../controls/index.md#win-ura-018) | Allow Log On Locally = Administrators | Medium |
+| [WIN-URA-019](../controls/index.md#win-ura-019) | Allow Log On Through Remote Desktop Services = Administrators, Remote Desktop Users | Medium |
+| [WIN-URA-020](../controls/index.md#win-ura-020) | Back Up Files and Directories = Administrators | Medium |
+| [WIN-URA-021](../controls/index.md#win-ura-021) | Restore Files and Directories = Administrators | Medium |
+| [WIN-URA-022](../controls/index.md#win-ura-022) | Change the System Time = Administrators, Local Service | Medium |
+| [WIN-URA-023](../controls/index.md#win-ura-023) | Change the Time Zone = Administrators, Local Service, Users | Low |
+| [WIN-URA-024](../controls/index.md#win-ura-024) | Create a Pagefile = Administrators | Low |
+| [WIN-URA-025](../controls/index.md#win-ura-025) | Create Global Objects = Administrators and Service Accounts | Medium |
+| [WIN-URA-026](../controls/index.md#win-ura-026) | Create Symbolic Links = Administrators | Medium |
+| [WIN-URA-027](../controls/index.md#win-ura-027) | Adjust Memory Quotas for a Process = Administrators and Service Accounts | Low |
+| [WIN-URA-028](../controls/index.md#win-ura-028) | Increase Scheduling Priority = Administrators, Window Manager | Low |
+| [WIN-URA-029](../controls/index.md#win-ura-029) | Lock Pages in Memory = No One | Medium |
+| [WIN-URA-030](../controls/index.md#win-ura-030) | Perform Volume Maintenance Tasks = Administrators | Medium |
+| [WIN-URA-031](../controls/index.md#win-ura-031) | Profile Single Process = Administrators | Low |
+| [WIN-URA-032](../controls/index.md#win-ura-032) | Replace a Process Level Token = Local Service, Network Service | Medium |
+| [WIN-URA-033](../controls/index.md#win-ura-033) | Shut Down the System = Administrators | Low |
+| [WIN-URA-034](../controls/index.md#win-ura-034) | Modify Firmware Environment Values = Administrators | Medium |
+| [WIN-URA-035](../controls/index.md#win-ura-035) | Enable Accounts to Be Trusted for Delegation = No One | High |
+| [WIN-URA-036](../controls/index.md#win-ura-036) | Obtain an Impersonation Token for Another User = No One | Medium |
+| [WIN-URA-037](../controls/index.md#win-ura-037) | Modify an Object Label = No One | Low |
+| [WIN-URA-038](../controls/index.md#win-ura-038) | Synchronize Directory Service Data = No One | Medium |
+| [WIN-URA-039](../controls/index.md#win-ura-039) | Profile System Performance = Administrators, WdiServiceHost | Low |
 
