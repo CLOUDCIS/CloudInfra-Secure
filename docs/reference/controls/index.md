@@ -1,6 +1,6 @@
 # Controls
 
-The CloudInfra Secure control library (148 controls). Each control exists once and may be used by many baselines.
+The CloudInfra Secure control library (164 controls). Each control exists once and may be used by many baselines.
 
 !!! note "Compliance disclaimer"
     CloudInfra Secure controls are designed to help organisations implement technical security requirements commonly found in recognised security standards. They do not constitute certification or proof of compliance.
@@ -12,11 +12,11 @@ Controls tagged **GPO** are delivered through a Group Policy registry value that
 <div class="cmpl-toolbar">
   <label for="ctlDelivery"><strong>Filter by delivery:</strong></label>
   <select id="ctlDelivery">
-    <option value="__all">All controls (148)</option>
+    <option value="__all">All controls (164)</option>
     <option value="gpo">Group Policy-backed (62)</option>
-    <option value="direct">Direct system setting (86)</option>
+    <option value="direct">Direct system setting (102)</option>
   </select>
-  <span class="cmpl-count" id="ctlCount">Showing 148 of 148 controls</span>
+  <span class="cmpl-count" id="ctlCount">Showing 164 of 164 controls</span>
 </div>
 
 <div class="cmpl-tablewrap" markdown="0">
@@ -164,6 +164,22 @@ Controls tagged **GPO** are delivered through a Group Policy registry value that
     <tr data-delivery="gpo"><td class="cmpl-num"></td><td><a href="#win-uac-005">WIN-UAC-005</a></td><td>UAC Switch to the Secure Desktop for Elevation</td><td>Medium</td><td>Privilege Management</td><td>Registry</td><td><span class="gpo-badge" title="Delivered via a Group Policy registry value; a domain GPO can override it">GPO</span></td></tr>
     <tr data-delivery="gpo"><td class="cmpl-num"></td><td><a href="#win-uac-006">WIN-UAC-006</a></td><td>Only Elevate UIAccess Apps in Secure Locations</td><td>Medium</td><td>Privilege Management</td><td>Registry</td><td><span class="gpo-badge" title="Delivered via a Group Policy registry value; a domain GPO can override it">GPO</span></td></tr>
     <tr data-delivery="gpo"><td class="cmpl-num"></td><td><a href="#win-uac-007">WIN-UAC-007</a></td><td>Apply UAC Token Filtering to Remote Local Accounts</td><td>High</td><td>Privilege Management</td><td>Registry</td><td><span class="gpo-badge" title="Delivered via a Group Policy registry value; a domain GPO can override it">GPO</span></td></tr>
+    <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-ura-001">WIN-URA-001</a></td><td>Access Credential Manager as a Trusted Caller = No One</td><td>High</td><td>User Rights Assignment</td><td>SecEdit</td><td><span class="muted-badge">Direct</span></td></tr>
+    <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-ura-002">WIN-URA-002</a></td><td>Act as Part of the Operating System = No One</td><td>High</td><td>User Rights Assignment</td><td>SecEdit</td><td><span class="muted-badge">Direct</span></td></tr>
+    <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-ura-003">WIN-URA-003</a></td><td>Create a Token Object = No One</td><td>High</td><td>User Rights Assignment</td><td>SecEdit</td><td><span class="muted-badge">Direct</span></td></tr>
+    <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-ura-004">WIN-URA-004</a></td><td>Create Permanent Shared Objects = No One</td><td>Medium</td><td>User Rights Assignment</td><td>SecEdit</td><td><span class="muted-badge">Direct</span></td></tr>
+    <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-ura-005">WIN-URA-005</a></td><td>Debug Programs = Administrators Only</td><td>High</td><td>User Rights Assignment</td><td>SecEdit</td><td><span class="muted-badge">Direct</span></td></tr>
+    <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-ura-006">WIN-URA-006</a></td><td>Deny Access to This Computer From the Network (includes Guests)</td><td>Medium</td><td>User Rights Assignment</td><td>SecEdit</td><td><span class="muted-badge">Direct</span></td></tr>
+    <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-ura-007">WIN-URA-007</a></td><td>Deny Log On as a Batch Job (includes Guests)</td><td>Low</td><td>User Rights Assignment</td><td>SecEdit</td><td><span class="muted-badge">Direct</span></td></tr>
+    <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-ura-008">WIN-URA-008</a></td><td>Deny Log On as a Service (includes Guests)</td><td>Low</td><td>User Rights Assignment</td><td>SecEdit</td><td><span class="muted-badge">Direct</span></td></tr>
+    <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-ura-009">WIN-URA-009</a></td><td>Deny Log On Locally (includes Guests)</td><td>Medium</td><td>User Rights Assignment</td><td>SecEdit</td><td><span class="muted-badge">Direct</span></td></tr>
+    <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-ura-010">WIN-URA-010</a></td><td>Deny Log On Through Remote Desktop Services (includes Guests)</td><td>Medium</td><td>User Rights Assignment</td><td>SecEdit</td><td><span class="muted-badge">Direct</span></td></tr>
+    <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-ura-011">WIN-URA-011</a></td><td>Force Shutdown From a Remote System = Administrators Only</td><td>Medium</td><td>User Rights Assignment</td><td>SecEdit</td><td><span class="muted-badge">Direct</span></td></tr>
+    <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-ura-012">WIN-URA-012</a></td><td>Generate Security Audits = Local Service, Network Service</td><td>Medium</td><td>User Rights Assignment</td><td>SecEdit</td><td><span class="muted-badge">Direct</span></td></tr>
+    <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-ura-013">WIN-URA-013</a></td><td>Impersonate a Client After Authentication = Service Accounts and Administrators</td><td>Medium</td><td>User Rights Assignment</td><td>SecEdit</td><td><span class="muted-badge">Direct</span></td></tr>
+    <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-ura-014">WIN-URA-014</a></td><td>Load and Unload Device Drivers = Administrators Only</td><td>Medium</td><td>User Rights Assignment</td><td>SecEdit</td><td><span class="muted-badge">Direct</span></td></tr>
+    <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-ura-015">WIN-URA-015</a></td><td>Manage Auditing and Security Log = Administrators Only</td><td>Medium</td><td>User Rights Assignment</td><td>SecEdit</td><td><span class="muted-badge">Direct</span></td></tr>
+    <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-ura-016">WIN-URA-016</a></td><td>Take Ownership of Files or Other Objects = Administrators Only</td><td>Medium</td><td>User Rights Assignment</td><td>SecEdit</td><td><span class="muted-badge">Direct</span></td></tr>
     <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-vbs-001">WIN-VBS-001</a></td><td>Enable Virtualization Based Security</td><td>High</td><td>Credential Protection</td><td>Registry</td><td><span class="muted-badge">Direct</span></td></tr>
     <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-vbs-002">WIN-VBS-002</a></td><td>Require Secure Boot for VBS</td><td>Medium</td><td>Credential Protection</td><td>Registry</td><td><span class="muted-badge">Direct</span></td></tr>
     <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-vbs-003">WIN-VBS-003</a></td><td>Enable Memory Integrity (HVCI)</td><td>High</td><td>Exploit Protection</td><td>Registry</td><td><span class="muted-badge">Direct</span></td></tr>
@@ -2291,6 +2307,246 @@ Force UAC remote-access token filtering for local accounts so they connect witho
 
 **References:**
 - [https://learn.microsoft.com/en-us/windows/security/operating-system-security/device-management/windows-security-configuration-framework/windows-security-baselines](https://learn.microsoft.com/en-us/windows/security/operating-system-security/device-management/windows-security-configuration-framework/windows-security-baselines)
+
+### WIN-URA-001 - Access Credential Manager as a Trusted Caller = No One { #win-ura-001 }
+
+**Severity:** High &nbsp; **Category:** User Rights Assignment &nbsp; **Provider:** SecEdit &nbsp; **Delivery:** Direct &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+
+No account should hold the Access Credential Manager as a trusted caller right.
+
+**Rationale.** This right lets a process retrieve stored credentials from Credential Manager.
+
+**Remediation.** Configure the 'SeTrustedCredManAccessPrivilege' user right so that no account holds it.
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
+
+**References:**
+- [https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/user-rights-assignment](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/user-rights-assignment)
+
+### WIN-URA-002 - Act as Part of the Operating System = No One { #win-ura-002 }
+
+**Severity:** High &nbsp; **Category:** User Rights Assignment &nbsp; **Provider:** SecEdit &nbsp; **Delivery:** Direct &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+
+No account should be able to act as part of the operating system (TCB).
+
+**Rationale.** This right allows a process to impersonate any user and bypass access controls.
+
+**Remediation.** Configure the 'SeTcbPrivilege' user right so that no account holds it.
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
+
+**References:**
+- [https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/user-rights-assignment](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/user-rights-assignment)
+
+### WIN-URA-003 - Create a Token Object = No One { #win-ura-003 }
+
+**Severity:** High &nbsp; **Category:** User Rights Assignment &nbsp; **Provider:** SecEdit &nbsp; **Delivery:** Direct &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+
+No account should be able to create an access token object.
+
+**Rationale.** Creating arbitrary tokens allows privilege escalation to any identity.
+
+**Remediation.** Configure the 'SeCreateTokenPrivilege' user right so that no account holds it.
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
+
+**References:**
+- [https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/user-rights-assignment](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/user-rights-assignment)
+
+### WIN-URA-004 - Create Permanent Shared Objects = No One { #win-ura-004 }
+
+**Severity:** Medium &nbsp; **Category:** User Rights Assignment &nbsp; **Provider:** SecEdit &nbsp; **Delivery:** Direct &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+
+No account should be able to create permanent shared objects.
+
+**Rationale.** This right can be used to expose sensitive data or cause denial of service via the object namespace.
+
+**Remediation.** Configure the 'SeCreatePermanentPrivilege' user right so that no account holds it.
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
+
+**References:**
+- [https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/user-rights-assignment](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/user-rights-assignment)
+
+### WIN-URA-005 - Debug Programs = Administrators Only { #win-ura-005 }
+
+**Severity:** High &nbsp; **Category:** User Rights Assignment &nbsp; **Provider:** SecEdit &nbsp; **Delivery:** Direct &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+
+Only Administrators should hold the Debug programs right.
+
+**Rationale.** Debug rights allow reading and modifying the memory of any process, including LSASS.
+
+**Remediation.** Assign the 'SeDebugPrivilege' user right to exactly the expected principals.
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
+
+**References:**
+- [https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/user-rights-assignment](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/user-rights-assignment)
+
+### WIN-URA-006 - Deny Access to This Computer From the Network (includes Guests) { #win-ura-006 }
+
+**Severity:** Medium &nbsp; **Category:** User Rights Assignment &nbsp; **Provider:** SecEdit &nbsp; **Delivery:** Direct &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+
+Guests must be denied network logon to this computer.
+
+**Rationale.** Network logon by guest accounts enables anonymous access and lateral movement.
+
+**Remediation.** Add the required principals (e.g. Guests) to the 'SeDenyNetworkLogonRight' user right.
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
+
+**References:**
+- [https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/user-rights-assignment](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/user-rights-assignment)
+
+### WIN-URA-007 - Deny Log On as a Batch Job (includes Guests) { #win-ura-007 }
+
+**Severity:** Low &nbsp; **Category:** User Rights Assignment &nbsp; **Provider:** SecEdit &nbsp; **Delivery:** Direct &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+
+Guests must be denied batch logon.
+
+**Rationale.** Batch logon by guests could run scheduled tasks under an untrusted identity.
+
+**Remediation.** Add the required principals (e.g. Guests) to the 'SeDenyBatchLogonRight' user right.
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
+
+**References:**
+- [https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/user-rights-assignment](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/user-rights-assignment)
+
+### WIN-URA-008 - Deny Log On as a Service (includes Guests) { #win-ura-008 }
+
+**Severity:** Low &nbsp; **Category:** User Rights Assignment &nbsp; **Provider:** SecEdit &nbsp; **Delivery:** Direct &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+
+Guests must be denied service logon.
+
+**Rationale.** Service logon by guests could run services under an untrusted identity.
+
+**Remediation.** Add the required principals (e.g. Guests) to the 'SeDenyServiceLogonRight' user right.
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
+
+**References:**
+- [https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/user-rights-assignment](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/user-rights-assignment)
+
+### WIN-URA-009 - Deny Log On Locally (includes Guests) { #win-ura-009 }
+
+**Severity:** Medium &nbsp; **Category:** User Rights Assignment &nbsp; **Provider:** SecEdit &nbsp; **Delivery:** Direct &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+
+Guests must be denied local (interactive) logon.
+
+**Rationale.** Interactive logon by guests permits console access by untrusted users.
+
+**Remediation.** Add the required principals (e.g. Guests) to the 'SeDenyInteractiveLogonRight' user right.
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
+
+**References:**
+- [https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/user-rights-assignment](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/user-rights-assignment)
+
+### WIN-URA-010 - Deny Log On Through Remote Desktop Services (includes Guests) { #win-ura-010 }
+
+**Severity:** Medium &nbsp; **Category:** User Rights Assignment &nbsp; **Provider:** SecEdit &nbsp; **Delivery:** Direct &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+
+Guests must be denied logon through Remote Desktop Services.
+
+**Rationale.** RDP logon by guests exposes remote sessions to untrusted users.
+
+**Remediation.** Add the required principals (e.g. Guests) to the 'SeDenyRemoteInteractiveLogonRight' user right.
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
+
+**References:**
+- [https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/user-rights-assignment](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/user-rights-assignment)
+
+### WIN-URA-011 - Force Shutdown From a Remote System = Administrators Only { #win-ura-011 }
+
+**Severity:** Medium &nbsp; **Category:** User Rights Assignment &nbsp; **Provider:** SecEdit &nbsp; **Delivery:** Direct &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+
+Only Administrators should be able to shut down the system remotely.
+
+**Rationale.** Remote shutdown by non-administrators enables denial of service.
+
+**Remediation.** Assign the 'SeRemoteShutdownPrivilege' user right to exactly the expected principals.
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
+
+**References:**
+- [https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/user-rights-assignment](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/user-rights-assignment)
+
+### WIN-URA-012 - Generate Security Audits = Local Service, Network Service { #win-ura-012 }
+
+**Severity:** Medium &nbsp; **Category:** User Rights Assignment &nbsp; **Provider:** SecEdit &nbsp; **Delivery:** Direct &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+
+Only Local Service and Network Service should generate security audit entries.
+
+**Rationale.** This right can be abused to flood or forge the security log.
+
+**Remediation.** Assign the 'SeAuditPrivilege' user right to exactly the expected principals.
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
+
+**References:**
+- [https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/user-rights-assignment](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/user-rights-assignment)
+
+### WIN-URA-013 - Impersonate a Client After Authentication = Service Accounts and Administrators { #win-ura-013 }
+
+**Severity:** Medium &nbsp; **Category:** User Rights Assignment &nbsp; **Provider:** SecEdit &nbsp; **Delivery:** Direct &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+
+Only Administrators and the built-in service accounts should hold the Impersonate a client right.
+
+**Rationale.** Unrestricted impersonation is the basis of many privilege-escalation (potato) attacks.
+
+**Remediation.** Assign the 'SeImpersonatePrivilege' user right to exactly the expected principals.
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
+
+**References:**
+- [https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/user-rights-assignment](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/user-rights-assignment)
+
+### WIN-URA-014 - Load and Unload Device Drivers = Administrators Only { #win-ura-014 }
+
+**Severity:** Medium &nbsp; **Category:** User Rights Assignment &nbsp; **Provider:** SecEdit &nbsp; **Delivery:** Direct &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+
+Only Administrators should be able to load and unload device drivers.
+
+**Rationale.** Loading drivers allows execution of arbitrary kernel-mode code.
+
+**Remediation.** Assign the 'SeLoadDriverPrivilege' user right to exactly the expected principals.
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
+
+**References:**
+- [https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/user-rights-assignment](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/user-rights-assignment)
+
+### WIN-URA-015 - Manage Auditing and Security Log = Administrators Only { #win-ura-015 }
+
+**Severity:** Medium &nbsp; **Category:** User Rights Assignment &nbsp; **Provider:** SecEdit &nbsp; **Delivery:** Direct &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+
+Only Administrators should be able to manage auditing and the security log.
+
+**Rationale.** This right allows clearing the security log to hide malicious activity.
+
+**Remediation.** Assign the 'SeSecurityPrivilege' user right to exactly the expected principals.
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
+
+**References:**
+- [https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/user-rights-assignment](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/user-rights-assignment)
+
+### WIN-URA-016 - Take Ownership of Files or Other Objects = Administrators Only { #win-ura-016 }
+
+**Severity:** Medium &nbsp; **Category:** User Rights Assignment &nbsp; **Provider:** SecEdit &nbsp; **Delivery:** Direct &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+
+Only Administrators should be able to take ownership of objects.
+
+**Rationale.** Taking ownership lets a user override object permissions and access any resource.
+
+**Remediation.** Assign the 'SeTakeOwnershipPrivilege' user right to exactly the expected principals.
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
+
+**References:**
+- [https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/user-rights-assignment](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/user-rights-assignment)
 
 ### WIN-VBS-001 - Enable Virtualization Based Security { #win-vbs-001 }
 

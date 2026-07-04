@@ -6,7 +6,7 @@ CloudInfra Secure ships 7 baselines. Each is a curated collection of control IDs
 
 Baseline for Active Directory Domain Controllers.
 
-**ID:** `CloudInfraSecure-DomainController` &nbsp; **Controls:** 100 &nbsp; **Supported OS:** WindowsServer2022, WindowsServer2025
+**ID:** `CloudInfraSecure-DomainController` &nbsp; **Controls:** 109 &nbsp; **Supported OS:** WindowsServer2022, WindowsServer2025
 
 | Control | Name | Severity |
 |---------|------|----------|
@@ -110,12 +110,21 @@ Baseline for Active Directory Domain Controllers.
 | [WIN-LSA-012](../controls/index.md#win-lsa-012) | Strengthen Default Permissions of Internal System Objects | Low |
 | [WIN-NET-007](../controls/index.md#win-net-007) | Enable Safe DLL Search Mode | Medium |
 | [WIN-DEF-013](../controls/index.md#win-def-013) | Scan Downloaded Files and Attachments | High |
+| [WIN-URA-001](../controls/index.md#win-ura-001) | Access Credential Manager as a Trusted Caller = No One | High |
+| [WIN-URA-002](../controls/index.md#win-ura-002) | Act as Part of the Operating System = No One | High |
+| [WIN-URA-003](../controls/index.md#win-ura-003) | Create a Token Object = No One | High |
+| [WIN-URA-004](../controls/index.md#win-ura-004) | Create Permanent Shared Objects = No One | Medium |
+| [WIN-URA-006](../controls/index.md#win-ura-006) | Deny Access to This Computer From the Network (includes Guests) | Medium |
+| [WIN-URA-007](../controls/index.md#win-ura-007) | Deny Log On as a Batch Job (includes Guests) | Low |
+| [WIN-URA-008](../controls/index.md#win-ura-008) | Deny Log On as a Service (includes Guests) | Low |
+| [WIN-URA-009](../controls/index.md#win-ura-009) | Deny Log On Locally (includes Guests) | Medium |
+| [WIN-URA-010](../controls/index.md#win-ura-010) | Deny Log On Through Remote Desktop Services (includes Guests) | Medium |
 
 ## CloudInfra Secure Enterprise - Enterprise tier
 
 Comprehensive baseline for regulated and high-assurance environments.
 
-**ID:** `CloudInfraSecure-Enterprise` &nbsp; **Controls:** 148 &nbsp; **Supported OS:** WindowsServer2022, WindowsServer2025
+**ID:** `CloudInfraSecure-Enterprise` &nbsp; **Controls:** 164 &nbsp; **Supported OS:** WindowsServer2022, WindowsServer2025
 
 | Control | Name | Severity |
 |---------|------|----------|
@@ -267,6 +276,22 @@ Comprehensive baseline for regulated and high-assurance environments.
 | [WIN-NET-007](../controls/index.md#win-net-007) | Enable Safe DLL Search Mode | Medium |
 | [WIN-PRINT-001](../controls/index.md#win-print-001) | Restrict Point and Print Driver Installation to Administrators | High |
 | [WIN-PRINT-002](../controls/index.md#win-print-002) | Require Elevation for New Point and Print Connections | Medium |
+| [WIN-URA-001](../controls/index.md#win-ura-001) | Access Credential Manager as a Trusted Caller = No One | High |
+| [WIN-URA-002](../controls/index.md#win-ura-002) | Act as Part of the Operating System = No One | High |
+| [WIN-URA-003](../controls/index.md#win-ura-003) | Create a Token Object = No One | High |
+| [WIN-URA-004](../controls/index.md#win-ura-004) | Create Permanent Shared Objects = No One | Medium |
+| [WIN-URA-005](../controls/index.md#win-ura-005) | Debug Programs = Administrators Only | High |
+| [WIN-URA-006](../controls/index.md#win-ura-006) | Deny Access to This Computer From the Network (includes Guests) | Medium |
+| [WIN-URA-007](../controls/index.md#win-ura-007) | Deny Log On as a Batch Job (includes Guests) | Low |
+| [WIN-URA-008](../controls/index.md#win-ura-008) | Deny Log On as a Service (includes Guests) | Low |
+| [WIN-URA-009](../controls/index.md#win-ura-009) | Deny Log On Locally (includes Guests) | Medium |
+| [WIN-URA-010](../controls/index.md#win-ura-010) | Deny Log On Through Remote Desktop Services (includes Guests) | Medium |
+| [WIN-URA-011](../controls/index.md#win-ura-011) | Force Shutdown From a Remote System = Administrators Only | Medium |
+| [WIN-URA-012](../controls/index.md#win-ura-012) | Generate Security Audits = Local Service, Network Service | Medium |
+| [WIN-URA-013](../controls/index.md#win-ura-013) | Impersonate a Client After Authentication = Service Accounts and Administrators | Medium |
+| [WIN-URA-014](../controls/index.md#win-ura-014) | Load and Unload Device Drivers = Administrators Only | Medium |
+| [WIN-URA-015](../controls/index.md#win-ura-015) | Manage Auditing and Security Log = Administrators Only | Medium |
+| [WIN-URA-016](../controls/index.md#win-ura-016) | Take Ownership of Files or Other Objects = Administrators Only | Medium |
 
 ## CloudInfra Secure Essential - Essential tier
 
@@ -296,7 +321,7 @@ Baseline of essential hardening controls suitable for any Windows Server workloa
 
 Baseline for Internet Information Services (IIS) web servers.
 
-**ID:** `CloudInfraSecure-IISWebServer` &nbsp; **Controls:** 56 &nbsp; **Supported OS:** WindowsServer2022, WindowsServer2025
+**ID:** `CloudInfraSecure-IISWebServer` &nbsp; **Controls:** 65 &nbsp; **Supported OS:** WindowsServer2022, WindowsServer2025
 
 | Control | Name | Severity |
 |---------|------|----------|
@@ -356,12 +381,21 @@ Baseline for Internet Information Services (IIS) web servers.
 | [WIN-NET-007](../controls/index.md#win-net-007) | Enable Safe DLL Search Mode | Medium |
 | [WIN-PRINT-001](../controls/index.md#win-print-001) | Restrict Point and Print Driver Installation to Administrators | High |
 | [WIN-AUD-020](../controls/index.md#win-aud-020) | Audit Detailed File Share | Medium |
+| [WIN-URA-001](../controls/index.md#win-ura-001) | Access Credential Manager as a Trusted Caller = No One | High |
+| [WIN-URA-002](../controls/index.md#win-ura-002) | Act as Part of the Operating System = No One | High |
+| [WIN-URA-003](../controls/index.md#win-ura-003) | Create a Token Object = No One | High |
+| [WIN-URA-004](../controls/index.md#win-ura-004) | Create Permanent Shared Objects = No One | Medium |
+| [WIN-URA-006](../controls/index.md#win-ura-006) | Deny Access to This Computer From the Network (includes Guests) | Medium |
+| [WIN-URA-007](../controls/index.md#win-ura-007) | Deny Log On as a Batch Job (includes Guests) | Low |
+| [WIN-URA-008](../controls/index.md#win-ura-008) | Deny Log On as a Service (includes Guests) | Low |
+| [WIN-URA-009](../controls/index.md#win-ura-009) | Deny Log On Locally (includes Guests) | Medium |
+| [WIN-URA-010](../controls/index.md#win-ura-010) | Deny Log On Through Remote Desktop Services (includes Guests) | Medium |
 
 ## CloudInfra Secure Remote Desktop Server - Role tier
 
 Baseline for Remote Desktop Session Host servers.
 
-**ID:** `CloudInfraSecure-RemoteDesktopServer` &nbsp; **Controls:** 55 &nbsp; **Supported OS:** WindowsServer2022, WindowsServer2025
+**ID:** `CloudInfraSecure-RemoteDesktopServer` &nbsp; **Controls:** 64 &nbsp; **Supported OS:** WindowsServer2022, WindowsServer2025
 
 | Control | Name | Severity |
 |---------|------|----------|
@@ -420,12 +454,21 @@ Baseline for Remote Desktop Session Host servers.
 | [WIN-PRINT-001](../controls/index.md#win-print-001) | Restrict Point and Print Driver Installation to Administrators | High |
 | [WIN-PRINT-002](../controls/index.md#win-print-002) | Require Elevation for New Point and Print Connections | Medium |
 | [WIN-AUD-017](../controls/index.md#win-aud-017) | Audit PNP Activity | Medium |
+| [WIN-URA-001](../controls/index.md#win-ura-001) | Access Credential Manager as a Trusted Caller = No One | High |
+| [WIN-URA-002](../controls/index.md#win-ura-002) | Act as Part of the Operating System = No One | High |
+| [WIN-URA-003](../controls/index.md#win-ura-003) | Create a Token Object = No One | High |
+| [WIN-URA-004](../controls/index.md#win-ura-004) | Create Permanent Shared Objects = No One | Medium |
+| [WIN-URA-006](../controls/index.md#win-ura-006) | Deny Access to This Computer From the Network (includes Guests) | Medium |
+| [WIN-URA-007](../controls/index.md#win-ura-007) | Deny Log On as a Batch Job (includes Guests) | Low |
+| [WIN-URA-008](../controls/index.md#win-ura-008) | Deny Log On as a Service (includes Guests) | Low |
+| [WIN-URA-009](../controls/index.md#win-ura-009) | Deny Log On Locally (includes Guests) | Medium |
+| [WIN-URA-010](../controls/index.md#win-ura-010) | Deny Log On Through Remote Desktop Services (includes Guests) | Medium |
 
 ## CloudInfra Secure SQL Server - Role tier
 
 Baseline for Microsoft SQL Server hosts.
 
-**ID:** `CloudInfraSecure-SQLServer` &nbsp; **Controls:** 52 &nbsp; **Supported OS:** WindowsServer2022, WindowsServer2025
+**ID:** `CloudInfraSecure-SQLServer` &nbsp; **Controls:** 61 &nbsp; **Supported OS:** WindowsServer2022, WindowsServer2025
 
 | Control | Name | Severity |
 |---------|------|----------|
@@ -481,12 +524,21 @@ Baseline for Microsoft SQL Server hosts.
 | [WIN-LSA-012](../controls/index.md#win-lsa-012) | Strengthen Default Permissions of Internal System Objects | Low |
 | [WIN-NET-007](../controls/index.md#win-net-007) | Enable Safe DLL Search Mode | Medium |
 | [WIN-AUD-019](../controls/index.md#win-aud-019) | Audit Other Object Access Events | Medium |
+| [WIN-URA-001](../controls/index.md#win-ura-001) | Access Credential Manager as a Trusted Caller = No One | High |
+| [WIN-URA-002](../controls/index.md#win-ura-002) | Act as Part of the Operating System = No One | High |
+| [WIN-URA-003](../controls/index.md#win-ura-003) | Create a Token Object = No One | High |
+| [WIN-URA-004](../controls/index.md#win-ura-004) | Create Permanent Shared Objects = No One | Medium |
+| [WIN-URA-006](../controls/index.md#win-ura-006) | Deny Access to This Computer From the Network (includes Guests) | Medium |
+| [WIN-URA-007](../controls/index.md#win-ura-007) | Deny Log On as a Batch Job (includes Guests) | Low |
+| [WIN-URA-008](../controls/index.md#win-ura-008) | Deny Log On as a Service (includes Guests) | Low |
+| [WIN-URA-009](../controls/index.md#win-ura-009) | Deny Log On Locally (includes Guests) | Medium |
+| [WIN-URA-010](../controls/index.md#win-ura-010) | Deny Log On Through Remote Desktop Services (includes Guests) | Medium |
 
 ## CloudInfra Secure Standard - Standard tier
 
 Recommended baseline adding logging, auditing and access hardening on top of Essential.
 
-**ID:** `CloudInfraSecure-Standard` &nbsp; **Controls:** 122 &nbsp; **Supported OS:** WindowsServer2022, WindowsServer2025
+**ID:** `CloudInfraSecure-Standard` &nbsp; **Controls:** 138 &nbsp; **Supported OS:** WindowsServer2022, WindowsServer2025
 
 | Control | Name | Severity |
 |---------|------|----------|
@@ -612,4 +664,20 @@ Recommended baseline adding logging, auditing and access hardening on top of Ess
 | [WIN-NET-007](../controls/index.md#win-net-007) | Enable Safe DLL Search Mode | Medium |
 | [WIN-PRINT-001](../controls/index.md#win-print-001) | Restrict Point and Print Driver Installation to Administrators | High |
 | [WIN-PRINT-002](../controls/index.md#win-print-002) | Require Elevation for New Point and Print Connections | Medium |
+| [WIN-URA-001](../controls/index.md#win-ura-001) | Access Credential Manager as a Trusted Caller = No One | High |
+| [WIN-URA-002](../controls/index.md#win-ura-002) | Act as Part of the Operating System = No One | High |
+| [WIN-URA-003](../controls/index.md#win-ura-003) | Create a Token Object = No One | High |
+| [WIN-URA-004](../controls/index.md#win-ura-004) | Create Permanent Shared Objects = No One | Medium |
+| [WIN-URA-005](../controls/index.md#win-ura-005) | Debug Programs = Administrators Only | High |
+| [WIN-URA-006](../controls/index.md#win-ura-006) | Deny Access to This Computer From the Network (includes Guests) | Medium |
+| [WIN-URA-007](../controls/index.md#win-ura-007) | Deny Log On as a Batch Job (includes Guests) | Low |
+| [WIN-URA-008](../controls/index.md#win-ura-008) | Deny Log On as a Service (includes Guests) | Low |
+| [WIN-URA-009](../controls/index.md#win-ura-009) | Deny Log On Locally (includes Guests) | Medium |
+| [WIN-URA-010](../controls/index.md#win-ura-010) | Deny Log On Through Remote Desktop Services (includes Guests) | Medium |
+| [WIN-URA-011](../controls/index.md#win-ura-011) | Force Shutdown From a Remote System = Administrators Only | Medium |
+| [WIN-URA-012](../controls/index.md#win-ura-012) | Generate Security Audits = Local Service, Network Service | Medium |
+| [WIN-URA-013](../controls/index.md#win-ura-013) | Impersonate a Client After Authentication = Service Accounts and Administrators | Medium |
+| [WIN-URA-014](../controls/index.md#win-ura-014) | Load and Unload Device Drivers = Administrators Only | Medium |
+| [WIN-URA-015](../controls/index.md#win-ura-015) | Manage Auditing and Security Log = Administrators Only | Medium |
+| [WIN-URA-016](../controls/index.md#win-ura-016) | Take Ownership of Files or Other Objects = Administrators Only | Medium |
 

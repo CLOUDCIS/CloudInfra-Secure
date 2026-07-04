@@ -9,20 +9,20 @@ Number of controls whose technical requirements may help implement each standard
 
 | Standard | Controls |
 |----------|----------|
-| DISA STIG | 148 |
-| NIST CSF | 148 |
-| NIST SP 800-53 Rev 5 | 148 |
-| NIST SP 800-171 | 148 |
+| DISA STIG | 164 |
+| NIST CSF | 164 |
+| NIST SP 800-53 Rev 5 | 164 |
+| NIST SP 800-171 | 164 |
 | FedRAMP | 13 |
-| Microsoft Cloud Security Benchmark | 128 |
-| Microsoft Security Baselines | 148 |
+| Microsoft Cloud Security Benchmark | 144 |
+| Microsoft Security Baselines | 164 |
 | CMMC Level 2 | 19 |
-| PCI DSS v4.0 | 148 |
+| PCI DSS v4.0 | 164 |
 | SOC 2 | 24 |
-| ISO/IEC 27001 | 148 |
+| ISO/IEC 27001 | 164 |
 | HIPAA Security Rule | 27 |
-| UK Cyber Essentials | 125 |
-| NIS2 | 148 |
+| UK Cyber Essentials | 141 |
+| NIS2 | 164 |
 
 ## Browse controls by standard
 
@@ -31,23 +31,23 @@ Select a standard to list the controls that map to it. This shows technical alig
 <div class="cmpl-toolbar">
   <label for="cmplStd"><strong>Filter by standard:</strong></label>
   <select id="cmplStd">
-    <option value="__all">All standards (148 controls)</option>
-    <option value="DISA STIG">DISA STIG (148)</option>
-    <option value="NIST CSF">NIST CSF (148)</option>
-    <option value="NIST SP 800-53 Rev 5">NIST SP 800-53 Rev 5 (148)</option>
-    <option value="NIST SP 800-171">NIST SP 800-171 (148)</option>
+    <option value="__all">All standards (164 controls)</option>
+    <option value="DISA STIG">DISA STIG (164)</option>
+    <option value="NIST CSF">NIST CSF (164)</option>
+    <option value="NIST SP 800-53 Rev 5">NIST SP 800-53 Rev 5 (164)</option>
+    <option value="NIST SP 800-171">NIST SP 800-171 (164)</option>
     <option value="FedRAMP">FedRAMP (13)</option>
-    <option value="Microsoft Cloud Security Benchmark">Microsoft Cloud Security Benchmark (128)</option>
-    <option value="Microsoft Security Baselines">Microsoft Security Baselines (148)</option>
+    <option value="Microsoft Cloud Security Benchmark">Microsoft Cloud Security Benchmark (144)</option>
+    <option value="Microsoft Security Baselines">Microsoft Security Baselines (164)</option>
     <option value="CMMC Level 2">CMMC Level 2 (19)</option>
-    <option value="PCI DSS v4.0">PCI DSS v4.0 (148)</option>
+    <option value="PCI DSS v4.0">PCI DSS v4.0 (164)</option>
     <option value="SOC 2">SOC 2 (24)</option>
-    <option value="ISO/IEC 27001">ISO/IEC 27001 (148)</option>
+    <option value="ISO/IEC 27001">ISO/IEC 27001 (164)</option>
     <option value="HIPAA Security Rule">HIPAA Security Rule (27)</option>
-    <option value="UK Cyber Essentials">UK Cyber Essentials (125)</option>
-    <option value="NIS2">NIS2 (148)</option>
+    <option value="UK Cyber Essentials">UK Cyber Essentials (141)</option>
+    <option value="NIS2">NIS2 (164)</option>
   </select>
-  <span class="cmpl-count" id="cmplCount">Showing 148 of 148 controls</span>
+  <span class="cmpl-count" id="cmplCount">Showing 164 of 164 controls</span>
 </div>
 
 <div class="cmpl-tablewrap" markdown="0">
@@ -195,6 +195,22 @@ Select a standard to list the controls that map to it. This shows technical alig
     <tr data-standards="|DISA STIG|NIST CSF|NIST SP 800-53 Rev 5|NIST SP 800-171|PCI DSS v4.0|ISO/IEC 27001|Microsoft Cloud Security Benchmark|Microsoft Security Baselines|NIS2|UK Cyber Essentials|"><td class="cmpl-num"></td><td><a href="../controls/#win-uac-005">WIN-UAC-005</a></td><td>UAC Switch to the Secure Desktop for Elevation</td><td>Medium</td><td>Privilege Management</td></tr>
     <tr data-standards="|DISA STIG|NIST CSF|NIST SP 800-53 Rev 5|NIST SP 800-171|PCI DSS v4.0|ISO/IEC 27001|Microsoft Cloud Security Benchmark|Microsoft Security Baselines|NIS2|UK Cyber Essentials|"><td class="cmpl-num"></td><td><a href="../controls/#win-uac-006">WIN-UAC-006</a></td><td>Only Elevate UIAccess Apps in Secure Locations</td><td>Medium</td><td>Privilege Management</td></tr>
     <tr data-standards="|DISA STIG|NIST CSF|NIST SP 800-53 Rev 5|NIST SP 800-171|PCI DSS v4.0|ISO/IEC 27001|Microsoft Cloud Security Benchmark|Microsoft Security Baselines|NIS2|UK Cyber Essentials|"><td class="cmpl-num"></td><td><a href="../controls/#win-uac-007">WIN-UAC-007</a></td><td>Apply UAC Token Filtering to Remote Local Accounts</td><td>High</td><td>Privilege Management</td></tr>
+    <tr data-standards="|DISA STIG|NIST CSF|NIST SP 800-53 Rev 5|NIST SP 800-171|PCI DSS v4.0|ISO/IEC 27001|Microsoft Cloud Security Benchmark|Microsoft Security Baselines|NIS2|UK Cyber Essentials|"><td class="cmpl-num"></td><td><a href="../controls/#win-ura-001">WIN-URA-001</a></td><td>Access Credential Manager as a Trusted Caller = No One</td><td>High</td><td>User Rights Assignment</td></tr>
+    <tr data-standards="|DISA STIG|NIST CSF|NIST SP 800-53 Rev 5|NIST SP 800-171|PCI DSS v4.0|ISO/IEC 27001|Microsoft Cloud Security Benchmark|Microsoft Security Baselines|NIS2|UK Cyber Essentials|"><td class="cmpl-num"></td><td><a href="../controls/#win-ura-002">WIN-URA-002</a></td><td>Act as Part of the Operating System = No One</td><td>High</td><td>User Rights Assignment</td></tr>
+    <tr data-standards="|DISA STIG|NIST CSF|NIST SP 800-53 Rev 5|NIST SP 800-171|PCI DSS v4.0|ISO/IEC 27001|Microsoft Cloud Security Benchmark|Microsoft Security Baselines|NIS2|UK Cyber Essentials|"><td class="cmpl-num"></td><td><a href="../controls/#win-ura-003">WIN-URA-003</a></td><td>Create a Token Object = No One</td><td>High</td><td>User Rights Assignment</td></tr>
+    <tr data-standards="|DISA STIG|NIST CSF|NIST SP 800-53 Rev 5|NIST SP 800-171|PCI DSS v4.0|ISO/IEC 27001|Microsoft Cloud Security Benchmark|Microsoft Security Baselines|NIS2|UK Cyber Essentials|"><td class="cmpl-num"></td><td><a href="../controls/#win-ura-004">WIN-URA-004</a></td><td>Create Permanent Shared Objects = No One</td><td>Medium</td><td>User Rights Assignment</td></tr>
+    <tr data-standards="|DISA STIG|NIST CSF|NIST SP 800-53 Rev 5|NIST SP 800-171|PCI DSS v4.0|ISO/IEC 27001|Microsoft Cloud Security Benchmark|Microsoft Security Baselines|NIS2|UK Cyber Essentials|"><td class="cmpl-num"></td><td><a href="../controls/#win-ura-005">WIN-URA-005</a></td><td>Debug Programs = Administrators Only</td><td>High</td><td>User Rights Assignment</td></tr>
+    <tr data-standards="|DISA STIG|NIST CSF|NIST SP 800-53 Rev 5|NIST SP 800-171|PCI DSS v4.0|ISO/IEC 27001|Microsoft Cloud Security Benchmark|Microsoft Security Baselines|NIS2|UK Cyber Essentials|"><td class="cmpl-num"></td><td><a href="../controls/#win-ura-006">WIN-URA-006</a></td><td>Deny Access to This Computer From the Network (includes Guests)</td><td>Medium</td><td>User Rights Assignment</td></tr>
+    <tr data-standards="|DISA STIG|NIST CSF|NIST SP 800-53 Rev 5|NIST SP 800-171|PCI DSS v4.0|ISO/IEC 27001|Microsoft Cloud Security Benchmark|Microsoft Security Baselines|NIS2|UK Cyber Essentials|"><td class="cmpl-num"></td><td><a href="../controls/#win-ura-007">WIN-URA-007</a></td><td>Deny Log On as a Batch Job (includes Guests)</td><td>Low</td><td>User Rights Assignment</td></tr>
+    <tr data-standards="|DISA STIG|NIST CSF|NIST SP 800-53 Rev 5|NIST SP 800-171|PCI DSS v4.0|ISO/IEC 27001|Microsoft Cloud Security Benchmark|Microsoft Security Baselines|NIS2|UK Cyber Essentials|"><td class="cmpl-num"></td><td><a href="../controls/#win-ura-008">WIN-URA-008</a></td><td>Deny Log On as a Service (includes Guests)</td><td>Low</td><td>User Rights Assignment</td></tr>
+    <tr data-standards="|DISA STIG|NIST CSF|NIST SP 800-53 Rev 5|NIST SP 800-171|PCI DSS v4.0|ISO/IEC 27001|Microsoft Cloud Security Benchmark|Microsoft Security Baselines|NIS2|UK Cyber Essentials|"><td class="cmpl-num"></td><td><a href="../controls/#win-ura-009">WIN-URA-009</a></td><td>Deny Log On Locally (includes Guests)</td><td>Medium</td><td>User Rights Assignment</td></tr>
+    <tr data-standards="|DISA STIG|NIST CSF|NIST SP 800-53 Rev 5|NIST SP 800-171|PCI DSS v4.0|ISO/IEC 27001|Microsoft Cloud Security Benchmark|Microsoft Security Baselines|NIS2|UK Cyber Essentials|"><td class="cmpl-num"></td><td><a href="../controls/#win-ura-010">WIN-URA-010</a></td><td>Deny Log On Through Remote Desktop Services (includes Guests)</td><td>Medium</td><td>User Rights Assignment</td></tr>
+    <tr data-standards="|DISA STIG|NIST CSF|NIST SP 800-53 Rev 5|NIST SP 800-171|PCI DSS v4.0|ISO/IEC 27001|Microsoft Cloud Security Benchmark|Microsoft Security Baselines|NIS2|UK Cyber Essentials|"><td class="cmpl-num"></td><td><a href="../controls/#win-ura-011">WIN-URA-011</a></td><td>Force Shutdown From a Remote System = Administrators Only</td><td>Medium</td><td>User Rights Assignment</td></tr>
+    <tr data-standards="|DISA STIG|NIST CSF|NIST SP 800-53 Rev 5|NIST SP 800-171|PCI DSS v4.0|ISO/IEC 27001|Microsoft Cloud Security Benchmark|Microsoft Security Baselines|NIS2|UK Cyber Essentials|"><td class="cmpl-num"></td><td><a href="../controls/#win-ura-012">WIN-URA-012</a></td><td>Generate Security Audits = Local Service, Network Service</td><td>Medium</td><td>User Rights Assignment</td></tr>
+    <tr data-standards="|DISA STIG|NIST CSF|NIST SP 800-53 Rev 5|NIST SP 800-171|PCI DSS v4.0|ISO/IEC 27001|Microsoft Cloud Security Benchmark|Microsoft Security Baselines|NIS2|UK Cyber Essentials|"><td class="cmpl-num"></td><td><a href="../controls/#win-ura-013">WIN-URA-013</a></td><td>Impersonate a Client After Authentication = Service Accounts and Administrators</td><td>Medium</td><td>User Rights Assignment</td></tr>
+    <tr data-standards="|DISA STIG|NIST CSF|NIST SP 800-53 Rev 5|NIST SP 800-171|PCI DSS v4.0|ISO/IEC 27001|Microsoft Cloud Security Benchmark|Microsoft Security Baselines|NIS2|UK Cyber Essentials|"><td class="cmpl-num"></td><td><a href="../controls/#win-ura-014">WIN-URA-014</a></td><td>Load and Unload Device Drivers = Administrators Only</td><td>Medium</td><td>User Rights Assignment</td></tr>
+    <tr data-standards="|DISA STIG|NIST CSF|NIST SP 800-53 Rev 5|NIST SP 800-171|PCI DSS v4.0|ISO/IEC 27001|Microsoft Cloud Security Benchmark|Microsoft Security Baselines|NIS2|UK Cyber Essentials|"><td class="cmpl-num"></td><td><a href="../controls/#win-ura-015">WIN-URA-015</a></td><td>Manage Auditing and Security Log = Administrators Only</td><td>Medium</td><td>User Rights Assignment</td></tr>
+    <tr data-standards="|DISA STIG|NIST CSF|NIST SP 800-53 Rev 5|NIST SP 800-171|PCI DSS v4.0|ISO/IEC 27001|Microsoft Cloud Security Benchmark|Microsoft Security Baselines|NIS2|UK Cyber Essentials|"><td class="cmpl-num"></td><td><a href="../controls/#win-ura-016">WIN-URA-016</a></td><td>Take Ownership of Files or Other Objects = Administrators Only</td><td>Medium</td><td>User Rights Assignment</td></tr>
     <tr data-standards="|DISA STIG|NIST CSF|NIST SP 800-53 Rev 5|NIST SP 800-171|PCI DSS v4.0|ISO/IEC 27001|Microsoft Cloud Security Benchmark|CMMC Level 2|HIPAA Security Rule|Microsoft Security Baselines|NIS2|UK Cyber Essentials|"><td class="cmpl-num"></td><td><a href="../controls/#win-vbs-001">WIN-VBS-001</a></td><td>Enable Virtualization Based Security</td><td>High</td><td>Credential Protection</td></tr>
     <tr data-standards="|DISA STIG|NIST CSF|NIST SP 800-53 Rev 5|NIST SP 800-171|PCI DSS v4.0|ISO/IEC 27001|Microsoft Cloud Security Benchmark|CMMC Level 2|HIPAA Security Rule|Microsoft Security Baselines|NIS2|UK Cyber Essentials|"><td class="cmpl-num"></td><td><a href="../controls/#win-vbs-002">WIN-VBS-002</a></td><td>Require Secure Boot for VBS</td><td>Medium</td><td>Credential Protection</td></tr>
     <tr data-standards="|DISA STIG|NIST CSF|NIST SP 800-53 Rev 5|NIST SP 800-171|PCI DSS v4.0|ISO/IEC 27001|Microsoft Cloud Security Benchmark|CMMC Level 2|HIPAA Security Rule|Microsoft Security Baselines|NIS2|UK Cyber Essentials|"><td class="cmpl-num"></td><td><a href="../controls/#win-vbs-003">WIN-VBS-003</a></td><td>Enable Memory Integrity (HVCI)</td><td>High</td><td>Exploit Protection</td></tr>
