@@ -1,0 +1,89 @@
+site_name: CloudInfra Secure Documentation
+site_description: >-
+  CloudInfra Secure - a lightweight, native Windows Server security baseline
+  platform. Audit, harden, report, and detect configuration drift with zero
+  external dependencies.
+site_author: InfraSOS FZCO
+site_url: https://cloudcis.github.io/CloudInfra-Secure/
+copyright: Copyright &copy; 2026 InfraSOS FZCO - CloudInfra Secure
+
+repo_url: https://github.com/CLOUDCIS/CloudInfra-Secure
+repo_name: CLOUDCIS/CloudInfra-Secure
+edit_uri: edit/main/docs/
+
+theme:
+  name: material
+  language: en
+  icon:
+    repo: fontawesome/brands/github
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - navigation.instant
+    - navigation.tracking
+    - toc.follow
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.tabs.link
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+
+extra_css:
+  - stylesheets/extra.css
+
+extra:
+  social:
+    - icon: fontawesome/solid/globe
+      link: https://cloudinfrastructureservices.co.uk/
+      name: Cloud Infrastructure Services
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.superfences
+  - pymdownx.inlinehilite
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+nav:
+  - Home: index.md
+  - Getting Started:
+      - Installation: getting-started/installation.md
+      - Quickstart: getting-started/quickstart.md
+  - User Guide:
+      - Commands: guide/commands.md
+      - Baselines: guide/baselines.md
+      - Audit, Apply & Rollback: guide/audit-apply-rollback.md
+      - Reporting: guide/reporting.md
+      - Drift & Alerts: guide/drift-and-alerts.md
+      - Configuration: guide/configuration.md
+      - Deployment (Packer): guide/deployment.md
+  - Reference:
+      - Controls: reference/controls/index.md
+      - Baselines: reference/baselines/index.md
+      - Compliance Coverage: reference/compliance.md
+  - About:
+      - Architecture: about/architecture.md
+      - Roadmap: about/roadmap.md
+      - FAQ: about/faq.md

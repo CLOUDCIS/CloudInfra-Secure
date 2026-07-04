@@ -1,0 +1,42 @@
+/* CloudInfra Secure brand palette (#00A4EF) */
+:root {
+  --md-primary-fg-color:        #00A4EF;
+  --md-primary-fg-color--light: #33b7f2;
+  --md-primary-fg-color--dark:  #0083bf;
+  --md-accent-fg-color:         #0083bf;
+  --md-typeset-a-color:         #0083bf;
+}
+
+/* Dark scheme keeps the brand accent readable */
+[data-md-color-scheme="slate"] {
+  --md-primary-fg-color:  #00A4EF;
+  --md-accent-fg-color:   #33b7f2;
+  --md-typeset-a-color:   #33b7f2;
+}
+
+/* Force the brand colour on the header, tabs and primary buttons regardless of
+   the default palette (Material defaults to indigo when no primary is set). */
+.md-header,
+.md-tabs {
+  background-color: #00A4EF;
+}
+.md-button--primary {
+  background-color: #00A4EF;
+  border-color: #00A4EF;
+}
+.md-button--primary:hover {
+  background-color: #0083bf;
+  border-color: #0083bf;
+}
+
+/* Home page banner */
+.cis-banner img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  border: 1px solid var(--md-default-fg-color--lightest);
+}
+
+/* Status pills reused from the product report */
+.pill-pass { color:#fff; background:#1a7f37; padding:1px 8px; border-radius:10px; font-size:.8em; }
+.pill-fail { color:#fff; background:#b91c1c; padding:1px 8px; border-radius:10px; font-size:.8em; }

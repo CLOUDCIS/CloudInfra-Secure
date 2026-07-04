@@ -1,0 +1,266 @@
+# Baselines
+
+CloudInfra Secure ships 7 baselines. Each is a curated collection of control IDs.
+
+## CloudInfra Secure Domain Controller - Role tier
+
+Baseline for Active Directory Domain Controllers.
+
+**ID:** `CloudInfraSecure-DomainController` &nbsp; **Controls:** 37 &nbsp; **Supported OS:** WindowsServer2022, WindowsServer2025
+
+| Control | Name | Severity |
+|---------|------|----------|
+| [WIN-FW-001](../controls/index.md#win-fw-001) | Windows Firewall Enabled (All Profiles) | High |
+| [WIN-SMB-001](../controls/index.md#win-smb-001) | Disable SMBv1 | High |
+| [WIN-TLS-010](../controls/index.md#win-tls-010) | Disable TLS 1.0 (Server) | High |
+| [WIN-TLS-011](../controls/index.md#win-tls-011) | Disable TLS 1.1 (Server) | High |
+| [WIN-PWD-001](../controls/index.md#win-pwd-001) | Minimum Password Length | High |
+| [WIN-PWD-002](../controls/index.md#win-pwd-002) | Password Complexity Enabled | High |
+| [WIN-LOCK-001](../controls/index.md#win-lock-001) | Account Lockout Threshold | Medium |
+| [WIN-AUD-001](../controls/index.md#win-aud-001) | Audit Logon Failures | Medium |
+| [WIN-AUD-002](../controls/index.md#win-aud-002) | Audit Account Lockout Events | Medium |
+| [WIN-UAC-001](../controls/index.md#win-uac-001) | User Account Control Enabled | High |
+| [WIN-DEF-001](../controls/index.md#win-def-001) | Microsoft Defender Antivirus Enabled | High |
+| [WIN-PWD-003](../controls/index.md#win-pwd-003) | Maximum Password Age | Medium |
+| [WIN-PWD-004](../controls/index.md#win-pwd-004) | Minimum Password Age | Low |
+| [WIN-PWD-005](../controls/index.md#win-pwd-005) | Enforce Password History | Medium |
+| [WIN-PWD-006](../controls/index.md#win-pwd-006) | Disable Reversible Password Encryption | High |
+| [WIN-LOCK-002](../controls/index.md#win-lock-002) | Account Lockout Duration | Medium |
+| [WIN-LOCK-003](../controls/index.md#win-lock-003) | Reset Account Lockout Counter | Medium |
+| [WIN-NTLM-001](../controls/index.md#win-ntlm-001) | LAN Manager Authentication Level (NTLMv2 Only) | High |
+| [WIN-LSA-001](../controls/index.md#win-lsa-001) | Do Not Store LAN Manager Hash | High |
+| [WIN-LSA-002](../controls/index.md#win-lsa-002) | Restrict Anonymous SID Enumeration | Medium |
+| [WIN-WDIGEST-001](../controls/index.md#win-wdigest-001) | Disable WDigest Credential Caching | High |
+| [WIN-LSA-003](../controls/index.md#win-lsa-003) | Enable LSASS Protection (RunAsPPL) | High |
+| [WIN-AUD-004](../controls/index.md#win-aud-004) | Audit Credential Validation | Medium |
+| [WIN-AUD-005](../controls/index.md#win-aud-005) | Audit Security Group Management | Medium |
+| [WIN-AUD-003](../controls/index.md#win-aud-003) | Audit Process Creation | Medium |
+| [WIN-SMB-004](../controls/index.md#win-smb-004) | Disable SMBv1 Client | High |
+| [WIN-SMB-005](../controls/index.md#win-smb-005) | Require SMB Client Signing | Medium |
+| [WIN-LDAP-001](../controls/index.md#win-ldap-001) | LDAP Client Signing | Medium |
+| [WIN-NET-001](../controls/index.md#win-net-001) | Disable LLMNR | Medium |
+| [WIN-TLS-012](../controls/index.md#win-tls-012) | Disable SSL 3.0 (Server) | High |
+| [WIN-TLS-013](../controls/index.md#win-tls-013) | Disable SSL 2.0 (Server) | High |
+| [WIN-LOGON-001](../controls/index.md#win-logon-001) | Machine Inactivity Limit | Medium |
+| [WIN-LOGON-002](../controls/index.md#win-logon-002) | Do Not Display Last Signed-In User | Low |
+| [WIN-AUD-006](../controls/index.md#win-aud-006) | Audit Special Logon | Medium |
+| [WIN-AUD-007](../controls/index.md#win-aud-007) | Audit Sensitive Privilege Use | Medium |
+| [WIN-AUD-008](../controls/index.md#win-aud-008) | Audit System Integrity | Medium |
+| [WIN-SVC-001](../controls/index.md#win-svc-001) | Disable Remote Registry Service | Medium |
+
+## CloudInfra Secure Enterprise - Enterprise tier
+
+Comprehensive baseline for regulated and high-assurance environments.
+
+**ID:** `CloudInfraSecure-Enterprise` &nbsp; **Controls:** 48 &nbsp; **Supported OS:** WindowsServer2022, WindowsServer2025
+
+| Control | Name | Severity |
+|---------|------|----------|
+| [WIN-FW-001](../controls/index.md#win-fw-001) | Windows Firewall Enabled (All Profiles) | High |
+| [WIN-SMB-001](../controls/index.md#win-smb-001) | Disable SMBv1 | High |
+| [WIN-TLS-010](../controls/index.md#win-tls-010) | Disable TLS 1.0 (Server) | High |
+| [WIN-TLS-011](../controls/index.md#win-tls-011) | Disable TLS 1.1 (Server) | High |
+| [WIN-RDP-001](../controls/index.md#win-rdp-001) | Require Network Level Authentication for RDP | High |
+| [WIN-PSL-001](../controls/index.md#win-psl-001) | Enable PowerShell Script Block Logging | Medium |
+| [WIN-PSL-002](../controls/index.md#win-psl-002) | Enable PowerShell Module Logging | Medium |
+| [WIN-PWD-001](../controls/index.md#win-pwd-001) | Minimum Password Length | High |
+| [WIN-PWD-002](../controls/index.md#win-pwd-002) | Password Complexity Enabled | High |
+| [WIN-LOCK-001](../controls/index.md#win-lock-001) | Account Lockout Threshold | Medium |
+| [WIN-AUD-001](../controls/index.md#win-aud-001) | Audit Logon Failures | Medium |
+| [WIN-AUD-002](../controls/index.md#win-aud-002) | Audit Account Lockout Events | Medium |
+| [WIN-DEF-001](../controls/index.md#win-def-001) | Microsoft Defender Antivirus Enabled | High |
+| [WIN-UAC-001](../controls/index.md#win-uac-001) | User Account Control Enabled | High |
+| [WIN-PWD-003](../controls/index.md#win-pwd-003) | Maximum Password Age | Medium |
+| [WIN-PWD-004](../controls/index.md#win-pwd-004) | Minimum Password Age | Low |
+| [WIN-PWD-005](../controls/index.md#win-pwd-005) | Enforce Password History | Medium |
+| [WIN-PWD-006](../controls/index.md#win-pwd-006) | Disable Reversible Password Encryption | High |
+| [WIN-LOCK-002](../controls/index.md#win-lock-002) | Account Lockout Duration | Medium |
+| [WIN-LOCK-003](../controls/index.md#win-lock-003) | Reset Account Lockout Counter | Medium |
+| [WIN-SMB-003](../controls/index.md#win-smb-003) | Require SMB Signing (Server) | High |
+| [WIN-NTLM-001](../controls/index.md#win-ntlm-001) | LAN Manager Authentication Level (NTLMv2 Only) | High |
+| [WIN-LSA-001](../controls/index.md#win-lsa-001) | Do Not Store LAN Manager Hash | High |
+| [WIN-LSA-002](../controls/index.md#win-lsa-002) | Restrict Anonymous SID Enumeration | Medium |
+| [WIN-LSA-003](../controls/index.md#win-lsa-003) | Enable LSASS Protection (RunAsPPL) | High |
+| [WIN-WDIGEST-001](../controls/index.md#win-wdigest-001) | Disable WDigest Credential Caching | High |
+| [WIN-UAC-002](../controls/index.md#win-uac-002) | UAC Elevation Prompt for Administrators | Medium |
+| [WIN-INSTALL-001](../controls/index.md#win-install-001) | Disable Always Install Elevated | High |
+| [WIN-AUTORUN-001](../controls/index.md#win-autorun-001) | Disable AutoRun on All Drives | Medium |
+| [WIN-AUD-003](../controls/index.md#win-aud-003) | Audit Process Creation | Medium |
+| [WIN-AUD-004](../controls/index.md#win-aud-004) | Audit Credential Validation | Medium |
+| [WIN-AUD-005](../controls/index.md#win-aud-005) | Audit Security Group Management | Medium |
+| [WIN-SMB-004](../controls/index.md#win-smb-004) | Disable SMBv1 Client | High |
+| [WIN-SMB-005](../controls/index.md#win-smb-005) | Require SMB Client Signing | Medium |
+| [WIN-LDAP-001](../controls/index.md#win-ldap-001) | LDAP Client Signing | Medium |
+| [WIN-NET-001](../controls/index.md#win-net-001) | Disable LLMNR | Medium |
+| [WIN-TLS-012](../controls/index.md#win-tls-012) | Disable SSL 3.0 (Server) | High |
+| [WIN-TLS-013](../controls/index.md#win-tls-013) | Disable SSL 2.0 (Server) | High |
+| [WIN-RDP-002](../controls/index.md#win-rdp-002) | RDP Minimum Encryption Level (High) | Medium |
+| [WIN-RDP-003](../controls/index.md#win-rdp-003) | RDP Security Layer (TLS) | Medium |
+| [WIN-RDP-004](../controls/index.md#win-rdp-004) | Disable RDP Drive Redirection | Medium |
+| [WIN-SVC-001](../controls/index.md#win-svc-001) | Disable Remote Registry Service | Medium |
+| [WIN-LOGON-001](../controls/index.md#win-logon-001) | Machine Inactivity Limit | Medium |
+| [WIN-LOGON-002](../controls/index.md#win-logon-002) | Do Not Display Last Signed-In User | Low |
+| [WIN-UAC-003](../controls/index.md#win-uac-003) | UAC Detect Application Installations | Medium |
+| [WIN-AUD-006](../controls/index.md#win-aud-006) | Audit Special Logon | Medium |
+| [WIN-AUD-007](../controls/index.md#win-aud-007) | Audit Sensitive Privilege Use | Medium |
+| [WIN-AUD-008](../controls/index.md#win-aud-008) | Audit System Integrity | Medium |
+
+## CloudInfra Secure Essential - Essential tier
+
+Baseline of essential hardening controls suitable for any Windows Server workload.
+
+**ID:** `CloudInfraSecure-Essential` &nbsp; **Controls:** 13 &nbsp; **Supported OS:** WindowsServer2022, WindowsServer2025
+
+| Control | Name | Severity |
+|---------|------|----------|
+| [WIN-FW-001](../controls/index.md#win-fw-001) | Windows Firewall Enabled (All Profiles) | High |
+| [WIN-SMB-001](../controls/index.md#win-smb-001) | Disable SMBv1 | High |
+| [WIN-TLS-010](../controls/index.md#win-tls-010) | Disable TLS 1.0 (Server) | High |
+| [WIN-TLS-011](../controls/index.md#win-tls-011) | Disable TLS 1.1 (Server) | High |
+| [WIN-UAC-001](../controls/index.md#win-uac-001) | User Account Control Enabled | High |
+| [WIN-DEF-001](../controls/index.md#win-def-001) | Microsoft Defender Antivirus Enabled | High |
+| [WIN-PWD-001](../controls/index.md#win-pwd-001) | Minimum Password Length | High |
+| [WIN-PWD-002](../controls/index.md#win-pwd-002) | Password Complexity Enabled | High |
+| [WIN-PWD-006](../controls/index.md#win-pwd-006) | Disable Reversible Password Encryption | High |
+| [WIN-LSA-001](../controls/index.md#win-lsa-001) | Do Not Store LAN Manager Hash | High |
+| [WIN-WDIGEST-001](../controls/index.md#win-wdigest-001) | Disable WDigest Credential Caching | High |
+| [WIN-TLS-012](../controls/index.md#win-tls-012) | Disable SSL 3.0 (Server) | High |
+| [WIN-TLS-013](../controls/index.md#win-tls-013) | Disable SSL 2.0 (Server) | High |
+
+## CloudInfra Secure IIS Web Server - Role tier
+
+Baseline for Internet Information Services (IIS) web servers.
+
+**ID:** `CloudInfraSecure-IISWebServer` &nbsp; **Controls:** 18 &nbsp; **Supported OS:** WindowsServer2022, WindowsServer2025
+
+| Control | Name | Severity |
+|---------|------|----------|
+| [WIN-FW-001](../controls/index.md#win-fw-001) | Windows Firewall Enabled (All Profiles) | High |
+| [WIN-TLS-010](../controls/index.md#win-tls-010) | Disable TLS 1.0 (Server) | High |
+| [WIN-TLS-011](../controls/index.md#win-tls-011) | Disable TLS 1.1 (Server) | High |
+| [WIN-DEF-001](../controls/index.md#win-def-001) | Microsoft Defender Antivirus Enabled | High |
+| [WIN-UAC-001](../controls/index.md#win-uac-001) | User Account Control Enabled | High |
+| [WIN-PSL-001](../controls/index.md#win-psl-001) | Enable PowerShell Script Block Logging | Medium |
+| [WIN-PSL-002](../controls/index.md#win-psl-002) | Enable PowerShell Module Logging | Medium |
+| [WIN-SMB-003](../controls/index.md#win-smb-003) | Require SMB Signing (Server) | High |
+| [WIN-NTLM-001](../controls/index.md#win-ntlm-001) | LAN Manager Authentication Level (NTLMv2 Only) | High |
+| [WIN-LSA-001](../controls/index.md#win-lsa-001) | Do Not Store LAN Manager Hash | High |
+| [WIN-WDIGEST-001](../controls/index.md#win-wdigest-001) | Disable WDigest Credential Caching | High |
+| [WIN-INSTALL-001](../controls/index.md#win-install-001) | Disable Always Install Elevated | High |
+| [WIN-AUTORUN-001](../controls/index.md#win-autorun-001) | Disable AutoRun on All Drives | Medium |
+| [WIN-TLS-012](../controls/index.md#win-tls-012) | Disable SSL 3.0 (Server) | High |
+| [WIN-TLS-013](../controls/index.md#win-tls-013) | Disable SSL 2.0 (Server) | High |
+| [WIN-SMB-004](../controls/index.md#win-smb-004) | Disable SMBv1 Client | High |
+| [WIN-NET-001](../controls/index.md#win-net-001) | Disable LLMNR | Medium |
+| [WIN-SVC-001](../controls/index.md#win-svc-001) | Disable Remote Registry Service | Medium |
+
+## CloudInfra Secure Remote Desktop Server - Role tier
+
+Baseline for Remote Desktop Session Host servers.
+
+**ID:** `CloudInfraSecure-RemoteDesktopServer` &nbsp; **Controls:** 20 &nbsp; **Supported OS:** WindowsServer2022, WindowsServer2025
+
+| Control | Name | Severity |
+|---------|------|----------|
+| [WIN-RDP-001](../controls/index.md#win-rdp-001) | Require Network Level Authentication for RDP | High |
+| [WIN-TLS-010](../controls/index.md#win-tls-010) | Disable TLS 1.0 (Server) | High |
+| [WIN-TLS-011](../controls/index.md#win-tls-011) | Disable TLS 1.1 (Server) | High |
+| [WIN-FW-001](../controls/index.md#win-fw-001) | Windows Firewall Enabled (All Profiles) | High |
+| [WIN-DEF-001](../controls/index.md#win-def-001) | Microsoft Defender Antivirus Enabled | High |
+| [WIN-LOCK-001](../controls/index.md#win-lock-001) | Account Lockout Threshold | Medium |
+| [WIN-UAC-001](../controls/index.md#win-uac-001) | User Account Control Enabled | High |
+| [WIN-NTLM-001](../controls/index.md#win-ntlm-001) | LAN Manager Authentication Level (NTLMv2 Only) | High |
+| [WIN-LSA-001](../controls/index.md#win-lsa-001) | Do Not Store LAN Manager Hash | High |
+| [WIN-WDIGEST-001](../controls/index.md#win-wdigest-001) | Disable WDigest Credential Caching | High |
+| [WIN-UAC-002](../controls/index.md#win-uac-002) | UAC Elevation Prompt for Administrators | Medium |
+| [WIN-INSTALL-001](../controls/index.md#win-install-001) | Disable Always Install Elevated | High |
+| [WIN-AUTORUN-001](../controls/index.md#win-autorun-001) | Disable AutoRun on All Drives | Medium |
+| [WIN-RDP-002](../controls/index.md#win-rdp-002) | RDP Minimum Encryption Level (High) | Medium |
+| [WIN-RDP-003](../controls/index.md#win-rdp-003) | RDP Security Layer (TLS) | Medium |
+| [WIN-RDP-004](../controls/index.md#win-rdp-004) | Disable RDP Drive Redirection | Medium |
+| [WIN-TLS-012](../controls/index.md#win-tls-012) | Disable SSL 3.0 (Server) | High |
+| [WIN-TLS-013](../controls/index.md#win-tls-013) | Disable SSL 2.0 (Server) | High |
+| [WIN-NET-001](../controls/index.md#win-net-001) | Disable LLMNR | Medium |
+| [WIN-LOGON-001](../controls/index.md#win-logon-001) | Machine Inactivity Limit | Medium |
+
+## CloudInfra Secure SQL Server - Role tier
+
+Baseline for Microsoft SQL Server hosts.
+
+**ID:** `CloudInfraSecure-SQLServer` &nbsp; **Controls:** 17 &nbsp; **Supported OS:** WindowsServer2022, WindowsServer2025
+
+| Control | Name | Severity |
+|---------|------|----------|
+| [WIN-FW-001](../controls/index.md#win-fw-001) | Windows Firewall Enabled (All Profiles) | High |
+| [WIN-TLS-010](../controls/index.md#win-tls-010) | Disable TLS 1.0 (Server) | High |
+| [WIN-TLS-011](../controls/index.md#win-tls-011) | Disable TLS 1.1 (Server) | High |
+| [WIN-DEF-001](../controls/index.md#win-def-001) | Microsoft Defender Antivirus Enabled | High |
+| [WIN-AUD-001](../controls/index.md#win-aud-001) | Audit Logon Failures | Medium |
+| [WIN-AUD-002](../controls/index.md#win-aud-002) | Audit Account Lockout Events | Medium |
+| [WIN-UAC-001](../controls/index.md#win-uac-001) | User Account Control Enabled | High |
+| [WIN-SMB-003](../controls/index.md#win-smb-003) | Require SMB Signing (Server) | High |
+| [WIN-NTLM-001](../controls/index.md#win-ntlm-001) | LAN Manager Authentication Level (NTLMv2 Only) | High |
+| [WIN-LSA-001](../controls/index.md#win-lsa-001) | Do Not Store LAN Manager Hash | High |
+| [WIN-WDIGEST-001](../controls/index.md#win-wdigest-001) | Disable WDigest Credential Caching | High |
+| [WIN-LSA-002](../controls/index.md#win-lsa-002) | Restrict Anonymous SID Enumeration | Medium |
+| [WIN-TLS-012](../controls/index.md#win-tls-012) | Disable SSL 3.0 (Server) | High |
+| [WIN-TLS-013](../controls/index.md#win-tls-013) | Disable SSL 2.0 (Server) | High |
+| [WIN-LDAP-001](../controls/index.md#win-ldap-001) | LDAP Client Signing | Medium |
+| [WIN-NET-001](../controls/index.md#win-net-001) | Disable LLMNR | Medium |
+| [WIN-SMB-004](../controls/index.md#win-smb-004) | Disable SMBv1 Client | High |
+
+## CloudInfra Secure Standard - Standard tier
+
+Recommended baseline adding logging, auditing and access hardening on top of Essential.
+
+**ID:** `CloudInfraSecure-Standard` &nbsp; **Controls:** 46 &nbsp; **Supported OS:** WindowsServer2022, WindowsServer2025
+
+| Control | Name | Severity |
+|---------|------|----------|
+| [WIN-FW-001](../controls/index.md#win-fw-001) | Windows Firewall Enabled (All Profiles) | High |
+| [WIN-SMB-001](../controls/index.md#win-smb-001) | Disable SMBv1 | High |
+| [WIN-TLS-010](../controls/index.md#win-tls-010) | Disable TLS 1.0 (Server) | High |
+| [WIN-TLS-011](../controls/index.md#win-tls-011) | Disable TLS 1.1 (Server) | High |
+| [WIN-RDP-001](../controls/index.md#win-rdp-001) | Require Network Level Authentication for RDP | High |
+| [WIN-PSL-001](../controls/index.md#win-psl-001) | Enable PowerShell Script Block Logging | Medium |
+| [WIN-PSL-002](../controls/index.md#win-psl-002) | Enable PowerShell Module Logging | Medium |
+| [WIN-PWD-001](../controls/index.md#win-pwd-001) | Minimum Password Length | High |
+| [WIN-PWD-002](../controls/index.md#win-pwd-002) | Password Complexity Enabled | High |
+| [WIN-LOCK-001](../controls/index.md#win-lock-001) | Account Lockout Threshold | Medium |
+| [WIN-AUD-001](../controls/index.md#win-aud-001) | Audit Logon Failures | Medium |
+| [WIN-AUD-002](../controls/index.md#win-aud-002) | Audit Account Lockout Events | Medium |
+| [WIN-DEF-001](../controls/index.md#win-def-001) | Microsoft Defender Antivirus Enabled | High |
+| [WIN-UAC-001](../controls/index.md#win-uac-001) | User Account Control Enabled | High |
+| [WIN-PWD-003](../controls/index.md#win-pwd-003) | Maximum Password Age | Medium |
+| [WIN-PWD-004](../controls/index.md#win-pwd-004) | Minimum Password Age | Low |
+| [WIN-PWD-005](../controls/index.md#win-pwd-005) | Enforce Password History | Medium |
+| [WIN-PWD-006](../controls/index.md#win-pwd-006) | Disable Reversible Password Encryption | High |
+| [WIN-LOCK-002](../controls/index.md#win-lock-002) | Account Lockout Duration | Medium |
+| [WIN-LOCK-003](../controls/index.md#win-lock-003) | Reset Account Lockout Counter | Medium |
+| [WIN-SMB-003](../controls/index.md#win-smb-003) | Require SMB Signing (Server) | High |
+| [WIN-NTLM-001](../controls/index.md#win-ntlm-001) | LAN Manager Authentication Level (NTLMv2 Only) | High |
+| [WIN-LSA-001](../controls/index.md#win-lsa-001) | Do Not Store LAN Manager Hash | High |
+| [WIN-LSA-002](../controls/index.md#win-lsa-002) | Restrict Anonymous SID Enumeration | Medium |
+| [WIN-WDIGEST-001](../controls/index.md#win-wdigest-001) | Disable WDigest Credential Caching | High |
+| [WIN-UAC-002](../controls/index.md#win-uac-002) | UAC Elevation Prompt for Administrators | Medium |
+| [WIN-INSTALL-001](../controls/index.md#win-install-001) | Disable Always Install Elevated | High |
+| [WIN-AUTORUN-001](../controls/index.md#win-autorun-001) | Disable AutoRun on All Drives | Medium |
+| [WIN-AUD-003](../controls/index.md#win-aud-003) | Audit Process Creation | Medium |
+| [WIN-AUD-004](../controls/index.md#win-aud-004) | Audit Credential Validation | Medium |
+| [WIN-AUD-005](../controls/index.md#win-aud-005) | Audit Security Group Management | Medium |
+| [WIN-SMB-004](../controls/index.md#win-smb-004) | Disable SMBv1 Client | High |
+| [WIN-SMB-005](../controls/index.md#win-smb-005) | Require SMB Client Signing | Medium |
+| [WIN-LDAP-001](../controls/index.md#win-ldap-001) | LDAP Client Signing | Medium |
+| [WIN-NET-001](../controls/index.md#win-net-001) | Disable LLMNR | Medium |
+| [WIN-TLS-012](../controls/index.md#win-tls-012) | Disable SSL 3.0 (Server) | High |
+| [WIN-TLS-013](../controls/index.md#win-tls-013) | Disable SSL 2.0 (Server) | High |
+| [WIN-RDP-002](../controls/index.md#win-rdp-002) | RDP Minimum Encryption Level (High) | Medium |
+| [WIN-RDP-003](../controls/index.md#win-rdp-003) | RDP Security Layer (TLS) | Medium |
+| [WIN-RDP-004](../controls/index.md#win-rdp-004) | Disable RDP Drive Redirection | Medium |
+| [WIN-SVC-001](../controls/index.md#win-svc-001) | Disable Remote Registry Service | Medium |
+| [WIN-LOGON-001](../controls/index.md#win-logon-001) | Machine Inactivity Limit | Medium |
+| [WIN-LOGON-002](../controls/index.md#win-logon-002) | Do Not Display Last Signed-In User | Low |
+| [WIN-UAC-003](../controls/index.md#win-uac-003) | UAC Detect Application Installations | Medium |
+| [WIN-AUD-006](../controls/index.md#win-aud-006) | Audit Special Logon | Medium |
+| [WIN-AUD-008](../controls/index.md#win-aud-008) | Audit System Integrity | Medium |
+
