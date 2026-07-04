@@ -73,7 +73,7 @@ The advanced audit policy must log failed logon events (subcategory 'Logon') to 
 **Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `SOC 2` `ISO/IEC 27001` `HIPAA Security Rule` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2`
 
 **References:**
-- [https://learn.microsoft.com/windows/security/threat-protection/auditing/audit-logon](https://learn.microsoft.com/windows/security/threat-protection/auditing/audit-logon)
+- [https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/audit-logon](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/audit-logon)
 
 ### WIN-AUD-002 - Audit Account Lockout Events { #win-aud-002 }
 
@@ -88,7 +88,7 @@ The advanced audit policy must log account lockout events (subcategory 'Account 
 **Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `SOC 2` `ISO/IEC 27001` `HIPAA Security Rule` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2`
 
 **References:**
-- [https://learn.microsoft.com/windows/security/threat-protection/auditing/audit-account-lockout](https://learn.microsoft.com/windows/security/threat-protection/auditing/audit-account-lockout)
+- [https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/audit-account-lockout](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/audit-account-lockout)
 
 ### WIN-AUD-003 - Audit Process Creation { #win-aud-003 }
 
@@ -103,7 +103,7 @@ Process creation events must be audited to support detection and forensic invest
 **Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `SOC 2` `ISO/IEC 27001` `Microsoft Security Baselines` `NIS2`
 
 **References:**
-- [https://learn.microsoft.com/windows/security/threat-protection/security-policy-settings/](https://learn.microsoft.com/windows/security/threat-protection/security-policy-settings/)
+- [https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/audit-process-creation](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/audit-process-creation)
 
 ### WIN-AUD-004 - Audit Credential Validation { #win-aud-004 }
 
@@ -118,7 +118,7 @@ Credential validation events must be audited to detect authentication attacks.
 **Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `SOC 2` `ISO/IEC 27001` `Microsoft Security Baselines` `NIS2`
 
 **References:**
-- [https://learn.microsoft.com/windows/security/threat-protection/security-policy-settings/](https://learn.microsoft.com/windows/security/threat-protection/security-policy-settings/)
+- [https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/audit-credential-validation](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/audit-credential-validation)
 
 ### WIN-AUD-005 - Audit Security Group Management { #win-aud-005 }
 
@@ -133,7 +133,7 @@ Changes to security groups must be audited to detect privilege escalation via gr
 **Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `SOC 2` `ISO/IEC 27001` `Microsoft Security Baselines` `NIS2`
 
 **References:**
-- [https://learn.microsoft.com/windows/security/threat-protection/security-policy-settings/](https://learn.microsoft.com/windows/security/threat-protection/security-policy-settings/)
+- [https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/audit-security-group-management](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/audit-security-group-management)
 
 ### WIN-AUD-006 - Audit Special Logon { #win-aud-006 }
 
@@ -148,7 +148,7 @@ Special logon events (privileged logons) must be audited.
 **Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `SOC 2` `ISO/IEC 27001` `Microsoft Security Baselines` `NIS2`
 
 **References:**
-- [https://learn.microsoft.com/windows/security/threat-protection/security-policy-settings/](https://learn.microsoft.com/windows/security/threat-protection/security-policy-settings/)
+- [https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/audit-special-logon](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/audit-special-logon)
 
 ### WIN-AUD-007 - Audit Sensitive Privilege Use { #win-aud-007 }
 
@@ -163,7 +163,7 @@ Use of sensitive privileges must be audited to detect privilege abuse.
 **Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `SOC 2` `ISO/IEC 27001` `Microsoft Security Baselines` `NIS2`
 
 **References:**
-- [https://learn.microsoft.com/windows/security/threat-protection/security-policy-settings/](https://learn.microsoft.com/windows/security/threat-protection/security-policy-settings/)
+- [https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/audit-sensitive-privilege-use](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/audit-sensitive-privilege-use)
 
 ### WIN-AUD-008 - Audit System Integrity { #win-aud-008 }
 
@@ -178,7 +178,7 @@ System integrity events (audit subsystem failures, driver issues) must be audite
 **Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `SOC 2` `ISO/IEC 27001` `Microsoft Security Baselines` `NIS2`
 
 **References:**
-- [https://learn.microsoft.com/windows/security/threat-protection/security-policy-settings/](https://learn.microsoft.com/windows/security/threat-protection/security-policy-settings/)
+- [https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/audit-system-integrity](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/audit-system-integrity)
 
 ### WIN-AUTORUN-001 - Disable AutoRun on All Drives { #win-autorun-001 }
 
@@ -193,7 +193,7 @@ AutoRun/AutoPlay must be disabled on all drive types to prevent automatic execut
 **Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
 
 **References:**
-- [https://learn.microsoft.com/windows/security/threat-protection/security-policy-settings/](https://learn.microsoft.com/windows/security/threat-protection/security-policy-settings/)
+- [https://learn.microsoft.com/en-us/windows/security/operating-system-security/device-management/windows-security-configuration-framework/windows-security-baselines](https://learn.microsoft.com/en-us/windows/security/operating-system-security/device-management/windows-security-configuration-framework/windows-security-baselines)
 
 ### WIN-DEF-001 - Microsoft Defender Antivirus Enabled { #win-def-001 }
 
@@ -208,7 +208,7 @@ Microsoft Defender Antivirus must be enabled and providing real-time protection.
 **Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `FedRAMP` `CMMC Level 2` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
 
 **References:**
-- [https://learn.microsoft.com/microsoft-365/security/defender-endpoint/microsoft-defender-antivirus-windows](https://learn.microsoft.com/microsoft-365/security/defender-endpoint/microsoft-defender-antivirus-windows)
+- [https://learn.microsoft.com/en-us/defender-endpoint/microsoft-defender-antivirus-windows](https://learn.microsoft.com/en-us/defender-endpoint/microsoft-defender-antivirus-windows)
 
 ### WIN-FW-001 - Windows Firewall Enabled (All Profiles) { #win-fw-001 }
 
@@ -223,7 +223,7 @@ The Windows Defender Firewall must be enabled for the Domain, Private and Public
 **Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `FedRAMP` `CMMC Level 2` `PCI DSS v4.0` `SOC 2` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
 
 **References:**
-- [https://learn.microsoft.com/windows/security/operating-system-security/network-security/windows-firewall/](https://learn.microsoft.com/windows/security/operating-system-security/network-security/windows-firewall/)
+- [https://learn.microsoft.com/en-us/windows/security/operating-system-security/network-security/windows-firewall/](https://learn.microsoft.com/en-us/windows/security/operating-system-security/network-security/windows-firewall/)
 
 ### WIN-INSTALL-001 - Disable Always Install Elevated { #win-install-001 }
 
@@ -238,7 +238,7 @@ Windows Installer must not install packages with elevated privileges for standar
 **Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `CMMC Level 2` `HIPAA Security Rule` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
 
 **References:**
-- [https://learn.microsoft.com/windows/security/threat-protection/security-policy-settings/](https://learn.microsoft.com/windows/security/threat-protection/security-policy-settings/)
+- [https://learn.microsoft.com/en-us/windows/security/operating-system-security/device-management/windows-security-configuration-framework/windows-security-baselines](https://learn.microsoft.com/en-us/windows/security/operating-system-security/device-management/windows-security-configuration-framework/windows-security-baselines)
 
 ### WIN-LDAP-001 - LDAP Client Signing { #win-ldap-001 }
 
@@ -253,7 +253,7 @@ The LDAP client must negotiate signing to protect directory queries from tamperi
 **Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
 
 **References:**
-- [https://learn.microsoft.com/windows/security/threat-protection/security-policy-settings/](https://learn.microsoft.com/windows/security/threat-protection/security-policy-settings/)
+- [https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/network-security-ldap-client-signing-requirements](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/network-security-ldap-client-signing-requirements)
 
 ### WIN-LOCK-001 - Account Lockout Threshold { #win-lock-001 }
 
@@ -268,7 +268,7 @@ The account lockout threshold must be set to a non-zero value of 5 or fewer inva
 **Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `CMMC Level 2` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
 
 **References:**
-- [https://learn.microsoft.com/windows/security/threat-protection/security-policy-settings/account-lockout-threshold](https://learn.microsoft.com/windows/security/threat-protection/security-policy-settings/account-lockout-threshold)
+- [https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/account-lockout-threshold](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/account-lockout-threshold)
 
 ### WIN-LOCK-002 - Account Lockout Duration { #win-lock-002 }
 
@@ -283,7 +283,7 @@ A locked account should remain locked long enough to slow automated password gue
 **Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
 
 **References:**
-- [https://learn.microsoft.com/windows/security/threat-protection/security-policy-settings/](https://learn.microsoft.com/windows/security/threat-protection/security-policy-settings/)
+- [https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/account-lockout-duration](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/account-lockout-duration)
 
 ### WIN-LOCK-003 - Reset Account Lockout Counter { #win-lock-003 }
 
@@ -298,7 +298,7 @@ The failed-logon counter should persist long enough to make lockout thresholds e
 **Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
 
 **References:**
-- [https://learn.microsoft.com/windows/security/threat-protection/security-policy-settings/](https://learn.microsoft.com/windows/security/threat-protection/security-policy-settings/)
+- [https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/reset-account-lockout-counter-after](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/reset-account-lockout-counter-after)
 
 ### WIN-LOGON-001 - Machine Inactivity Limit { #win-logon-001 }
 
@@ -313,7 +313,7 @@ The machine must lock after a period of inactivity to protect unattended session
 **Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
 
 **References:**
-- [https://learn.microsoft.com/windows/security/threat-protection/security-policy-settings/](https://learn.microsoft.com/windows/security/threat-protection/security-policy-settings/)
+- [https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/interactive-logon-machine-inactivity-limit](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/interactive-logon-machine-inactivity-limit)
 
 ### WIN-LOGON-002 - Do Not Display Last Signed-In User { #win-logon-002 }
 
@@ -328,7 +328,7 @@ The last signed-in username must not be displayed at the logon screen.
 **Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
 
 **References:**
-- [https://learn.microsoft.com/windows/security/threat-protection/security-policy-settings/](https://learn.microsoft.com/windows/security/threat-protection/security-policy-settings/)
+- [https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/interactive-logon-do-not-display-last-user-name](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/interactive-logon-do-not-display-last-user-name)
 
 ### WIN-LSA-001 - Do Not Store LAN Manager Hash { #win-lsa-001 }
 
@@ -343,7 +343,7 @@ The weak LAN Manager hash of passwords must not be stored on next password chang
 **Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `CMMC Level 2` `HIPAA Security Rule` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
 
 **References:**
-- [https://learn.microsoft.com/windows/security/threat-protection/security-policy-settings/](https://learn.microsoft.com/windows/security/threat-protection/security-policy-settings/)
+- [https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/network-security-do-not-store-lan-manager-hash-value-on-next-password-change](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/network-security-do-not-store-lan-manager-hash-value-on-next-password-change)
 
 ### WIN-LSA-002 - Restrict Anonymous SID Enumeration { #win-lsa-002 }
 
@@ -358,7 +358,7 @@ Anonymous users must not be able to enumerate SIDs and account names.
 **Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
 
 **References:**
-- [https://learn.microsoft.com/windows/security/threat-protection/security-policy-settings/](https://learn.microsoft.com/windows/security/threat-protection/security-policy-settings/)
+- [https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/network-access-do-not-allow-anonymous-enumeration-of-sam-accounts-and-shares](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/network-access-do-not-allow-anonymous-enumeration-of-sam-accounts-and-shares)
 
 ### WIN-LSA-003 - Enable LSASS Protection (RunAsPPL) { #win-lsa-003 }
 
@@ -373,7 +373,7 @@ LSASS must run as a protected process (PPL) to resist credential theft tools.
 **Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `CMMC Level 2` `HIPAA Security Rule` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
 
 **References:**
-- [https://learn.microsoft.com/windows/security/threat-protection/security-policy-settings/](https://learn.microsoft.com/windows/security/threat-protection/security-policy-settings/)
+- [https://learn.microsoft.com/en-us/windows/security/operating-system-security/device-management/windows-security-configuration-framework/windows-security-baselines](https://learn.microsoft.com/en-us/windows/security/operating-system-security/device-management/windows-security-configuration-framework/windows-security-baselines)
 
 ### WIN-NET-001 - Disable LLMNR { #win-net-001 }
 
@@ -388,7 +388,7 @@ Link-Local Multicast Name Resolution (LLMNR) must be disabled to prevent name-re
 **Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
 
 **References:**
-- [https://learn.microsoft.com/windows/security/threat-protection/security-policy-settings/](https://learn.microsoft.com/windows/security/threat-protection/security-policy-settings/)
+- [https://learn.microsoft.com/en-us/windows/security/operating-system-security/device-management/windows-security-configuration-framework/windows-security-baselines](https://learn.microsoft.com/en-us/windows/security/operating-system-security/device-management/windows-security-configuration-framework/windows-security-baselines)
 
 ### WIN-NTLM-001 - LAN Manager Authentication Level (NTLMv2 Only) { #win-ntlm-001 }
 
@@ -403,7 +403,7 @@ The system must send NTLMv2 responses only and refuse LM and NTLM, resisting dow
 **Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `CMMC Level 2` `HIPAA Security Rule` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
 
 **References:**
-- [https://learn.microsoft.com/windows/security/threat-protection/security-policy-settings/](https://learn.microsoft.com/windows/security/threat-protection/security-policy-settings/)
+- [https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/network-security-lan-manager-authentication-level](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/network-security-lan-manager-authentication-level)
 
 ### WIN-PSL-001 - Enable PowerShell Script Block Logging { #win-psl-001 }
 
@@ -418,7 +418,7 @@ PowerShell Script Block Logging must be enabled to record the content of execute
 **Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `SOC 2` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2`
 
 **References:**
-- [https://learn.microsoft.com/powershell/module/microsoft.powershell.core/about/about_logging_windows](https://learn.microsoft.com/powershell/module/microsoft.powershell.core/about/about_logging_windows)
+- [https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_logging_windows](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_logging_windows)
 
 ### WIN-PSL-002 - Enable PowerShell Module Logging { #win-psl-002 }
 
@@ -433,7 +433,7 @@ PowerShell Module Logging must be enabled to record pipeline execution details o
 **Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `SOC 2` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2`
 
 **References:**
-- [https://learn.microsoft.com/powershell/module/microsoft.powershell.core/about/about_logging_windows](https://learn.microsoft.com/powershell/module/microsoft.powershell.core/about/about_logging_windows)
+- [https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_logging_windows](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_logging_windows)
 
 ### WIN-PWD-001 - Minimum Password Length { #win-pwd-001 }
 
@@ -448,7 +448,7 @@ The local security policy must require a minimum password length of at least 14 
 **Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `CMMC Level 2` `PCI DSS v4.0` `ISO/IEC 27001` `HIPAA Security Rule` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
 
 **References:**
-- [https://learn.microsoft.com/windows/security/threat-protection/security-policy-settings/minimum-password-length](https://learn.microsoft.com/windows/security/threat-protection/security-policy-settings/minimum-password-length)
+- [https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/minimum-password-length](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/minimum-password-length)
 
 ### WIN-PWD-002 - Password Complexity Enabled { #win-pwd-002 }
 
@@ -463,7 +463,7 @@ The local security policy must enforce password complexity requirements.
 **Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `CMMC Level 2` `PCI DSS v4.0` `ISO/IEC 27001` `HIPAA Security Rule` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
 
 **References:**
-- [https://learn.microsoft.com/windows/security/threat-protection/security-policy-settings/password-must-meet-complexity-requirements](https://learn.microsoft.com/windows/security/threat-protection/security-policy-settings/password-must-meet-complexity-requirements)
+- [https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/password-must-meet-complexity-requirements](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/password-must-meet-complexity-requirements)
 
 ### WIN-PWD-003 - Maximum Password Age { #win-pwd-003 }
 
@@ -478,7 +478,7 @@ Passwords must expire within a defined period so that compromised credentials ha
 **Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `CMMC Level 2` `HIPAA Security Rule` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
 
 **References:**
-- [https://learn.microsoft.com/windows/security/threat-protection/security-policy-settings/](https://learn.microsoft.com/windows/security/threat-protection/security-policy-settings/)
+- [https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/maximum-password-age](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/maximum-password-age)
 
 ### WIN-PWD-004 - Minimum Password Age { #win-pwd-004 }
 
@@ -493,7 +493,7 @@ A minimum password age prevents users from cycling rapidly through passwords to 
 **Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
 
 **References:**
-- [https://learn.microsoft.com/windows/security/threat-protection/security-policy-settings/](https://learn.microsoft.com/windows/security/threat-protection/security-policy-settings/)
+- [https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/minimum-password-age](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/minimum-password-age)
 
 ### WIN-PWD-005 - Enforce Password History { #win-pwd-005 }
 
@@ -508,7 +508,7 @@ Remembering previous passwords prevents reuse of recently used credentials.
 **Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `CMMC Level 2` `HIPAA Security Rule` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
 
 **References:**
-- [https://learn.microsoft.com/windows/security/threat-protection/security-policy-settings/](https://learn.microsoft.com/windows/security/threat-protection/security-policy-settings/)
+- [https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/enforce-password-history](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/enforce-password-history)
 
 ### WIN-PWD-006 - Disable Reversible Password Encryption { #win-pwd-006 }
 
@@ -523,7 +523,7 @@ Storing passwords using reversible encryption is equivalent to storing plaintext
 **Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `CMMC Level 2` `HIPAA Security Rule` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
 
 **References:**
-- [https://learn.microsoft.com/windows/security/threat-protection/security-policy-settings/](https://learn.microsoft.com/windows/security/threat-protection/security-policy-settings/)
+- [https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/store-passwords-using-reversible-encryption](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/store-passwords-using-reversible-encryption)
 
 ### WIN-RDP-001 - Require Network Level Authentication for RDP { #win-rdp-001 }
 
@@ -538,7 +538,7 @@ Remote Desktop connections must require Network Level Authentication (NLA) so us
 **Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
 
 **References:**
-- [https://learn.microsoft.com/windows-server/remote/remote-desktop-services/](https://learn.microsoft.com/windows-server/remote/remote-desktop-services/)
+- [https://learn.microsoft.com/en-us/windows/security/operating-system-security/device-management/windows-security-configuration-framework/windows-security-baselines](https://learn.microsoft.com/en-us/windows/security/operating-system-security/device-management/windows-security-configuration-framework/windows-security-baselines)
 
 ### WIN-RDP-002 - RDP Minimum Encryption Level (High) { #win-rdp-002 }
 
@@ -553,7 +553,7 @@ Remote Desktop sessions must use a High minimum encryption level.
 **Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
 
 **References:**
-- [https://learn.microsoft.com/windows/security/threat-protection/security-policy-settings/](https://learn.microsoft.com/windows/security/threat-protection/security-policy-settings/)
+- [https://learn.microsoft.com/en-us/windows/security/operating-system-security/device-management/windows-security-configuration-framework/windows-security-baselines](https://learn.microsoft.com/en-us/windows/security/operating-system-security/device-management/windows-security-configuration-framework/windows-security-baselines)
 
 ### WIN-RDP-003 - RDP Security Layer (TLS) { #win-rdp-003 }
 
@@ -568,7 +568,7 @@ Remote Desktop must use the SSL/TLS security layer for connection security.
 **Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
 
 **References:**
-- [https://learn.microsoft.com/windows/security/threat-protection/security-policy-settings/](https://learn.microsoft.com/windows/security/threat-protection/security-policy-settings/)
+- [https://learn.microsoft.com/en-us/windows/security/operating-system-security/device-management/windows-security-configuration-framework/windows-security-baselines](https://learn.microsoft.com/en-us/windows/security/operating-system-security/device-management/windows-security-configuration-framework/windows-security-baselines)
 
 ### WIN-RDP-004 - Disable RDP Drive Redirection { #win-rdp-004 }
 
@@ -583,7 +583,7 @@ Client drive redirection over RDP must be disabled to prevent data exfiltration 
 **Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
 
 **References:**
-- [https://learn.microsoft.com/windows/security/threat-protection/security-policy-settings/](https://learn.microsoft.com/windows/security/threat-protection/security-policy-settings/)
+- [https://learn.microsoft.com/en-us/windows/security/operating-system-security/device-management/windows-security-configuration-framework/windows-security-baselines](https://learn.microsoft.com/en-us/windows/security/operating-system-security/device-management/windows-security-configuration-framework/windows-security-baselines)
 
 ### WIN-SMB-001 - Disable SMBv1 { #win-smb-001 }
 
@@ -598,7 +598,7 @@ SMBv1 is a deprecated protocol vulnerable to EternalBlue-class remote code execu
 **Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `CMMC Level 2` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
 
 **References:**
-- [https://learn.microsoft.com/windows-server/storage/file-server/troubleshoot/detect-enable-and-disable-smbv1-v2-v3](https://learn.microsoft.com/windows-server/storage/file-server/troubleshoot/detect-enable-and-disable-smbv1-v2-v3)
+- [https://learn.microsoft.com/en-us/windows-server/storage/file-server/troubleshoot/detect-enable-and-disable-smbv1-v2-v3](https://learn.microsoft.com/en-us/windows-server/storage/file-server/troubleshoot/detect-enable-and-disable-smbv1-v2-v3)
 
 ### WIN-SMB-003 - Require SMB Signing (Server) { #win-smb-003 }
 
@@ -613,7 +613,7 @@ The SMB server must require packet signing to prevent tampering and man-in-the-m
 **Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
 
 **References:**
-- [https://learn.microsoft.com/windows/security/threat-protection/security-policy-settings/](https://learn.microsoft.com/windows/security/threat-protection/security-policy-settings/)
+- [https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/microsoft-network-server-digitally-sign-communications-always](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/microsoft-network-server-digitally-sign-communications-always)
 
 ### WIN-SMB-004 - Disable SMBv1 Client { #win-smb-004 }
 
@@ -628,7 +628,7 @@ The SMBv1 client driver (mrxsmb10) must be disabled to prevent the host connecti
 **Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
 
 **References:**
-- [https://learn.microsoft.com/windows/security/threat-protection/security-policy-settings/](https://learn.microsoft.com/windows/security/threat-protection/security-policy-settings/)
+- [https://learn.microsoft.com/en-us/windows-server/storage/file-server/troubleshoot/detect-enable-and-disable-smbv1-v2-v3](https://learn.microsoft.com/en-us/windows-server/storage/file-server/troubleshoot/detect-enable-and-disable-smbv1-v2-v3)
 
 ### WIN-SMB-005 - Require SMB Client Signing { #win-smb-005 }
 
@@ -643,7 +643,7 @@ The SMB client must require packet signing to protect outbound file traffic from
 **Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
 
 **References:**
-- [https://learn.microsoft.com/windows/security/threat-protection/security-policy-settings/](https://learn.microsoft.com/windows/security/threat-protection/security-policy-settings/)
+- [https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/microsoft-network-client-digitally-sign-communications-always](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/microsoft-network-client-digitally-sign-communications-always)
 
 ### WIN-SVC-001 - Disable Remote Registry Service { #win-svc-001 }
 
@@ -658,7 +658,7 @@ The Remote Registry service must be stopped and disabled to reduce remote attack
 **Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
 
 **References:**
-- [https://learn.microsoft.com/windows/security/threat-protection/security-policy-settings/](https://learn.microsoft.com/windows/security/threat-protection/security-policy-settings/)
+- [https://learn.microsoft.com/en-us/windows/security/operating-system-security/device-management/windows-security-configuration-framework/windows-security-baselines](https://learn.microsoft.com/en-us/windows/security/operating-system-security/device-management/windows-security-configuration-framework/windows-security-baselines)
 
 ### WIN-TLS-010 - Disable TLS 1.0 (Server) { #win-tls-010 }
 
@@ -673,7 +673,7 @@ TLS 1.0 is a deprecated protocol with known weaknesses. The SCHANNEL server endp
 **Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `FedRAMP` `PCI DSS v4.0` `ISO/IEC 27001` `HIPAA Security Rule` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
 
 **References:**
-- [https://learn.microsoft.com/windows-server/security/tls/tls-registry-settings](https://learn.microsoft.com/windows-server/security/tls/tls-registry-settings)
+- [https://learn.microsoft.com/en-us/windows-server/security/tls/tls-registry-settings](https://learn.microsoft.com/en-us/windows-server/security/tls/tls-registry-settings)
 
 ### WIN-TLS-011 - Disable TLS 1.1 (Server) { #win-tls-011 }
 
@@ -688,7 +688,7 @@ TLS 1.1 is a deprecated protocol. The SCHANNEL server endpoint for TLS 1.1 must 
 **Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `FedRAMP` `PCI DSS v4.0` `ISO/IEC 27001` `HIPAA Security Rule` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
 
 **References:**
-- [https://learn.microsoft.com/windows-server/security/tls/tls-registry-settings](https://learn.microsoft.com/windows-server/security/tls/tls-registry-settings)
+- [https://learn.microsoft.com/en-us/windows-server/security/tls/tls-registry-settings](https://learn.microsoft.com/en-us/windows-server/security/tls/tls-registry-settings)
 
 ### WIN-TLS-012 - Disable SSL 3.0 (Server) { #win-tls-012 }
 
@@ -703,7 +703,7 @@ The deprecated SSL 3.0 protocol must be disabled on the SCHANNEL server endpoint
 **Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
 
 **References:**
-- [https://learn.microsoft.com/windows/security/threat-protection/security-policy-settings/](https://learn.microsoft.com/windows/security/threat-protection/security-policy-settings/)
+- [https://learn.microsoft.com/en-us/windows-server/security/tls/tls-registry-settings](https://learn.microsoft.com/en-us/windows-server/security/tls/tls-registry-settings)
 
 ### WIN-TLS-013 - Disable SSL 2.0 (Server) { #win-tls-013 }
 
@@ -718,7 +718,7 @@ The obsolete SSL 2.0 protocol must be disabled on the SCHANNEL server endpoint.
 **Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
 
 **References:**
-- [https://learn.microsoft.com/windows/security/threat-protection/security-policy-settings/](https://learn.microsoft.com/windows/security/threat-protection/security-policy-settings/)
+- [https://learn.microsoft.com/en-us/windows-server/security/tls/tls-registry-settings](https://learn.microsoft.com/en-us/windows-server/security/tls/tls-registry-settings)
 
 ### WIN-UAC-001 - User Account Control Enabled { #win-uac-001 }
 
@@ -733,7 +733,7 @@ User Account Control (UAC) must be enabled (EnableLUA = 1) to enforce administra
 **Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `CMMC Level 2` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
 
 **References:**
-- [https://learn.microsoft.com/windows/security/application-security/application-control/user-account-control/](https://learn.microsoft.com/windows/security/application-security/application-control/user-account-control/)
+- [https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/user-account-control-run-all-administrators-in-admin-approval-mode](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/user-account-control-run-all-administrators-in-admin-approval-mode)
 
 ### WIN-UAC-002 - UAC Elevation Prompt for Administrators { #win-uac-002 }
 
@@ -748,7 +748,7 @@ Administrator elevation must prompt for consent on the secure desktop.
 **Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
 
 **References:**
-- [https://learn.microsoft.com/windows/security/threat-protection/security-policy-settings/](https://learn.microsoft.com/windows/security/threat-protection/security-policy-settings/)
+- [https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/user-account-control-behavior-of-the-elevation-prompt-for-administrators-in-admin-approval-mode](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/user-account-control-behavior-of-the-elevation-prompt-for-administrators-in-admin-approval-mode)
 
 ### WIN-UAC-003 - UAC Detect Application Installations { #win-uac-003 }
 
@@ -763,7 +763,7 @@ UAC must detect application installations and prompt for elevation.
 **Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
 
 **References:**
-- [https://learn.microsoft.com/windows/security/threat-protection/security-policy-settings/](https://learn.microsoft.com/windows/security/threat-protection/security-policy-settings/)
+- [https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/user-account-control-detect-application-installations-and-prompt-for-elevation](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/user-account-control-detect-application-installations-and-prompt-for-elevation)
 
 ### WIN-WDIGEST-001 - Disable WDigest Credential Caching { #win-wdigest-001 }
 
@@ -778,5 +778,5 @@ WDigest must not cache plaintext credentials in memory.
 **Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `CMMC Level 2` `HIPAA Security Rule` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
 
 **References:**
-- [https://learn.microsoft.com/windows/security/threat-protection/security-policy-settings/](https://learn.microsoft.com/windows/security/threat-protection/security-policy-settings/)
+- [https://learn.microsoft.com/en-us/windows/security/operating-system-security/device-management/windows-security-configuration-framework/windows-security-baselines](https://learn.microsoft.com/en-us/windows/security/operating-system-security/device-management/windows-security-configuration-framework/windows-security-baselines)
 
