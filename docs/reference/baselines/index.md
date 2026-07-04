@@ -6,7 +6,7 @@ CloudInfra Secure ships 7 baselines. Each is a curated collection of control IDs
 
 Baseline for Active Directory Domain Controllers.
 
-**ID:** `CloudInfraSecure-DomainController` &nbsp; **Controls:** 169 &nbsp; **Supported OS:** WindowsServer2022, WindowsServer2025
+**ID:** `CloudInfraSecure-DomainController` &nbsp; **Controls:** 179 &nbsp; **Supported OS:** WindowsServer2022, WindowsServer2025
 
 | Control | Name | Severity |
 |---------|------|----------|
@@ -179,12 +179,22 @@ Baseline for Active Directory Domain Controllers.
 | [WIN-WINRM-006](../controls/index.md#win-winrm-006) | Disallow WinRM Client Unencrypted Traffic | Medium |
 | [WIN-WINRS-001](../controls/index.md#win-winrs-001) | Disable Windows Remote Shell Access | Medium |
 | [WIN-DEF-016](../controls/index.md#win-def-016) | Enable Defender File Hash Computation | Low |
+| [WIN-NET-008](../controls/index.md#win-net-008) | Hardened UNC Path for SYSVOL | High |
+| [WIN-NET-009](../controls/index.md#win-net-009) | Hardened UNC Path for NETLOGON | High |
+| [WIN-NET-010](../controls/index.md#win-net-010) | Disable Font Providers | Low |
+| [WIN-NET-011](../controls/index.md#win-net-011) | Turn Off Smart Multi-Homed Name Resolution | Medium |
+| [WIN-NET-021](../controls/index.md#win-net-021) | TCP Maximum Data Retransmissions (IPv4) | Low |
+| [WIN-NET-022](../controls/index.md#win-net-022) | TCP Maximum Data Retransmissions (IPv6) | Low |
+| [WIN-EVTLOG-009](../controls/index.md#win-evtlog-009) | Security Log Near-Capacity Warning Threshold | Low |
+| [WIN-SCRSVR-001](../controls/index.md#win-scrsvr-001) | Enable Screen Saver (Default Profile) | Low |
+| [WIN-SCRSVR-002](../controls/index.md#win-scrsvr-002) | Password Protect the Screen Saver (Default Profile) | Medium |
+| [WIN-SCRSVR-003](../controls/index.md#win-scrsvr-003) | Screen Saver Timeout (Default Profile) | Low |
 
 ## CloudInfra Secure Enterprise - Enterprise tier
 
 Comprehensive baseline for regulated and high-assurance environments.
 
-**ID:** `CloudInfraSecure-Enterprise` &nbsp; **Controls:** 275 &nbsp; **Supported OS:** WindowsServer2022, WindowsServer2025
+**ID:** `CloudInfraSecure-Enterprise` &nbsp; **Controls:** 299 &nbsp; **Supported OS:** WindowsServer2022, WindowsServer2025
 
 | Control | Name | Severity |
 |---------|------|----------|
@@ -463,6 +473,30 @@ Comprehensive baseline for regulated and high-assurance environments.
 | [WIN-INSTALL-002](../controls/index.md#win-install-002) | Disable User Control Over Windows Installer | Medium |
 | [WIN-LOGON-015](../controls/index.md#win-logon-015) | Disable Automatic Restart Sign-On (ARSO) | Medium |
 | [WIN-DEF-016](../controls/index.md#win-def-016) | Enable Defender File Hash Computation | Low |
+| [WIN-NET-008](../controls/index.md#win-net-008) | Hardened UNC Path for SYSVOL | High |
+| [WIN-NET-009](../controls/index.md#win-net-009) | Hardened UNC Path for NETLOGON | High |
+| [WIN-NET-010](../controls/index.md#win-net-010) | Disable Font Providers | Low |
+| [WIN-NET-011](../controls/index.md#win-net-011) | Turn Off Smart Multi-Homed Name Resolution | Medium |
+| [WIN-NET-012](../controls/index.md#win-net-012) | Prohibit Installation of Network Bridge | Low |
+| [WIN-NET-013](../controls/index.md#win-net-013) | Prohibit Internet Connection Sharing | Low |
+| [WIN-NET-014](../controls/index.md#win-net-014) | Require Domain Users to Elevate When Setting Network Location | Low |
+| [WIN-NET-015](../controls/index.md#win-net-015) | Minimize Simultaneous Internet and Domain Connections | Low |
+| [WIN-NET-016](../controls/index.md#win-net-016) | Prohibit Non-Domain Networks When on Domain Network | Low |
+| [WIN-NET-017](../controls/index.md#win-net-017) | Disable Windows Connect Now Registrars | Low |
+| [WIN-NET-018](../controls/index.md#win-net-018) | Prohibit Access of Windows Connect Now Wizards | Low |
+| [WIN-NET-019](../controls/index.md#win-net-019) | Turn Off Link-Layer Topology Mapper I/O Driver | Low |
+| [WIN-NET-020](../controls/index.md#win-net-020) | Turn Off Link-Layer Topology Responder Driver | Low |
+| [WIN-NET-021](../controls/index.md#win-net-021) | TCP Maximum Data Retransmissions (IPv4) | Low |
+| [WIN-NET-022](../controls/index.md#win-net-022) | TCP Maximum Data Retransmissions (IPv6) | Low |
+| [WIN-NET-023](../controls/index.md#win-net-023) | TCP Keep-Alive Time | Low |
+| [WIN-NET-024](../controls/index.md#win-net-024) | Disable Dead Gateway Detection | Low |
+| [WIN-EVTLOG-009](../controls/index.md#win-evtlog-009) | Security Log Near-Capacity Warning Threshold | Low |
+| [WIN-LOGON-016](../controls/index.md#win-logon-016) | Screen Saver Grace Period | Low |
+| [WIN-SCRSVR-001](../controls/index.md#win-scrsvr-001) | Enable Screen Saver (Default Profile) | Low |
+| [WIN-SCRSVR-002](../controls/index.md#win-scrsvr-002) | Password Protect the Screen Saver (Default Profile) | Medium |
+| [WIN-SCRSVR-003](../controls/index.md#win-scrsvr-003) | Screen Saver Timeout (Default Profile) | Low |
+| [WIN-LOGON-017](../controls/index.md#win-logon-017) | Turn Off Toast Notifications on the Lock Screen (Default Profile) | Low |
+| [WIN-DEF-017](../controls/index.md#win-def-017) | Notify Antivirus When Opening Attachments (Default Profile) | Medium |
 
 ## CloudInfra Secure Essential - Essential tier
 
@@ -492,7 +526,7 @@ Baseline of essential hardening controls suitable for any Windows Server workloa
 
 Baseline for Internet Information Services (IIS) web servers.
 
-**ID:** `CloudInfraSecure-IISWebServer` &nbsp; **Controls:** 95 &nbsp; **Supported OS:** WindowsServer2022, WindowsServer2025
+**ID:** `CloudInfraSecure-IISWebServer` &nbsp; **Controls:** 101 &nbsp; **Supported OS:** WindowsServer2022, WindowsServer2025
 
 | Control | Name | Severity |
 |---------|------|----------|
@@ -591,12 +625,18 @@ Baseline for Internet Information Services (IIS) web servers.
 | [WIN-WINRS-001](../controls/index.md#win-winrs-001) | Disable Windows Remote Shell Access | Medium |
 | [WIN-DEF-016](../controls/index.md#win-def-016) | Enable Defender File Hash Computation | Low |
 | [WIN-AUTORUN-002](../controls/index.md#win-autorun-002) | Disallow Autoplay for Non-Volume Devices | Medium |
+| [WIN-NET-008](../controls/index.md#win-net-008) | Hardened UNC Path for SYSVOL | High |
+| [WIN-NET-009](../controls/index.md#win-net-009) | Hardened UNC Path for NETLOGON | High |
+| [WIN-NET-011](../controls/index.md#win-net-011) | Turn Off Smart Multi-Homed Name Resolution | Medium |
+| [WIN-NET-021](../controls/index.md#win-net-021) | TCP Maximum Data Retransmissions (IPv4) | Low |
+| [WIN-NET-024](../controls/index.md#win-net-024) | Disable Dead Gateway Detection | Low |
+| [WIN-DEF-017](../controls/index.md#win-def-017) | Notify Antivirus When Opening Attachments (Default Profile) | Medium |
 
 ## CloudInfra Secure Remote Desktop Server - Role tier
 
 Baseline for Remote Desktop Session Host servers.
 
-**ID:** `CloudInfraSecure-RemoteDesktopServer` &nbsp; **Controls:** 91 &nbsp; **Supported OS:** WindowsServer2022, WindowsServer2025
+**ID:** `CloudInfraSecure-RemoteDesktopServer` &nbsp; **Controls:** 97 &nbsp; **Supported OS:** WindowsServer2022, WindowsServer2025
 
 | Control | Name | Severity |
 |---------|------|----------|
@@ -691,12 +731,18 @@ Baseline for Remote Desktop Session Host servers.
 | [WIN-RDP-013](../controls/index.md#win-rdp-013) | Require Secure RPC for Remote Desktop | Medium |
 | [WIN-RDP-014](../controls/index.md#win-rdp-014) | Use Temporary Folders Per RDP Session | Low |
 | [WIN-SMARTSCREEN-001](../controls/index.md#win-smartscreen-001) | Configure Windows Defender SmartScreen | Medium |
+| [WIN-SCRSVR-001](../controls/index.md#win-scrsvr-001) | Enable Screen Saver (Default Profile) | Low |
+| [WIN-SCRSVR-002](../controls/index.md#win-scrsvr-002) | Password Protect the Screen Saver (Default Profile) | Medium |
+| [WIN-SCRSVR-003](../controls/index.md#win-scrsvr-003) | Screen Saver Timeout (Default Profile) | Low |
+| [WIN-LOGON-016](../controls/index.md#win-logon-016) | Screen Saver Grace Period | Low |
+| [WIN-LOGON-017](../controls/index.md#win-logon-017) | Turn Off Toast Notifications on the Lock Screen (Default Profile) | Low |
+| [WIN-DEF-017](../controls/index.md#win-def-017) | Notify Antivirus When Opening Attachments (Default Profile) | Medium |
 
 ## CloudInfra Secure SQL Server - Role tier
 
 Baseline for Microsoft SQL Server hosts.
 
-**ID:** `CloudInfraSecure-SQLServer` &nbsp; **Controls:** 86 &nbsp; **Supported OS:** WindowsServer2022, WindowsServer2025
+**ID:** `CloudInfraSecure-SQLServer` &nbsp; **Controls:** 91 &nbsp; **Supported OS:** WindowsServer2022, WindowsServer2025
 
 | Control | Name | Severity |
 |---------|------|----------|
@@ -786,12 +832,17 @@ Baseline for Microsoft SQL Server hosts.
 | [WIN-WINRM-006](../controls/index.md#win-winrm-006) | Disallow WinRM Client Unencrypted Traffic | Medium |
 | [WIN-WINRS-001](../controls/index.md#win-winrs-001) | Disable Windows Remote Shell Access | Medium |
 | [WIN-DEF-016](../controls/index.md#win-def-016) | Enable Defender File Hash Computation | Low |
+| [WIN-NET-008](../controls/index.md#win-net-008) | Hardened UNC Path for SYSVOL | High |
+| [WIN-NET-009](../controls/index.md#win-net-009) | Hardened UNC Path for NETLOGON | High |
+| [WIN-NET-021](../controls/index.md#win-net-021) | TCP Maximum Data Retransmissions (IPv4) | Low |
+| [WIN-NET-022](../controls/index.md#win-net-022) | TCP Maximum Data Retransmissions (IPv6) | Low |
+| [WIN-EVTLOG-009](../controls/index.md#win-evtlog-009) | Security Log Near-Capacity Warning Threshold | Low |
 
 ## CloudInfra Secure Standard - Standard tier
 
 Recommended baseline adding logging, auditing and access hardening on top of Essential.
 
-**ID:** `CloudInfraSecure-Standard` &nbsp; **Controls:** 248 &nbsp; **Supported OS:** WindowsServer2022, WindowsServer2025
+**ID:** `CloudInfraSecure-Standard` &nbsp; **Controls:** 272 &nbsp; **Supported OS:** WindowsServer2022, WindowsServer2025
 
 | Control | Name | Severity |
 |---------|------|----------|
@@ -1043,4 +1094,28 @@ Recommended baseline adding logging, auditing and access hardening on top of Ess
 | [WIN-INSTALL-002](../controls/index.md#win-install-002) | Disable User Control Over Windows Installer | Medium |
 | [WIN-LOGON-015](../controls/index.md#win-logon-015) | Disable Automatic Restart Sign-On (ARSO) | Medium |
 | [WIN-DEF-016](../controls/index.md#win-def-016) | Enable Defender File Hash Computation | Low |
+| [WIN-NET-008](../controls/index.md#win-net-008) | Hardened UNC Path for SYSVOL | High |
+| [WIN-NET-009](../controls/index.md#win-net-009) | Hardened UNC Path for NETLOGON | High |
+| [WIN-NET-010](../controls/index.md#win-net-010) | Disable Font Providers | Low |
+| [WIN-NET-011](../controls/index.md#win-net-011) | Turn Off Smart Multi-Homed Name Resolution | Medium |
+| [WIN-NET-012](../controls/index.md#win-net-012) | Prohibit Installation of Network Bridge | Low |
+| [WIN-NET-013](../controls/index.md#win-net-013) | Prohibit Internet Connection Sharing | Low |
+| [WIN-NET-014](../controls/index.md#win-net-014) | Require Domain Users to Elevate When Setting Network Location | Low |
+| [WIN-NET-015](../controls/index.md#win-net-015) | Minimize Simultaneous Internet and Domain Connections | Low |
+| [WIN-NET-016](../controls/index.md#win-net-016) | Prohibit Non-Domain Networks When on Domain Network | Low |
+| [WIN-NET-017](../controls/index.md#win-net-017) | Disable Windows Connect Now Registrars | Low |
+| [WIN-NET-018](../controls/index.md#win-net-018) | Prohibit Access of Windows Connect Now Wizards | Low |
+| [WIN-NET-019](../controls/index.md#win-net-019) | Turn Off Link-Layer Topology Mapper I/O Driver | Low |
+| [WIN-NET-020](../controls/index.md#win-net-020) | Turn Off Link-Layer Topology Responder Driver | Low |
+| [WIN-NET-021](../controls/index.md#win-net-021) | TCP Maximum Data Retransmissions (IPv4) | Low |
+| [WIN-NET-022](../controls/index.md#win-net-022) | TCP Maximum Data Retransmissions (IPv6) | Low |
+| [WIN-NET-023](../controls/index.md#win-net-023) | TCP Keep-Alive Time | Low |
+| [WIN-NET-024](../controls/index.md#win-net-024) | Disable Dead Gateway Detection | Low |
+| [WIN-EVTLOG-009](../controls/index.md#win-evtlog-009) | Security Log Near-Capacity Warning Threshold | Low |
+| [WIN-LOGON-016](../controls/index.md#win-logon-016) | Screen Saver Grace Period | Low |
+| [WIN-SCRSVR-001](../controls/index.md#win-scrsvr-001) | Enable Screen Saver (Default Profile) | Low |
+| [WIN-SCRSVR-002](../controls/index.md#win-scrsvr-002) | Password Protect the Screen Saver (Default Profile) | Medium |
+| [WIN-SCRSVR-003](../controls/index.md#win-scrsvr-003) | Screen Saver Timeout (Default Profile) | Low |
+| [WIN-LOGON-017](../controls/index.md#win-logon-017) | Turn Off Toast Notifications on the Lock Screen (Default Profile) | Low |
+| [WIN-DEF-017](../controls/index.md#win-def-017) | Notify Antivirus When Opening Attachments (Default Profile) | Medium |
 
