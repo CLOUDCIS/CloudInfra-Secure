@@ -7,18 +7,18 @@ Number of controls whose technical requirements may help implement each standard
 
 | Standard | Controls |
 |----------|----------|
-| DISA STIG | 66 |
-| NIST CSF | 66 |
-| NIST SP 800-53 Rev 5 | 66 |
-| NIST SP 800-171 | 66 |
+| DISA STIG | 84 |
+| NIST CSF | 84 |
+| NIST SP 800-53 Rev 5 | 84 |
+| NIST SP 800-171 | 84 |
 | FedRAMP | 4 |
-| Microsoft Cloud Security Benchmark | 56 |
-| Microsoft Security Baselines | 66 |
+| Microsoft Cloud Security Benchmark | 69 |
+| Microsoft Security Baselines | 84 |
 | CMMC Level 2 | 15 |
-| PCI DSS v4.0 | 66 |
-| SOC 2 | 14 |
-| ISO/IEC 27001 | 66 |
+| PCI DSS v4.0 | 84 |
+| SOC 2 | 19 |
+| ISO/IEC 27001 | 84 |
 | HIPAA Security Rule | 14 |
-| UK Cyber Essentials | 53 |
-| NIS2 | 66 |
+| UK Cyber Essentials | 66 |
+| NIS2 | 84 |
 

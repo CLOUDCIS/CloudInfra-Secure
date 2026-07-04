@@ -1,6 +1,6 @@
 # Controls
 
-The CloudInfra Secure control library (66 controls). Each control exists once and may be used by many baselines.
+The CloudInfra Secure control library (84 controls). Each control exists once and may be used by many baselines.
 
 !!! note "Compliance disclaimer"
     CloudInfra Secure controls are designed to help organisations implement technical security requirements commonly found in recognised security standards. They do not constitute certification or proof of compliance.
@@ -12,6 +12,12 @@ The CloudInfra Secure control library (66 controls). Each control exists once an
 | [WIN-ASR-001](#win-asr-001) | ASR: Block Credential Stealing from LSASS | High | Attack Surface Reduction | Registry | No |
 | [WIN-ASR-002](#win-asr-002) | ASR: Block Office Apps Creating Child Processes | Medium | Attack Surface Reduction | Registry | No |
 | [WIN-ASR-003](#win-asr-003) | ASR: Block Executable Content from Email and Webmail | Medium | Attack Surface Reduction | Registry | No |
+| [WIN-ASR-004](#win-asr-004) | ASR: Block Obfuscated Scripts | Medium | Attack Surface Reduction | Registry | No |
+| [WIN-ASR-005](#win-asr-005) | ASR: Block Untrusted Processes from USB | Medium | Attack Surface Reduction | Registry | No |
+| [WIN-ASR-006](#win-asr-006) | ASR: Block Process Creation from PSExec and WMI | Medium | Attack Surface Reduction | Registry | No |
+| [WIN-ASR-007](#win-asr-007) | ASR: Advanced Protection Against Ransomware | High | Attack Surface Reduction | Registry | No |
+| [WIN-ASR-008](#win-asr-008) | ASR: Block Office Apps Injecting Code into Other Processes | Medium | Attack Surface Reduction | Registry | No |
+| [WIN-ASR-009](#win-asr-009) | ASR: Block Office Apps Creating Executable Content | Medium | Attack Surface Reduction | Registry | No |
 | [WIN-AUD-001](#win-aud-001) | Audit Logon Failures | Medium | Logging and Monitoring | AuditPol | No |
 | [WIN-AUD-002](#win-aud-002) | Audit Account Lockout Events | Medium | Logging and Monitoring | AuditPol | No |
 | [WIN-AUD-003](#win-aud-003) | Audit Process Creation | Medium | Logging and Monitoring | AuditPol | No |
@@ -23,6 +29,11 @@ The CloudInfra Secure control library (66 controls). Each control exists once an
 | [WIN-AUD-009](#win-aud-009) | Audit Logoff | Medium | Logging and Monitoring | AuditPol | No |
 | [WIN-AUD-010](#win-aud-010) | Audit Removable Storage | Medium | Logging and Monitoring | AuditPol | No |
 | [WIN-AUD-011](#win-aud-011) | Audit Authentication Policy Change | Medium | Logging and Monitoring | AuditPol | No |
+| [WIN-AUD-012](#win-aud-012) | Audit User Account Management | Medium | Logging and Monitoring | AuditPol | No |
+| [WIN-AUD-013](#win-aud-013) | Audit Computer Account Management | Medium | Logging and Monitoring | AuditPol | No |
+| [WIN-AUD-014](#win-aud-014) | Audit Audit Policy Change | Medium | Logging and Monitoring | AuditPol | No |
+| [WIN-AUD-015](#win-aud-015) | Audit Other Logon/Logoff Events | Medium | Logging and Monitoring | AuditPol | No |
+| [WIN-AUD-016](#win-aud-016) | Audit MPSSVC Rule-Level Policy Change | Medium | Logging and Monitoring | AuditPol | No |
 | [WIN-AUTORUN-001](#win-autorun-001) | Disable AutoRun on All Drives | Medium | Attack Surface Reduction | Registry | No |
 | [WIN-DEF-001](#win-def-001) | Microsoft Defender Antivirus Enabled | High | Endpoint Protection | Defender | No |
 | [WIN-DEF-002](#win-def-002) | Enable Potentially Unwanted Application (PUA) Protection | High | Endpoint Protection | Registry | No |
@@ -37,16 +48,21 @@ The CloudInfra Secure control library (66 controls). Each control exists once an
 | [WIN-LOGON-001](#win-logon-001) | Machine Inactivity Limit | Medium | Access Control | Registry | No |
 | [WIN-LOGON-002](#win-logon-002) | Do Not Display Last Signed-In User | Low | Access Control | Registry | No |
 | [WIN-LOGON-003](#win-logon-003) | Limit Number of Cached Logons | Medium | Access Control | Registry | No |
+| [WIN-LOGON-004](#win-logon-004) | Require Ctrl+Alt+Del at Logon | Low | Access Control | Registry | No |
 | [WIN-LSA-001](#win-lsa-001) | Do Not Store LAN Manager Hash | High | Credential Protection | Registry | No |
 | [WIN-LSA-002](#win-lsa-002) | Restrict Anonymous SID Enumeration | Medium | Access Control | Registry | No |
 | [WIN-LSA-003](#win-lsa-003) | Enable LSASS Protection (RunAsPPL) | High | Credential Protection | Registry | Yes |
 | [WIN-LSA-004](#win-lsa-004) | Do Not Allow Anonymous Enumeration of SAM Accounts | Medium | Access Control | Registry | No |
 | [WIN-LSA-005](#win-lsa-005) | Enable Structured Exception Handling Overwrite Protection (SEHOP) | Medium | Exploit Protection | Registry | No |
+| [WIN-LSA-006](#win-lsa-006) | Digitally Encrypt or Sign Secure Channel Data (Always) | Medium | Authentication | Registry | No |
+| [WIN-LSA-007](#win-lsa-007) | Do Not Apply Everyone Permissions to Anonymous Users | Medium | Access Control | Registry | No |
 | [WIN-NET-001](#win-net-001) | Disable LLMNR | Medium | Network Protocols | Registry | No |
 | [WIN-NET-002](#win-net-002) | Disable IPv4 Source Routing | Medium | Network Protocols | Registry | No |
 | [WIN-NET-003](#win-net-003) | Disable ICMP Redirects | Low | Network Protocols | Registry | No |
 | [WIN-NET-004](#win-net-004) | Disable IPv6 Source Routing | Medium | Network Protocols | Registry | No |
 | [WIN-NTLM-001](#win-ntlm-001) | LAN Manager Authentication Level (NTLMv2 Only) | High | Authentication | Registry | No |
+| [WIN-NTLM-002](#win-ntlm-002) | Minimum NTLM Session Security (Clients) | Medium | Authentication | Registry | No |
+| [WIN-NTLM-003](#win-ntlm-003) | Minimum NTLM Session Security (Servers) | Medium | Authentication | Registry | No |
 | [WIN-PSL-001](#win-psl-001) | Enable PowerShell Script Block Logging | Medium | Logging and Monitoring | Registry | No |
 | [WIN-PSL-002](#win-psl-002) | Enable PowerShell Module Logging | Medium | Logging and Monitoring | Registry | No |
 | [WIN-PWD-001](#win-pwd-001) | Minimum Password Length | High | Account Policy | SecEdit | No |
@@ -75,6 +91,8 @@ The CloudInfra Secure control library (66 controls). Each control exists once an
 | [WIN-UAC-004](#win-uac-004) | Deny UAC Elevation Prompt for Standard Users | Medium | Privilege Management | Registry | No |
 | [WIN-UAC-005](#win-uac-005) | UAC Switch to the Secure Desktop for Elevation | Medium | Privilege Management | Registry | No |
 | [WIN-WDIGEST-001](#win-wdigest-001) | Disable WDigest Credential Caching | High | Credential Protection | Registry | No |
+| [WIN-WINRM-001](#win-winrm-001) | Disable WinRM Client Basic Authentication | Medium | Remote Management | Registry | No |
+| [WIN-WINRM-002](#win-winrm-002) | Disallow WinRM Unencrypted Traffic | Medium | Remote Management | Registry | No |
 
 ## Control reference
 
@@ -117,6 +135,96 @@ The Attack Surface Reduction rule blocking executable content from email and web
 **Rationale.** Executable email attachments are a primary malware delivery vector.
 
 **Remediation.** Enable ASR rule be9ba2d9-53ea-4cdc-84e5-9b1eeee46550 in block mode (1).
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
+
+**References:**
+- [https://learn.microsoft.com/en-us/defender-endpoint/attack-surface-reduction-rules-reference](https://learn.microsoft.com/en-us/defender-endpoint/attack-surface-reduction-rules-reference)
+
+### WIN-ASR-004 - ASR: Block Obfuscated Scripts { #win-asr-004 }
+
+**Severity:** Medium &nbsp; **Category:** Attack Surface Reduction &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Enterprise
+
+Block execution of potentially obfuscated scripts, a common malware evasion technique.
+
+**Rationale.** Obfuscated scripts hide malicious behaviour from analysis and detection.
+
+**Remediation.** Enable ASR rule 5beb7efe-fd9a-4556-801d-275e5ffc04cc in block mode (1).
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
+
+**References:**
+- [https://learn.microsoft.com/en-us/defender-endpoint/attack-surface-reduction-rules-reference](https://learn.microsoft.com/en-us/defender-endpoint/attack-surface-reduction-rules-reference)
+
+### WIN-ASR-005 - ASR: Block Untrusted Processes from USB { #win-asr-005 }
+
+**Severity:** Medium &nbsp; **Category:** Attack Surface Reduction &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Enterprise
+
+Block untrusted and unsigned executables from running from USB removable media.
+
+**Rationale.** Removable media is a common malware ingress vector.
+
+**Remediation.** Enable ASR rule b2b3f03d-6a65-4f7b-a9c7-1c7ef74a9ba4 in block mode (1).
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
+
+**References:**
+- [https://learn.microsoft.com/en-us/defender-endpoint/attack-surface-reduction-rules-reference](https://learn.microsoft.com/en-us/defender-endpoint/attack-surface-reduction-rules-reference)
+
+### WIN-ASR-006 - ASR: Block Process Creation from PSExec and WMI { #win-asr-006 }
+
+**Severity:** Medium &nbsp; **Category:** Attack Surface Reduction &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Enterprise
+
+Block processes created via PsExec and WMI commands, commonly used for lateral movement.
+
+**Rationale.** PsExec/WMI process creation enables remote code execution and lateral movement.
+
+**Remediation.** Enable ASR rule d1e49aac-8f56-4280-b9ba-993a6d77406c in block mode (1).
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
+
+**References:**
+- [https://learn.microsoft.com/en-us/defender-endpoint/attack-surface-reduction-rules-reference](https://learn.microsoft.com/en-us/defender-endpoint/attack-surface-reduction-rules-reference)
+
+### WIN-ASR-007 - ASR: Advanced Protection Against Ransomware { #win-asr-007 }
+
+**Severity:** High &nbsp; **Category:** Attack Surface Reduction &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Enterprise
+
+Enable advanced heuristic and cloud protection against ransomware.
+
+**Rationale.** Ransomware can rapidly encrypt data across the host and network.
+
+**Remediation.** Enable ASR rule c1db55ab-c21a-4637-bb3f-a12568109d35 in block mode (1).
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
+
+**References:**
+- [https://learn.microsoft.com/en-us/defender-endpoint/attack-surface-reduction-rules-reference](https://learn.microsoft.com/en-us/defender-endpoint/attack-surface-reduction-rules-reference)
+
+### WIN-ASR-008 - ASR: Block Office Apps Injecting Code into Other Processes { #win-asr-008 }
+
+**Severity:** Medium &nbsp; **Category:** Attack Surface Reduction &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Enterprise
+
+Block Office applications from injecting code into other processes.
+
+**Rationale.** Code injection from Office lets malware masquerade as trusted processes.
+
+**Remediation.** Enable ASR rule 75668c1f-73b5-4cf0-bb93-3ecf5cb7cc84 in block mode (1).
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
+
+**References:**
+- [https://learn.microsoft.com/en-us/defender-endpoint/attack-surface-reduction-rules-reference](https://learn.microsoft.com/en-us/defender-endpoint/attack-surface-reduction-rules-reference)
+
+### WIN-ASR-009 - ASR: Block Office Apps Creating Executable Content { #win-asr-009 }
+
+**Severity:** Medium &nbsp; **Category:** Attack Surface Reduction &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Enterprise
+
+Block Office applications from writing executable content to disk.
+
+**Rationale.** Office-dropped executables are used for persistence and payload delivery.
+
+**Remediation.** Enable ASR rule 3b576869-a4ec-4529-8536-b80a7769e899 in block mode (1).
 
 **Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
 
@@ -287,6 +395,81 @@ Changes to authentication policy must be audited.
 
 **References:**
 - [https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/audit-authentication-policy-change](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/audit-authentication-policy-change)
+
+### WIN-AUD-012 - Audit User Account Management { #win-aud-012 }
+
+**Severity:** Medium &nbsp; **Category:** Logging and Monitoring &nbsp; **Provider:** AuditPol &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+
+Changes to user accounts (create, delete, enable, password reset) must be audited.
+
+**Rationale.** Unaudited account changes hide account creation and privilege abuse.
+
+**Remediation.** Enable success and failure auditing for the User Account Management subcategory.
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `SOC 2` `ISO/IEC 27001` `Microsoft Security Baselines` `NIS2`
+
+**References:**
+- [https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/audit-user-account-management](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/audit-user-account-management)
+
+### WIN-AUD-013 - Audit Computer Account Management { #win-aud-013 }
+
+**Severity:** Medium &nbsp; **Category:** Logging and Monitoring &nbsp; **Provider:** AuditPol &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+
+Changes to computer accounts must be audited.
+
+**Rationale.** Unaudited computer-account changes hide rogue machine joins and tampering.
+
+**Remediation.** Enable success auditing for the Computer Account Management subcategory.
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `SOC 2` `ISO/IEC 27001` `Microsoft Security Baselines` `NIS2`
+
+**References:**
+- [https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/audit-computer-account-management](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/audit-computer-account-management)
+
+### WIN-AUD-014 - Audit Audit Policy Change { #win-aud-014 }
+
+**Severity:** Medium &nbsp; **Category:** Logging and Monitoring &nbsp; **Provider:** AuditPol &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+
+Changes to the audit policy itself must be audited.
+
+**Rationale.** Unaudited audit-policy changes let an attacker disable logging undetected.
+
+**Remediation.** Enable success and failure auditing for the Audit Policy Change subcategory.
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `SOC 2` `ISO/IEC 27001` `Microsoft Security Baselines` `NIS2`
+
+**References:**
+- [https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/audit-audit-policy-change](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/audit-audit-policy-change)
+
+### WIN-AUD-015 - Audit Other Logon/Logoff Events { #win-aud-015 }
+
+**Severity:** Medium &nbsp; **Category:** Logging and Monitoring &nbsp; **Provider:** AuditPol &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+
+Other logon/logoff events (RDP reconnects, workstation lock/unlock) must be audited.
+
+**Rationale.** These events reveal remote-session and screen-lock activity useful for detection.
+
+**Remediation.** Enable success and failure auditing for the Other Logon/Logoff Events subcategory.
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `SOC 2` `ISO/IEC 27001` `Microsoft Security Baselines` `NIS2`
+
+**References:**
+- [https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/audit-other-logonlogoff-events](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/audit-other-logonlogoff-events)
+
+### WIN-AUD-016 - Audit MPSSVC Rule-Level Policy Change { #win-aud-016 }
+
+**Severity:** Medium &nbsp; **Category:** Logging and Monitoring &nbsp; **Provider:** AuditPol &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+
+Changes to Windows Firewall rules must be audited.
+
+**Rationale.** Unaudited firewall-rule changes hide attempts to open the host to attack.
+
+**Remediation.** Enable success and failure auditing for the MPSSVC Rule-Level Policy Change subcategory.
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `SOC 2` `ISO/IEC 27001` `Microsoft Security Baselines` `NIS2`
+
+**References:**
+- [https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/audit-mpssvc-rule-level-policy-change](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/audit-mpssvc-rule-level-policy-change)
 
 ### WIN-AUTORUN-001 - Disable AutoRun on All Drives { #win-autorun-001 }
 
@@ -498,6 +681,21 @@ The number of cached domain logon credentials must be limited to reduce offline 
 **References:**
 - [https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/interactive-logon-number-of-previous-logons-to-cache-in-case-domain-controller-is-not-available](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/interactive-logon-number-of-previous-logons-to-cache-in-case-domain-controller-is-not-available)
 
+### WIN-LOGON-004 - Require Ctrl+Alt+Del at Logon { #win-logon-004 }
+
+**Severity:** Low &nbsp; **Category:** Access Control &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+
+Users must press Ctrl+Alt+Del before signing in to guarantee a trusted logon path.
+
+**Rationale.** Without the secure attention sequence, credential-harvesting spoofed logon screens are possible.
+
+**Remediation.** Set Policies System DisableCAD to 0 (require Ctrl+Alt+Del).
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
+
+**References:**
+- [https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/interactive-logon-do-not-require-ctrl-alt-del](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/interactive-logon-do-not-require-ctrl-alt-del)
+
 ### WIN-LSA-001 - Do Not Store LAN Manager Hash { #win-lsa-001 }
 
 **Severity:** High &nbsp; **Category:** Credential Protection &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Essential
@@ -573,6 +771,36 @@ SEHOP must be enabled to block Structured Exception Handler overwrite exploitati
 **References:**
 - [https://learn.microsoft.com/en-us/windows/security/operating-system-security/device-management/windows-security-configuration-framework/windows-security-baselines](https://learn.microsoft.com/en-us/windows/security/operating-system-security/device-management/windows-security-configuration-framework/windows-security-baselines)
 
+### WIN-LSA-006 - Digitally Encrypt or Sign Secure Channel Data (Always) { #win-lsa-006 }
+
+**Severity:** Medium &nbsp; **Category:** Authentication &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+
+All domain secure-channel traffic must be signed or encrypted.
+
+**Rationale.** Unsigned secure-channel traffic is vulnerable to tampering and replay.
+
+**Remediation.** Set Netlogon Parameters RequireSignOrSeal to 1.
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
+
+**References:**
+- [https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/domain-member-digitally-encrypt-or-sign-secure-channel-data-always](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/domain-member-digitally-encrypt-or-sign-secure-channel-data-always)
+
+### WIN-LSA-007 - Do Not Apply Everyone Permissions to Anonymous Users { #win-lsa-007 }
+
+**Severity:** Medium &nbsp; **Category:** Access Control &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+
+The Everyone SID must not be applied to anonymous connections.
+
+**Rationale.** Applying Everyone permissions to anonymous users grants broad unauthenticated access.
+
+**Remediation.** Set Lsa EveryoneIncludesAnonymous to 0.
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
+
+**References:**
+- [https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/network-access-let-everyone-permissions-apply-to-anonymous-users](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/network-access-let-everyone-permissions-apply-to-anonymous-users)
+
 ### WIN-NET-001 - Disable LLMNR { #win-net-001 }
 
 **Severity:** Medium &nbsp; **Category:** Network Protocols &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
@@ -647,6 +875,36 @@ The system must send NTLMv2 responses only and refuse LM and NTLM, resisting dow
 
 **References:**
 - [https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/network-security-lan-manager-authentication-level](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/network-security-lan-manager-authentication-level)
+
+### WIN-NTLM-002 - Minimum NTLM Session Security (Clients) { #win-ntlm-002 }
+
+**Severity:** Medium &nbsp; **Category:** Authentication &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+
+NTLM SSP clients must require NTLMv2 session security and 128-bit encryption.
+
+**Rationale.** Weak NTLM session security is vulnerable to downgrade and man-in-the-middle attacks.
+
+**Remediation.** Set Lsa MSV1_0 NTLMMinClientSec to 537395200 (require NTLMv2 and 128-bit).
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
+
+**References:**
+- [https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/network-security-minimum-session-security-for-ntlm-ssp-based-including-secure-rpc-clients](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/network-security-minimum-session-security-for-ntlm-ssp-based-including-secure-rpc-clients)
+
+### WIN-NTLM-003 - Minimum NTLM Session Security (Servers) { #win-ntlm-003 }
+
+**Severity:** Medium &nbsp; **Category:** Authentication &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+
+NTLM SSP servers must require NTLMv2 session security and 128-bit encryption.
+
+**Rationale.** Weak NTLM session security is vulnerable to downgrade and man-in-the-middle attacks.
+
+**Remediation.** Set Lsa MSV1_0 NTLMMinServerSec to 537395200 (require NTLMv2 and 128-bit).
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
+
+**References:**
+- [https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/network-security-minimum-session-security-for-ntlm-ssp-based-including-secure-rpc-servers](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/network-security-minimum-session-security-for-ntlm-ssp-based-including-secure-rpc-servers)
 
 ### WIN-PSL-001 - Enable PowerShell Script Block Logging { #win-psl-001 }
 
@@ -1064,6 +1322,36 @@ WDigest must not cache plaintext credentials in memory.
 **Remediation.** Set SecurityProviders WDigest UseLogonCredential to 0 to disable plaintext caching.
 
 **Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `CMMC Level 2` `HIPAA Security Rule` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
+
+**References:**
+- [https://learn.microsoft.com/en-us/windows/security/operating-system-security/device-management/windows-security-configuration-framework/windows-security-baselines](https://learn.microsoft.com/en-us/windows/security/operating-system-security/device-management/windows-security-configuration-framework/windows-security-baselines)
+
+### WIN-WINRM-001 - Disable WinRM Client Basic Authentication { #win-winrm-001 }
+
+**Severity:** Medium &nbsp; **Category:** Remote Management &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+
+The WinRM client must not allow Basic authentication.
+
+**Rationale.** WinRM Basic auth transmits credentials with weak protection.
+
+**Remediation.** Set Policies Microsoft Windows WinRM Client AllowBasic to 0.
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
+
+**References:**
+- [https://learn.microsoft.com/en-us/windows/security/operating-system-security/device-management/windows-security-configuration-framework/windows-security-baselines](https://learn.microsoft.com/en-us/windows/security/operating-system-security/device-management/windows-security-configuration-framework/windows-security-baselines)
+
+### WIN-WINRM-002 - Disallow WinRM Unencrypted Traffic { #win-winrm-002 }
+
+**Severity:** Medium &nbsp; **Category:** Remote Management &nbsp; **Provider:** Registry &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+
+The WinRM service must not allow unencrypted traffic.
+
+**Rationale.** Unencrypted WinRM traffic exposes management data and credentials.
+
+**Remediation.** Set Policies Microsoft Windows WinRM Service AllowUnencryptedTraffic to 0.
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
 
 **References:**
 - [https://learn.microsoft.com/en-us/windows/security/operating-system-security/device-management/windows-security-configuration-framework/windows-security-baselines](https://learn.microsoft.com/en-us/windows/security/operating-system-security/device-management/windows-security-configuration-framework/windows-security-baselines)

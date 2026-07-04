@@ -6,7 +6,7 @@ CloudInfra Secure ships 7 baselines. Each is a curated collection of control IDs
 
 Baseline for Active Directory Domain Controllers.
 
-**ID:** `CloudInfraSecure-DomainController` &nbsp; **Controls:** 52 &nbsp; **Supported OS:** WindowsServer2022, WindowsServer2025
+**ID:** `CloudInfraSecure-DomainController` &nbsp; **Controls:** 64 &nbsp; **Supported OS:** WindowsServer2022, WindowsServer2025
 
 | Control | Name | Severity |
 |---------|------|----------|
@@ -62,12 +62,24 @@ Baseline for Active Directory Domain Controllers.
 | [WIN-AUD-009](../controls/index.md#win-aud-009) | Audit Logoff | Medium |
 | [WIN-AUD-010](../controls/index.md#win-aud-010) | Audit Removable Storage | Medium |
 | [WIN-AUD-011](../controls/index.md#win-aud-011) | Audit Authentication Policy Change | Medium |
+| [WIN-AUD-012](../controls/index.md#win-aud-012) | Audit User Account Management | Medium |
+| [WIN-AUD-013](../controls/index.md#win-aud-013) | Audit Computer Account Management | Medium |
+| [WIN-AUD-014](../controls/index.md#win-aud-014) | Audit Audit Policy Change | Medium |
+| [WIN-AUD-015](../controls/index.md#win-aud-015) | Audit Other Logon/Logoff Events | Medium |
+| [WIN-AUD-016](../controls/index.md#win-aud-016) | Audit MPSSVC Rule-Level Policy Change | Medium |
+| [WIN-NTLM-002](../controls/index.md#win-ntlm-002) | Minimum NTLM Session Security (Clients) | Medium |
+| [WIN-NTLM-003](../controls/index.md#win-ntlm-003) | Minimum NTLM Session Security (Servers) | Medium |
+| [WIN-LSA-006](../controls/index.md#win-lsa-006) | Digitally Encrypt or Sign Secure Channel Data (Always) | Medium |
+| [WIN-LSA-007](../controls/index.md#win-lsa-007) | Do Not Apply Everyone Permissions to Anonymous Users | Medium |
+| [WIN-LOGON-004](../controls/index.md#win-logon-004) | Require Ctrl+Alt+Del at Logon | Low |
+| [WIN-WINRM-001](../controls/index.md#win-winrm-001) | Disable WinRM Client Basic Authentication | Medium |
+| [WIN-WINRM-002](../controls/index.md#win-winrm-002) | Disallow WinRM Unencrypted Traffic | Medium |
 
 ## CloudInfra Secure Enterprise - Enterprise tier
 
 Comprehensive baseline for regulated and high-assurance environments.
 
-**ID:** `CloudInfraSecure-Enterprise` &nbsp; **Controls:** 66 &nbsp; **Supported OS:** WindowsServer2022, WindowsServer2025
+**ID:** `CloudInfraSecure-Enterprise` &nbsp; **Controls:** 84 &nbsp; **Supported OS:** WindowsServer2022, WindowsServer2025
 
 | Control | Name | Severity |
 |---------|------|----------|
@@ -137,6 +149,24 @@ Comprehensive baseline for regulated and high-assurance environments.
 | [WIN-AUD-009](../controls/index.md#win-aud-009) | Audit Logoff | Medium |
 | [WIN-AUD-010](../controls/index.md#win-aud-010) | Audit Removable Storage | Medium |
 | [WIN-AUD-011](../controls/index.md#win-aud-011) | Audit Authentication Policy Change | Medium |
+| [WIN-ASR-004](../controls/index.md#win-asr-004) | ASR: Block Obfuscated Scripts | Medium |
+| [WIN-ASR-005](../controls/index.md#win-asr-005) | ASR: Block Untrusted Processes from USB | Medium |
+| [WIN-ASR-006](../controls/index.md#win-asr-006) | ASR: Block Process Creation from PSExec and WMI | Medium |
+| [WIN-ASR-007](../controls/index.md#win-asr-007) | ASR: Advanced Protection Against Ransomware | High |
+| [WIN-ASR-008](../controls/index.md#win-asr-008) | ASR: Block Office Apps Injecting Code into Other Processes | Medium |
+| [WIN-ASR-009](../controls/index.md#win-asr-009) | ASR: Block Office Apps Creating Executable Content | Medium |
+| [WIN-AUD-012](../controls/index.md#win-aud-012) | Audit User Account Management | Medium |
+| [WIN-AUD-013](../controls/index.md#win-aud-013) | Audit Computer Account Management | Medium |
+| [WIN-AUD-014](../controls/index.md#win-aud-014) | Audit Audit Policy Change | Medium |
+| [WIN-AUD-015](../controls/index.md#win-aud-015) | Audit Other Logon/Logoff Events | Medium |
+| [WIN-AUD-016](../controls/index.md#win-aud-016) | Audit MPSSVC Rule-Level Policy Change | Medium |
+| [WIN-LOGON-004](../controls/index.md#win-logon-004) | Require Ctrl+Alt+Del at Logon | Low |
+| [WIN-NTLM-002](../controls/index.md#win-ntlm-002) | Minimum NTLM Session Security (Clients) | Medium |
+| [WIN-NTLM-003](../controls/index.md#win-ntlm-003) | Minimum NTLM Session Security (Servers) | Medium |
+| [WIN-LSA-006](../controls/index.md#win-lsa-006) | Digitally Encrypt or Sign Secure Channel Data (Always) | Medium |
+| [WIN-LSA-007](../controls/index.md#win-lsa-007) | Do Not Apply Everyone Permissions to Anonymous Users | Medium |
+| [WIN-WINRM-001](../controls/index.md#win-winrm-001) | Disable WinRM Client Basic Authentication | Medium |
+| [WIN-WINRM-002](../controls/index.md#win-winrm-002) | Disallow WinRM Unencrypted Traffic | Medium |
 
 ## CloudInfra Secure Essential - Essential tier
 
@@ -166,7 +196,7 @@ Baseline of essential hardening controls suitable for any Windows Server workloa
 
 Baseline for Internet Information Services (IIS) web servers.
 
-**ID:** `CloudInfraSecure-IISWebServer` &nbsp; **Controls:** 25 &nbsp; **Supported OS:** WindowsServer2022, WindowsServer2025
+**ID:** `CloudInfraSecure-IISWebServer` &nbsp; **Controls:** 30 &nbsp; **Supported OS:** WindowsServer2022, WindowsServer2025
 
 | Control | Name | Severity |
 |---------|------|----------|
@@ -195,12 +225,17 @@ Baseline for Internet Information Services (IIS) web servers.
 | [WIN-NET-004](../controls/index.md#win-net-004) | Disable IPv6 Source Routing | Medium |
 | [WIN-SMB-006](../controls/index.md#win-smb-006) | Restrict Anonymous Access to Named Pipes and Shares | Medium |
 | [WIN-ASR-003](../controls/index.md#win-asr-003) | ASR: Block Executable Content from Email and Webmail | Medium |
+| [WIN-NTLM-002](../controls/index.md#win-ntlm-002) | Minimum NTLM Session Security (Clients) | Medium |
+| [WIN-NTLM-003](../controls/index.md#win-ntlm-003) | Minimum NTLM Session Security (Servers) | Medium |
+| [WIN-WINRM-001](../controls/index.md#win-winrm-001) | Disable WinRM Client Basic Authentication | Medium |
+| [WIN-WINRM-002](../controls/index.md#win-winrm-002) | Disallow WinRM Unencrypted Traffic | Medium |
+| [WIN-AUD-016](../controls/index.md#win-aud-016) | Audit MPSSVC Rule-Level Policy Change | Medium |
 
 ## CloudInfra Secure Remote Desktop Server - Role tier
 
 Baseline for Remote Desktop Session Host servers.
 
-**ID:** `CloudInfraSecure-RemoteDesktopServer` &nbsp; **Controls:** 26 &nbsp; **Supported OS:** WindowsServer2022, WindowsServer2025
+**ID:** `CloudInfraSecure-RemoteDesktopServer` &nbsp; **Controls:** 32 &nbsp; **Supported OS:** WindowsServer2022, WindowsServer2025
 
 | Control | Name | Severity |
 |---------|------|----------|
@@ -230,12 +265,18 @@ Baseline for Remote Desktop Session Host servers.
 | [WIN-UAC-005](../controls/index.md#win-uac-005) | UAC Switch to the Secure Desktop for Elevation | Medium |
 | [WIN-LOGON-003](../controls/index.md#win-logon-003) | Limit Number of Cached Logons | Medium |
 | [WIN-AUD-009](../controls/index.md#win-aud-009) | Audit Logoff | Medium |
+| [WIN-LOGON-004](../controls/index.md#win-logon-004) | Require Ctrl+Alt+Del at Logon | Low |
+| [WIN-NTLM-002](../controls/index.md#win-ntlm-002) | Minimum NTLM Session Security (Clients) | Medium |
+| [WIN-NTLM-003](../controls/index.md#win-ntlm-003) | Minimum NTLM Session Security (Servers) | Medium |
+| [WIN-WINRM-001](../controls/index.md#win-winrm-001) | Disable WinRM Client Basic Authentication | Medium |
+| [WIN-WINRM-002](../controls/index.md#win-winrm-002) | Disallow WinRM Unencrypted Traffic | Medium |
+| [WIN-AUD-015](../controls/index.md#win-aud-015) | Audit Other Logon/Logoff Events | Medium |
 
 ## CloudInfra Secure SQL Server - Role tier
 
 Baseline for Microsoft SQL Server hosts.
 
-**ID:** `CloudInfraSecure-SQLServer` &nbsp; **Controls:** 23 &nbsp; **Supported OS:** WindowsServer2022, WindowsServer2025
+**ID:** `CloudInfraSecure-SQLServer` &nbsp; **Controls:** 28 &nbsp; **Supported OS:** WindowsServer2022, WindowsServer2025
 
 | Control | Name | Severity |
 |---------|------|----------|
@@ -262,12 +303,17 @@ Baseline for Microsoft SQL Server hosts.
 | [WIN-NET-004](../controls/index.md#win-net-004) | Disable IPv6 Source Routing | Medium |
 | [WIN-SMB-006](../controls/index.md#win-smb-006) | Restrict Anonymous Access to Named Pipes and Shares | Medium |
 | [WIN-LSA-004](../controls/index.md#win-lsa-004) | Do Not Allow Anonymous Enumeration of SAM Accounts | Medium |
+| [WIN-NTLM-002](../controls/index.md#win-ntlm-002) | Minimum NTLM Session Security (Clients) | Medium |
+| [WIN-NTLM-003](../controls/index.md#win-ntlm-003) | Minimum NTLM Session Security (Servers) | Medium |
+| [WIN-WINRM-001](../controls/index.md#win-winrm-001) | Disable WinRM Client Basic Authentication | Medium |
+| [WIN-WINRM-002](../controls/index.md#win-winrm-002) | Disallow WinRM Unencrypted Traffic | Medium |
+| [WIN-LSA-007](../controls/index.md#win-lsa-007) | Do Not Apply Everyone Permissions to Anonymous Users | Medium |
 
 ## CloudInfra Secure Standard - Standard tier
 
 Recommended baseline adding logging, auditing and access hardening on top of Essential.
 
-**ID:** `CloudInfraSecure-Standard` &nbsp; **Controls:** 61 &nbsp; **Supported OS:** WindowsServer2022, WindowsServer2025
+**ID:** `CloudInfraSecure-Standard` &nbsp; **Controls:** 73 &nbsp; **Supported OS:** WindowsServer2022, WindowsServer2025
 
 | Control | Name | Severity |
 |---------|------|----------|
@@ -332,4 +378,16 @@ Recommended baseline adding logging, auditing and access hardening on top of Ess
 | [WIN-AUD-009](../controls/index.md#win-aud-009) | Audit Logoff | Medium |
 | [WIN-AUD-010](../controls/index.md#win-aud-010) | Audit Removable Storage | Medium |
 | [WIN-AUD-011](../controls/index.md#win-aud-011) | Audit Authentication Policy Change | Medium |
+| [WIN-AUD-012](../controls/index.md#win-aud-012) | Audit User Account Management | Medium |
+| [WIN-AUD-013](../controls/index.md#win-aud-013) | Audit Computer Account Management | Medium |
+| [WIN-AUD-014](../controls/index.md#win-aud-014) | Audit Audit Policy Change | Medium |
+| [WIN-AUD-015](../controls/index.md#win-aud-015) | Audit Other Logon/Logoff Events | Medium |
+| [WIN-AUD-016](../controls/index.md#win-aud-016) | Audit MPSSVC Rule-Level Policy Change | Medium |
+| [WIN-LOGON-004](../controls/index.md#win-logon-004) | Require Ctrl+Alt+Del at Logon | Low |
+| [WIN-NTLM-002](../controls/index.md#win-ntlm-002) | Minimum NTLM Session Security (Clients) | Medium |
+| [WIN-NTLM-003](../controls/index.md#win-ntlm-003) | Minimum NTLM Session Security (Servers) | Medium |
+| [WIN-LSA-006](../controls/index.md#win-lsa-006) | Digitally Encrypt or Sign Secure Channel Data (Always) | Medium |
+| [WIN-LSA-007](../controls/index.md#win-lsa-007) | Do Not Apply Everyone Permissions to Anonymous Users | Medium |
+| [WIN-WINRM-001](../controls/index.md#win-winrm-001) | Disable WinRM Client Basic Authentication | Medium |
+| [WIN-WINRM-002](../controls/index.md#win-winrm-002) | Disallow WinRM Unencrypted Traffic | Medium |
 
