@@ -6,7 +6,7 @@ CloudInfra Secure ships 7 baselines. Each is a curated collection of control IDs
 
 Baseline for Active Directory Domain Controllers.
 
-**ID:** `CloudInfraSecure-DomainController` &nbsp; **Controls:** 159 &nbsp; **Supported OS:** WindowsServer2022, WindowsServer2025
+**ID:** `CloudInfraSecure-DomainController` &nbsp; **Controls:** 169 &nbsp; **Supported OS:** WindowsServer2022, WindowsServer2025
 
 | Control | Name | Severity |
 |---------|------|----------|
@@ -169,12 +169,22 @@ Baseline for Active Directory Domain Controllers.
 | [WIN-LOGON-014](../controls/index.md#win-logon-014) | Disable Convenience PIN Sign-In | Medium |
 | [WIN-RPC-001](../controls/index.md#win-rpc-001) | Restrict Unauthenticated RPC Clients | Medium |
 | [WIN-RPC-002](../controls/index.md#win-rpc-002) | Enable RPC Endpoint Mapper Client Authentication | Medium |
+| [WIN-CREDUI-001](../controls/index.md#win-credui-001) | Do Not Display the Password Reveal Button | Low |
+| [WIN-CREDUI-002](../controls/index.md#win-credui-002) | Do Not Enumerate Administrator Accounts on Elevation | Medium |
+| [WIN-TELEM-001](../controls/index.md#win-telem-001) | Limit Diagnostic Data to Required or Less | Low |
+| [WIN-TELEM-002](../controls/index.md#win-telem-002) | Disable OneSettings Downloads | Low |
+| [WIN-SMARTSCREEN-001](../controls/index.md#win-smartscreen-001) | Configure Windows Defender SmartScreen | Medium |
+| [WIN-WINRM-004](../controls/index.md#win-winrm-004) | Disable WinRM Service Basic Authentication | Medium |
+| [WIN-WINRM-005](../controls/index.md#win-winrm-005) | Disallow WinRM Storing RunAs Credentials | Medium |
+| [WIN-WINRM-006](../controls/index.md#win-winrm-006) | Disallow WinRM Client Unencrypted Traffic | Medium |
+| [WIN-WINRS-001](../controls/index.md#win-winrs-001) | Disable Windows Remote Shell Access | Medium |
+| [WIN-DEF-016](../controls/index.md#win-def-016) | Enable Defender File Hash Computation | Low |
 
 ## CloudInfra Secure Enterprise - Enterprise tier
 
 Comprehensive baseline for regulated and high-assurance environments.
 
-**ID:** `CloudInfraSecure-Enterprise` &nbsp; **Controls:** 251 &nbsp; **Supported OS:** WindowsServer2022, WindowsServer2025
+**ID:** `CloudInfraSecure-Enterprise` &nbsp; **Controls:** 275 &nbsp; **Supported OS:** WindowsServer2022, WindowsServer2025
 
 | Control | Name | Severity |
 |---------|------|----------|
@@ -429,6 +439,30 @@ Comprehensive baseline for regulated and high-assurance environments.
 | [WIN-RA-002](../controls/index.md#win-ra-002) | Disable Offer (Unsolicited) Remote Assistance | Medium |
 | [WIN-RPC-001](../controls/index.md#win-rpc-001) | Restrict Unauthenticated RPC Clients | Medium |
 | [WIN-RPC-002](../controls/index.md#win-rpc-002) | Enable RPC Endpoint Mapper Client Authentication | Medium |
+| [WIN-CREDUI-001](../controls/index.md#win-credui-001) | Do Not Display the Password Reveal Button | Low |
+| [WIN-CREDUI-002](../controls/index.md#win-credui-002) | Do Not Enumerate Administrator Accounts on Elevation | Medium |
+| [WIN-CREDUI-003](../controls/index.md#win-credui-003) | Prevent Use of Security Questions for Local Accounts | Low |
+| [WIN-TELEM-001](../controls/index.md#win-telem-001) | Limit Diagnostic Data to Required or Less | Low |
+| [WIN-TELEM-002](../controls/index.md#win-telem-002) | Disable OneSettings Downloads | Low |
+| [WIN-TELEM-003](../controls/index.md#win-telem-003) | Do Not Show Feedback Notifications | Low |
+| [WIN-TELEM-004](../controls/index.md#win-telem-004) | Enable OneSettings Auditing | Low |
+| [WIN-TELEM-005](../controls/index.md#win-telem-005) | Disable Windows Insider Preview Builds | Medium |
+| [WIN-CLOUD-001](../controls/index.md#win-cloud-001) | Turn Off Microsoft Consumer Experiences | Low |
+| [WIN-SMARTSCREEN-001](../controls/index.md#win-smartscreen-001) | Configure Windows Defender SmartScreen | Medium |
+| [WIN-RDP-010](../controls/index.md#win-rdp-010) | Disable RDP COM Port Redirection | Low |
+| [WIN-RDP-011](../controls/index.md#win-rdp-011) | Disable RDP LPT Port Redirection | Low |
+| [WIN-RDP-012](../controls/index.md#win-rdp-012) | Disable RDP Plug and Play Device Redirection | Low |
+| [WIN-RDP-013](../controls/index.md#win-rdp-013) | Require Secure RPC for Remote Desktop | Medium |
+| [WIN-RDP-014](../controls/index.md#win-rdp-014) | Use Temporary Folders Per RDP Session | Low |
+| [WIN-WINRM-004](../controls/index.md#win-winrm-004) | Disable WinRM Service Basic Authentication | Medium |
+| [WIN-WINRM-005](../controls/index.md#win-winrm-005) | Disallow WinRM Storing RunAs Credentials | Medium |
+| [WIN-WINRM-006](../controls/index.md#win-winrm-006) | Disallow WinRM Client Unencrypted Traffic | Medium |
+| [WIN-WINRS-001](../controls/index.md#win-winrs-001) | Disable Windows Remote Shell Access | Medium |
+| [WIN-AUTORUN-002](../controls/index.md#win-autorun-002) | Disallow Autoplay for Non-Volume Devices | Medium |
+| [WIN-AUTORUN-003](../controls/index.md#win-autorun-003) | Set Default AutoRun Behavior to Do Not Execute | Medium |
+| [WIN-INSTALL-002](../controls/index.md#win-install-002) | Disable User Control Over Windows Installer | Medium |
+| [WIN-LOGON-015](../controls/index.md#win-logon-015) | Disable Automatic Restart Sign-On (ARSO) | Medium |
+| [WIN-DEF-016](../controls/index.md#win-def-016) | Enable Defender File Hash Computation | Low |
 
 ## CloudInfra Secure Essential - Essential tier
 
@@ -458,7 +492,7 @@ Baseline of essential hardening controls suitable for any Windows Server workloa
 
 Baseline for Internet Information Services (IIS) web servers.
 
-**ID:** `CloudInfraSecure-IISWebServer` &nbsp; **Controls:** 88 &nbsp; **Supported OS:** WindowsServer2022, WindowsServer2025
+**ID:** `CloudInfraSecure-IISWebServer` &nbsp; **Controls:** 95 &nbsp; **Supported OS:** WindowsServer2022, WindowsServer2025
 
 | Control | Name | Severity |
 |---------|------|----------|
@@ -550,12 +584,19 @@ Baseline for Internet Information Services (IIS) web servers.
 | [WIN-RPC-001](../controls/index.md#win-rpc-001) | Restrict Unauthenticated RPC Clients | Medium |
 | [WIN-RA-001](../controls/index.md#win-ra-001) | Disable Solicited Remote Assistance | Medium |
 | [WIN-RA-002](../controls/index.md#win-ra-002) | Disable Offer (Unsolicited) Remote Assistance | Medium |
+| [WIN-SMARTSCREEN-001](../controls/index.md#win-smartscreen-001) | Configure Windows Defender SmartScreen | Medium |
+| [WIN-WINRM-004](../controls/index.md#win-winrm-004) | Disable WinRM Service Basic Authentication | Medium |
+| [WIN-WINRM-005](../controls/index.md#win-winrm-005) | Disallow WinRM Storing RunAs Credentials | Medium |
+| [WIN-WINRM-006](../controls/index.md#win-winrm-006) | Disallow WinRM Client Unencrypted Traffic | Medium |
+| [WIN-WINRS-001](../controls/index.md#win-winrs-001) | Disable Windows Remote Shell Access | Medium |
+| [WIN-DEF-016](../controls/index.md#win-def-016) | Enable Defender File Hash Computation | Low |
+| [WIN-AUTORUN-002](../controls/index.md#win-autorun-002) | Disallow Autoplay for Non-Volume Devices | Medium |
 
 ## CloudInfra Secure Remote Desktop Server - Role tier
 
 Baseline for Remote Desktop Session Host servers.
 
-**ID:** `CloudInfraSecure-RemoteDesktopServer` &nbsp; **Controls:** 85 &nbsp; **Supported OS:** WindowsServer2022, WindowsServer2025
+**ID:** `CloudInfraSecure-RemoteDesktopServer` &nbsp; **Controls:** 91 &nbsp; **Supported OS:** WindowsServer2022, WindowsServer2025
 
 | Control | Name | Severity |
 |---------|------|----------|
@@ -644,12 +685,18 @@ Baseline for Remote Desktop Session Host servers.
 | [WIN-RA-001](../controls/index.md#win-ra-001) | Disable Solicited Remote Assistance | Medium |
 | [WIN-RA-002](../controls/index.md#win-ra-002) | Disable Offer (Unsolicited) Remote Assistance | Medium |
 | [WIN-LOGON-009](../controls/index.md#win-logon-009) | Do Not Enumerate Connected Users on Domain-Joined Computers | Medium |
+| [WIN-RDP-010](../controls/index.md#win-rdp-010) | Disable RDP COM Port Redirection | Low |
+| [WIN-RDP-011](../controls/index.md#win-rdp-011) | Disable RDP LPT Port Redirection | Low |
+| [WIN-RDP-012](../controls/index.md#win-rdp-012) | Disable RDP Plug and Play Device Redirection | Low |
+| [WIN-RDP-013](../controls/index.md#win-rdp-013) | Require Secure RPC for Remote Desktop | Medium |
+| [WIN-RDP-014](../controls/index.md#win-rdp-014) | Use Temporary Folders Per RDP Session | Low |
+| [WIN-SMARTSCREEN-001](../controls/index.md#win-smartscreen-001) | Configure Windows Defender SmartScreen | Medium |
 
 ## CloudInfra Secure SQL Server - Role tier
 
 Baseline for Microsoft SQL Server hosts.
 
-**ID:** `CloudInfraSecure-SQLServer` &nbsp; **Controls:** 81 &nbsp; **Supported OS:** WindowsServer2022, WindowsServer2025
+**ID:** `CloudInfraSecure-SQLServer` &nbsp; **Controls:** 86 &nbsp; **Supported OS:** WindowsServer2022, WindowsServer2025
 
 | Control | Name | Severity |
 |---------|------|----------|
@@ -734,12 +781,17 @@ Baseline for Microsoft SQL Server hosts.
 | [WIN-CREDDEL-002](../controls/index.md#win-creddel-002) | Remote Host Allows Delegation of Non-Exportable Credentials | Medium |
 | [WIN-RPC-001](../controls/index.md#win-rpc-001) | Restrict Unauthenticated RPC Clients | Medium |
 | [WIN-RPC-002](../controls/index.md#win-rpc-002) | Enable RPC Endpoint Mapper Client Authentication | Medium |
+| [WIN-WINRM-004](../controls/index.md#win-winrm-004) | Disable WinRM Service Basic Authentication | Medium |
+| [WIN-WINRM-005](../controls/index.md#win-winrm-005) | Disallow WinRM Storing RunAs Credentials | Medium |
+| [WIN-WINRM-006](../controls/index.md#win-winrm-006) | Disallow WinRM Client Unencrypted Traffic | Medium |
+| [WIN-WINRS-001](../controls/index.md#win-winrs-001) | Disable Windows Remote Shell Access | Medium |
+| [WIN-DEF-016](../controls/index.md#win-def-016) | Enable Defender File Hash Computation | Low |
 
 ## CloudInfra Secure Standard - Standard tier
 
 Recommended baseline adding logging, auditing and access hardening on top of Essential.
 
-**ID:** `CloudInfraSecure-Standard` &nbsp; **Controls:** 224 &nbsp; **Supported OS:** WindowsServer2022, WindowsServer2025
+**ID:** `CloudInfraSecure-Standard` &nbsp; **Controls:** 248 &nbsp; **Supported OS:** WindowsServer2022, WindowsServer2025
 
 | Control | Name | Severity |
 |---------|------|----------|
@@ -967,4 +1019,28 @@ Recommended baseline adding logging, auditing and access hardening on top of Ess
 | [WIN-RA-002](../controls/index.md#win-ra-002) | Disable Offer (Unsolicited) Remote Assistance | Medium |
 | [WIN-RPC-001](../controls/index.md#win-rpc-001) | Restrict Unauthenticated RPC Clients | Medium |
 | [WIN-RPC-002](../controls/index.md#win-rpc-002) | Enable RPC Endpoint Mapper Client Authentication | Medium |
+| [WIN-CREDUI-001](../controls/index.md#win-credui-001) | Do Not Display the Password Reveal Button | Low |
+| [WIN-CREDUI-002](../controls/index.md#win-credui-002) | Do Not Enumerate Administrator Accounts on Elevation | Medium |
+| [WIN-CREDUI-003](../controls/index.md#win-credui-003) | Prevent Use of Security Questions for Local Accounts | Low |
+| [WIN-TELEM-001](../controls/index.md#win-telem-001) | Limit Diagnostic Data to Required or Less | Low |
+| [WIN-TELEM-002](../controls/index.md#win-telem-002) | Disable OneSettings Downloads | Low |
+| [WIN-TELEM-003](../controls/index.md#win-telem-003) | Do Not Show Feedback Notifications | Low |
+| [WIN-TELEM-004](../controls/index.md#win-telem-004) | Enable OneSettings Auditing | Low |
+| [WIN-TELEM-005](../controls/index.md#win-telem-005) | Disable Windows Insider Preview Builds | Medium |
+| [WIN-CLOUD-001](../controls/index.md#win-cloud-001) | Turn Off Microsoft Consumer Experiences | Low |
+| [WIN-SMARTSCREEN-001](../controls/index.md#win-smartscreen-001) | Configure Windows Defender SmartScreen | Medium |
+| [WIN-RDP-010](../controls/index.md#win-rdp-010) | Disable RDP COM Port Redirection | Low |
+| [WIN-RDP-011](../controls/index.md#win-rdp-011) | Disable RDP LPT Port Redirection | Low |
+| [WIN-RDP-012](../controls/index.md#win-rdp-012) | Disable RDP Plug and Play Device Redirection | Low |
+| [WIN-RDP-013](../controls/index.md#win-rdp-013) | Require Secure RPC for Remote Desktop | Medium |
+| [WIN-RDP-014](../controls/index.md#win-rdp-014) | Use Temporary Folders Per RDP Session | Low |
+| [WIN-WINRM-004](../controls/index.md#win-winrm-004) | Disable WinRM Service Basic Authentication | Medium |
+| [WIN-WINRM-005](../controls/index.md#win-winrm-005) | Disallow WinRM Storing RunAs Credentials | Medium |
+| [WIN-WINRM-006](../controls/index.md#win-winrm-006) | Disallow WinRM Client Unencrypted Traffic | Medium |
+| [WIN-WINRS-001](../controls/index.md#win-winrs-001) | Disable Windows Remote Shell Access | Medium |
+| [WIN-AUTORUN-002](../controls/index.md#win-autorun-002) | Disallow Autoplay for Non-Volume Devices | Medium |
+| [WIN-AUTORUN-003](../controls/index.md#win-autorun-003) | Set Default AutoRun Behavior to Do Not Execute | Medium |
+| [WIN-INSTALL-002](../controls/index.md#win-install-002) | Disable User Control Over Windows Installer | Medium |
+| [WIN-LOGON-015](../controls/index.md#win-logon-015) | Disable Automatic Restart Sign-On (ARSO) | Medium |
+| [WIN-DEF-016](../controls/index.md#win-def-016) | Enable Defender File Hash Computation | Low |
 

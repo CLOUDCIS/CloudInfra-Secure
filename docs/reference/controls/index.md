@@ -1,6 +1,6 @@
 # Controls
 
-The CloudInfra Secure control library (251 controls). Each control exists once and may be used by many baselines.
+The CloudInfra Secure control library (275 controls). Each control exists once and may be used by many baselines.
 
 !!! note "Compliance disclaimer"
     CloudInfra Secure controls are designed to help organisations implement technical security requirements commonly found in recognised security standards. They do not constitute certification or proof of compliance.
@@ -12,11 +12,11 @@ Controls tagged **GPO** are delivered through a Group Policy registry value that
 <div class="cmpl-toolbar">
   <label for="ctlDelivery"><strong>Filter by delivery:</strong></label>
   <select id="ctlDelivery">
-    <option value="__all">All controls (251)</option>
-    <option value="gpo">Group Policy-backed (97)</option>
+    <option value="__all">All controls (275)</option>
+    <option value="gpo">Group Policy-backed (121)</option>
     <option value="direct">Direct system setting (154)</option>
   </select>
-  <span class="cmpl-count" id="ctlCount">Showing 251 of 251 controls</span>
+  <span class="cmpl-count" id="ctlCount">Showing 275 of 275 controls</span>
 </div>
 
 <div class="cmpl-tablewrap" markdown="0">
@@ -72,9 +72,15 @@ Controls tagged **GPO** are delivered through a Group Policy registry value that
     <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-aud-029">WIN-AUD-029</a></td><td>Audit Security System Extension</td><td>Medium</td><td>Logging and Monitoring</td><td>AuditPol</td><td><span class="muted-badge">Direct</span></td></tr>
     <tr data-delivery="gpo"><td class="cmpl-num"></td><td><a href="#win-aud-030">WIN-AUD-030</a></td><td>Include Command Line in Process Creation Events</td><td>Medium</td><td>Logging and Monitoring</td><td>Registry</td><td><span class="gpo-badge" title="Delivered via a Group Policy registry value; a domain GPO can override it">GPO</span></td></tr>
     <tr data-delivery="gpo"><td class="cmpl-num"></td><td><a href="#win-autorun-001">WIN-AUTORUN-001</a></td><td>Disable AutoRun on All Drives</td><td>Medium</td><td>Attack Surface Reduction</td><td>Registry</td><td><span class="gpo-badge" title="Delivered via a Group Policy registry value; a domain GPO can override it">GPO</span></td></tr>
+    <tr data-delivery="gpo"><td class="cmpl-num"></td><td><a href="#win-autorun-002">WIN-AUTORUN-002</a></td><td>Disallow Autoplay for Non-Volume Devices</td><td>Medium</td><td>Attack Surface Reduction</td><td>Registry</td><td><span class="gpo-badge" title="Delivered via a Group Policy registry value; a domain GPO can override it">GPO</span></td></tr>
+    <tr data-delivery="gpo"><td class="cmpl-num"></td><td><a href="#win-autorun-003">WIN-AUTORUN-003</a></td><td>Set Default AutoRun Behavior to Do Not Execute</td><td>Medium</td><td>Attack Surface Reduction</td><td>Registry</td><td><span class="gpo-badge" title="Delivered via a Group Policy registry value; a domain GPO can override it">GPO</span></td></tr>
     <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-cg-001">WIN-CG-001</a></td><td>Enable Credential Guard</td><td>High</td><td>Credential Protection</td><td>Registry</td><td><span class="muted-badge">Direct</span></td></tr>
+    <tr data-delivery="gpo"><td class="cmpl-num"></td><td><a href="#win-cloud-001">WIN-CLOUD-001</a></td><td>Turn Off Microsoft Consumer Experiences</td><td>Low</td><td>Attack Surface Reduction</td><td>Registry</td><td><span class="gpo-badge" title="Delivered via a Group Policy registry value; a domain GPO can override it">GPO</span></td></tr>
     <tr data-delivery="gpo"><td class="cmpl-num"></td><td><a href="#win-creddel-001">WIN-CREDDEL-001</a></td><td>Encryption Oracle Remediation (Force Updated Clients)</td><td>High</td><td>Credential Protection</td><td>Registry</td><td><span class="gpo-badge" title="Delivered via a Group Policy registry value; a domain GPO can override it">GPO</span></td></tr>
     <tr data-delivery="gpo"><td class="cmpl-num"></td><td><a href="#win-creddel-002">WIN-CREDDEL-002</a></td><td>Remote Host Allows Delegation of Non-Exportable Credentials</td><td>Medium</td><td>Credential Protection</td><td>Registry</td><td><span class="gpo-badge" title="Delivered via a Group Policy registry value; a domain GPO can override it">GPO</span></td></tr>
+    <tr data-delivery="gpo"><td class="cmpl-num"></td><td><a href="#win-credui-001">WIN-CREDUI-001</a></td><td>Do Not Display the Password Reveal Button</td><td>Low</td><td>Credential Protection</td><td>Registry</td><td><span class="gpo-badge" title="Delivered via a Group Policy registry value; a domain GPO can override it">GPO</span></td></tr>
+    <tr data-delivery="gpo"><td class="cmpl-num"></td><td><a href="#win-credui-002">WIN-CREDUI-002</a></td><td>Do Not Enumerate Administrator Accounts on Elevation</td><td>Medium</td><td>Credential Protection</td><td>Registry</td><td><span class="gpo-badge" title="Delivered via a Group Policy registry value; a domain GPO can override it">GPO</span></td></tr>
+    <tr data-delivery="gpo"><td class="cmpl-num"></td><td><a href="#win-credui-003">WIN-CREDUI-003</a></td><td>Prevent Use of Security Questions for Local Accounts</td><td>Low</td><td>Credential Protection</td><td>Registry</td><td><span class="gpo-badge" title="Delivered via a Group Policy registry value; a domain GPO can override it">GPO</span></td></tr>
     <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-def-001">WIN-DEF-001</a></td><td>Microsoft Defender Antivirus Enabled</td><td>High</td><td>Endpoint Protection</td><td>Defender</td><td><span class="muted-badge">Direct</span></td></tr>
     <tr data-delivery="gpo"><td class="cmpl-num"></td><td><a href="#win-def-002">WIN-DEF-002</a></td><td>Enable Potentially Unwanted Application (PUA) Protection</td><td>High</td><td>Endpoint Protection</td><td>Registry</td><td><span class="gpo-badge" title="Delivered via a Group Policy registry value; a domain GPO can override it">GPO</span></td></tr>
     <tr data-delivery="gpo"><td class="cmpl-num"></td><td><a href="#win-def-003">WIN-DEF-003</a></td><td>Enable Defender Real-Time Protection</td><td>High</td><td>Endpoint Protection</td><td>Registry</td><td><span class="gpo-badge" title="Delivered via a Group Policy registry value; a domain GPO can override it">GPO</span></td></tr>
@@ -90,6 +96,7 @@ Controls tagged **GPO** are delivered through a Group Policy registry value that
     <tr data-delivery="gpo"><td class="cmpl-num"></td><td><a href="#win-def-013">WIN-DEF-013</a></td><td>Scan Downloaded Files and Attachments</td><td>High</td><td>Endpoint Protection</td><td>Registry</td><td><span class="gpo-badge" title="Delivered via a Group Policy registry value; a domain GPO can override it">GPO</span></td></tr>
     <tr data-delivery="gpo"><td class="cmpl-num"></td><td><a href="#win-def-014">WIN-DEF-014</a></td><td>Disable Local Admin Merge of Defender Preferences</td><td>Medium</td><td>Endpoint Protection</td><td>Registry</td><td><span class="gpo-badge" title="Delivered via a Group Policy registry value; a domain GPO can override it">GPO</span></td></tr>
     <tr data-delivery="gpo"><td class="cmpl-num"></td><td><a href="#win-def-015">WIN-DEF-015</a></td><td>Enable Real-Time Script Scanning</td><td>Medium</td><td>Endpoint Protection</td><td>Registry</td><td><span class="gpo-badge" title="Delivered via a Group Policy registry value; a domain GPO can override it">GPO</span></td></tr>
+    <tr data-delivery="gpo"><td class="cmpl-num"></td><td><a href="#win-def-016">WIN-DEF-016</a></td><td>Enable Defender File Hash Computation</td><td>Low</td><td>Endpoint Protection</td><td>Registry</td><td><span class="gpo-badge" title="Delivered via a Group Policy registry value; a domain GPO can override it">GPO</span></td></tr>
     <tr data-delivery="gpo"><td class="cmpl-num"></td><td><a href="#win-elam-001">WIN-ELAM-001</a></td><td>Boot-Start Driver Initialization Policy</td><td>Medium</td><td>Endpoint Protection</td><td>Registry</td><td><span class="gpo-badge" title="Delivered via a Group Policy registry value; a domain GPO can override it">GPO</span></td></tr>
     <tr data-delivery="gpo"><td class="cmpl-num"></td><td><a href="#win-evtlog-001">WIN-EVTLOG-001</a></td><td>Application Event Log Maximum Size (&gt;= 32 MB)</td><td>Medium</td><td>Logging and Monitoring</td><td>Registry</td><td><span class="gpo-badge" title="Delivered via a Group Policy registry value; a domain GPO can override it">GPO</span></td></tr>
     <tr data-delivery="gpo"><td class="cmpl-num"></td><td><a href="#win-evtlog-002">WIN-EVTLOG-002</a></td><td>Application Event Log Retention (Overwrite as Needed)</td><td>Low</td><td>Logging and Monitoring</td><td>Registry</td><td><span class="gpo-badge" title="Delivered via a Group Policy registry value; a domain GPO can override it">GPO</span></td></tr>
@@ -115,6 +122,7 @@ Controls tagged **GPO** are delivered through a Group Policy registry value that
     <tr data-delivery="gpo"><td class="cmpl-num"></td><td><a href="#win-inet-006">WIN-INET-006</a></td><td>Turn Off Internet Connection Wizard If URL Connection</td><td>Low</td><td>Attack Surface Reduction</td><td>Registry</td><td><span class="gpo-badge" title="Delivered via a Group Policy registry value; a domain GPO can override it">GPO</span></td></tr>
     <tr data-delivery="gpo"><td class="cmpl-num"></td><td><a href="#win-inet-007">WIN-INET-007</a></td><td>Turn Off Search Companion Content File Updates</td><td>Low</td><td>Attack Surface Reduction</td><td>Registry</td><td><span class="gpo-badge" title="Delivered via a Group Policy registry value; a domain GPO can override it">GPO</span></td></tr>
     <tr data-delivery="gpo"><td class="cmpl-num"></td><td><a href="#win-install-001">WIN-INSTALL-001</a></td><td>Disable Always Install Elevated</td><td>High</td><td>Privilege Management</td><td>Registry</td><td><span class="gpo-badge" title="Delivered via a Group Policy registry value; a domain GPO can override it">GPO</span></td></tr>
+    <tr data-delivery="gpo"><td class="cmpl-num"></td><td><a href="#win-install-002">WIN-INSTALL-002</a></td><td>Disable User Control Over Windows Installer</td><td>Medium</td><td>Privilege Management</td><td>Registry</td><td><span class="gpo-badge" title="Delivered via a Group Policy registry value; a domain GPO can override it">GPO</span></td></tr>
     <tr data-delivery="gpo"><td class="cmpl-num"></td><td><a href="#win-krb-001">WIN-KRB-001</a></td><td>Configure Kerberos Encryption Types (AES only)</td><td>Medium</td><td>Authentication</td><td>Registry</td><td><span class="gpo-badge" title="Delivered via a Group Policy registry value; a domain GPO can override it">GPO</span></td></tr>
     <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-ldap-001">WIN-LDAP-001</a></td><td>LDAP Client Signing</td><td>Medium</td><td>Authentication</td><td>Registry</td><td><span class="muted-badge">Direct</span></td></tr>
     <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-lock-001">WIN-LOCK-001</a></td><td>Account Lockout Threshold</td><td>Medium</td><td>Account Policy</td><td>SecEdit</td><td><span class="muted-badge">Direct</span></td></tr>
@@ -134,6 +142,7 @@ Controls tagged **GPO** are delivered through a Group Policy registry value that
     <tr data-delivery="gpo"><td class="cmpl-num"></td><td><a href="#win-logon-012">WIN-LOGON-012</a></td><td>Do Not Display Network Selection UI</td><td>Low</td><td>Access Control</td><td>Registry</td><td><span class="gpo-badge" title="Delivered via a Group Policy registry value; a domain GPO can override it">GPO</span></td></tr>
     <tr data-delivery="gpo"><td class="cmpl-num"></td><td><a href="#win-logon-013">WIN-LOGON-013</a></td><td>Turn Off App Notifications on the Lock Screen</td><td>Low</td><td>Access Control</td><td>Registry</td><td><span class="gpo-badge" title="Delivered via a Group Policy registry value; a domain GPO can override it">GPO</span></td></tr>
     <tr data-delivery="gpo"><td class="cmpl-num"></td><td><a href="#win-logon-014">WIN-LOGON-014</a></td><td>Disable Convenience PIN Sign-In</td><td>Medium</td><td>Access Control</td><td>Registry</td><td><span class="gpo-badge" title="Delivered via a Group Policy registry value; a domain GPO can override it">GPO</span></td></tr>
+    <tr data-delivery="gpo"><td class="cmpl-num"></td><td><a href="#win-logon-015">WIN-LOGON-015</a></td><td>Disable Automatic Restart Sign-On (ARSO)</td><td>Medium</td><td>Access Control</td><td>Registry</td><td><span class="gpo-badge" title="Delivered via a Group Policy registry value; a domain GPO can override it">GPO</span></td></tr>
     <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-lsa-001">WIN-LSA-001</a></td><td>Do Not Store LAN Manager Hash</td><td>High</td><td>Credential Protection</td><td>Registry</td><td><span class="muted-badge">Direct</span></td></tr>
     <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-lsa-002">WIN-LSA-002</a></td><td>Restrict Anonymous SID Enumeration</td><td>Medium</td><td>Access Control</td><td>Registry</td><td><span class="muted-badge">Direct</span></td></tr>
     <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-lsa-003">WIN-LSA-003</a></td><td>Enable LSASS Protection (RunAsPPL)</td><td>High</td><td>Credential Protection</td><td>Registry</td><td><span class="muted-badge">Direct</span></td></tr>
@@ -190,8 +199,14 @@ Controls tagged **GPO** are delivered through a Group Policy registry value that
     <tr data-delivery="gpo"><td class="cmpl-num"></td><td><a href="#win-rdp-007">WIN-RDP-007</a></td><td>Set RDP Idle Session Time Limit</td><td>Low</td><td>Remote Access</td><td>Registry</td><td><span class="gpo-badge" title="Delivered via a Group Policy registry value; a domain GPO can override it">GPO</span></td></tr>
     <tr data-delivery="gpo"><td class="cmpl-num"></td><td><a href="#win-rdp-008">WIN-RDP-008</a></td><td>Set RDP Disconnected Session Time Limit</td><td>Low</td><td>Remote Access</td><td>Registry</td><td><span class="gpo-badge" title="Delivered via a Group Policy registry value; a domain GPO can override it">GPO</span></td></tr>
     <tr data-delivery="gpo"><td class="cmpl-num"></td><td><a href="#win-rdp-009">WIN-RDP-009</a></td><td>Do Not Allow Saved RDP Passwords</td><td>Medium</td><td>Remote Access</td><td>Registry</td><td><span class="gpo-badge" title="Delivered via a Group Policy registry value; a domain GPO can override it">GPO</span></td></tr>
+    <tr data-delivery="gpo"><td class="cmpl-num"></td><td><a href="#win-rdp-010">WIN-RDP-010</a></td><td>Disable RDP COM Port Redirection</td><td>Low</td><td>Remote Access</td><td>Registry</td><td><span class="gpo-badge" title="Delivered via a Group Policy registry value; a domain GPO can override it">GPO</span></td></tr>
+    <tr data-delivery="gpo"><td class="cmpl-num"></td><td><a href="#win-rdp-011">WIN-RDP-011</a></td><td>Disable RDP LPT Port Redirection</td><td>Low</td><td>Remote Access</td><td>Registry</td><td><span class="gpo-badge" title="Delivered via a Group Policy registry value; a domain GPO can override it">GPO</span></td></tr>
+    <tr data-delivery="gpo"><td class="cmpl-num"></td><td><a href="#win-rdp-012">WIN-RDP-012</a></td><td>Disable RDP Plug and Play Device Redirection</td><td>Low</td><td>Remote Access</td><td>Registry</td><td><span class="gpo-badge" title="Delivered via a Group Policy registry value; a domain GPO can override it">GPO</span></td></tr>
+    <tr data-delivery="gpo"><td class="cmpl-num"></td><td><a href="#win-rdp-013">WIN-RDP-013</a></td><td>Require Secure RPC for Remote Desktop</td><td>Medium</td><td>Remote Access</td><td>Registry</td><td><span class="gpo-badge" title="Delivered via a Group Policy registry value; a domain GPO can override it">GPO</span></td></tr>
+    <tr data-delivery="gpo"><td class="cmpl-num"></td><td><a href="#win-rdp-014">WIN-RDP-014</a></td><td>Use Temporary Folders Per RDP Session</td><td>Low</td><td>Remote Access</td><td>Registry</td><td><span class="gpo-badge" title="Delivered via a Group Policy registry value; a domain GPO can override it">GPO</span></td></tr>
     <tr data-delivery="gpo"><td class="cmpl-num"></td><td><a href="#win-rpc-001">WIN-RPC-001</a></td><td>Restrict Unauthenticated RPC Clients</td><td>Medium</td><td>Network Protocols</td><td>Registry</td><td><span class="gpo-badge" title="Delivered via a Group Policy registry value; a domain GPO can override it">GPO</span></td></tr>
     <tr data-delivery="gpo"><td class="cmpl-num"></td><td><a href="#win-rpc-002">WIN-RPC-002</a></td><td>Enable RPC Endpoint Mapper Client Authentication</td><td>Medium</td><td>Network Protocols</td><td>Registry</td><td><span class="gpo-badge" title="Delivered via a Group Policy registry value; a domain GPO can override it">GPO</span></td></tr>
+    <tr data-delivery="gpo"><td class="cmpl-num"></td><td><a href="#win-smartscreen-001">WIN-SMARTSCREEN-001</a></td><td>Configure Windows Defender SmartScreen</td><td>Medium</td><td>Endpoint Protection</td><td>Registry</td><td><span class="gpo-badge" title="Delivered via a Group Policy registry value; a domain GPO can override it">GPO</span></td></tr>
     <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-smb-001">WIN-SMB-001</a></td><td>Disable SMBv1</td><td>High</td><td>Network Protocols</td><td>Registry</td><td><span class="muted-badge">Direct</span></td></tr>
     <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-smb-003">WIN-SMB-003</a></td><td>Require SMB Signing (Server)</td><td>High</td><td>Network Protocols</td><td>Registry</td><td><span class="muted-badge">Direct</span></td></tr>
     <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-smb-004">WIN-SMB-004</a></td><td>Disable SMBv1 Client</td><td>High</td><td>Network Protocols</td><td>Registry</td><td><span class="muted-badge">Direct</span></td></tr>
@@ -206,6 +221,11 @@ Controls tagged **GPO** are delivered through a Group Policy registry value that
     <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-smb-013">WIN-SMB-013</a></td><td>Server SPN Target Name Validation Level</td><td>Medium</td><td>Network Protocols</td><td>Registry</td><td><span class="muted-badge">Direct</span></td></tr>
     <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-svc-001">WIN-SVC-001</a></td><td>Disable Remote Registry Service</td><td>Medium</td><td>Attack Surface Reduction</td><td>Service</td><td><span class="muted-badge">Direct</span></td></tr>
     <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-svc-002">WIN-SVC-002</a></td><td>Disable Print Spooler Service</td><td>Medium</td><td>Attack Surface Reduction</td><td>Service</td><td><span class="muted-badge">Direct</span></td></tr>
+    <tr data-delivery="gpo"><td class="cmpl-num"></td><td><a href="#win-telem-001">WIN-TELEM-001</a></td><td>Limit Diagnostic Data to Required or Less</td><td>Low</td><td>Attack Surface Reduction</td><td>Registry</td><td><span class="gpo-badge" title="Delivered via a Group Policy registry value; a domain GPO can override it">GPO</span></td></tr>
+    <tr data-delivery="gpo"><td class="cmpl-num"></td><td><a href="#win-telem-002">WIN-TELEM-002</a></td><td>Disable OneSettings Downloads</td><td>Low</td><td>Attack Surface Reduction</td><td>Registry</td><td><span class="gpo-badge" title="Delivered via a Group Policy registry value; a domain GPO can override it">GPO</span></td></tr>
+    <tr data-delivery="gpo"><td class="cmpl-num"></td><td><a href="#win-telem-003">WIN-TELEM-003</a></td><td>Do Not Show Feedback Notifications</td><td>Low</td><td>Attack Surface Reduction</td><td>Registry</td><td><span class="gpo-badge" title="Delivered via a Group Policy registry value; a domain GPO can override it">GPO</span></td></tr>
+    <tr data-delivery="gpo"><td class="cmpl-num"></td><td><a href="#win-telem-004">WIN-TELEM-004</a></td><td>Enable OneSettings Auditing</td><td>Low</td><td>Logging and Monitoring</td><td>Registry</td><td><span class="gpo-badge" title="Delivered via a Group Policy registry value; a domain GPO can override it">GPO</span></td></tr>
+    <tr data-delivery="gpo"><td class="cmpl-num"></td><td><a href="#win-telem-005">WIN-TELEM-005</a></td><td>Disable Windows Insider Preview Builds</td><td>Medium</td><td>Attack Surface Reduction</td><td>Registry</td><td><span class="gpo-badge" title="Delivered via a Group Policy registry value; a domain GPO can override it">GPO</span></td></tr>
     <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-tls-001">WIN-TLS-001</a></td><td>Enable TLS 1.2 (Server)</td><td>Medium</td><td>Cryptography</td><td>Registry</td><td><span class="muted-badge">Direct</span></td></tr>
     <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-tls-002">WIN-TLS-002</a></td><td>Enable TLS 1.2 (Client)</td><td>Medium</td><td>Cryptography</td><td>Registry</td><td><span class="muted-badge">Direct</span></td></tr>
     <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-tls-003">WIN-TLS-003</a></td><td>Disable RC4 128/128 Cipher</td><td>High</td><td>Cryptography</td><td>Registry</td><td><span class="muted-badge">Direct</span></td></tr>
@@ -274,6 +294,10 @@ Controls tagged **GPO** are delivered through a Group Policy registry value that
     <tr data-delivery="gpo"><td class="cmpl-num"></td><td><a href="#win-winrm-001">WIN-WINRM-001</a></td><td>Disable WinRM Client Basic Authentication</td><td>Medium</td><td>Remote Management</td><td>Registry</td><td><span class="gpo-badge" title="Delivered via a Group Policy registry value; a domain GPO can override it">GPO</span></td></tr>
     <tr data-delivery="gpo"><td class="cmpl-num"></td><td><a href="#win-winrm-002">WIN-WINRM-002</a></td><td>Disallow WinRM Unencrypted Traffic</td><td>Medium</td><td>Remote Management</td><td>Registry</td><td><span class="gpo-badge" title="Delivered via a Group Policy registry value; a domain GPO can override it">GPO</span></td></tr>
     <tr data-delivery="gpo"><td class="cmpl-num"></td><td><a href="#win-winrm-003">WIN-WINRM-003</a></td><td>Disable WinRM Client Digest Authentication</td><td>Medium</td><td>Remote Management</td><td>Registry</td><td><span class="gpo-badge" title="Delivered via a Group Policy registry value; a domain GPO can override it">GPO</span></td></tr>
+    <tr data-delivery="gpo"><td class="cmpl-num"></td><td><a href="#win-winrm-004">WIN-WINRM-004</a></td><td>Disable WinRM Service Basic Authentication</td><td>Medium</td><td>Remote Management</td><td>Registry</td><td><span class="gpo-badge" title="Delivered via a Group Policy registry value; a domain GPO can override it">GPO</span></td></tr>
+    <tr data-delivery="gpo"><td class="cmpl-num"></td><td><a href="#win-winrm-005">WIN-WINRM-005</a></td><td>Disallow WinRM Storing RunAs Credentials</td><td>Medium</td><td>Remote Management</td><td>Registry</td><td><span class="gpo-badge" title="Delivered via a Group Policy registry value; a domain GPO can override it">GPO</span></td></tr>
+    <tr data-delivery="gpo"><td class="cmpl-num"></td><td><a href="#win-winrm-006">WIN-WINRM-006</a></td><td>Disallow WinRM Client Unencrypted Traffic</td><td>Medium</td><td>Remote Management</td><td>Registry</td><td><span class="gpo-badge" title="Delivered via a Group Policy registry value; a domain GPO can override it">GPO</span></td></tr>
+    <tr data-delivery="gpo"><td class="cmpl-num"></td><td><a href="#win-winrs-001">WIN-WINRS-001</a></td><td>Disable Windows Remote Shell Access</td><td>Medium</td><td>Remote Management</td><td>Registry</td><td><span class="gpo-badge" title="Delivered via a Group Policy registry value; a domain GPO can override it">GPO</span></td></tr>
   </tbody>
 </table>
 </div>
@@ -1015,6 +1039,36 @@ AutoRun/AutoPlay must be disabled on all drive types to prevent automatic execut
 **References:**
 - [https://learn.microsoft.com/en-us/windows/security/operating-system-security/device-management/windows-security-configuration-framework/windows-security-baselines](https://learn.microsoft.com/en-us/windows/security/operating-system-security/device-management/windows-security-configuration-framework/windows-security-baselines)
 
+### WIN-AUTORUN-002 - Disallow Autoplay for Non-Volume Devices { #win-autorun-002 }
+
+**Severity:** Medium &nbsp; **Category:** Attack Surface Reduction &nbsp; **Provider:** Registry &nbsp; **Delivery:** Group Policy &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+
+Disable AutoPlay for non-volume devices such as MTP cameras and phones. Group Policy setting: this control checks the corresponding Group Policy registry value, so it can report non-compliant until the policy is explicitly configured (even where the effective Windows default is already secure), and a domain Group Policy applied after hardening can override it.
+
+**Rationale.** AutoPlay on such devices can auto-launch malicious content.
+
+**Remediation.** Set Explorer NoAutoplayfornonVolume to 1.
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
+
+**References:**
+- [https://learn.microsoft.com/en-us/windows/security/operating-system-security/device-management/windows-security-configuration-framework/windows-security-baselines](https://learn.microsoft.com/en-us/windows/security/operating-system-security/device-management/windows-security-configuration-framework/windows-security-baselines)
+
+### WIN-AUTORUN-003 - Set Default AutoRun Behavior to Do Not Execute { #win-autorun-003 }
+
+**Severity:** Medium &nbsp; **Category:** Attack Surface Reduction &nbsp; **Provider:** Registry &nbsp; **Delivery:** Group Policy &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+
+Set the default AutoRun behavior to never execute autorun commands. Group Policy setting: this control checks the corresponding Group Policy registry value, so it can report non-compliant until the policy is explicitly configured (even where the effective Windows default is already secure), and a domain Group Policy applied after hardening can override it.
+
+**Rationale.** AutoRun command execution is a classic removable-media infection vector.
+
+**Remediation.** Set Explorer NoAutorun to 1.
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
+
+**References:**
+- [https://learn.microsoft.com/en-us/windows/security/operating-system-security/device-management/windows-security-configuration-framework/windows-security-baselines](https://learn.microsoft.com/en-us/windows/security/operating-system-security/device-management/windows-security-configuration-framework/windows-security-baselines)
+
 ### WIN-CG-001 - Enable Credential Guard { #win-cg-001 }
 
 **Severity:** High &nbsp; **Category:** Credential Protection &nbsp; **Provider:** Registry &nbsp; **Delivery:** Direct &nbsp; **Reboot:** Yes &nbsp; **Tier:** Enterprise
@@ -1029,6 +1083,21 @@ Enable Credential Guard (with UEFI lock) to isolate and protect NTLM hashes and 
 
 **References:**
 - [https://learn.microsoft.com/en-us/windows/security/identity-protection/credential-guard/configure](https://learn.microsoft.com/en-us/windows/security/identity-protection/credential-guard/configure)
+
+### WIN-CLOUD-001 - Turn Off Microsoft Consumer Experiences { #win-cloud-001 }
+
+**Severity:** Low &nbsp; **Category:** Attack Surface Reduction &nbsp; **Provider:** Registry &nbsp; **Delivery:** Group Policy &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+
+Disable Microsoft consumer experiences (app suggestions, consumer content). Group Policy setting: this control checks the corresponding Group Policy registry value, so it can report non-compliant until the policy is explicitly configured (even where the effective Windows default is already secure), and a domain Group Policy applied after hardening can override it.
+
+**Rationale.** Consumer content downloads and installs unwanted software over the internet.
+
+**Remediation.** Set CloudContent DisableWindowsConsumerFeatures to 1.
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
+
+**References:**
+- [https://learn.microsoft.com/en-us/windows/security/operating-system-security/device-management/windows-security-configuration-framework/windows-security-baselines](https://learn.microsoft.com/en-us/windows/security/operating-system-security/device-management/windows-security-configuration-framework/windows-security-baselines)
 
 ### WIN-CREDDEL-001 - Encryption Oracle Remediation (Force Updated Clients) { #win-creddel-001 }
 
@@ -1054,6 +1123,51 @@ Allow only non-exportable (Remote Credential Guard) credential delegation to rem
 **Rationale.** Exportable delegated credentials can be stolen from a compromised remote host.
 
 **Remediation.** Set CredentialsDelegation AllowProtectedCreds to 1.
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
+
+**References:**
+- [https://learn.microsoft.com/en-us/windows/security/operating-system-security/device-management/windows-security-configuration-framework/windows-security-baselines](https://learn.microsoft.com/en-us/windows/security/operating-system-security/device-management/windows-security-configuration-framework/windows-security-baselines)
+
+### WIN-CREDUI-001 - Do Not Display the Password Reveal Button { #win-credui-001 }
+
+**Severity:** Low &nbsp; **Category:** Credential Protection &nbsp; **Provider:** Registry &nbsp; **Delivery:** Group Policy &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+
+Hide the password-reveal (eye) button in credential dialogs. Group Policy setting: this control checks the corresponding Group Policy registry value, so it can report non-compliant until the policy is explicitly configured (even where the effective Windows default is already secure), and a domain Group Policy applied after hardening can override it.
+
+**Rationale.** The reveal button can expose a typed password to a shoulder-surfer.
+
+**Remediation.** Set CredUI DisablePasswordReveal to 1.
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
+
+**References:**
+- [https://learn.microsoft.com/en-us/windows/security/operating-system-security/device-management/windows-security-configuration-framework/windows-security-baselines](https://learn.microsoft.com/en-us/windows/security/operating-system-security/device-management/windows-security-configuration-framework/windows-security-baselines)
+
+### WIN-CREDUI-002 - Do Not Enumerate Administrator Accounts on Elevation { #win-credui-002 }
+
+**Severity:** Medium &nbsp; **Category:** Credential Protection &nbsp; **Provider:** Registry &nbsp; **Delivery:** Group Policy &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+
+Do not list administrator accounts when a UAC elevation prompt appears. Group Policy setting: this control checks the corresponding Group Policy registry value, so it can report non-compliant until the policy is explicitly configured (even where the effective Windows default is already secure), and a domain Group Policy applied after hardening can override it.
+
+**Rationale.** Enumerating admins on elevation discloses privileged account names.
+
+**Remediation.** Set CredUI EnumerateAdministrators to 0.
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
+
+**References:**
+- [https://learn.microsoft.com/en-us/windows/security/operating-system-security/device-management/windows-security-configuration-framework/windows-security-baselines](https://learn.microsoft.com/en-us/windows/security/operating-system-security/device-management/windows-security-configuration-framework/windows-security-baselines)
+
+### WIN-CREDUI-003 - Prevent Use of Security Questions for Local Accounts { #win-credui-003 }
+
+**Severity:** Low &nbsp; **Category:** Credential Protection &nbsp; **Provider:** Registry &nbsp; **Delivery:** Group Policy &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+
+Disable security questions as a local-account password reset method. Group Policy setting: this control checks the corresponding Group Policy registry value, so it can report non-compliant until the policy is explicitly configured (even where the effective Windows default is already secure), and a domain Group Policy applied after hardening can override it.
+
+**Rationale.** Security questions are weak, guessable recovery credentials.
+
+**Remediation.** Set System NoLocalPasswordResetQuestions to 1.
 
 **Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
 
@@ -1284,6 +1398,21 @@ Scan scripts as they run (real-time script scanning). Group Policy setting: this
 
 **References:**
 - [https://learn.microsoft.com/en-us/defender-endpoint/microsoft-defender-antivirus-windows](https://learn.microsoft.com/en-us/defender-endpoint/microsoft-defender-antivirus-windows)
+
+### WIN-DEF-016 - Enable Defender File Hash Computation { #win-def-016 }
+
+**Severity:** Low &nbsp; **Category:** Endpoint Protection &nbsp; **Provider:** Registry &nbsp; **Delivery:** Group Policy &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+
+Compute file hashes for all executed files so indicators can be matched. Group Policy setting: this control checks the corresponding Group Policy registry value, so it can report non-compliant until the policy is explicitly configured (even where the effective Windows default is already secure), and a domain Group Policy applied after hardening can override it.
+
+**Rationale.** Without hash computation, hash-based threat indicators cannot match.
+
+**Remediation.** Set Windows Defender MpEngine EnableFileHashComputation to 1.
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
+
+**References:**
+- [https://learn.microsoft.com/en-us/windows/security/operating-system-security/device-management/windows-security-configuration-framework/windows-security-baselines](https://learn.microsoft.com/en-us/windows/security/operating-system-security/device-management/windows-security-configuration-framework/windows-security-baselines)
 
 ### WIN-ELAM-001 - Boot-Start Driver Initialization Policy { #win-elam-001 }
 
@@ -1660,6 +1789,21 @@ Windows Installer must not install packages with elevated privileges for standar
 **References:**
 - [https://learn.microsoft.com/en-us/windows/security/operating-system-security/device-management/windows-security-configuration-framework/windows-security-baselines](https://learn.microsoft.com/en-us/windows/security/operating-system-security/device-management/windows-security-configuration-framework/windows-security-baselines)
 
+### WIN-INSTALL-002 - Disable User Control Over Windows Installer { #win-install-002 }
+
+**Severity:** Medium &nbsp; **Category:** Privilege Management &nbsp; **Provider:** Registry &nbsp; **Delivery:** Group Policy &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+
+Prevent users from changing installer options that are normally admin-only. Group Policy setting: this control checks the corresponding Group Policy registry value; a domain Group Policy applied after hardening can override the local configuration.
+
+**Rationale.** User control over installs can be abused to elevate or bypass policy.
+
+**Remediation.** Set Installer EnableUserControl to 0.
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
+
+**References:**
+- [https://learn.microsoft.com/en-us/windows/security/operating-system-security/device-management/windows-security-configuration-framework/windows-security-baselines](https://learn.microsoft.com/en-us/windows/security/operating-system-security/device-management/windows-security-configuration-framework/windows-security-baselines)
+
 ### WIN-KRB-001 - Configure Kerberos Encryption Types (AES only) { #win-krb-001 }
 
 **Severity:** Medium &nbsp; **Category:** Authentication &nbsp; **Provider:** Registry &nbsp; **Delivery:** Group Policy &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
@@ -1939,6 +2083,21 @@ Disable domain convenience PIN sign-in. Group Policy setting: this control check
 **Rationale.** A convenience PIN is a weaker credential than a full domain password.
 
 **Remediation.** Set System AllowDomainPINLogon to 0.
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
+
+**References:**
+- [https://learn.microsoft.com/en-us/windows/security/operating-system-security/device-management/windows-security-configuration-framework/windows-security-baselines](https://learn.microsoft.com/en-us/windows/security/operating-system-security/device-management/windows-security-configuration-framework/windows-security-baselines)
+
+### WIN-LOGON-015 - Disable Automatic Restart Sign-On (ARSO) { #win-logon-015 }
+
+**Severity:** Medium &nbsp; **Category:** Access Control &nbsp; **Provider:** Registry &nbsp; **Delivery:** Group Policy &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+
+Do not automatically sign in and lock the last user after a restart. Group Policy setting: this control checks the corresponding Group Policy registry value, so it can report non-compliant until the policy is explicitly configured (even where the effective Windows default is already secure), and a domain Group Policy applied after hardening can override it.
+
+**Rationale.** ARSO caches credentials to auto-sign-in after updates, a credential-exposure risk.
+
+**Remediation.** Set System DisableAutomaticRestartSignOn to 1.
 
 **Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
 
@@ -2785,6 +2944,81 @@ Prevent Remote Desktop clients from saving passwords. Group Policy setting: this
 **References:**
 - [https://learn.microsoft.com/en-us/windows/security/operating-system-security/device-management/windows-security-configuration-framework/windows-security-baselines](https://learn.microsoft.com/en-us/windows/security/operating-system-security/device-management/windows-security-configuration-framework/windows-security-baselines)
 
+### WIN-RDP-010 - Disable RDP COM Port Redirection { #win-rdp-010 }
+
+**Severity:** Low &nbsp; **Category:** Remote Access &nbsp; **Provider:** Registry &nbsp; **Delivery:** Group Policy &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+
+Prevent COM port redirection in Remote Desktop sessions. Group Policy setting: this control checks the corresponding Group Policy registry value, so it can report non-compliant until the policy is explicitly configured (even where the effective Windows default is already secure), and a domain Group Policy applied after hardening can override it.
+
+**Rationale.** Device redirection expands the RDP data-exfiltration surface.
+
+**Remediation.** Set Terminal Services fDisableCcm to 1.
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
+
+**References:**
+- [https://learn.microsoft.com/en-us/windows/security/operating-system-security/device-management/windows-security-configuration-framework/windows-security-baselines](https://learn.microsoft.com/en-us/windows/security/operating-system-security/device-management/windows-security-configuration-framework/windows-security-baselines)
+
+### WIN-RDP-011 - Disable RDP LPT Port Redirection { #win-rdp-011 }
+
+**Severity:** Low &nbsp; **Category:** Remote Access &nbsp; **Provider:** Registry &nbsp; **Delivery:** Group Policy &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+
+Prevent LPT port redirection in Remote Desktop sessions. Group Policy setting: this control checks the corresponding Group Policy registry value, so it can report non-compliant until the policy is explicitly configured (even where the effective Windows default is already secure), and a domain Group Policy applied after hardening can override it.
+
+**Rationale.** Device redirection expands the RDP data-exfiltration surface.
+
+**Remediation.** Set Terminal Services fDisableLPT to 1.
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
+
+**References:**
+- [https://learn.microsoft.com/en-us/windows/security/operating-system-security/device-management/windows-security-configuration-framework/windows-security-baselines](https://learn.microsoft.com/en-us/windows/security/operating-system-security/device-management/windows-security-configuration-framework/windows-security-baselines)
+
+### WIN-RDP-012 - Disable RDP Plug and Play Device Redirection { #win-rdp-012 }
+
+**Severity:** Low &nbsp; **Category:** Remote Access &nbsp; **Provider:** Registry &nbsp; **Delivery:** Group Policy &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+
+Prevent supported Plug and Play device redirection in Remote Desktop sessions. Group Policy setting: this control checks the corresponding Group Policy registry value, so it can report non-compliant until the policy is explicitly configured (even where the effective Windows default is already secure), and a domain Group Policy applied after hardening can override it.
+
+**Rationale.** PnP redirection can attach untrusted devices to the session.
+
+**Remediation.** Set Terminal Services fDisablePNPRedir to 1.
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
+
+**References:**
+- [https://learn.microsoft.com/en-us/windows/security/operating-system-security/device-management/windows-security-configuration-framework/windows-security-baselines](https://learn.microsoft.com/en-us/windows/security/operating-system-security/device-management/windows-security-configuration-framework/windows-security-baselines)
+
+### WIN-RDP-013 - Require Secure RPC for Remote Desktop { #win-rdp-013 }
+
+**Severity:** Medium &nbsp; **Category:** Remote Access &nbsp; **Provider:** Registry &nbsp; **Delivery:** Group Policy &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+
+Require secure (encrypted, authenticated) RPC for Remote Desktop connections. Group Policy setting: this control checks the corresponding Group Policy registry value; a domain Group Policy applied after hardening can override the local configuration.
+
+**Rationale.** Unsecured RPC exposes RDP management traffic.
+
+**Remediation.** Set Terminal Services fEncryptRPCTraffic to 1.
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
+
+**References:**
+- [https://learn.microsoft.com/en-us/windows/security/operating-system-security/device-management/windows-security-configuration-framework/windows-security-baselines](https://learn.microsoft.com/en-us/windows/security/operating-system-security/device-management/windows-security-configuration-framework/windows-security-baselines)
+
+### WIN-RDP-014 - Use Temporary Folders Per RDP Session { #win-rdp-014 }
+
+**Severity:** Low &nbsp; **Category:** Remote Access &nbsp; **Provider:** Registry &nbsp; **Delivery:** Group Policy &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+
+Use a separate temporary folder for each Remote Desktop session. Group Policy setting: this control checks the corresponding Group Policy registry value; a domain Group Policy applied after hardening can override the local configuration.
+
+**Rationale.** Shared temp folders can leak data between sessions.
+
+**Remediation.** Set Terminal Services PerSessionTempDir to 1.
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
+
+**References:**
+- [https://learn.microsoft.com/en-us/windows/security/operating-system-security/device-management/windows-security-configuration-framework/windows-security-baselines](https://learn.microsoft.com/en-us/windows/security/operating-system-security/device-management/windows-security-configuration-framework/windows-security-baselines)
+
 ### WIN-RPC-001 - Restrict Unauthenticated RPC Clients { #win-rpc-001 }
 
 **Severity:** Medium &nbsp; **Category:** Network Protocols &nbsp; **Provider:** Registry &nbsp; **Delivery:** Group Policy &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
@@ -2809,6 +3043,21 @@ Require authentication when resolving RPC endpoints via the Endpoint Mapper. Gro
 **Rationale.** Unauthenticated endpoint resolution can be abused for reconnaissance and relay.
 
 **Remediation.** Set Rpc EnableAuthEpResolution to 1.
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
+
+**References:**
+- [https://learn.microsoft.com/en-us/windows/security/operating-system-security/device-management/windows-security-configuration-framework/windows-security-baselines](https://learn.microsoft.com/en-us/windows/security/operating-system-security/device-management/windows-security-configuration-framework/windows-security-baselines)
+
+### WIN-SMARTSCREEN-001 - Configure Windows Defender SmartScreen { #win-smartscreen-001 }
+
+**Severity:** Medium &nbsp; **Category:** Endpoint Protection &nbsp; **Provider:** Registry &nbsp; **Delivery:** Group Policy &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+
+Enable SmartScreen reputation checks for apps and files. Group Policy setting: this control checks the corresponding Group Policy registry value, so it can report non-compliant until the policy is explicitly configured (even where the effective Windows default is already secure), and a domain Group Policy applied after hardening can override it.
+
+**Rationale.** Without SmartScreen, users can run known-malicious downloads.
+
+**Remediation.** Set System EnableSmartScreen to 1.
 
 **Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
 
@@ -3019,6 +3268,81 @@ The Print Spooler service must be stopped and disabled on servers that do not pr
 **Rationale.** The Print Spooler has a history of critical remote code execution vulnerabilities.
 
 **Remediation.** Stop and disable the Spooler service. Do not apply to print servers.
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
+
+**References:**
+- [https://learn.microsoft.com/en-us/windows/security/operating-system-security/device-management/windows-security-configuration-framework/windows-security-baselines](https://learn.microsoft.com/en-us/windows/security/operating-system-security/device-management/windows-security-configuration-framework/windows-security-baselines)
+
+### WIN-TELEM-001 - Limit Diagnostic Data to Required or Less { #win-telem-001 }
+
+**Severity:** Low &nbsp; **Category:** Attack Surface Reduction &nbsp; **Provider:** Registry &nbsp; **Delivery:** Group Policy &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+
+Send no more than the required level of diagnostic data. Group Policy setting: this control checks the corresponding Group Policy registry value, so it can report non-compliant until the policy is explicitly configured (even where the effective Windows default is already secure), and a domain Group Policy applied after hardening can override it.
+
+**Rationale.** Higher telemetry levels transmit more potentially sensitive data off the host.
+
+**Remediation.** Set DataCollection AllowTelemetry to 0 (Security) or 1 (Required).
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
+
+**References:**
+- [https://learn.microsoft.com/en-us/windows/security/operating-system-security/device-management/windows-security-configuration-framework/windows-security-baselines](https://learn.microsoft.com/en-us/windows/security/operating-system-security/device-management/windows-security-configuration-framework/windows-security-baselines)
+
+### WIN-TELEM-002 - Disable OneSettings Downloads { #win-telem-002 }
+
+**Severity:** Low &nbsp; **Category:** Attack Surface Reduction &nbsp; **Provider:** Registry &nbsp; **Delivery:** Group Policy &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+
+Prevent Windows from downloading configuration from the OneSettings service. Group Policy setting: this control checks the corresponding Group Policy registry value, so it can report non-compliant until the policy is explicitly configured (even where the effective Windows default is already secure), and a domain Group Policy applied after hardening can override it.
+
+**Rationale.** OneSettings downloads are unnecessary outbound calls on a hardened server.
+
+**Remediation.** Set DataCollection DisableOneSettingsDownloads to 1.
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
+
+**References:**
+- [https://learn.microsoft.com/en-us/windows/security/operating-system-security/device-management/windows-security-configuration-framework/windows-security-baselines](https://learn.microsoft.com/en-us/windows/security/operating-system-security/device-management/windows-security-configuration-framework/windows-security-baselines)
+
+### WIN-TELEM-003 - Do Not Show Feedback Notifications { #win-telem-003 }
+
+**Severity:** Low &nbsp; **Category:** Attack Surface Reduction &nbsp; **Provider:** Registry &nbsp; **Delivery:** Group Policy &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+
+Suppress Windows feedback notifications. Group Policy setting: this control checks the corresponding Group Policy registry value, so it can report non-compliant until the policy is explicitly configured (even where the effective Windows default is already secure), and a domain Group Policy applied after hardening can override it.
+
+**Rationale.** Feedback prompts are unnecessary on servers and encourage data submission.
+
+**Remediation.** Set DataCollection DoNotShowFeedbackNotifications to 1.
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
+
+**References:**
+- [https://learn.microsoft.com/en-us/windows/security/operating-system-security/device-management/windows-security-configuration-framework/windows-security-baselines](https://learn.microsoft.com/en-us/windows/security/operating-system-security/device-management/windows-security-configuration-framework/windows-security-baselines)
+
+### WIN-TELEM-004 - Enable OneSettings Auditing { #win-telem-004 }
+
+**Severity:** Low &nbsp; **Category:** Logging and Monitoring &nbsp; **Provider:** Registry &nbsp; **Delivery:** Group Policy &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+
+Audit access to the OneSettings service. Group Policy setting: this control checks the corresponding Group Policy registry value, so it can report non-compliant until the policy is explicitly configured (even where the effective Windows default is already secure), and a domain Group Policy applied after hardening can override it.
+
+**Rationale.** Without auditing, OneSettings activity is invisible.
+
+**Remediation.** Set DataCollection EnableOneSettingsAuditing to 1.
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
+
+**References:**
+- [https://learn.microsoft.com/en-us/windows/security/operating-system-security/device-management/windows-security-configuration-framework/windows-security-baselines](https://learn.microsoft.com/en-us/windows/security/operating-system-security/device-management/windows-security-configuration-framework/windows-security-baselines)
+
+### WIN-TELEM-005 - Disable Windows Insider Preview Builds { #win-telem-005 }
+
+**Severity:** Medium &nbsp; **Category:** Attack Surface Reduction &nbsp; **Provider:** Registry &nbsp; **Delivery:** Group Policy &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+
+Prevent enrollment in Windows Insider preview builds. Group Policy setting: this control checks the corresponding Group Policy registry value; a domain Group Policy applied after hardening can override the local configuration.
+
+**Rationale.** Preview builds are pre-release code not suitable for production servers.
+
+**Remediation.** Set PreviewBuilds AllowBuildPreview to 0.
 
 **Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
 
@@ -4039,6 +4363,66 @@ The WinRM client must not use Digest authentication. Group Policy setting: this 
 **Rationale.** Digest authentication is weaker than Kerberos/Negotiate and can expose credentials.
 
 **Remediation.** Set Policies Microsoft Windows WinRM Client AllowDigest to 0.
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
+
+**References:**
+- [https://learn.microsoft.com/en-us/windows/security/operating-system-security/device-management/windows-security-configuration-framework/windows-security-baselines](https://learn.microsoft.com/en-us/windows/security/operating-system-security/device-management/windows-security-configuration-framework/windows-security-baselines)
+
+### WIN-WINRM-004 - Disable WinRM Service Basic Authentication { #win-winrm-004 }
+
+**Severity:** Medium &nbsp; **Category:** Remote Management &nbsp; **Provider:** Registry &nbsp; **Delivery:** Group Policy &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+
+The WinRM service must not accept Basic authentication. Group Policy setting: this control checks the corresponding Group Policy registry value, so it can report non-compliant until the policy is explicitly configured (even where the effective Windows default is already secure), and a domain Group Policy applied after hardening can override it.
+
+**Rationale.** Basic auth transmits credentials with weak protection.
+
+**Remediation.** Set WinRM Service AllowBasic to 0.
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
+
+**References:**
+- [https://learn.microsoft.com/en-us/windows/security/operating-system-security/device-management/windows-security-configuration-framework/windows-security-baselines](https://learn.microsoft.com/en-us/windows/security/operating-system-security/device-management/windows-security-configuration-framework/windows-security-baselines)
+
+### WIN-WINRM-005 - Disallow WinRM Storing RunAs Credentials { #win-winrm-005 }
+
+**Severity:** Medium &nbsp; **Category:** Remote Management &nbsp; **Provider:** Registry &nbsp; **Delivery:** Group Policy &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+
+Prevent the WinRM service from storing RunAs credentials. Group Policy setting: this control checks the corresponding Group Policy registry value, so it can report non-compliant until the policy is explicitly configured (even where the effective Windows default is already secure), and a domain Group Policy applied after hardening can override it.
+
+**Rationale.** Stored RunAs credentials can be extracted from a compromised host.
+
+**Remediation.** Set WinRM Service DisableRunAs to 1.
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
+
+**References:**
+- [https://learn.microsoft.com/en-us/windows/security/operating-system-security/device-management/windows-security-configuration-framework/windows-security-baselines](https://learn.microsoft.com/en-us/windows/security/operating-system-security/device-management/windows-security-configuration-framework/windows-security-baselines)
+
+### WIN-WINRM-006 - Disallow WinRM Client Unencrypted Traffic { #win-winrm-006 }
+
+**Severity:** Medium &nbsp; **Category:** Remote Management &nbsp; **Provider:** Registry &nbsp; **Delivery:** Group Policy &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+
+The WinRM client must not send unencrypted traffic. Group Policy setting: this control checks the corresponding Group Policy registry value, so it can report non-compliant until the policy is explicitly configured (even where the effective Windows default is already secure), and a domain Group Policy applied after hardening can override it.
+
+**Rationale.** Unencrypted WinRM exposes management data and credentials.
+
+**Remediation.** Set WinRM Client AllowUnencryptedTraffic to 0.
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
+
+**References:**
+- [https://learn.microsoft.com/en-us/windows/security/operating-system-security/device-management/windows-security-configuration-framework/windows-security-baselines](https://learn.microsoft.com/en-us/windows/security/operating-system-security/device-management/windows-security-configuration-framework/windows-security-baselines)
+
+### WIN-WINRS-001 - Disable Windows Remote Shell Access { #win-winrs-001 }
+
+**Severity:** Medium &nbsp; **Category:** Remote Management &nbsp; **Provider:** Registry &nbsp; **Delivery:** Group Policy &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+
+Disable remote shell (WinRS) access. Group Policy setting: this control checks the corresponding Group Policy registry value, so it can report non-compliant until the policy is explicitly configured (even where the effective Windows default is already secure), and a domain Group Policy applied after hardening can override it.
+
+**Rationale.** Remote Shell provides an additional remote-execution channel.
+
+**Remediation.** Set WinRM Service WinRS AllowRemoteShellAccess to 0.
 
 **Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
 
