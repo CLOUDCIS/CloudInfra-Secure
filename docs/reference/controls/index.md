@@ -1,6 +1,6 @@
 # Controls
 
-The CloudInfra Secure control library (187 controls). Each control exists once and may be used by many baselines.
+The CloudInfra Secure control library (211 controls). Each control exists once and may be used by many baselines.
 
 !!! note "Compliance disclaimer"
     CloudInfra Secure controls are designed to help organisations implement technical security requirements commonly found in recognised security standards. They do not constitute certification or proof of compliance.
@@ -12,11 +12,11 @@ Controls tagged **GPO** are delivered through a Group Policy registry value that
 <div class="cmpl-toolbar">
   <label for="ctlDelivery"><strong>Filter by delivery:</strong></label>
   <select id="ctlDelivery">
-    <option value="__all">All controls (187)</option>
-    <option value="gpo">Group Policy-backed (62)</option>
-    <option value="direct">Direct system setting (125)</option>
+    <option value="__all">All controls (211)</option>
+    <option value="gpo">Group Policy-backed (65)</option>
+    <option value="direct">Direct system setting (146)</option>
   </select>
-  <span class="cmpl-count" id="ctlCount">Showing 187 of 187 controls</span>
+  <span class="cmpl-count" id="ctlCount">Showing 211 of 211 controls</span>
 </div>
 
 <div class="cmpl-tablewrap" markdown="0">
@@ -24,6 +24,8 @@ Controls tagged **GPO** are delivered through a Group Policy registry value that
   <thead><tr><th class="cmpl-num">#</th><th>ID</th><th>Name</th><th>Severity</th><th>Category</th><th>Provider</th><th>Delivery</th></tr></thead>
   <tbody>
     <tr data-delivery="gpo"><td class="cmpl-num"></td><td><a href="#win-acct-001">WIN-ACCT-001</a></td><td>Block Microsoft Accounts</td><td>Medium</td><td>Access Control</td><td>Registry</td><td><span class="gpo-badge" title="Delivered via a Group Policy registry value; a domain GPO can override it">GPO</span></td></tr>
+    <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-acct-002">WIN-ACCT-002</a></td><td>Guest Account Disabled</td><td>Medium</td><td>Access Control</td><td>SecEdit</td><td><span class="muted-badge">Direct</span></td></tr>
+    <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-acct-003">WIN-ACCT-003</a></td><td>Force Logoff When Logon Hours Expire</td><td>Low</td><td>Account Policy</td><td>SecEdit</td><td><span class="muted-badge">Direct</span></td></tr>
     <tr data-delivery="gpo"><td class="cmpl-num"></td><td><a href="#win-asr-001">WIN-ASR-001</a></td><td>ASR: Block Credential Stealing from LSASS</td><td>High</td><td>Attack Surface Reduction</td><td>Registry</td><td><span class="gpo-badge" title="Delivered via a Group Policy registry value; a domain GPO can override it">GPO</span></td></tr>
     <tr data-delivery="gpo"><td class="cmpl-num"></td><td><a href="#win-asr-002">WIN-ASR-002</a></td><td>ASR: Block Office Apps Creating Child Processes</td><td>Medium</td><td>Attack Surface Reduction</td><td>Registry</td><td><span class="gpo-badge" title="Delivered via a Group Policy registry value; a domain GPO can override it">GPO</span></td></tr>
     <tr data-delivery="gpo"><td class="cmpl-num"></td><td><a href="#win-asr-003">WIN-ASR-003</a></td><td>ASR: Block Executable Content from Email and Webmail</td><td>Medium</td><td>Attack Surface Reduction</td><td>Registry</td><td><span class="gpo-badge" title="Delivered via a Group Policy registry value; a domain GPO can override it">GPO</span></td></tr>
@@ -59,6 +61,7 @@ Controls tagged **GPO** are delivered through a Group Policy registry value that
     <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-aud-018">WIN-AUD-018</a></td><td>Audit Group Membership</td><td>Medium</td><td>Logging and Monitoring</td><td>AuditPol</td><td><span class="muted-badge">Direct</span></td></tr>
     <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-aud-019">WIN-AUD-019</a></td><td>Audit Other Object Access Events</td><td>Medium</td><td>Logging and Monitoring</td><td>AuditPol</td><td><span class="muted-badge">Direct</span></td></tr>
     <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-aud-020">WIN-AUD-020</a></td><td>Audit Detailed File Share</td><td>Medium</td><td>Logging and Monitoring</td><td>AuditPol</td><td><span class="muted-badge">Direct</span></td></tr>
+    <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-aud-021">WIN-AUD-021</a></td><td>Force Audit Policy Subcategory Settings</td><td>Medium</td><td>Logging and Monitoring</td><td>Registry</td><td><span class="muted-badge">Direct</span></td></tr>
     <tr data-delivery="gpo"><td class="cmpl-num"></td><td><a href="#win-autorun-001">WIN-AUTORUN-001</a></td><td>Disable AutoRun on All Drives</td><td>Medium</td><td>Attack Surface Reduction</td><td>Registry</td><td><span class="gpo-badge" title="Delivered via a Group Policy registry value; a domain GPO can override it">GPO</span></td></tr>
     <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-cg-001">WIN-CG-001</a></td><td>Enable Credential Guard</td><td>High</td><td>Credential Protection</td><td>Registry</td><td><span class="muted-badge">Direct</span></td></tr>
     <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-def-001">WIN-DEF-001</a></td><td>Microsoft Defender Antivirus Enabled</td><td>High</td><td>Endpoint Protection</td><td>Defender</td><td><span class="muted-badge">Direct</span></td></tr>
@@ -93,6 +96,8 @@ Controls tagged **GPO** are delivered through a Group Policy registry value that
     <tr data-delivery="gpo"><td class="cmpl-num"></td><td><a href="#win-logon-004">WIN-LOGON-004</a></td><td>Require Ctrl+Alt+Del at Logon</td><td>Low</td><td>Access Control</td><td>Registry</td><td><span class="gpo-badge" title="Delivered via a Group Policy registry value; a domain GPO can override it">GPO</span></td></tr>
     <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-logon-005">WIN-LOGON-005</a></td><td>Smart Card Removal Behavior (Lock Workstation)</td><td>Low</td><td>Access Control</td><td>Registry</td><td><span class="muted-badge">Direct</span></td></tr>
     <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-logon-006">WIN-LOGON-006</a></td><td>Disable Automatic Logon</td><td>Medium</td><td>Access Control</td><td>Registry</td><td><span class="muted-badge">Direct</span></td></tr>
+    <tr data-delivery="gpo"><td class="cmpl-num"></td><td><a href="#win-logon-007">WIN-LOGON-007</a></td><td>Do Not Allow System to Be Shut Down Without Logging On</td><td>Low</td><td>Access Control</td><td>Registry</td><td><span class="gpo-badge" title="Delivered via a Group Policy registry value; a domain GPO can override it">GPO</span></td></tr>
+    <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-logon-008">WIN-LOGON-008</a></td><td>Require Domain Controller Authentication to Unlock Workstation</td><td>Medium</td><td>Access Control</td><td>Registry</td><td><span class="muted-badge">Direct</span></td></tr>
     <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-lsa-001">WIN-LSA-001</a></td><td>Do Not Store LAN Manager Hash</td><td>High</td><td>Credential Protection</td><td>Registry</td><td><span class="muted-badge">Direct</span></td></tr>
     <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-lsa-002">WIN-LSA-002</a></td><td>Restrict Anonymous SID Enumeration</td><td>Medium</td><td>Access Control</td><td>Registry</td><td><span class="muted-badge">Direct</span></td></tr>
     <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-lsa-003">WIN-LSA-003</a></td><td>Enable LSASS Protection (RunAsPPL)</td><td>High</td><td>Credential Protection</td><td>Registry</td><td><span class="muted-badge">Direct</span></td></tr>
@@ -105,6 +110,13 @@ Controls tagged **GPO** are delivered through a Group Policy registry value that
     <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-lsa-010">WIN-LSA-010</a></td><td>Sharing and Security Model for Local Accounts (Classic)</td><td>Medium</td><td>Access Control</td><td>Registry</td><td><span class="muted-badge">Direct</span></td></tr>
     <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-lsa-011">WIN-LSA-011</a></td><td>Disallow LocalSystem NULL Session Fallback</td><td>Medium</td><td>Access Control</td><td>Registry</td><td><span class="muted-badge">Direct</span></td></tr>
     <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-lsa-012">WIN-LSA-012</a></td><td>Strengthen Default Permissions of Internal System Objects</td><td>Low</td><td>Access Control</td><td>Registry</td><td><span class="muted-badge">Direct</span></td></tr>
+    <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-lsa-013">WIN-LSA-013</a></td><td>Digitally Encrypt Secure Channel Data (When Possible)</td><td>Medium</td><td>Authentication</td><td>Registry</td><td><span class="muted-badge">Direct</span></td></tr>
+    <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-lsa-014">WIN-LSA-014</a></td><td>Digitally Sign Secure Channel Data (When Possible)</td><td>Medium</td><td>Authentication</td><td>Registry</td><td><span class="muted-badge">Direct</span></td></tr>
+    <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-lsa-015">WIN-LSA-015</a></td><td>Do Not Disable Machine Account Password Changes</td><td>Medium</td><td>Authentication</td><td>Registry</td><td><span class="muted-badge">Direct</span></td></tr>
+    <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-lsa-016">WIN-LSA-016</a></td><td>Maximum Machine Account Password Age (30 Days)</td><td>Low</td><td>Authentication</td><td>Registry</td><td><span class="muted-badge">Direct</span></td></tr>
+    <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-lsa-017">WIN-LSA-017</a></td><td>Require Strong (Windows 2000 or Later) Session Key</td><td>Medium</td><td>Authentication</td><td>Registry</td><td><span class="muted-badge">Direct</span></td></tr>
+    <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-lsa-018">WIN-LSA-018</a></td><td>Do Not Store Passwords and Credentials for Network Authentication</td><td>High</td><td>Credential Protection</td><td>Registry</td><td><span class="muted-badge">Direct</span></td></tr>
+    <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-lsa-019">WIN-LSA-019</a></td><td>Require Case Insensitivity for Non-Windows Subsystems</td><td>Low</td><td>Access Control</td><td>Registry</td><td><span class="muted-badge">Direct</span></td></tr>
     <tr data-delivery="gpo"><td class="cmpl-num"></td><td><a href="#win-net-001">WIN-NET-001</a></td><td>Disable LLMNR</td><td>Medium</td><td>Network Protocols</td><td>Registry</td><td><span class="gpo-badge" title="Delivered via a Group Policy registry value; a domain GPO can override it">GPO</span></td></tr>
     <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-net-002">WIN-NET-002</a></td><td>Disable IPv4 Source Routing</td><td>Medium</td><td>Network Protocols</td><td>Registry</td><td><span class="muted-badge">Direct</span></td></tr>
     <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-net-003">WIN-NET-003</a></td><td>Disable ICMP Redirects</td><td>Low</td><td>Network Protocols</td><td>Registry</td><td><span class="muted-badge">Direct</span></td></tr>
@@ -115,8 +127,13 @@ Controls tagged **GPO** are delivered through a Group Policy registry value that
     <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-ntlm-001">WIN-NTLM-001</a></td><td>LAN Manager Authentication Level (NTLMv2 Only)</td><td>High</td><td>Authentication</td><td>Registry</td><td><span class="muted-badge">Direct</span></td></tr>
     <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-ntlm-002">WIN-NTLM-002</a></td><td>Minimum NTLM Session Security (Clients)</td><td>Medium</td><td>Authentication</td><td>Registry</td><td><span class="muted-badge">Direct</span></td></tr>
     <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-ntlm-003">WIN-NTLM-003</a></td><td>Minimum NTLM Session Security (Servers)</td><td>Medium</td><td>Authentication</td><td>Registry</td><td><span class="muted-badge">Direct</span></td></tr>
+    <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-ntlm-004">WIN-NTLM-004</a></td><td>Allow LocalSystem to Use Computer Identity for NTLM</td><td>Medium</td><td>Authentication</td><td>Registry</td><td><span class="muted-badge">Direct</span></td></tr>
+    <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-ntlm-005">WIN-NTLM-005</a></td><td>Disallow PKU2U Online Identities</td><td>Medium</td><td>Authentication</td><td>Registry</td><td><span class="muted-badge">Direct</span></td></tr>
+    <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-ntlm-006">WIN-NTLM-006</a></td><td>Audit Incoming NTLM Traffic</td><td>Low</td><td>Authentication</td><td>Registry</td><td><span class="muted-badge">Direct</span></td></tr>
+    <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-ntlm-007">WIN-NTLM-007</a></td><td>Audit Outgoing NTLM Traffic to Remote Servers</td><td>Low</td><td>Authentication</td><td>Registry</td><td><span class="muted-badge">Direct</span></td></tr>
     <tr data-delivery="gpo"><td class="cmpl-num"></td><td><a href="#win-print-001">WIN-PRINT-001</a></td><td>Restrict Point and Print Driver Installation to Administrators</td><td>High</td><td>Attack Surface Reduction</td><td>Registry</td><td><span class="gpo-badge" title="Delivered via a Group Policy registry value; a domain GPO can override it">GPO</span></td></tr>
     <tr data-delivery="gpo"><td class="cmpl-num"></td><td><a href="#win-print-002">WIN-PRINT-002</a></td><td>Require Elevation for New Point and Print Connections</td><td>Medium</td><td>Attack Surface Reduction</td><td>Registry</td><td><span class="gpo-badge" title="Delivered via a Group Policy registry value; a domain GPO can override it">GPO</span></td></tr>
+    <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-print-003">WIN-PRINT-003</a></td><td>Prevent Users From Installing Printer Drivers</td><td>Medium</td><td>Attack Surface Reduction</td><td>Registry</td><td><span class="muted-badge">Direct</span></td></tr>
     <tr data-delivery="gpo"><td class="cmpl-num"></td><td><a href="#win-psl-001">WIN-PSL-001</a></td><td>Enable PowerShell Script Block Logging</td><td>Medium</td><td>Logging and Monitoring</td><td>Registry</td><td><span class="gpo-badge" title="Delivered via a Group Policy registry value; a domain GPO can override it">GPO</span></td></tr>
     <tr data-delivery="gpo"><td class="cmpl-num"></td><td><a href="#win-psl-002">WIN-PSL-002</a></td><td>Enable PowerShell Module Logging</td><td>Medium</td><td>Logging and Monitoring</td><td>Registry</td><td><span class="gpo-badge" title="Delivered via a Group Policy registry value; a domain GPO can override it">GPO</span></td></tr>
     <tr data-delivery="gpo"><td class="cmpl-num"></td><td><a href="#win-psl-003">WIN-PSL-003</a></td><td>Enable PowerShell Transcription</td><td>Medium</td><td>Logging and Monitoring</td><td>Registry</td><td><span class="gpo-badge" title="Delivered via a Group Policy registry value; a domain GPO can override it">GPO</span></td></tr>
@@ -142,6 +159,11 @@ Controls tagged **GPO** are delivered through a Group Policy registry value that
     <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-smb-006">WIN-SMB-006</a></td><td>Restrict Anonymous Access to Named Pipes and Shares</td><td>Medium</td><td>Network Protocols</td><td>Registry</td><td><span class="muted-badge">Direct</span></td></tr>
     <tr data-delivery="gpo"><td class="cmpl-num"></td><td><a href="#win-smb-007">WIN-SMB-007</a></td><td>Disable SMB Client Insecure Guest Logons</td><td>Medium</td><td>Network Protocols</td><td>Registry</td><td><span class="gpo-badge" title="Delivered via a Group Policy registry value; a domain GPO can override it">GPO</span></td></tr>
     <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-smb-008">WIN-SMB-008</a></td><td>Do Not Send Unencrypted Password to Third-Party SMB Servers</td><td>Medium</td><td>Network Protocols</td><td>Registry</td><td><span class="muted-badge">Direct</span></td></tr>
+    <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-smb-009">WIN-SMB-009</a></td><td>Digitally Sign Client Communications (If Server Agrees)</td><td>Low</td><td>Network Protocols</td><td>Registry</td><td><span class="muted-badge">Direct</span></td></tr>
+    <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-smb-010">WIN-SMB-010</a></td><td>Digitally Sign Server Communications (If Client Agrees)</td><td>Low</td><td>Network Protocols</td><td>Registry</td><td><span class="muted-badge">Direct</span></td></tr>
+    <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-smb-011">WIN-SMB-011</a></td><td>Idle Time Required Before Suspending an SMB Session (15 min)</td><td>Low</td><td>Network Protocols</td><td>Registry</td><td><span class="muted-badge">Direct</span></td></tr>
+    <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-smb-012">WIN-SMB-012</a></td><td>Disconnect Clients When Logon Hours Expire</td><td>Low</td><td>Network Protocols</td><td>Registry</td><td><span class="muted-badge">Direct</span></td></tr>
+    <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-smb-013">WIN-SMB-013</a></td><td>Server SPN Target Name Validation Level</td><td>Medium</td><td>Network Protocols</td><td>Registry</td><td><span class="muted-badge">Direct</span></td></tr>
     <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-svc-001">WIN-SVC-001</a></td><td>Disable Remote Registry Service</td><td>Medium</td><td>Attack Surface Reduction</td><td>Service</td><td><span class="muted-badge">Direct</span></td></tr>
     <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-svc-002">WIN-SVC-002</a></td><td>Disable Print Spooler Service</td><td>Medium</td><td>Attack Surface Reduction</td><td>Service</td><td><span class="muted-badge">Direct</span></td></tr>
     <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-tls-001">WIN-TLS-001</a></td><td>Enable TLS 1.2 (Server)</td><td>Medium</td><td>Cryptography</td><td>Registry</td><td><span class="muted-badge">Direct</span></td></tr>
@@ -164,6 +186,8 @@ Controls tagged **GPO** are delivered through a Group Policy registry value that
     <tr data-delivery="gpo"><td class="cmpl-num"></td><td><a href="#win-uac-005">WIN-UAC-005</a></td><td>UAC Switch to the Secure Desktop for Elevation</td><td>Medium</td><td>Privilege Management</td><td>Registry</td><td><span class="gpo-badge" title="Delivered via a Group Policy registry value; a domain GPO can override it">GPO</span></td></tr>
     <tr data-delivery="gpo"><td class="cmpl-num"></td><td><a href="#win-uac-006">WIN-UAC-006</a></td><td>Only Elevate UIAccess Apps in Secure Locations</td><td>Medium</td><td>Privilege Management</td><td>Registry</td><td><span class="gpo-badge" title="Delivered via a Group Policy registry value; a domain GPO can override it">GPO</span></td></tr>
     <tr data-delivery="gpo"><td class="cmpl-num"></td><td><a href="#win-uac-007">WIN-UAC-007</a></td><td>Apply UAC Token Filtering to Remote Local Accounts</td><td>High</td><td>Privilege Management</td><td>Registry</td><td><span class="gpo-badge" title="Delivered via a Group Policy registry value; a domain GPO can override it">GPO</span></td></tr>
+    <tr data-delivery="gpo"><td class="cmpl-num"></td><td><a href="#win-uac-008">WIN-UAC-008</a></td><td>Admin Approval Mode for the Built-in Administrator</td><td>Medium</td><td>Privilege Management</td><td>Registry</td><td><span class="gpo-badge" title="Delivered via a Group Policy registry value; a domain GPO can override it">GPO</span></td></tr>
+    <tr data-delivery="gpo"><td class="cmpl-num"></td><td><a href="#win-uac-009">WIN-UAC-009</a></td><td>Virtualize File and Registry Write Failures to Per-User Locations</td><td>Low</td><td>Privilege Management</td><td>Registry</td><td><span class="gpo-badge" title="Delivered via a Group Policy registry value; a domain GPO can override it">GPO</span></td></tr>
     <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-ura-001">WIN-URA-001</a></td><td>Access Credential Manager as a Trusted Caller = No One</td><td>High</td><td>User Rights Assignment</td><td>SecEdit</td><td><span class="muted-badge">Direct</span></td></tr>
     <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-ura-002">WIN-URA-002</a></td><td>Act as Part of the Operating System = No One</td><td>High</td><td>User Rights Assignment</td><td>SecEdit</td><td><span class="muted-badge">Direct</span></td></tr>
     <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-ura-003">WIN-URA-003</a></td><td>Create a Token Object = No One</td><td>High</td><td>User Rights Assignment</td><td>SecEdit</td><td><span class="muted-badge">Direct</span></td></tr>
@@ -230,6 +254,36 @@ Prevent users from adding or logging on with Microsoft accounts. Group Policy se
 
 **References:**
 - [https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/accounts-block-microsoft-accounts](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/accounts-block-microsoft-accounts)
+
+### WIN-ACCT-002 - Guest Account Disabled { #win-acct-002 }
+
+**Severity:** Medium &nbsp; **Category:** Access Control &nbsp; **Provider:** SecEdit &nbsp; **Delivery:** Direct &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+
+The built-in Guest account must be disabled.
+
+**Rationale.** An enabled Guest account permits anonymous, unattributed access.
+
+**Remediation.** Disable the built-in Guest account (EnableGuestAccount = 0).
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
+
+**References:**
+- [https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/accounts-guest-account-status](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/accounts-guest-account-status)
+
+### WIN-ACCT-003 - Force Logoff When Logon Hours Expire { #win-acct-003 }
+
+**Severity:** Low &nbsp; **Category:** Account Policy &nbsp; **Provider:** SecEdit &nbsp; **Delivery:** Direct &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+
+Force users to log off when their logon hours expire.
+
+**Rationale.** Sessions outliving permitted hours bypass time-based access controls.
+
+**Remediation.** Enable Force logoff when logon hours expire (ForceLogoffWhenHourExpire = 1).
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
+
+**References:**
+- [https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/network-security-force-logoff-when-logon-hours-expire](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/network-security-force-logoff-when-logon-hours-expire)
 
 ### WIN-ASR-001 - ASR: Block Credential Stealing from LSASS { #win-asr-001 }
 
@@ -756,6 +810,21 @@ Audit failed attempts to access files and folders on shared folders.
 **References:**
 - [https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/audit-detailed-file-share](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/audit-detailed-file-share)
 
+### WIN-AUD-021 - Force Audit Policy Subcategory Settings { #win-aud-021 }
+
+**Severity:** Medium &nbsp; **Category:** Logging and Monitoring &nbsp; **Provider:** Registry &nbsp; **Delivery:** Direct &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+
+Force advanced audit subcategory settings to override legacy category-level audit policy.
+
+**Rationale.** Without this, granular advanced audit policy may not take effect.
+
+**Remediation.** Set Lsa SCENoApplyLegacyAuditPolicy to 1.
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `SOC 2` `ISO/IEC 27001` `Microsoft Security Baselines` `NIS2`
+
+**References:**
+- [https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/audit-force-audit-policy-subcategory-settings-to-override](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/audit-force-audit-policy-subcategory-settings-to-override)
+
 ### WIN-AUTORUN-001 - Disable AutoRun on All Drives { #win-autorun-001 }
 
 **Severity:** Medium &nbsp; **Category:** Attack Surface Reduction &nbsp; **Provider:** Registry &nbsp; **Delivery:** Group Policy &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
@@ -1266,6 +1335,36 @@ Disable automatic logon, which stores a plaintext password in the registry.
 **References:**
 - [https://learn.microsoft.com/en-us/windows/security/operating-system-security/device-management/windows-security-configuration-framework/windows-security-baselines](https://learn.microsoft.com/en-us/windows/security/operating-system-security/device-management/windows-security-configuration-framework/windows-security-baselines)
 
+### WIN-LOGON-007 - Do Not Allow System to Be Shut Down Without Logging On { #win-logon-007 }
+
+**Severity:** Low &nbsp; **Category:** Access Control &nbsp; **Provider:** Registry &nbsp; **Delivery:** Group Policy &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+
+Require authentication before the system can be shut down. Group Policy setting: this control checks the corresponding Group Policy registry value; a domain Group Policy applied after hardening can override the local configuration.
+
+**Rationale.** Unauthenticated shutdown from the logon screen enables denial of service.
+
+**Remediation.** Set Policies System ShutdownWithoutLogon to 0.
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
+
+**References:**
+- [https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/shutdown-allow-system-to-be-shut-down-without-having-to-log-on](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/shutdown-allow-system-to-be-shut-down-without-having-to-log-on)
+
+### WIN-LOGON-008 - Require Domain Controller Authentication to Unlock Workstation { #win-logon-008 }
+
+**Severity:** Medium &nbsp; **Category:** Access Control &nbsp; **Provider:** Registry &nbsp; **Delivery:** Direct &nbsp; **Reboot:** No &nbsp; **Tier:** Enterprise
+
+Require a domain controller to authenticate the account when unlocking a locked session.
+
+**Rationale.** Cached-credential unlock ignores recent account disable/lockout changes.
+
+**Remediation.** Set Winlogon ForceUnlockLogon to 1 (best paired with cached logons = 0).
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
+
+**References:**
+- [https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/interactive-logon-require-domain-controller-authentication-to-unlock-workstation](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/interactive-logon-require-domain-controller-authentication-to-unlock-workstation)
+
 ### WIN-LSA-001 - Do Not Store LAN Manager Hash { #win-lsa-001 }
 
 **Severity:** High &nbsp; **Category:** Credential Protection &nbsp; **Provider:** Registry &nbsp; **Delivery:** Direct &nbsp; **Reboot:** No &nbsp; **Tier:** Essential
@@ -1446,6 +1545,111 @@ Strengthen the default DACL on shared system objects so non-administrators canno
 **References:**
 - [https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/system-objects-strengthen-default-permissions-of-internal-system-objects](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/system-objects-strengthen-default-permissions-of-internal-system-objects)
 
+### WIN-LSA-013 - Digitally Encrypt Secure Channel Data (When Possible) { #win-lsa-013 }
+
+**Severity:** Medium &nbsp; **Category:** Authentication &nbsp; **Provider:** Registry &nbsp; **Delivery:** Direct &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+
+Encrypt domain secure-channel traffic whenever the domain controller supports it.
+
+**Rationale.** Unencrypted secure-channel data can be read in transit.
+
+**Remediation.** Set Netlogon Parameters SealSecureChannel to 1.
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
+
+**References:**
+- [https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/domain-member-digitally-encrypt-secure-channel-data-when-possible](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/domain-member-digitally-encrypt-secure-channel-data-when-possible)
+
+### WIN-LSA-014 - Digitally Sign Secure Channel Data (When Possible) { #win-lsa-014 }
+
+**Severity:** Medium &nbsp; **Category:** Authentication &nbsp; **Provider:** Registry &nbsp; **Delivery:** Direct &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+
+Sign domain secure-channel traffic whenever the domain controller supports it.
+
+**Rationale.** Unsigned secure-channel data can be tampered with in transit.
+
+**Remediation.** Set Netlogon Parameters SignSecureChannel to 1.
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
+
+**References:**
+- [https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/domain-member-digitally-sign-secure-channel-data-when-possible](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/domain-member-digitally-sign-secure-channel-data-when-possible)
+
+### WIN-LSA-015 - Do Not Disable Machine Account Password Changes { #win-lsa-015 }
+
+**Severity:** Medium &nbsp; **Category:** Authentication &nbsp; **Provider:** Registry &nbsp; **Delivery:** Direct &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+
+Allow periodic machine-account password changes.
+
+**Rationale.** A static machine-account password is easier to compromise and replay.
+
+**Remediation.** Set Netlogon Parameters DisablePasswordChange to 0.
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
+
+**References:**
+- [https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/domain-member-disable-machine-account-password-changes](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/domain-member-disable-machine-account-password-changes)
+
+### WIN-LSA-016 - Maximum Machine Account Password Age (30 Days) { #win-lsa-016 }
+
+**Severity:** Low &nbsp; **Category:** Authentication &nbsp; **Provider:** Registry &nbsp; **Delivery:** Direct &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+
+The machine-account password must be rotated at least every 30 days.
+
+**Rationale.** Infrequent rotation extends the window for a stolen machine password.
+
+**Remediation.** Set Netlogon Parameters MaximumPasswordAge to 30.
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
+
+**References:**
+- [https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/domain-member-maximum-machine-account-password-age](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/domain-member-maximum-machine-account-password-age)
+
+### WIN-LSA-017 - Require Strong (Windows 2000 or Later) Session Key { #win-lsa-017 }
+
+**Severity:** Medium &nbsp; **Category:** Authentication &nbsp; **Provider:** Registry &nbsp; **Delivery:** Direct &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+
+Require a strong 128-bit secure-channel session key.
+
+**Rationale.** Weak 64-bit session keys are more vulnerable to eavesdropping and hijacking.
+
+**Remediation.** Set Netlogon Parameters RequireStrongKey to 1.
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
+
+**References:**
+- [https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/domain-member-require-strong-windows-2000-or-later-session-key](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/domain-member-require-strong-windows-2000-or-later-session-key)
+
+### WIN-LSA-018 - Do Not Store Passwords and Credentials for Network Authentication { #win-lsa-018 }
+
+**Severity:** High &nbsp; **Category:** Credential Protection &nbsp; **Provider:** Registry &nbsp; **Delivery:** Direct &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+
+Prevent caching of network-authentication passwords and credentials.
+
+**Rationale.** Cached network credentials can be harvested from a compromised host.
+
+**Remediation.** Set Lsa DisableDomainCreds to 1.
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
+
+**References:**
+- [https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/network-access-do-not-allow-storage-of-passwords-and-credentials-for-network-authentication](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/network-access-do-not-allow-storage-of-passwords-and-credentials-for-network-authentication)
+
+### WIN-LSA-019 - Require Case Insensitivity for Non-Windows Subsystems { #win-lsa-019 }
+
+**Severity:** Low &nbsp; **Category:** Access Control &nbsp; **Provider:** Registry &nbsp; **Delivery:** Direct &nbsp; **Reboot:** Yes &nbsp; **Tier:** Standard
+
+Enforce case insensitivity for all subsystems, including POSIX.
+
+**Rationale.** Case-sensitive object names can be used to bypass name-based access checks.
+
+**Remediation.** Set Session Manager Kernel ObCaseInsensitive to 1.
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
+
+**References:**
+- [https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/system-objects-require-case-insensitivity-for-non-windows-subsystems](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/system-objects-require-case-insensitivity-for-non-windows-subsystems)
+
 ### WIN-NET-001 - Disable LLMNR { #win-net-001 }
 
 **Severity:** Medium &nbsp; **Category:** Network Protocols &nbsp; **Provider:** Registry &nbsp; **Delivery:** Group Policy &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
@@ -1596,6 +1800,66 @@ NTLM SSP servers must require NTLMv2 session security and 128-bit encryption.
 **References:**
 - [https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/network-security-minimum-session-security-for-ntlm-ssp-based-including-secure-rpc-servers](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/network-security-minimum-session-security-for-ntlm-ssp-based-including-secure-rpc-servers)
 
+### WIN-NTLM-004 - Allow LocalSystem to Use Computer Identity for NTLM { #win-ntlm-004 }
+
+**Severity:** Medium &nbsp; **Category:** Authentication &nbsp; **Provider:** Registry &nbsp; **Delivery:** Direct &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+
+LocalSystem services authenticate with the computer identity instead of anonymously.
+
+**Rationale.** Anonymous LocalSystem NTLM weakens session security.
+
+**Remediation.** Set Lsa UseMachineId to 1.
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
+
+**References:**
+- [https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/network-security-allow-local-system-to-use-computer-identity-for-ntlm](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/network-security-allow-local-system-to-use-computer-identity-for-ntlm)
+
+### WIN-NTLM-005 - Disallow PKU2U Online Identities { #win-ntlm-005 }
+
+**Severity:** Medium &nbsp; **Category:** Authentication &nbsp; **Provider:** Registry &nbsp; **Delivery:** Direct &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+
+Prevent PKU2U from using online identities to authenticate to this server (on-premises environments).
+
+**Rationale.** PKU2U online identities can bypass domain-defined access controls.
+
+**Remediation.** Set Lsa pku2u AllowOnlineID to 0.
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
+
+**References:**
+- [https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/network-security-allow-pku2u-authentication-requests-to-this-computer-to-use-online-identities](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/network-security-allow-pku2u-authentication-requests-to-this-computer-to-use-online-identities)
+
+### WIN-NTLM-006 - Audit Incoming NTLM Traffic { #win-ntlm-006 }
+
+**Severity:** Low &nbsp; **Category:** Authentication &nbsp; **Provider:** Registry &nbsp; **Delivery:** Direct &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+
+Log all incoming NTLM authentication so NTLM usage can be measured before restriction.
+
+**Rationale.** Without auditing, NTLM dependence is invisible and hard to eliminate.
+
+**Remediation.** Set Lsa MSV1_0 AuditReceivingNTLMTraffic to 2 (all accounts).
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
+
+**References:**
+- [https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/network-security-restrict-ntlm-audit-incoming-ntlm-traffic](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/network-security-restrict-ntlm-audit-incoming-ntlm-traffic)
+
+### WIN-NTLM-007 - Audit Outgoing NTLM Traffic to Remote Servers { #win-ntlm-007 }
+
+**Severity:** Low &nbsp; **Category:** Authentication &nbsp; **Provider:** Registry &nbsp; **Delivery:** Direct &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+
+Log all outgoing NTLM authentication to remote servers.
+
+**Rationale.** Unmeasured outgoing NTLM makes it hard to move to Kerberos.
+
+**Remediation.** Set Lsa MSV1_0 RestrictSendingNTLMTraffic to 1 (Audit all).
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
+
+**References:**
+- [https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/network-security-restrict-ntlm-outgoing-ntlm-traffic-to-remote-servers](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/network-security-restrict-ntlm-outgoing-ntlm-traffic-to-remote-servers)
+
 ### WIN-PRINT-001 - Restrict Point and Print Driver Installation to Administrators { #win-print-001 }
 
 **Severity:** High &nbsp; **Category:** Attack Surface Reduction &nbsp; **Provider:** Registry &nbsp; **Delivery:** Group Policy &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
@@ -1625,6 +1889,21 @@ Warn and require elevation when installing drivers for a new Point and Print con
 
 **References:**
 - [https://learn.microsoft.com/en-us/windows/security/operating-system-security/device-management/windows-security-configuration-framework/windows-security-baselines](https://learn.microsoft.com/en-us/windows/security/operating-system-security/device-management/windows-security-configuration-framework/windows-security-baselines)
+
+### WIN-PRINT-003 - Prevent Users From Installing Printer Drivers { #win-print-003 }
+
+**Severity:** Medium &nbsp; **Category:** Attack Surface Reduction &nbsp; **Provider:** Registry &nbsp; **Delivery:** Direct &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+
+Only administrators may install printer drivers when adding a network printer.
+
+**Rationale.** User-installed printer drivers can introduce untrusted kernel code on servers.
+
+**Remediation.** Set Print Providers LanMan Print Services Servers AddPrinterDrivers to 1.
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
+
+**References:**
+- [https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/devices-prevent-users-from-installing-printer-drivers](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/devices-prevent-users-from-installing-printer-drivers)
 
 ### WIN-PSL-001 - Enable PowerShell Script Block Logging { #win-psl-001 }
 
@@ -2001,6 +2280,81 @@ Prevent the SMB client from sending plaintext passwords to non-Microsoft SMB ser
 **References:**
 - [https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/microsoft-network-client-send-unencrypted-password-to-third-party-smb-servers](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/microsoft-network-client-send-unencrypted-password-to-third-party-smb-servers)
 
+### WIN-SMB-009 - Digitally Sign Client Communications (If Server Agrees) { #win-smb-009 }
+
+**Severity:** Low &nbsp; **Category:** Network Protocols &nbsp; **Provider:** Registry &nbsp; **Delivery:** Direct &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+
+The SMB client negotiates signing whenever the server supports it.
+
+**Rationale.** Unsigned SMB sessions are vulnerable to tampering and relay.
+
+**Remediation.** Set LanmanWorkstation Parameters EnableSecuritySignature to 1.
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
+
+**References:**
+- [https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/microsoft-network-client-digitally-sign-communications-if-server-agrees](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/microsoft-network-client-digitally-sign-communications-if-server-agrees)
+
+### WIN-SMB-010 - Digitally Sign Server Communications (If Client Agrees) { #win-smb-010 }
+
+**Severity:** Low &nbsp; **Category:** Network Protocols &nbsp; **Provider:** Registry &nbsp; **Delivery:** Direct &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+
+The SMB server negotiates signing whenever the client supports it.
+
+**Rationale.** Unsigned SMB sessions are vulnerable to tampering and relay.
+
+**Remediation.** Set LanmanServer Parameters EnableSecuritySignature to 1.
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
+
+**References:**
+- [https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/microsoft-network-server-digitally-sign-communications-if-client-agrees](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/microsoft-network-server-digitally-sign-communications-if-client-agrees)
+
+### WIN-SMB-011 - Idle Time Required Before Suspending an SMB Session (15 min) { #win-smb-011 }
+
+**Severity:** Low &nbsp; **Category:** Network Protocols &nbsp; **Provider:** Registry &nbsp; **Delivery:** Direct &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+
+Suspend idle SMB sessions after 15 minutes.
+
+**Rationale.** Idle sessions consume resources and can be resumed by an attacker.
+
+**Remediation.** Set LanmanServer Parameters AutoDisconnect to 15.
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
+
+**References:**
+- [https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/microsoft-network-server-amount-of-idle-time-required-before-suspending-session](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/microsoft-network-server-amount-of-idle-time-required-before-suspending-session)
+
+### WIN-SMB-012 - Disconnect Clients When Logon Hours Expire { #win-smb-012 }
+
+**Severity:** Low &nbsp; **Category:** Network Protocols &nbsp; **Provider:** Registry &nbsp; **Delivery:** Direct &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+
+Force-disconnect SMB clients when their logon hours expire.
+
+**Rationale.** Sessions that outlive logon hours bypass time-based access controls.
+
+**Remediation.** Set LanmanServer Parameters EnableForcedLogOff to 1.
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
+
+**References:**
+- [https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/microsoft-network-server-disconnect-clients-when-logon-hours-expire](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/microsoft-network-server-disconnect-clients-when-logon-hours-expire)
+
+### WIN-SMB-013 - Server SPN Target Name Validation Level { #win-smb-013 }
+
+**Severity:** Medium &nbsp; **Category:** Network Protocols &nbsp; **Provider:** Registry &nbsp; **Delivery:** Direct &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+
+Validate the SPN provided by SMB clients to mitigate SMB relay attacks.
+
+**Rationale.** Without SPN validation, SMB is exposed to relay attacks.
+
+**Remediation.** Set LanmanServer Parameters SmbServerNameHardeningLevel to 1 (Accept if provided by client).
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
+
+**References:**
+- [https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/microsoft-network-server-server-spn-target-name-validation-level](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/microsoft-network-server-server-spn-target-name-validation-level)
+
 ### WIN-SVC-001 - Disable Remote Registry Service { #win-svc-001 }
 
 **Severity:** Medium &nbsp; **Category:** Attack Surface Reduction &nbsp; **Provider:** Service &nbsp; **Delivery:** Direct &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
@@ -2330,6 +2684,36 @@ Force UAC remote-access token filtering for local accounts so they connect witho
 
 **References:**
 - [https://learn.microsoft.com/en-us/windows/security/operating-system-security/device-management/windows-security-configuration-framework/windows-security-baselines](https://learn.microsoft.com/en-us/windows/security/operating-system-security/device-management/windows-security-configuration-framework/windows-security-baselines)
+
+### WIN-UAC-008 - Admin Approval Mode for the Built-in Administrator { #win-uac-008 }
+
+**Severity:** Medium &nbsp; **Category:** Privilege Management &nbsp; **Provider:** Registry &nbsp; **Delivery:** Group Policy &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+
+Apply Admin Approval Mode (UAC prompts) to the built-in Administrator account. Group Policy setting: this control checks the corresponding Group Policy registry value, so it can report non-compliant until the policy is explicitly configured (even where the effective Windows default is already secure), and a domain Group Policy applied after hardening can override it.
+
+**Rationale.** Without this, the built-in Administrator runs with full rights and no elevation prompt.
+
+**Remediation.** Set Policies System FilterAdministratorToken to 1.
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
+
+**References:**
+- [https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/user-account-control-admin-approval-mode-for-the-built-in-administrator-account](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/user-account-control-admin-approval-mode-for-the-built-in-administrator-account)
+
+### WIN-UAC-009 - Virtualize File and Registry Write Failures to Per-User Locations { #win-uac-009 }
+
+**Severity:** Low &nbsp; **Category:** Privilege Management &nbsp; **Provider:** Registry &nbsp; **Delivery:** Group Policy &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+
+Redirect legacy per-machine file and registry writes to per-user locations. Group Policy setting: this control checks the corresponding Group Policy registry value; a domain Group Policy applied after hardening can override the local configuration.
+
+**Rationale.** Disabling virtualization can cause legacy apps to write to protected locations.
+
+**Remediation.** Set Policies System EnableVirtualization to 1.
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
+
+**References:**
+- [https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/user-account-control-virtualize-file-and-registry-write-failures-to-per-user-locations](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/user-account-control-virtualize-file-and-registry-write-failures-to-per-user-locations)
 
 ### WIN-URA-001 - Access Credential Manager as a Trusted Caller = No One { #win-ura-001 }
 

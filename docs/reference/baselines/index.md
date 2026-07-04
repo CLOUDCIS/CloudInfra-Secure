@@ -6,7 +6,7 @@ CloudInfra Secure ships 7 baselines. Each is a curated collection of control IDs
 
 Baseline for Active Directory Domain Controllers.
 
-**ID:** `CloudInfraSecure-DomainController` &nbsp; **Controls:** 112 &nbsp; **Supported OS:** WindowsServer2022, WindowsServer2025
+**ID:** `CloudInfraSecure-DomainController` &nbsp; **Controls:** 121 &nbsp; **Supported OS:** WindowsServer2022, WindowsServer2025
 
 | Control | Name | Severity |
 |---------|------|----------|
@@ -122,12 +122,21 @@ Baseline for Active Directory Domain Controllers.
 | [WIN-URA-029](../controls/index.md#win-ura-029) | Lock Pages in Memory = No One | Medium |
 | [WIN-URA-036](../controls/index.md#win-ura-036) | Obtain an Impersonation Token for Another User = No One | Medium |
 | [WIN-URA-037](../controls/index.md#win-ura-037) | Modify an Object Label = No One | Low |
+| [WIN-LSA-013](../controls/index.md#win-lsa-013) | Digitally Encrypt Secure Channel Data (When Possible) | Medium |
+| [WIN-LSA-014](../controls/index.md#win-lsa-014) | Digitally Sign Secure Channel Data (When Possible) | Medium |
+| [WIN-LSA-015](../controls/index.md#win-lsa-015) | Do Not Disable Machine Account Password Changes | Medium |
+| [WIN-LSA-016](../controls/index.md#win-lsa-016) | Maximum Machine Account Password Age (30 Days) | Low |
+| [WIN-LSA-017](../controls/index.md#win-lsa-017) | Require Strong (Windows 2000 or Later) Session Key | Medium |
+| [WIN-NTLM-004](../controls/index.md#win-ntlm-004) | Allow LocalSystem to Use Computer Identity for NTLM | Medium |
+| [WIN-AUD-021](../controls/index.md#win-aud-021) | Force Audit Policy Subcategory Settings | Medium |
+| [WIN-ACCT-002](../controls/index.md#win-acct-002) | Guest Account Disabled | Medium |
+| [WIN-ACCT-003](../controls/index.md#win-acct-003) | Force Logoff When Logon Hours Expire | Low |
 
 ## CloudInfra Secure Enterprise - Enterprise tier
 
 Comprehensive baseline for regulated and high-assurance environments.
 
-**ID:** `CloudInfraSecure-Enterprise` &nbsp; **Controls:** 187 &nbsp; **Supported OS:** WindowsServer2022, WindowsServer2025
+**ID:** `CloudInfraSecure-Enterprise` &nbsp; **Controls:** 211 &nbsp; **Supported OS:** WindowsServer2022, WindowsServer2025
 
 | Control | Name | Severity |
 |---------|------|----------|
@@ -318,6 +327,30 @@ Comprehensive baseline for regulated and high-assurance environments.
 | [WIN-URA-037](../controls/index.md#win-ura-037) | Modify an Object Label = No One | Low |
 | [WIN-URA-038](../controls/index.md#win-ura-038) | Synchronize Directory Service Data = No One | Medium |
 | [WIN-URA-039](../controls/index.md#win-ura-039) | Profile System Performance = Administrators, WdiServiceHost | Low |
+| [WIN-LSA-013](../controls/index.md#win-lsa-013) | Digitally Encrypt Secure Channel Data (When Possible) | Medium |
+| [WIN-LSA-014](../controls/index.md#win-lsa-014) | Digitally Sign Secure Channel Data (When Possible) | Medium |
+| [WIN-LSA-015](../controls/index.md#win-lsa-015) | Do Not Disable Machine Account Password Changes | Medium |
+| [WIN-LSA-016](../controls/index.md#win-lsa-016) | Maximum Machine Account Password Age (30 Days) | Low |
+| [WIN-LSA-017](../controls/index.md#win-lsa-017) | Require Strong (Windows 2000 or Later) Session Key | Medium |
+| [WIN-SMB-009](../controls/index.md#win-smb-009) | Digitally Sign Client Communications (If Server Agrees) | Low |
+| [WIN-SMB-010](../controls/index.md#win-smb-010) | Digitally Sign Server Communications (If Client Agrees) | Low |
+| [WIN-SMB-011](../controls/index.md#win-smb-011) | Idle Time Required Before Suspending an SMB Session (15 min) | Low |
+| [WIN-SMB-012](../controls/index.md#win-smb-012) | Disconnect Clients When Logon Hours Expire | Low |
+| [WIN-SMB-013](../controls/index.md#win-smb-013) | Server SPN Target Name Validation Level | Medium |
+| [WIN-NTLM-004](../controls/index.md#win-ntlm-004) | Allow LocalSystem to Use Computer Identity for NTLM | Medium |
+| [WIN-NTLM-005](../controls/index.md#win-ntlm-005) | Disallow PKU2U Online Identities | Medium |
+| [WIN-NTLM-006](../controls/index.md#win-ntlm-006) | Audit Incoming NTLM Traffic | Low |
+| [WIN-NTLM-007](../controls/index.md#win-ntlm-007) | Audit Outgoing NTLM Traffic to Remote Servers | Low |
+| [WIN-LSA-018](../controls/index.md#win-lsa-018) | Do Not Store Passwords and Credentials for Network Authentication | High |
+| [WIN-LOGON-007](../controls/index.md#win-logon-007) | Do Not Allow System to Be Shut Down Without Logging On | Low |
+| [WIN-LSA-019](../controls/index.md#win-lsa-019) | Require Case Insensitivity for Non-Windows Subsystems | Low |
+| [WIN-AUD-021](../controls/index.md#win-aud-021) | Force Audit Policy Subcategory Settings | Medium |
+| [WIN-PRINT-003](../controls/index.md#win-print-003) | Prevent Users From Installing Printer Drivers | Medium |
+| [WIN-ACCT-002](../controls/index.md#win-acct-002) | Guest Account Disabled | Medium |
+| [WIN-ACCT-003](../controls/index.md#win-acct-003) | Force Logoff When Logon Hours Expire | Low |
+| [WIN-UAC-008](../controls/index.md#win-uac-008) | Admin Approval Mode for the Built-in Administrator | Medium |
+| [WIN-UAC-009](../controls/index.md#win-uac-009) | Virtualize File and Registry Write Failures to Per-User Locations | Low |
+| [WIN-LOGON-008](../controls/index.md#win-logon-008) | Require Domain Controller Authentication to Unlock Workstation | Medium |
 
 ## CloudInfra Secure Essential - Essential tier
 
@@ -347,7 +380,7 @@ Baseline of essential hardening controls suitable for any Windows Server workloa
 
 Baseline for Internet Information Services (IIS) web servers.
 
-**ID:** `CloudInfraSecure-IISWebServer` &nbsp; **Controls:** 70 &nbsp; **Supported OS:** WindowsServer2022, WindowsServer2025
+**ID:** `CloudInfraSecure-IISWebServer` &nbsp; **Controls:** 76 &nbsp; **Supported OS:** WindowsServer2022, WindowsServer2025
 
 | Control | Name | Severity |
 |---------|------|----------|
@@ -421,12 +454,18 @@ Baseline for Internet Information Services (IIS) web servers.
 | [WIN-URA-036](../controls/index.md#win-ura-036) | Obtain an Impersonation Token for Another User = No One | Medium |
 | [WIN-URA-037](../controls/index.md#win-ura-037) | Modify an Object Label = No One | Low |
 | [WIN-URA-038](../controls/index.md#win-ura-038) | Synchronize Directory Service Data = No One | Medium |
+| [WIN-SMB-009](../controls/index.md#win-smb-009) | Digitally Sign Client Communications (If Server Agrees) | Low |
+| [WIN-SMB-010](../controls/index.md#win-smb-010) | Digitally Sign Server Communications (If Client Agrees) | Low |
+| [WIN-SMB-013](../controls/index.md#win-smb-013) | Server SPN Target Name Validation Level | Medium |
+| [WIN-LSA-018](../controls/index.md#win-lsa-018) | Do Not Store Passwords and Credentials for Network Authentication | High |
+| [WIN-PRINT-003](../controls/index.md#win-print-003) | Prevent Users From Installing Printer Drivers | Medium |
+| [WIN-ACCT-002](../controls/index.md#win-acct-002) | Guest Account Disabled | Medium |
 
 ## CloudInfra Secure Remote Desktop Server - Role tier
 
 Baseline for Remote Desktop Session Host servers.
 
-**ID:** `CloudInfraSecure-RemoteDesktopServer` &nbsp; **Controls:** 70 &nbsp; **Supported OS:** WindowsServer2022, WindowsServer2025
+**ID:** `CloudInfraSecure-RemoteDesktopServer` &nbsp; **Controls:** 75 &nbsp; **Supported OS:** WindowsServer2022, WindowsServer2025
 
 | Control | Name | Severity |
 |---------|------|----------|
@@ -500,12 +539,17 @@ Baseline for Remote Desktop Session Host servers.
 | [WIN-URA-037](../controls/index.md#win-ura-037) | Modify an Object Label = No One | Low |
 | [WIN-URA-038](../controls/index.md#win-ura-038) | Synchronize Directory Service Data = No One | Medium |
 | [WIN-URA-019](../controls/index.md#win-ura-019) | Allow Log On Through Remote Desktop Services = Administrators, Remote Desktop Users | Medium |
+| [WIN-SMB-011](../controls/index.md#win-smb-011) | Idle Time Required Before Suspending an SMB Session (15 min) | Low |
+| [WIN-LSA-018](../controls/index.md#win-lsa-018) | Do Not Store Passwords and Credentials for Network Authentication | High |
+| [WIN-UAC-008](../controls/index.md#win-uac-008) | Admin Approval Mode for the Built-in Administrator | Medium |
+| [WIN-ACCT-002](../controls/index.md#win-acct-002) | Guest Account Disabled | Medium |
+| [WIN-PRINT-003](../controls/index.md#win-print-003) | Prevent Users From Installing Printer Drivers | Medium |
 
 ## CloudInfra Secure SQL Server - Role tier
 
 Baseline for Microsoft SQL Server hosts.
 
-**ID:** `CloudInfraSecure-SQLServer` &nbsp; **Controls:** 66 &nbsp; **Supported OS:** WindowsServer2022, WindowsServer2025
+**ID:** `CloudInfraSecure-SQLServer` &nbsp; **Controls:** 71 &nbsp; **Supported OS:** WindowsServer2022, WindowsServer2025
 
 | Control | Name | Severity |
 |---------|------|----------|
@@ -575,12 +619,17 @@ Baseline for Microsoft SQL Server hosts.
 | [WIN-URA-036](../controls/index.md#win-ura-036) | Obtain an Impersonation Token for Another User = No One | Medium |
 | [WIN-URA-037](../controls/index.md#win-ura-037) | Modify an Object Label = No One | Low |
 | [WIN-URA-038](../controls/index.md#win-ura-038) | Synchronize Directory Service Data = No One | Medium |
+| [WIN-LSA-017](../controls/index.md#win-lsa-017) | Require Strong (Windows 2000 or Later) Session Key | Medium |
+| [WIN-LSA-018](../controls/index.md#win-lsa-018) | Do Not Store Passwords and Credentials for Network Authentication | High |
+| [WIN-NTLM-004](../controls/index.md#win-ntlm-004) | Allow LocalSystem to Use Computer Identity for NTLM | Medium |
+| [WIN-AUD-021](../controls/index.md#win-aud-021) | Force Audit Policy Subcategory Settings | Medium |
+| [WIN-ACCT-002](../controls/index.md#win-acct-002) | Guest Account Disabled | Medium |
 
 ## CloudInfra Secure Standard - Standard tier
 
 Recommended baseline adding logging, auditing and access hardening on top of Essential.
 
-**ID:** `CloudInfraSecure-Standard` &nbsp; **Controls:** 161 &nbsp; **Supported OS:** WindowsServer2022, WindowsServer2025
+**ID:** `CloudInfraSecure-Standard` &nbsp; **Controls:** 184 &nbsp; **Supported OS:** WindowsServer2022, WindowsServer2025
 
 | Control | Name | Severity |
 |---------|------|----------|
@@ -745,4 +794,27 @@ Recommended baseline adding logging, auditing and access hardening on top of Ess
 | [WIN-URA-037](../controls/index.md#win-ura-037) | Modify an Object Label = No One | Low |
 | [WIN-URA-038](../controls/index.md#win-ura-038) | Synchronize Directory Service Data = No One | Medium |
 | [WIN-URA-039](../controls/index.md#win-ura-039) | Profile System Performance = Administrators, WdiServiceHost | Low |
+| [WIN-LSA-013](../controls/index.md#win-lsa-013) | Digitally Encrypt Secure Channel Data (When Possible) | Medium |
+| [WIN-LSA-014](../controls/index.md#win-lsa-014) | Digitally Sign Secure Channel Data (When Possible) | Medium |
+| [WIN-LSA-015](../controls/index.md#win-lsa-015) | Do Not Disable Machine Account Password Changes | Medium |
+| [WIN-LSA-016](../controls/index.md#win-lsa-016) | Maximum Machine Account Password Age (30 Days) | Low |
+| [WIN-LSA-017](../controls/index.md#win-lsa-017) | Require Strong (Windows 2000 or Later) Session Key | Medium |
+| [WIN-SMB-009](../controls/index.md#win-smb-009) | Digitally Sign Client Communications (If Server Agrees) | Low |
+| [WIN-SMB-010](../controls/index.md#win-smb-010) | Digitally Sign Server Communications (If Client Agrees) | Low |
+| [WIN-SMB-011](../controls/index.md#win-smb-011) | Idle Time Required Before Suspending an SMB Session (15 min) | Low |
+| [WIN-SMB-012](../controls/index.md#win-smb-012) | Disconnect Clients When Logon Hours Expire | Low |
+| [WIN-SMB-013](../controls/index.md#win-smb-013) | Server SPN Target Name Validation Level | Medium |
+| [WIN-NTLM-004](../controls/index.md#win-ntlm-004) | Allow LocalSystem to Use Computer Identity for NTLM | Medium |
+| [WIN-NTLM-005](../controls/index.md#win-ntlm-005) | Disallow PKU2U Online Identities | Medium |
+| [WIN-NTLM-006](../controls/index.md#win-ntlm-006) | Audit Incoming NTLM Traffic | Low |
+| [WIN-NTLM-007](../controls/index.md#win-ntlm-007) | Audit Outgoing NTLM Traffic to Remote Servers | Low |
+| [WIN-LSA-018](../controls/index.md#win-lsa-018) | Do Not Store Passwords and Credentials for Network Authentication | High |
+| [WIN-LOGON-007](../controls/index.md#win-logon-007) | Do Not Allow System to Be Shut Down Without Logging On | Low |
+| [WIN-LSA-019](../controls/index.md#win-lsa-019) | Require Case Insensitivity for Non-Windows Subsystems | Low |
+| [WIN-AUD-021](../controls/index.md#win-aud-021) | Force Audit Policy Subcategory Settings | Medium |
+| [WIN-PRINT-003](../controls/index.md#win-print-003) | Prevent Users From Installing Printer Drivers | Medium |
+| [WIN-ACCT-002](../controls/index.md#win-acct-002) | Guest Account Disabled | Medium |
+| [WIN-ACCT-003](../controls/index.md#win-acct-003) | Force Logoff When Logon Hours Expire | Low |
+| [WIN-UAC-008](../controls/index.md#win-uac-008) | Admin Approval Mode for the Built-in Administrator | Medium |
+| [WIN-UAC-009](../controls/index.md#win-uac-009) | Virtualize File and Registry Write Failures to Per-User Locations | Low |
 
