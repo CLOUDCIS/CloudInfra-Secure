@@ -1,6 +1,6 @@
 # Controls
 
-The CloudInfra Secure control library (211 controls). Each control exists once and may be used by many baselines.
+The CloudInfra Secure control library (227 controls). Each control exists once and may be used by many baselines.
 
 !!! note "Compliance disclaimer"
     CloudInfra Secure controls are designed to help organisations implement technical security requirements commonly found in recognised security standards. They do not constitute certification or proof of compliance.
@@ -12,11 +12,11 @@ Controls tagged **GPO** are delivered through a Group Policy registry value that
 <div class="cmpl-toolbar">
   <label for="ctlDelivery"><strong>Filter by delivery:</strong></label>
   <select id="ctlDelivery">
-    <option value="__all">All controls (211)</option>
-    <option value="gpo">Group Policy-backed (65)</option>
-    <option value="direct">Direct system setting (146)</option>
+    <option value="__all">All controls (227)</option>
+    <option value="gpo">Group Policy-backed (73)</option>
+    <option value="direct">Direct system setting (154)</option>
   </select>
-  <span class="cmpl-count" id="ctlCount">Showing 211 of 211 controls</span>
+  <span class="cmpl-count" id="ctlCount">Showing 227 of 227 controls</span>
 </div>
 
 <div class="cmpl-tablewrap" markdown="0">
@@ -62,6 +62,14 @@ Controls tagged **GPO** are delivered through a Group Policy registry value that
     <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-aud-019">WIN-AUD-019</a></td><td>Audit Other Object Access Events</td><td>Medium</td><td>Logging and Monitoring</td><td>AuditPol</td><td><span class="muted-badge">Direct</span></td></tr>
     <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-aud-020">WIN-AUD-020</a></td><td>Audit Detailed File Share</td><td>Medium</td><td>Logging and Monitoring</td><td>AuditPol</td><td><span class="muted-badge">Direct</span></td></tr>
     <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-aud-021">WIN-AUD-021</a></td><td>Force Audit Policy Subcategory Settings</td><td>Medium</td><td>Logging and Monitoring</td><td>Registry</td><td><span class="muted-badge">Direct</span></td></tr>
+    <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-aud-022">WIN-AUD-022</a></td><td>Audit Other Account Management Events</td><td>Medium</td><td>Logging and Monitoring</td><td>AuditPol</td><td><span class="muted-badge">Direct</span></td></tr>
+    <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-aud-023">WIN-AUD-023</a></td><td>Audit File Share</td><td>Medium</td><td>Logging and Monitoring</td><td>AuditPol</td><td><span class="muted-badge">Direct</span></td></tr>
+    <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-aud-024">WIN-AUD-024</a></td><td>Audit Authorization Policy Change</td><td>Medium</td><td>Logging and Monitoring</td><td>AuditPol</td><td><span class="muted-badge">Direct</span></td></tr>
+    <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-aud-025">WIN-AUD-025</a></td><td>Audit Other Policy Change Events</td><td>Low</td><td>Logging and Monitoring</td><td>AuditPol</td><td><span class="muted-badge">Direct</span></td></tr>
+    <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-aud-026">WIN-AUD-026</a></td><td>Audit IPsec Driver</td><td>Medium</td><td>Logging and Monitoring</td><td>AuditPol</td><td><span class="muted-badge">Direct</span></td></tr>
+    <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-aud-027">WIN-AUD-027</a></td><td>Audit Other System Events</td><td>Low</td><td>Logging and Monitoring</td><td>AuditPol</td><td><span class="muted-badge">Direct</span></td></tr>
+    <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-aud-028">WIN-AUD-028</a></td><td>Audit Security State Change</td><td>Medium</td><td>Logging and Monitoring</td><td>AuditPol</td><td><span class="muted-badge">Direct</span></td></tr>
+    <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-aud-029">WIN-AUD-029</a></td><td>Audit Security System Extension</td><td>Medium</td><td>Logging and Monitoring</td><td>AuditPol</td><td><span class="muted-badge">Direct</span></td></tr>
     <tr data-delivery="gpo"><td class="cmpl-num"></td><td><a href="#win-autorun-001">WIN-AUTORUN-001</a></td><td>Disable AutoRun on All Drives</td><td>Medium</td><td>Attack Surface Reduction</td><td>Registry</td><td><span class="gpo-badge" title="Delivered via a Group Policy registry value; a domain GPO can override it">GPO</span></td></tr>
     <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-cg-001">WIN-CG-001</a></td><td>Enable Credential Guard</td><td>High</td><td>Credential Protection</td><td>Registry</td><td><span class="muted-badge">Direct</span></td></tr>
     <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-def-001">WIN-DEF-001</a></td><td>Microsoft Defender Antivirus Enabled</td><td>High</td><td>Endpoint Protection</td><td>Defender</td><td><span class="muted-badge">Direct</span></td></tr>
@@ -79,6 +87,14 @@ Controls tagged **GPO** are delivered through a Group Policy registry value that
     <tr data-delivery="gpo"><td class="cmpl-num"></td><td><a href="#win-def-013">WIN-DEF-013</a></td><td>Scan Downloaded Files and Attachments</td><td>High</td><td>Endpoint Protection</td><td>Registry</td><td><span class="gpo-badge" title="Delivered via a Group Policy registry value; a domain GPO can override it">GPO</span></td></tr>
     <tr data-delivery="gpo"><td class="cmpl-num"></td><td><a href="#win-def-014">WIN-DEF-014</a></td><td>Disable Local Admin Merge of Defender Preferences</td><td>Medium</td><td>Endpoint Protection</td><td>Registry</td><td><span class="gpo-badge" title="Delivered via a Group Policy registry value; a domain GPO can override it">GPO</span></td></tr>
     <tr data-delivery="gpo"><td class="cmpl-num"></td><td><a href="#win-def-015">WIN-DEF-015</a></td><td>Enable Real-Time Script Scanning</td><td>Medium</td><td>Endpoint Protection</td><td>Registry</td><td><span class="gpo-badge" title="Delivered via a Group Policy registry value; a domain GPO can override it">GPO</span></td></tr>
+    <tr data-delivery="gpo"><td class="cmpl-num"></td><td><a href="#win-evtlog-001">WIN-EVTLOG-001</a></td><td>Application Event Log Maximum Size (&gt;= 32 MB)</td><td>Medium</td><td>Logging and Monitoring</td><td>Registry</td><td><span class="gpo-badge" title="Delivered via a Group Policy registry value; a domain GPO can override it">GPO</span></td></tr>
+    <tr data-delivery="gpo"><td class="cmpl-num"></td><td><a href="#win-evtlog-002">WIN-EVTLOG-002</a></td><td>Application Event Log Retention (Overwrite as Needed)</td><td>Low</td><td>Logging and Monitoring</td><td>Registry</td><td><span class="gpo-badge" title="Delivered via a Group Policy registry value; a domain GPO can override it">GPO</span></td></tr>
+    <tr data-delivery="gpo"><td class="cmpl-num"></td><td><a href="#win-evtlog-003">WIN-EVTLOG-003</a></td><td>Security Event Log Maximum Size (&gt;= 192 MB)</td><td>High</td><td>Logging and Monitoring</td><td>Registry</td><td><span class="gpo-badge" title="Delivered via a Group Policy registry value; a domain GPO can override it">GPO</span></td></tr>
+    <tr data-delivery="gpo"><td class="cmpl-num"></td><td><a href="#win-evtlog-004">WIN-EVTLOG-004</a></td><td>Security Event Log Retention (Overwrite as Needed)</td><td>Low</td><td>Logging and Monitoring</td><td>Registry</td><td><span class="gpo-badge" title="Delivered via a Group Policy registry value; a domain GPO can override it">GPO</span></td></tr>
+    <tr data-delivery="gpo"><td class="cmpl-num"></td><td><a href="#win-evtlog-005">WIN-EVTLOG-005</a></td><td>Setup Event Log Maximum Size (&gt;= 32 MB)</td><td>Low</td><td>Logging and Monitoring</td><td>Registry</td><td><span class="gpo-badge" title="Delivered via a Group Policy registry value; a domain GPO can override it">GPO</span></td></tr>
+    <tr data-delivery="gpo"><td class="cmpl-num"></td><td><a href="#win-evtlog-006">WIN-EVTLOG-006</a></td><td>Setup Event Log Retention (Overwrite as Needed)</td><td>Low</td><td>Logging and Monitoring</td><td>Registry</td><td><span class="gpo-badge" title="Delivered via a Group Policy registry value; a domain GPO can override it">GPO</span></td></tr>
+    <tr data-delivery="gpo"><td class="cmpl-num"></td><td><a href="#win-evtlog-007">WIN-EVTLOG-007</a></td><td>System Event Log Maximum Size (&gt;= 32 MB)</td><td>Medium</td><td>Logging and Monitoring</td><td>Registry</td><td><span class="gpo-badge" title="Delivered via a Group Policy registry value; a domain GPO can override it">GPO</span></td></tr>
+    <tr data-delivery="gpo"><td class="cmpl-num"></td><td><a href="#win-evtlog-008">WIN-EVTLOG-008</a></td><td>System Event Log Retention (Overwrite as Needed)</td><td>Low</td><td>Logging and Monitoring</td><td>Registry</td><td><span class="gpo-badge" title="Delivered via a Group Policy registry value; a domain GPO can override it">GPO</span></td></tr>
     <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-fw-001">WIN-FW-001</a></td><td>Windows Firewall Enabled (All Profiles)</td><td>High</td><td>Host Firewall</td><td>Firewall</td><td><span class="muted-badge">Direct</span></td></tr>
     <tr data-delivery="gpo"><td class="cmpl-num"></td><td><a href="#win-fw-002">WIN-FW-002</a></td><td>Block Inbound Connections by Default (Domain Profile)</td><td>Medium</td><td>Host Firewall</td><td>Registry</td><td><span class="gpo-badge" title="Delivered via a Group Policy registry value; a domain GPO can override it">GPO</span></td></tr>
     <tr data-delivery="gpo"><td class="cmpl-num"></td><td><a href="#win-fw-003">WIN-FW-003</a></td><td>Block Inbound Connections by Default (Private Profile)</td><td>Medium</td><td>Host Firewall</td><td>Registry</td><td><span class="gpo-badge" title="Delivered via a Group Policy registry value; a domain GPO can override it">GPO</span></td></tr>
@@ -825,6 +841,126 @@ Force advanced audit subcategory settings to override legacy category-level audi
 **References:**
 - [https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/audit-force-audit-policy-subcategory-settings-to-override](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/audit-force-audit-policy-subcategory-settings-to-override)
 
+### WIN-AUD-022 - Audit Other Account Management Events { #win-aud-022 }
+
+**Severity:** Medium &nbsp; **Category:** Logging and Monitoring &nbsp; **Provider:** AuditPol &nbsp; **Delivery:** Direct &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+
+Audit account-management events not covered by the other account-management subcategories.
+
+**Rationale.** Some account-management actions would otherwise go unrecorded.
+
+**Remediation.** Enable success and failure auditing for the Other Account Management Events subcategory.
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `SOC 2` `ISO/IEC 27001` `Microsoft Security Baselines` `NIS2`
+
+**References:**
+- [https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/audit-other-account-management-events](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/audit-other-account-management-events)
+
+### WIN-AUD-023 - Audit File Share { #win-aud-023 }
+
+**Severity:** Medium &nbsp; **Category:** Logging and Monitoring &nbsp; **Provider:** AuditPol &nbsp; **Delivery:** Direct &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+
+Audit creation, deletion, modification, and access of network shares.
+
+**Rationale.** Share tampering and unauthorized share access would go undetected.
+
+**Remediation.** Enable success and failure auditing for the File Share subcategory.
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `SOC 2` `ISO/IEC 27001` `Microsoft Security Baselines` `NIS2`
+
+**References:**
+- [https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/audit-file-share](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/audit-file-share)
+
+### WIN-AUD-024 - Audit Authorization Policy Change { #win-aud-024 }
+
+**Severity:** Medium &nbsp; **Category:** Logging and Monitoring &nbsp; **Provider:** AuditPol &nbsp; **Delivery:** Direct &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+
+Audit changes to authorization policy, including user-rights assignment changes.
+
+**Rationale.** Unaudited authorization-policy changes hide privilege tampering.
+
+**Remediation.** Enable success auditing for the Authorization Policy Change subcategory.
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `SOC 2` `ISO/IEC 27001` `Microsoft Security Baselines` `NIS2`
+
+**References:**
+- [https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/audit-authorization-policy-change](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/audit-authorization-policy-change)
+
+### WIN-AUD-025 - Audit Other Policy Change Events { #win-aud-025 }
+
+**Severity:** Low &nbsp; **Category:** Logging and Monitoring &nbsp; **Provider:** AuditPol &nbsp; **Delivery:** Direct &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+
+Audit failures applying security policy and cryptographic (CNG) operations.
+
+**Rationale.** Failed policy application and crypto errors would go unrecorded.
+
+**Remediation.** Enable failure auditing for the Other Policy Change Events subcategory.
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `SOC 2` `ISO/IEC 27001` `Microsoft Security Baselines` `NIS2`
+
+**References:**
+- [https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/audit-other-policy-change-events](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/audit-other-policy-change-events)
+
+### WIN-AUD-026 - Audit IPsec Driver { #win-aud-026 }
+
+**Severity:** Medium &nbsp; **Category:** Logging and Monitoring &nbsp; **Provider:** AuditPol &nbsp; **Delivery:** Direct &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+
+Audit IPsec driver activities such as dropped packets and integrity failures.
+
+**Rationale.** IPsec failures and attacks against IPsec would go undetected.
+
+**Remediation.** Enable success and failure auditing for the IPsec Driver subcategory.
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `SOC 2` `ISO/IEC 27001` `Microsoft Security Baselines` `NIS2`
+
+**References:**
+- [https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/audit-ipsec-driver](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/audit-ipsec-driver)
+
+### WIN-AUD-027 - Audit Other System Events { #win-aud-027 }
+
+**Severity:** Low &nbsp; **Category:** Logging and Monitoring &nbsp; **Provider:** AuditPol &nbsp; **Delivery:** Direct &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+
+Audit other system events such as Windows Firewall service state and start/stop.
+
+**Rationale.** Firewall service state changes would otherwise go unrecorded.
+
+**Remediation.** Enable success and failure auditing for the Other System Events subcategory.
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `SOC 2` `ISO/IEC 27001` `Microsoft Security Baselines` `NIS2`
+
+**References:**
+- [https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/audit-other-system-events](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/audit-other-system-events)
+
+### WIN-AUD-028 - Audit Security State Change { #win-aud-028 }
+
+**Severity:** Medium &nbsp; **Category:** Logging and Monitoring &nbsp; **Provider:** AuditPol &nbsp; **Delivery:** Direct &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+
+Audit changes in the security state of the system, such as startup and shutdown.
+
+**Rationale.** System start/stop and time changes would go unrecorded.
+
+**Remediation.** Enable success auditing for the Security State Change subcategory.
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `SOC 2` `ISO/IEC 27001` `Microsoft Security Baselines` `NIS2`
+
+**References:**
+- [https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/audit-security-state-change](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/audit-security-state-change)
+
+### WIN-AUD-029 - Audit Security System Extension { #win-aud-029 }
+
+**Severity:** Medium &nbsp; **Category:** Logging and Monitoring &nbsp; **Provider:** AuditPol &nbsp; **Delivery:** Direct &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+
+Audit the loading of authentication/security packages and service installations.
+
+**Rationale.** Malicious security packages and service installs are critical events to detect.
+
+**Remediation.** Enable success auditing for the Security System Extension subcategory.
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `SOC 2` `ISO/IEC 27001` `Microsoft Security Baselines` `NIS2`
+
+**References:**
+- [https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/audit-security-system-extension](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/audit-security-system-extension)
+
 ### WIN-AUTORUN-001 - Disable AutoRun on All Drives { #win-autorun-001 }
 
 **Severity:** Medium &nbsp; **Category:** Attack Surface Reduction &nbsp; **Provider:** Registry &nbsp; **Delivery:** Group Policy &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
@@ -1079,6 +1215,126 @@ Scan scripts as they run (real-time script scanning). Group Policy setting: this
 
 **References:**
 - [https://learn.microsoft.com/en-us/defender-endpoint/microsoft-defender-antivirus-windows](https://learn.microsoft.com/en-us/defender-endpoint/microsoft-defender-antivirus-windows)
+
+### WIN-EVTLOG-001 - Application Event Log Maximum Size (>= 32 MB) { #win-evtlog-001 }
+
+**Severity:** Medium &nbsp; **Category:** Logging and Monitoring &nbsp; **Provider:** Registry &nbsp; **Delivery:** Group Policy &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+
+The Application event log must be at least 32,768 KB so events are retained long enough to investigate. Group Policy setting: this control checks the corresponding Group Policy registry value, so it can report non-compliant until the policy is explicitly configured (even where the effective Windows default is already secure), and a domain Group Policy applied after hardening can override it.
+
+**Rationale.** A small log wraps quickly and loses evidence of an incident.
+
+**Remediation.** Set EventLog Application MaxSize to at least 32768 (KB).
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `SOC 2` `ISO/IEC 27001` `Microsoft Security Baselines` `NIS2`
+
+**References:**
+- [https://learn.microsoft.com/en-us/windows/security/operating-system-security/device-management/windows-security-configuration-framework/windows-security-baselines](https://learn.microsoft.com/en-us/windows/security/operating-system-security/device-management/windows-security-configuration-framework/windows-security-baselines)
+
+### WIN-EVTLOG-002 - Application Event Log Retention (Overwrite as Needed) { #win-evtlog-002 }
+
+**Severity:** Low &nbsp; **Category:** Logging and Monitoring &nbsp; **Provider:** Registry &nbsp; **Delivery:** Group Policy &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+
+The Application event log must overwrite oldest events when full rather than halting logging. Group Policy setting: this control checks the corresponding Group Policy registry value; a domain Group Policy applied after hardening can override the local configuration.
+
+**Rationale.** A non-overwriting full log can stop new events or the system.
+
+**Remediation.** Set EventLog Application Retention to 0 (overwrite events as needed).
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `SOC 2` `ISO/IEC 27001` `Microsoft Security Baselines` `NIS2`
+
+**References:**
+- [https://learn.microsoft.com/en-us/windows/security/operating-system-security/device-management/windows-security-configuration-framework/windows-security-baselines](https://learn.microsoft.com/en-us/windows/security/operating-system-security/device-management/windows-security-configuration-framework/windows-security-baselines)
+
+### WIN-EVTLOG-003 - Security Event Log Maximum Size (>= 192 MB) { #win-evtlog-003 }
+
+**Severity:** High &nbsp; **Category:** Logging and Monitoring &nbsp; **Provider:** Registry &nbsp; **Delivery:** Group Policy &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+
+The Security event log must be at least 196,608 KB given its high event volume. Group Policy setting: this control checks the corresponding Group Policy registry value, so it can report non-compliant until the policy is explicitly configured (even where the effective Windows default is already secure), and a domain Group Policy applied after hardening can override it.
+
+**Rationale.** A small Security log wraps quickly and loses critical audit evidence.
+
+**Remediation.** Set EventLog Security MaxSize to at least 196608 (KB).
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `SOC 2` `ISO/IEC 27001` `Microsoft Security Baselines` `NIS2`
+
+**References:**
+- [https://learn.microsoft.com/en-us/windows/security/operating-system-security/device-management/windows-security-configuration-framework/windows-security-baselines](https://learn.microsoft.com/en-us/windows/security/operating-system-security/device-management/windows-security-configuration-framework/windows-security-baselines)
+
+### WIN-EVTLOG-004 - Security Event Log Retention (Overwrite as Needed) { #win-evtlog-004 }
+
+**Severity:** Low &nbsp; **Category:** Logging and Monitoring &nbsp; **Provider:** Registry &nbsp; **Delivery:** Group Policy &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+
+The Security event log must overwrite oldest events when full rather than halting logging. Group Policy setting: this control checks the corresponding Group Policy registry value; a domain Group Policy applied after hardening can override the local configuration.
+
+**Rationale.** A non-overwriting full Security log can stop new events or the system.
+
+**Remediation.** Set EventLog Security Retention to 0 (overwrite events as needed).
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `SOC 2` `ISO/IEC 27001` `Microsoft Security Baselines` `NIS2`
+
+**References:**
+- [https://learn.microsoft.com/en-us/windows/security/operating-system-security/device-management/windows-security-configuration-framework/windows-security-baselines](https://learn.microsoft.com/en-us/windows/security/operating-system-security/device-management/windows-security-configuration-framework/windows-security-baselines)
+
+### WIN-EVTLOG-005 - Setup Event Log Maximum Size (>= 32 MB) { #win-evtlog-005 }
+
+**Severity:** Low &nbsp; **Category:** Logging and Monitoring &nbsp; **Provider:** Registry &nbsp; **Delivery:** Group Policy &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+
+The Setup event log must be at least 32,768 KB. Group Policy setting: this control checks the corresponding Group Policy registry value, so it can report non-compliant until the policy is explicitly configured (even where the effective Windows default is already secure), and a domain Group Policy applied after hardening can override it.
+
+**Rationale.** A small Setup log loses servicing and setup history.
+
+**Remediation.** Set EventLog Setup MaxSize to at least 32768 (KB).
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `SOC 2` `ISO/IEC 27001` `Microsoft Security Baselines` `NIS2`
+
+**References:**
+- [https://learn.microsoft.com/en-us/windows/security/operating-system-security/device-management/windows-security-configuration-framework/windows-security-baselines](https://learn.microsoft.com/en-us/windows/security/operating-system-security/device-management/windows-security-configuration-framework/windows-security-baselines)
+
+### WIN-EVTLOG-006 - Setup Event Log Retention (Overwrite as Needed) { #win-evtlog-006 }
+
+**Severity:** Low &nbsp; **Category:** Logging and Monitoring &nbsp; **Provider:** Registry &nbsp; **Delivery:** Group Policy &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+
+The Setup event log must overwrite oldest events when full rather than halting logging. Group Policy setting: this control checks the corresponding Group Policy registry value; a domain Group Policy applied after hardening can override the local configuration.
+
+**Rationale.** A non-overwriting full Setup log can stop new events.
+
+**Remediation.** Set EventLog Setup Retention to 0 (overwrite events as needed).
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `SOC 2` `ISO/IEC 27001` `Microsoft Security Baselines` `NIS2`
+
+**References:**
+- [https://learn.microsoft.com/en-us/windows/security/operating-system-security/device-management/windows-security-configuration-framework/windows-security-baselines](https://learn.microsoft.com/en-us/windows/security/operating-system-security/device-management/windows-security-configuration-framework/windows-security-baselines)
+
+### WIN-EVTLOG-007 - System Event Log Maximum Size (>= 32 MB) { #win-evtlog-007 }
+
+**Severity:** Medium &nbsp; **Category:** Logging and Monitoring &nbsp; **Provider:** Registry &nbsp; **Delivery:** Group Policy &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+
+The System event log must be at least 32,768 KB. Group Policy setting: this control checks the corresponding Group Policy registry value, so it can report non-compliant until the policy is explicitly configured (even where the effective Windows default is already secure), and a domain Group Policy applied after hardening can override it.
+
+**Rationale.** A small System log wraps quickly and loses evidence.
+
+**Remediation.** Set EventLog System MaxSize to at least 32768 (KB).
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `SOC 2` `ISO/IEC 27001` `Microsoft Security Baselines` `NIS2`
+
+**References:**
+- [https://learn.microsoft.com/en-us/windows/security/operating-system-security/device-management/windows-security-configuration-framework/windows-security-baselines](https://learn.microsoft.com/en-us/windows/security/operating-system-security/device-management/windows-security-configuration-framework/windows-security-baselines)
+
+### WIN-EVTLOG-008 - System Event Log Retention (Overwrite as Needed) { #win-evtlog-008 }
+
+**Severity:** Low &nbsp; **Category:** Logging and Monitoring &nbsp; **Provider:** Registry &nbsp; **Delivery:** Group Policy &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+
+The System event log must overwrite oldest events when full rather than halting logging. Group Policy setting: this control checks the corresponding Group Policy registry value; a domain Group Policy applied after hardening can override the local configuration.
+
+**Rationale.** A non-overwriting full System log can stop new events or the system.
+
+**Remediation.** Set EventLog System Retention to 0 (overwrite events as needed).
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `SOC 2` `ISO/IEC 27001` `Microsoft Security Baselines` `NIS2`
+
+**References:**
+- [https://learn.microsoft.com/en-us/windows/security/operating-system-security/device-management/windows-security-configuration-framework/windows-security-baselines](https://learn.microsoft.com/en-us/windows/security/operating-system-security/device-management/windows-security-configuration-framework/windows-security-baselines)
 
 ### WIN-FW-001 - Windows Firewall Enabled (All Profiles) { #win-fw-001 }
 

@@ -6,7 +6,7 @@ CloudInfra Secure ships 7 baselines. Each is a curated collection of control IDs
 
 Baseline for Active Directory Domain Controllers.
 
-**ID:** `CloudInfraSecure-DomainController` &nbsp; **Controls:** 121 &nbsp; **Supported OS:** WindowsServer2022, WindowsServer2025
+**ID:** `CloudInfraSecure-DomainController` &nbsp; **Controls:** 137 &nbsp; **Supported OS:** WindowsServer2022, WindowsServer2025
 
 | Control | Name | Severity |
 |---------|------|----------|
@@ -131,12 +131,28 @@ Baseline for Active Directory Domain Controllers.
 | [WIN-AUD-021](../controls/index.md#win-aud-021) | Force Audit Policy Subcategory Settings | Medium |
 | [WIN-ACCT-002](../controls/index.md#win-acct-002) | Guest Account Disabled | Medium |
 | [WIN-ACCT-003](../controls/index.md#win-acct-003) | Force Logoff When Logon Hours Expire | Low |
+| [WIN-AUD-022](../controls/index.md#win-aud-022) | Audit Other Account Management Events | Medium |
+| [WIN-AUD-023](../controls/index.md#win-aud-023) | Audit File Share | Medium |
+| [WIN-AUD-024](../controls/index.md#win-aud-024) | Audit Authorization Policy Change | Medium |
+| [WIN-AUD-025](../controls/index.md#win-aud-025) | Audit Other Policy Change Events | Low |
+| [WIN-AUD-026](../controls/index.md#win-aud-026) | Audit IPsec Driver | Medium |
+| [WIN-AUD-027](../controls/index.md#win-aud-027) | Audit Other System Events | Low |
+| [WIN-AUD-028](../controls/index.md#win-aud-028) | Audit Security State Change | Medium |
+| [WIN-AUD-029](../controls/index.md#win-aud-029) | Audit Security System Extension | Medium |
+| [WIN-EVTLOG-001](../controls/index.md#win-evtlog-001) | Application Event Log Maximum Size (>= 32 MB) | Medium |
+| [WIN-EVTLOG-002](../controls/index.md#win-evtlog-002) | Application Event Log Retention (Overwrite as Needed) | Low |
+| [WIN-EVTLOG-003](../controls/index.md#win-evtlog-003) | Security Event Log Maximum Size (>= 192 MB) | High |
+| [WIN-EVTLOG-004](../controls/index.md#win-evtlog-004) | Security Event Log Retention (Overwrite as Needed) | Low |
+| [WIN-EVTLOG-005](../controls/index.md#win-evtlog-005) | Setup Event Log Maximum Size (>= 32 MB) | Low |
+| [WIN-EVTLOG-006](../controls/index.md#win-evtlog-006) | Setup Event Log Retention (Overwrite as Needed) | Low |
+| [WIN-EVTLOG-007](../controls/index.md#win-evtlog-007) | System Event Log Maximum Size (>= 32 MB) | Medium |
+| [WIN-EVTLOG-008](../controls/index.md#win-evtlog-008) | System Event Log Retention (Overwrite as Needed) | Low |
 
 ## CloudInfra Secure Enterprise - Enterprise tier
 
 Comprehensive baseline for regulated and high-assurance environments.
 
-**ID:** `CloudInfraSecure-Enterprise` &nbsp; **Controls:** 211 &nbsp; **Supported OS:** WindowsServer2022, WindowsServer2025
+**ID:** `CloudInfraSecure-Enterprise` &nbsp; **Controls:** 227 &nbsp; **Supported OS:** WindowsServer2022, WindowsServer2025
 
 | Control | Name | Severity |
 |---------|------|----------|
@@ -351,6 +367,22 @@ Comprehensive baseline for regulated and high-assurance environments.
 | [WIN-UAC-008](../controls/index.md#win-uac-008) | Admin Approval Mode for the Built-in Administrator | Medium |
 | [WIN-UAC-009](../controls/index.md#win-uac-009) | Virtualize File and Registry Write Failures to Per-User Locations | Low |
 | [WIN-LOGON-008](../controls/index.md#win-logon-008) | Require Domain Controller Authentication to Unlock Workstation | Medium |
+| [WIN-AUD-022](../controls/index.md#win-aud-022) | Audit Other Account Management Events | Medium |
+| [WIN-AUD-023](../controls/index.md#win-aud-023) | Audit File Share | Medium |
+| [WIN-AUD-024](../controls/index.md#win-aud-024) | Audit Authorization Policy Change | Medium |
+| [WIN-AUD-025](../controls/index.md#win-aud-025) | Audit Other Policy Change Events | Low |
+| [WIN-AUD-026](../controls/index.md#win-aud-026) | Audit IPsec Driver | Medium |
+| [WIN-AUD-027](../controls/index.md#win-aud-027) | Audit Other System Events | Low |
+| [WIN-AUD-028](../controls/index.md#win-aud-028) | Audit Security State Change | Medium |
+| [WIN-AUD-029](../controls/index.md#win-aud-029) | Audit Security System Extension | Medium |
+| [WIN-EVTLOG-001](../controls/index.md#win-evtlog-001) | Application Event Log Maximum Size (>= 32 MB) | Medium |
+| [WIN-EVTLOG-002](../controls/index.md#win-evtlog-002) | Application Event Log Retention (Overwrite as Needed) | Low |
+| [WIN-EVTLOG-003](../controls/index.md#win-evtlog-003) | Security Event Log Maximum Size (>= 192 MB) | High |
+| [WIN-EVTLOG-004](../controls/index.md#win-evtlog-004) | Security Event Log Retention (Overwrite as Needed) | Low |
+| [WIN-EVTLOG-005](../controls/index.md#win-evtlog-005) | Setup Event Log Maximum Size (>= 32 MB) | Low |
+| [WIN-EVTLOG-006](../controls/index.md#win-evtlog-006) | Setup Event Log Retention (Overwrite as Needed) | Low |
+| [WIN-EVTLOG-007](../controls/index.md#win-evtlog-007) | System Event Log Maximum Size (>= 32 MB) | Medium |
+| [WIN-EVTLOG-008](../controls/index.md#win-evtlog-008) | System Event Log Retention (Overwrite as Needed) | Low |
 
 ## CloudInfra Secure Essential - Essential tier
 
@@ -380,7 +412,7 @@ Baseline of essential hardening controls suitable for any Windows Server workloa
 
 Baseline for Internet Information Services (IIS) web servers.
 
-**ID:** `CloudInfraSecure-IISWebServer` &nbsp; **Controls:** 76 &nbsp; **Supported OS:** WindowsServer2022, WindowsServer2025
+**ID:** `CloudInfraSecure-IISWebServer` &nbsp; **Controls:** 81 &nbsp; **Supported OS:** WindowsServer2022, WindowsServer2025
 
 | Control | Name | Severity |
 |---------|------|----------|
@@ -460,12 +492,17 @@ Baseline for Internet Information Services (IIS) web servers.
 | [WIN-LSA-018](../controls/index.md#win-lsa-018) | Do Not Store Passwords and Credentials for Network Authentication | High |
 | [WIN-PRINT-003](../controls/index.md#win-print-003) | Prevent Users From Installing Printer Drivers | Medium |
 | [WIN-ACCT-002](../controls/index.md#win-acct-002) | Guest Account Disabled | Medium |
+| [WIN-AUD-023](../controls/index.md#win-aud-023) | Audit File Share | Medium |
+| [WIN-EVTLOG-001](../controls/index.md#win-evtlog-001) | Application Event Log Maximum Size (>= 32 MB) | Medium |
+| [WIN-EVTLOG-003](../controls/index.md#win-evtlog-003) | Security Event Log Maximum Size (>= 192 MB) | High |
+| [WIN-EVTLOG-007](../controls/index.md#win-evtlog-007) | System Event Log Maximum Size (>= 32 MB) | Medium |
+| [WIN-AUD-029](../controls/index.md#win-aud-029) | Audit Security System Extension | Medium |
 
 ## CloudInfra Secure Remote Desktop Server - Role tier
 
 Baseline for Remote Desktop Session Host servers.
 
-**ID:** `CloudInfraSecure-RemoteDesktopServer` &nbsp; **Controls:** 75 &nbsp; **Supported OS:** WindowsServer2022, WindowsServer2025
+**ID:** `CloudInfraSecure-RemoteDesktopServer` &nbsp; **Controls:** 80 &nbsp; **Supported OS:** WindowsServer2022, WindowsServer2025
 
 | Control | Name | Severity |
 |---------|------|----------|
@@ -544,12 +581,17 @@ Baseline for Remote Desktop Session Host servers.
 | [WIN-UAC-008](../controls/index.md#win-uac-008) | Admin Approval Mode for the Built-in Administrator | Medium |
 | [WIN-ACCT-002](../controls/index.md#win-acct-002) | Guest Account Disabled | Medium |
 | [WIN-PRINT-003](../controls/index.md#win-print-003) | Prevent Users From Installing Printer Drivers | Medium |
+| [WIN-AUD-023](../controls/index.md#win-aud-023) | Audit File Share | Medium |
+| [WIN-EVTLOG-003](../controls/index.md#win-evtlog-003) | Security Event Log Maximum Size (>= 192 MB) | High |
+| [WIN-EVTLOG-007](../controls/index.md#win-evtlog-007) | System Event Log Maximum Size (>= 32 MB) | Medium |
+| [WIN-AUD-028](../controls/index.md#win-aud-028) | Audit Security State Change | Medium |
+| [WIN-AUD-029](../controls/index.md#win-aud-029) | Audit Security System Extension | Medium |
 
 ## CloudInfra Secure SQL Server - Role tier
 
 Baseline for Microsoft SQL Server hosts.
 
-**ID:** `CloudInfraSecure-SQLServer` &nbsp; **Controls:** 71 &nbsp; **Supported OS:** WindowsServer2022, WindowsServer2025
+**ID:** `CloudInfraSecure-SQLServer` &nbsp; **Controls:** 76 &nbsp; **Supported OS:** WindowsServer2022, WindowsServer2025
 
 | Control | Name | Severity |
 |---------|------|----------|
@@ -624,12 +666,17 @@ Baseline for Microsoft SQL Server hosts.
 | [WIN-NTLM-004](../controls/index.md#win-ntlm-004) | Allow LocalSystem to Use Computer Identity for NTLM | Medium |
 | [WIN-AUD-021](../controls/index.md#win-aud-021) | Force Audit Policy Subcategory Settings | Medium |
 | [WIN-ACCT-002](../controls/index.md#win-acct-002) | Guest Account Disabled | Medium |
+| [WIN-AUD-023](../controls/index.md#win-aud-023) | Audit File Share | Medium |
+| [WIN-EVTLOG-003](../controls/index.md#win-evtlog-003) | Security Event Log Maximum Size (>= 192 MB) | High |
+| [WIN-EVTLOG-004](../controls/index.md#win-evtlog-004) | Security Event Log Retention (Overwrite as Needed) | Low |
+| [WIN-AUD-024](../controls/index.md#win-aud-024) | Audit Authorization Policy Change | Medium |
+| [WIN-AUD-029](../controls/index.md#win-aud-029) | Audit Security System Extension | Medium |
 
 ## CloudInfra Secure Standard - Standard tier
 
 Recommended baseline adding logging, auditing and access hardening on top of Essential.
 
-**ID:** `CloudInfraSecure-Standard` &nbsp; **Controls:** 184 &nbsp; **Supported OS:** WindowsServer2022, WindowsServer2025
+**ID:** `CloudInfraSecure-Standard` &nbsp; **Controls:** 200 &nbsp; **Supported OS:** WindowsServer2022, WindowsServer2025
 
 | Control | Name | Severity |
 |---------|------|----------|
@@ -817,4 +864,20 @@ Recommended baseline adding logging, auditing and access hardening on top of Ess
 | [WIN-ACCT-003](../controls/index.md#win-acct-003) | Force Logoff When Logon Hours Expire | Low |
 | [WIN-UAC-008](../controls/index.md#win-uac-008) | Admin Approval Mode for the Built-in Administrator | Medium |
 | [WIN-UAC-009](../controls/index.md#win-uac-009) | Virtualize File and Registry Write Failures to Per-User Locations | Low |
+| [WIN-AUD-022](../controls/index.md#win-aud-022) | Audit Other Account Management Events | Medium |
+| [WIN-AUD-023](../controls/index.md#win-aud-023) | Audit File Share | Medium |
+| [WIN-AUD-024](../controls/index.md#win-aud-024) | Audit Authorization Policy Change | Medium |
+| [WIN-AUD-025](../controls/index.md#win-aud-025) | Audit Other Policy Change Events | Low |
+| [WIN-AUD-026](../controls/index.md#win-aud-026) | Audit IPsec Driver | Medium |
+| [WIN-AUD-027](../controls/index.md#win-aud-027) | Audit Other System Events | Low |
+| [WIN-AUD-028](../controls/index.md#win-aud-028) | Audit Security State Change | Medium |
+| [WIN-AUD-029](../controls/index.md#win-aud-029) | Audit Security System Extension | Medium |
+| [WIN-EVTLOG-001](../controls/index.md#win-evtlog-001) | Application Event Log Maximum Size (>= 32 MB) | Medium |
+| [WIN-EVTLOG-002](../controls/index.md#win-evtlog-002) | Application Event Log Retention (Overwrite as Needed) | Low |
+| [WIN-EVTLOG-003](../controls/index.md#win-evtlog-003) | Security Event Log Maximum Size (>= 192 MB) | High |
+| [WIN-EVTLOG-004](../controls/index.md#win-evtlog-004) | Security Event Log Retention (Overwrite as Needed) | Low |
+| [WIN-EVTLOG-005](../controls/index.md#win-evtlog-005) | Setup Event Log Maximum Size (>= 32 MB) | Low |
+| [WIN-EVTLOG-006](../controls/index.md#win-evtlog-006) | Setup Event Log Retention (Overwrite as Needed) | Low |
+| [WIN-EVTLOG-007](../controls/index.md#win-evtlog-007) | System Event Log Maximum Size (>= 32 MB) | Medium |
+| [WIN-EVTLOG-008](../controls/index.md#win-evtlog-008) | System Event Log Retention (Overwrite as Needed) | Low |
 
