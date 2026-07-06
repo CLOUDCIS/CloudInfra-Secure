@@ -362,7 +362,7 @@ The built-in Guest account must be disabled.
 
 ### WIN-ACCT-003 - Force Logoff When Logon Hours Expire { #win-acct-003 }
 
-**Severity:** Low &nbsp; **Category:** Account Policy &nbsp; **Provider:** SecEdit &nbsp; **Delivery:** Direct &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+**Severity:** Low &nbsp; **Category:** Account Policy &nbsp; **Provider:** SecEdit &nbsp; **Delivery:** Direct &nbsp; **Reboot:** No &nbsp; **Tier:** Standard &nbsp; **Applies to:** Domain-joined only
 
 Force users to log off when their logon hours expire.
 
