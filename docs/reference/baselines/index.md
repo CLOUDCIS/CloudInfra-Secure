@@ -6,7 +6,7 @@ CloudInfra Secure ships 7 baselines. Each is a curated collection of control IDs
 
 Baseline for Active Directory Domain Controllers.
 
-**ID:** `CloudInfraSecure-DomainController` &nbsp; **Controls:** 179 &nbsp; **Supported OS:** WindowsServer2022, WindowsServer2025
+**ID:** `CloudInfraSecure-DomainController` &nbsp; **Controls:** 181 &nbsp; **Supported OS:** WindowsServer2022, WindowsServer2025
 
 | Control | Name | Severity |
 |---------|------|----------|
@@ -189,12 +189,14 @@ Baseline for Active Directory Domain Controllers.
 | [WIN-SCRSVR-001](../controls/index.md#win-scrsvr-001) | Enable Screen Saver (Default Profile) | Low |
 | [WIN-SCRSVR-002](../controls/index.md#win-scrsvr-002) | Password Protect the Screen Saver (Default Profile) | Medium |
 | [WIN-SCRSVR-003](../controls/index.md#win-scrsvr-003) | Screen Saver Timeout (Default Profile) | Low |
+| [WIN-LOGON-018](../controls/index.md#win-logon-018) | Logon Legal Notice Text | Low |
+| [WIN-LOGON-019](../controls/index.md#win-logon-019) | Logon Legal Notice Title | Low |
 
 ## CloudInfra Secure Enterprise - Enterprise tier
 
 Comprehensive baseline for regulated and high-assurance environments.
 
-**ID:** `CloudInfraSecure-Enterprise` &nbsp; **Controls:** 299 &nbsp; **Supported OS:** WindowsServer2022, WindowsServer2025
+**ID:** `CloudInfraSecure-Enterprise` &nbsp; **Controls:** 301 &nbsp; **Supported OS:** WindowsServer2022, WindowsServer2025
 
 | Control | Name | Severity |
 |---------|------|----------|
@@ -497,12 +499,14 @@ Comprehensive baseline for regulated and high-assurance environments.
 | [WIN-SCRSVR-003](../controls/index.md#win-scrsvr-003) | Screen Saver Timeout (Default Profile) | Low |
 | [WIN-LOGON-017](../controls/index.md#win-logon-017) | Turn Off Toast Notifications on the Lock Screen (Default Profile) | Low |
 | [WIN-DEF-017](../controls/index.md#win-def-017) | Notify Antivirus When Opening Attachments (Default Profile) | Medium |
+| [WIN-LOGON-018](../controls/index.md#win-logon-018) | Logon Legal Notice Text | Low |
+| [WIN-LOGON-019](../controls/index.md#win-logon-019) | Logon Legal Notice Title | Low |
 
 ## CloudInfra Secure Essential - Essential tier
 
 Baseline of essential hardening controls suitable for any Windows Server workload.
 
-**ID:** `CloudInfraSecure-Essential` &nbsp; **Controls:** 15 &nbsp; **Supported OS:** WindowsServer2022, WindowsServer2025
+**ID:** `CloudInfraSecure-Essential` &nbsp; **Controls:** 17 &nbsp; **Supported OS:** WindowsServer2022, WindowsServer2025
 
 | Control | Name | Severity |
 |---------|------|----------|
@@ -521,12 +525,14 @@ Baseline of essential hardening controls suitable for any Windows Server workloa
 | [WIN-TLS-013](../controls/index.md#win-tls-013) | Disable SSL 2.0 (Server) | High |
 | [WIN-DEF-002](../controls/index.md#win-def-002) | Enable Potentially Unwanted Application (PUA) Protection | High |
 | [WIN-DEF-003](../controls/index.md#win-def-003) | Enable Defender Real-Time Protection | High |
+| [WIN-LOGON-018](../controls/index.md#win-logon-018) | Logon Legal Notice Text | Low |
+| [WIN-LOGON-019](../controls/index.md#win-logon-019) | Logon Legal Notice Title | Low |
 
 ## CloudInfra Secure IIS Web Server - Role tier
 
 Baseline for Internet Information Services (IIS) web servers.
 
-**ID:** `CloudInfraSecure-IISWebServer` &nbsp; **Controls:** 101 &nbsp; **Supported OS:** WindowsServer2022, WindowsServer2025
+**ID:** `CloudInfraSecure-IISWebServer` &nbsp; **Controls:** 103 &nbsp; **Supported OS:** WindowsServer2022, WindowsServer2025
 
 | Control | Name | Severity |
 |---------|------|----------|
@@ -631,12 +637,14 @@ Baseline for Internet Information Services (IIS) web servers.
 | [WIN-NET-021](../controls/index.md#win-net-021) | TCP Maximum Data Retransmissions (IPv4) | Low |
 | [WIN-NET-024](../controls/index.md#win-net-024) | Disable Dead Gateway Detection | Low |
 | [WIN-DEF-017](../controls/index.md#win-def-017) | Notify Antivirus When Opening Attachments (Default Profile) | Medium |
+| [WIN-LOGON-018](../controls/index.md#win-logon-018) | Logon Legal Notice Text | Low |
+| [WIN-LOGON-019](../controls/index.md#win-logon-019) | Logon Legal Notice Title | Low |
 
 ## CloudInfra Secure Remote Desktop Server - Role tier
 
 Baseline for Remote Desktop Session Host servers.
 
-**ID:** `CloudInfraSecure-RemoteDesktopServer` &nbsp; **Controls:** 97 &nbsp; **Supported OS:** WindowsServer2022, WindowsServer2025
+**ID:** `CloudInfraSecure-RemoteDesktopServer` &nbsp; **Controls:** 99 &nbsp; **Supported OS:** WindowsServer2022, WindowsServer2025
 
 | Control | Name | Severity |
 |---------|------|----------|
@@ -737,12 +745,14 @@ Baseline for Remote Desktop Session Host servers.
 | [WIN-LOGON-016](../controls/index.md#win-logon-016) | Screen Saver Grace Period | Low |
 | [WIN-LOGON-017](../controls/index.md#win-logon-017) | Turn Off Toast Notifications on the Lock Screen (Default Profile) | Low |
 | [WIN-DEF-017](../controls/index.md#win-def-017) | Notify Antivirus When Opening Attachments (Default Profile) | Medium |
+| [WIN-LOGON-018](../controls/index.md#win-logon-018) | Logon Legal Notice Text | Low |
+| [WIN-LOGON-019](../controls/index.md#win-logon-019) | Logon Legal Notice Title | Low |
 
 ## CloudInfra Secure SQL Server - Role tier
 
 Baseline for Microsoft SQL Server hosts.
 
-**ID:** `CloudInfraSecure-SQLServer` &nbsp; **Controls:** 91 &nbsp; **Supported OS:** WindowsServer2022, WindowsServer2025
+**ID:** `CloudInfraSecure-SQLServer` &nbsp; **Controls:** 93 &nbsp; **Supported OS:** WindowsServer2022, WindowsServer2025
 
 | Control | Name | Severity |
 |---------|------|----------|
@@ -837,12 +847,14 @@ Baseline for Microsoft SQL Server hosts.
 | [WIN-NET-021](../controls/index.md#win-net-021) | TCP Maximum Data Retransmissions (IPv4) | Low |
 | [WIN-NET-022](../controls/index.md#win-net-022) | TCP Maximum Data Retransmissions (IPv6) | Low |
 | [WIN-EVTLOG-009](../controls/index.md#win-evtlog-009) | Security Log Near-Capacity Warning Threshold | Low |
+| [WIN-LOGON-018](../controls/index.md#win-logon-018) | Logon Legal Notice Text | Low |
+| [WIN-LOGON-019](../controls/index.md#win-logon-019) | Logon Legal Notice Title | Low |
 
 ## CloudInfra Secure Standard - Standard tier
 
 Recommended baseline adding logging, auditing and access hardening on top of Essential.
 
-**ID:** `CloudInfraSecure-Standard` &nbsp; **Controls:** 272 &nbsp; **Supported OS:** WindowsServer2022, WindowsServer2025
+**ID:** `CloudInfraSecure-Standard` &nbsp; **Controls:** 274 &nbsp; **Supported OS:** WindowsServer2022, WindowsServer2025
 
 | Control | Name | Severity |
 |---------|------|----------|
@@ -1118,4 +1130,6 @@ Recommended baseline adding logging, auditing and access hardening on top of Ess
 | [WIN-SCRSVR-003](../controls/index.md#win-scrsvr-003) | Screen Saver Timeout (Default Profile) | Low |
 | [WIN-LOGON-017](../controls/index.md#win-logon-017) | Turn Off Toast Notifications on the Lock Screen (Default Profile) | Low |
 | [WIN-DEF-017](../controls/index.md#win-def-017) | Notify Antivirus When Opening Attachments (Default Profile) | Medium |
+| [WIN-LOGON-018](../controls/index.md#win-logon-018) | Logon Legal Notice Text | Low |
+| [WIN-LOGON-019](../controls/index.md#win-logon-019) | Logon Legal Notice Title | Low |
 

@@ -1,6 +1,6 @@
 # Controls
 
-The CloudInfra Secure control library (299 controls). Each control exists once and may be used by many baselines.
+The CloudInfra Secure control library (301 controls). Each control exists once and may be used by many baselines.
 
 !!! note "Compliance disclaimer"
     CloudInfra Secure controls are designed to help organisations implement technical security requirements commonly found in recognised security standards. They do not constitute certification or proof of compliance.
@@ -12,11 +12,11 @@ Controls tagged **GPO** are delivered through a Group Policy registry value that
 <div class="cmpl-toolbar">
   <label for="ctlDelivery"><strong>Filter by delivery:</strong></label>
   <select id="ctlDelivery">
-    <option value="__all">All controls (299)</option>
-    <option value="gpo">Group Policy-backed (139)</option>
+    <option value="__all">All controls (301)</option>
+    <option value="gpo">Group Policy-backed (141)</option>
     <option value="direct">Direct system setting (160)</option>
   </select>
-  <span class="cmpl-count" id="ctlCount">Showing 299 of 299 controls</span>
+  <span class="cmpl-count" id="ctlCount">Showing 301 of 301 controls</span>
 </div>
 
 <div class="cmpl-tablewrap" markdown="0">
@@ -147,6 +147,8 @@ Controls tagged **GPO** are delivered through a Group Policy registry value that
     <tr data-delivery="gpo"><td class="cmpl-num"></td><td><a href="#win-logon-015">WIN-LOGON-015</a></td><td>Disable Automatic Restart Sign-On (ARSO)</td><td>Medium</td><td>Access Control</td><td>Registry</td><td><span class="gpo-badge" title="Delivered via a Group Policy registry value; a domain GPO can override it">GPO</span></td></tr>
     <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-logon-016">WIN-LOGON-016</a></td><td>Screen Saver Grace Period</td><td>Low</td><td>Access Control</td><td>Registry</td><td><span class="muted-badge">Direct</span></td></tr>
     <tr data-delivery="gpo"><td class="cmpl-num"></td><td><a href="#win-logon-017">WIN-LOGON-017</a></td><td>Turn Off Toast Notifications on the Lock Screen (Default Profile)</td><td>Low</td><td>Access Control</td><td>Registry</td><td><span class="gpo-badge" title="Delivered via a Group Policy registry value; a domain GPO can override it">GPO</span></td></tr>
+    <tr data-delivery="gpo"><td class="cmpl-num"></td><td><a href="#win-logon-018">WIN-LOGON-018</a></td><td>Logon Legal Notice Text</td><td>Low</td><td>Access Control</td><td>Registry</td><td><span class="gpo-badge" title="Delivered via a Group Policy registry value; a domain GPO can override it">GPO</span></td></tr>
+    <tr data-delivery="gpo"><td class="cmpl-num"></td><td><a href="#win-logon-019">WIN-LOGON-019</a></td><td>Logon Legal Notice Title</td><td>Low</td><td>Access Control</td><td>Registry</td><td><span class="gpo-badge" title="Delivered via a Group Policy registry value; a domain GPO can override it">GPO</span></td></tr>
     <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-lsa-001">WIN-LSA-001</a></td><td>Do Not Store LAN Manager Hash</td><td>High</td><td>Credential Protection</td><td>Registry</td><td><span class="muted-badge">Direct</span></td></tr>
     <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-lsa-002">WIN-LSA-002</a></td><td>Restrict Anonymous SID Enumeration</td><td>Medium</td><td>Access Control</td><td>Registry</td><td><span class="muted-badge">Direct</span></td></tr>
     <tr data-delivery="direct"><td class="cmpl-num"></td><td><a href="#win-lsa-003">WIN-LSA-003</a></td><td>Enable LSASS Protection (RunAsPPL)</td><td>High</td><td>Credential Protection</td><td>Registry</td><td><span class="muted-badge">Direct</span></td></tr>
@@ -2187,6 +2189,36 @@ Prevent toast notifications from appearing on the lock screen for the default pr
 
 **References:**
 - [https://learn.microsoft.com/en-us/windows/security/operating-system-security/device-management/windows-security-configuration-framework/windows-security-baselines](https://learn.microsoft.com/en-us/windows/security/operating-system-security/device-management/windows-security-configuration-framework/windows-security-baselines)
+
+### WIN-LOGON-018 - Logon Legal Notice Text { #win-logon-018 }
+
+**Severity:** Low &nbsp; **Category:** Access Control &nbsp; **Provider:** Registry &nbsp; **Delivery:** Group Policy &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+
+Display a legal warning banner (message text) before interactive and Remote Desktop logon. Audits that a non-empty banner is set; the applied default authorized-use text can be replaced with your own wording. Group Policy setting: this control checks the corresponding Group Policy registry value, so it can report non-compliant until the policy is explicitly configured (even where the effective Windows default is already secure), and a domain Group Policy applied after hardening can override it.
+
+**Rationale.** Without a logon banner, users are not warned that access is authorized-only and monitored, weakening legal and deterrence posture.
+
+**Remediation.** Set Policies System LegalNoticeText to your organisation authorized-use warning (any non-empty value). Customise by editing this control apply value.
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
+
+**References:**
+- [https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/interactive-logon-message-text-for-users-attempting-to-log-on](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/interactive-logon-message-text-for-users-attempting-to-log-on)
+
+### WIN-LOGON-019 - Logon Legal Notice Title { #win-logon-019 }
+
+**Severity:** Low &nbsp; **Category:** Access Control &nbsp; **Provider:** Registry &nbsp; **Delivery:** Group Policy &nbsp; **Reboot:** No &nbsp; **Tier:** Standard
+
+Set the title bar caption for the logon warning banner. Audits that a non-empty caption is set; the applied default can be replaced with your own wording. Group Policy setting: this control checks the corresponding Group Policy registry value, so it can report non-compliant until the policy is explicitly configured (even where the effective Windows default is already secure), and a domain Group Policy applied after hardening can override it.
+
+**Rationale.** A banner with no title is less clear and less authoritative as a legal warning.
+
+**Remediation.** Set Policies System LegalNoticeCaption to a non-empty title. Customise by editing this control apply value.
+
+**Compliance alignment:** `DISA STIG` `NIST CSF` `NIST SP 800-53 Rev 5` `NIST SP 800-171` `PCI DSS v4.0` `ISO/IEC 27001` `Microsoft Cloud Security Benchmark` `Microsoft Security Baselines` `NIS2` `UK Cyber Essentials`
+
+**References:**
+- [https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/interactive-logon-message-title-for-users-attempting-to-log-on](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/interactive-logon-message-title-for-users-attempting-to-log-on)
 
 ### WIN-LSA-001 - Do Not Store LAN Manager Hash { #win-lsa-001 }
 

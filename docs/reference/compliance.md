@@ -9,20 +9,20 @@ Number of controls whose technical requirements may help implement each standard
 
 | Standard | Controls |
 |----------|----------|
-| DISA STIG | 299 |
-| NIST CSF | 299 |
-| NIST SP 800-53 Rev 5 | 299 |
-| NIST SP 800-171 | 299 |
+| DISA STIG | 301 |
+| NIST CSF | 301 |
+| NIST SP 800-53 Rev 5 | 301 |
+| NIST SP 800-171 | 301 |
 | FedRAMP | 13 |
-| Microsoft Cloud Security Benchmark | 260 |
-| Microsoft Security Baselines | 299 |
+| Microsoft Cloud Security Benchmark | 262 |
+| Microsoft Security Baselines | 301 |
 | CMMC Level 2 | 19 |
-| PCI DSS v4.0 | 299 |
+| PCI DSS v4.0 | 301 |
 | SOC 2 | 43 |
-| ISO/IEC 27001 | 299 |
+| ISO/IEC 27001 | 301 |
 | HIPAA Security Rule | 27 |
-| UK Cyber Essentials | 258 |
-| NIS2 | 299 |
+| UK Cyber Essentials | 260 |
+| NIS2 | 301 |
 
 ## Browse controls by standard
 
@@ -31,23 +31,23 @@ Select a standard to list the controls that map to it. This shows technical alig
 <div class="cmpl-toolbar">
   <label for="cmplStd"><strong>Filter by standard:</strong></label>
   <select id="cmplStd">
-    <option value="__all">All standards (299 controls)</option>
-    <option value="DISA STIG">DISA STIG (299)</option>
-    <option value="NIST CSF">NIST CSF (299)</option>
-    <option value="NIST SP 800-53 Rev 5">NIST SP 800-53 Rev 5 (299)</option>
-    <option value="NIST SP 800-171">NIST SP 800-171 (299)</option>
+    <option value="__all">All standards (301 controls)</option>
+    <option value="DISA STIG">DISA STIG (301)</option>
+    <option value="NIST CSF">NIST CSF (301)</option>
+    <option value="NIST SP 800-53 Rev 5">NIST SP 800-53 Rev 5 (301)</option>
+    <option value="NIST SP 800-171">NIST SP 800-171 (301)</option>
     <option value="FedRAMP">FedRAMP (13)</option>
-    <option value="Microsoft Cloud Security Benchmark">Microsoft Cloud Security Benchmark (260)</option>
-    <option value="Microsoft Security Baselines">Microsoft Security Baselines (299)</option>
+    <option value="Microsoft Cloud Security Benchmark">Microsoft Cloud Security Benchmark (262)</option>
+    <option value="Microsoft Security Baselines">Microsoft Security Baselines (301)</option>
     <option value="CMMC Level 2">CMMC Level 2 (19)</option>
-    <option value="PCI DSS v4.0">PCI DSS v4.0 (299)</option>
+    <option value="PCI DSS v4.0">PCI DSS v4.0 (301)</option>
     <option value="SOC 2">SOC 2 (43)</option>
-    <option value="ISO/IEC 27001">ISO/IEC 27001 (299)</option>
+    <option value="ISO/IEC 27001">ISO/IEC 27001 (301)</option>
     <option value="HIPAA Security Rule">HIPAA Security Rule (27)</option>
-    <option value="UK Cyber Essentials">UK Cyber Essentials (258)</option>
-    <option value="NIS2">NIS2 (299)</option>
+    <option value="UK Cyber Essentials">UK Cyber Essentials (260)</option>
+    <option value="NIS2">NIS2 (301)</option>
   </select>
-  <span class="cmpl-count" id="cmplCount">Showing 299 of 299 controls</span>
+  <span class="cmpl-count" id="cmplCount">Showing 301 of 301 controls</span>
 </div>
 
 <div class="cmpl-tablewrap" markdown="0">
@@ -178,6 +178,8 @@ Select a standard to list the controls that map to it. This shows technical alig
     <tr data-standards="|DISA STIG|NIST CSF|NIST SP 800-53 Rev 5|NIST SP 800-171|PCI DSS v4.0|ISO/IEC 27001|Microsoft Cloud Security Benchmark|Microsoft Security Baselines|NIS2|UK Cyber Essentials|"><td class="cmpl-num"></td><td><a href="../controls/#win-logon-015">WIN-LOGON-015</a></td><td>Disable Automatic Restart Sign-On (ARSO)</td><td>Medium</td><td>Access Control</td></tr>
     <tr data-standards="|DISA STIG|NIST CSF|NIST SP 800-53 Rev 5|NIST SP 800-171|PCI DSS v4.0|ISO/IEC 27001|Microsoft Cloud Security Benchmark|Microsoft Security Baselines|NIS2|UK Cyber Essentials|"><td class="cmpl-num"></td><td><a href="../controls/#win-logon-016">WIN-LOGON-016</a></td><td>Screen Saver Grace Period</td><td>Low</td><td>Access Control</td></tr>
     <tr data-standards="|DISA STIG|NIST CSF|NIST SP 800-53 Rev 5|NIST SP 800-171|PCI DSS v4.0|ISO/IEC 27001|Microsoft Cloud Security Benchmark|Microsoft Security Baselines|NIS2|UK Cyber Essentials|"><td class="cmpl-num"></td><td><a href="../controls/#win-logon-017">WIN-LOGON-017</a></td><td>Turn Off Toast Notifications on the Lock Screen (Default Profile)</td><td>Low</td><td>Access Control</td></tr>
+    <tr data-standards="|DISA STIG|NIST CSF|NIST SP 800-53 Rev 5|NIST SP 800-171|PCI DSS v4.0|ISO/IEC 27001|Microsoft Cloud Security Benchmark|Microsoft Security Baselines|NIS2|UK Cyber Essentials|"><td class="cmpl-num"></td><td><a href="../controls/#win-logon-018">WIN-LOGON-018</a></td><td>Logon Legal Notice Text</td><td>Low</td><td>Access Control</td></tr>
+    <tr data-standards="|DISA STIG|NIST CSF|NIST SP 800-53 Rev 5|NIST SP 800-171|PCI DSS v4.0|ISO/IEC 27001|Microsoft Cloud Security Benchmark|Microsoft Security Baselines|NIS2|UK Cyber Essentials|"><td class="cmpl-num"></td><td><a href="../controls/#win-logon-019">WIN-LOGON-019</a></td><td>Logon Legal Notice Title</td><td>Low</td><td>Access Control</td></tr>
     <tr data-standards="|DISA STIG|NIST CSF|NIST SP 800-53 Rev 5|NIST SP 800-171|PCI DSS v4.0|ISO/IEC 27001|Microsoft Cloud Security Benchmark|CMMC Level 2|HIPAA Security Rule|Microsoft Security Baselines|NIS2|UK Cyber Essentials|"><td class="cmpl-num"></td><td><a href="../controls/#win-lsa-001">WIN-LSA-001</a></td><td>Do Not Store LAN Manager Hash</td><td>High</td><td>Credential Protection</td></tr>
     <tr data-standards="|DISA STIG|NIST CSF|NIST SP 800-53 Rev 5|NIST SP 800-171|PCI DSS v4.0|ISO/IEC 27001|Microsoft Cloud Security Benchmark|Microsoft Security Baselines|NIS2|UK Cyber Essentials|"><td class="cmpl-num"></td><td><a href="../controls/#win-lsa-002">WIN-LSA-002</a></td><td>Restrict Anonymous SID Enumeration</td><td>Medium</td><td>Access Control</td></tr>
     <tr data-standards="|DISA STIG|NIST CSF|NIST SP 800-53 Rev 5|NIST SP 800-171|PCI DSS v4.0|ISO/IEC 27001|Microsoft Cloud Security Benchmark|CMMC Level 2|HIPAA Security Rule|Microsoft Security Baselines|NIS2|UK Cyber Essentials|"><td class="cmpl-num"></td><td><a href="../controls/#win-lsa-003">WIN-LSA-003</a></td><td>Enable LSASS Protection (RunAsPPL)</td><td>High</td><td>Credential Protection</td></tr>
