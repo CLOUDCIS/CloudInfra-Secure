@@ -1,5 +1,20 @@
 # FAQ
 
+### I deployed a marketplace image — do I need to run `apply`?
+
+No. Your image was **hardened before publication**, so it is protected from first
+boot. Start with `verify` to confirm the hardened state, then review the deployed
+baseline and a report. `apply` is only for *adapting* the server later (a new
+role, a stricter assurance level) — see [Assess and Change Safely](../guide/audit-apply-rollback.md).
+
+### How do I know the product on the image is genuine and untampered?
+
+Two independent checks. Every product file is listed in a SHA-256 integrity
+manifest that `verify` recomputes, and published images are Authenticode
+code-signed by the publisher (**InfraSOS FZCO**). Inspect a signature with
+`Get-AuthenticodeSignature .\Modules\Core.psm1`. See
+[Architecture › Software integrity and trust](architecture.md).
+
 ### Does CloudInfra Secure require any external dependencies?
 
 No. It is native PowerShell 5.1 using only built-in Windows tooling (Registry, `auditpol`, `secedit`, `schtasks`, `Get-Service`, NetSecurity, Defender cmdlets). No Python, Go, Node.js, SQL, web server, or third-party PowerShell modules.

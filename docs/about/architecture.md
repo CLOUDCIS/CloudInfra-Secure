@@ -15,7 +15,17 @@ CloudInfra Secure is **control-centric** and **baseline-agnostic**. The engine's
 
 Each control names a `provider` and supplies provider-specific `check` / `apply` / `rollback` parameter blocks — **data, not code**. Providers implement `Test()`, `Apply()`, `Restore()`, and `Capture()`.
 
-Providers in V1: `Registry`, `SecEdit`, `AuditPol`, `Service`, `Firewall`, `Defender`, `Manual`, and `Custom` (a signed escape hatch). Adding a new setting type = one new provider, written once. Adding a control = one JSON file, zero engine changes.
+Providers in V1: `Registry`, `SecEdit`, `AuditPol`, `Service`, `Firewall`, `Defender`, `Manual`, and `Custom`. Adding a new setting type = one new provider, written once. Adding a control = one JSON file, zero engine changes.
+
+!!! info "The `Custom` provider is not an arbitrary-code escape hatch"
+    Standard control content is **declarative** and cannot execute arbitrary code
+    — a control JSON file describes desired state and is interpreted by a typed
+    provider; it is never `Invoke-Expression`'d. The `Custom` provider exists for
+    the rare control whose logic cannot be expressed declaratively, but that logic
+    is **part of the signed product codebase**, reviewed and shipped with the
+    engine — it is **not** executable content supplied through control JSON. In
+    other words, no control file can introduce new executable behaviour; it can
+    only select and parameterise logic that already ships, signed, in the product.
 
 ## Content model
 
@@ -23,6 +33,50 @@ Providers in V1: `Registry`, `SecEdit`, `AuditPol`, `Service`, `Firewall`, `Defe
 - **Baseline** (`Baselines/<id>.json`) — name, tier, supported OS, and a list of control IDs.
 
 Both are validated at load time against JSON schemas.
+
+## Software integrity and trust
+
+CloudInfra Secure runs with administrative privilege on a hardened server, so the
+integrity of the product itself is part of the security model. Two independent
+mechanisms establish that trust:
+
+**Authenticode code signing.** Published product files are Authenticode-signed by
+the publisher, **InfraSOS FZCO**, with a trusted timestamp. The signature binds
+the code to a verified publisher identity and proves it has not been altered since
+signing. You can inspect any file's signature directly:
+
+```powershell
+Get-AuthenticodeSignature .\Modules\Core.psm1 | Select-Object Status, SignerCertificate
+```
+
+A `Valid` status with the InfraSOS FZCO signer is the expected result on a genuine
+published image.
+
+**Signed integrity manifest.** Every product file is listed in a SHA-256
+`manifest.json`. The `verify` command recomputes each file's hash and compares it
+to the manifest, detecting any addition, removal or modification of product
+content — including the declarative control and baseline JSON. What `verify`
+checks:
+
+- all product files are present and unmodified (hashes match the manifest);
+- the deployed baseline is intact;
+- the current security posture and any drift since publication.
+
+**If a file is modified**, its recomputed hash no longer matches the manifest and
+`verify` reports the mismatch; if the file is signed and tampered, its Authenticode
+status also ceases to be `Valid`. Either signal tells you the product on disk is no
+longer the published, trusted content.
+
+**Update trust model.** Product updates ship as newly signed content with an
+updated manifest, so the same two checks — signature and manifest — re-establish
+trust after every update. Trust is never assumed; it is re-verifiable at any time
+with one command.
+
+!!! note "Signing status"
+    Authenticode signing is applied to **published marketplace images**. If you
+    are evaluating a pre-release or self-built copy, files may be unsigned; the
+    SHA-256 integrity manifest still applies. See the
+    [Roadmap](roadmap.md) for current signing status.
 
 ## Forward compatibility
 
