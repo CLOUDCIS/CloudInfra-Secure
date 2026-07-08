@@ -1,40 +1,96 @@
-# Installation
+# Getting Started With Your CloudInfra Secure Image
 
-CloudInfra Secure is **native PowerShell** — no installer, no runtimes, no external modules.
+You deployed a **pre-hardened** CloudInfra Secure Windows Server image from your
+cloud marketplace. The security baseline was applied **before publication**, so
+the server is protected from first boot. Nothing to install — this page shows you
+what is already on the image and how to confirm its security state.
 
-## Requirements
+## What is already on the image
 
-- **Windows Server 2022 or 2025**
-- **PowerShell 5.1** (built in)
-- **Administrator** rights for mutating commands (`apply`, `rollback`, `drift enable/disable`); read-only commands (`audit`, `report`, `verify`) work unelevated
+| Component | Purpose |
+|---|---|
+| **CloudInfra Secure engine** | The PowerShell security engine (`CloudInfraSecure.ps1`) and modules |
+| **Control library** | The full library of Windows Server security controls |
+| **Deployed baseline definition** | `Baseline.json` — the exact baseline applied to this image before publication |
+| **Integrity manifest** | `manifest.json` — SHA-256 hashes of every product file, used by `verify` |
+| **Configuration directory** | `C:\ProgramData\Cloud Infrastructure Services\CloudInfra Secure\` (config, logs, snapshots) |
+| **Report directory** | `C:\CloudInfraSecure\Reports\` (configurable) |
 
-## Install
-
-Copy the `CloudInfraSecure` folder to the server — e.g. `C:\Program Files\Cloud Infrastructure Services\CloudInfra Secure` — and run the entry script:
+The engine is located at **`C:\CloudInfraSecure\`**. Open an **elevated**
+PowerShell there to run any command:
 
 ```powershell
-# Allow the scripts to run for this session (unsigned during evaluation)
-Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass -Force
-
-.\CloudInfraSecure.ps1 audit -Baseline CloudInfraSecure-Standard
+cd C:\CloudInfraSecure
 ```
 
-!!! tip "After a code update, start a new PowerShell window"
-    Module-based PowerShell tools load their modules once per session. After updating the product, open a **new** PowerShell window so the new modules load. Scheduled/automated runs are always fresh processes, so this only affects interactive testing.
+## Verify the product installation
 
-## Runtime locations
+Confirm the product files are intact (integrity), and see the deployed baseline,
+security posture, and any drift since the image was published:
 
-| What | Where |
-|---|---|
-| Config, logs, snapshots, `Baseline.json` | `C:\ProgramData\Cloud Infrastructure Services\CloudInfra Secure\` |
-| **Reports** | `C:\CloudInfraSecure\Reports` (configurable via `reportsPath`) |
-| Integrity manifest | `manifest.json` in the install folder |
+```powershell
+.\CloudInfraSecure.ps1 verify
+```
 
-## Verify the install
+## Confirm the deployed baseline
+
+`verify` reports which baseline was deployed. View that baseline's full
+definition:
 
 ```powershell
 .\CloudInfraSecure.ps1 baseline list
-.\CloudInfraSecure.ps1 controls list
+.\CloudInfraSecure.ps1 baseline show <deployed-baseline-id>
 ```
 
-You should see the shipped baselines and the control library. Continue to the [Quickstart](quickstart.md).
+## Generate your first report
+
+```powershell
+.\CloudInfraSecure.ps1 report -Format HTML
+```
+
+Open the newest file in `C:\CloudInfraSecure\Reports\`. See
+[Reporting](../guide/reporting.md) for how to read it.
+
+## Software integrity
+
+Every product file is listed in a SHA-256 **integrity manifest**, and `verify`
+recomputes those hashes to detect any modification. Published marketplace images
+are **Authenticode code-signed** by the publisher (**InfraSOS FZCO**); you can
+inspect a signature at any time:
+
+```powershell
+Get-AuthenticodeSignature .\Modules\Core.psm1 | Select-Object Status, SignerCertificate
+```
+
+See [Architecture › Software integrity and trust](../about/architecture.md) for
+the full trust model.
+
+## Cloud-specific notes
+
+=== "Azure"
+
+    - **Connect:** RDP to the VM (or use Azure Bastion). Network Level Authentication is enforced.
+    - **Where it is installed:** `C:\CloudInfraSecure\`.
+    - **Baseline applied:** run `verify` to see the deployed baseline for this image.
+    - **Entitlement:** managed through your Azure Marketplace subscription for the VM offer.
+    - **Before changing the server role:** review [Baselines](../guide/baselines.md) — do **not** apply a different baseline just because it sounds more secure. Verify first, then choose a role-appropriate profile.
+
+=== "AWS"
+
+    - **Connect:** RDP to the instance using the key pair / password from the EC2 console.
+    - **Where it is installed:** `C:\CloudInfraSecure\`.
+    - **Baseline applied:** run `verify` to see the deployed baseline for this image.
+    - **Entitlement:** managed through your AWS Marketplace subscription for the AMI.
+    - **Before changing the server role:** review [Baselines](../guide/baselines.md) and confirm the profile suits the workload before applying anything.
+
+=== "Google Cloud"
+
+    - **Connect:** RDP to the VM using the Windows password generated in the Compute Engine console.
+    - **Where it is installed:** `C:\CloudInfraSecure\`.
+    - **Baseline applied:** run `verify` to see the deployed baseline for this image.
+    - **Entitlement:** managed through your Google Cloud Marketplace subscription.
+    - **Before changing the server role:** review [Baselines](../guide/baselines.md) and pick a role-appropriate profile rather than the strictest one.
+
+---
+
+Continue to the [Quickstart — Your First 10 Minutes](quickstart.md).

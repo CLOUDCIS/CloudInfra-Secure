@@ -3,7 +3,7 @@
 The CloudInfra Secure control library (301 controls). Each control exists once and may be used by many baselines.
 
 !!! note "Compliance disclaimer"
-    CloudInfra Secure controls are designed to help organisations implement technical security requirements commonly found in recognised security standards. They do not constitute certification or proof of compliance.
+    CloudInfra Secure is designed to assist organisations in implementing and assessing technical security controls that align with recognised cybersecurity and compliance frameworks. CloudInfra Secure is not certified, approved, endorsed or authorised by any standards body or framework owner. Compliance mappings are provided for informational purposes only and do not constitute certification, accreditation, audit evidence or a guarantee of compliance. Organisations remain responsible for validating their own compliance based on their specific environment, policies and operational controls.
 
 ## Coverage summary
 

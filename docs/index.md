@@ -9,10 +9,48 @@ hide:
 
 # CloudInfra Secure
 
-**A lightweight, native Windows Server security baseline platform.** Audit security controls, apply proprietary security baselines, generate compliance reports, detect configuration drift, snapshot & roll back changes, and verify image integrity — with **zero external dependencies**.
+**Hardened Windows Server that stays hardened.**
 
-[Get started :material-arrow-right:](getting-started/quickstart.md){ .md-button .md-button--primary }
+CloudInfra Secure provides pre-hardened Windows Server 2022 and 2025 images for
+Azure, AWS and Google Cloud. Every image includes the CloudInfra Secure security
+engine to **verify** the deployed security state, generate detailed **reports**,
+detect configuration **drift**, **alert** on regressions and safely **remediate**
+or **roll back** changes.
+
+[Just deployed? Verify your image :material-arrow-right:](getting-started/quickstart.md){ .md-button .md-button--primary }
 [Browse the controls :material-shield-check:](reference/controls/index.md){ .md-button }
+
+---
+
+## Where do you want to start?
+
+<div class="grid cards" markdown>
+
+-   :material-rocket-launch: __Just deployed your image?__
+
+    ---
+
+    Verify the hardened state and generate your first report.
+
+    [:material-arrow-right: Getting started](getting-started/quickstart.md)
+
+-   :material-shield-search: __Want to understand what is secured?__
+
+    ---
+
+    Explore the 300+ technical security controls and the deployed baseline.
+
+    [:material-arrow-right: Controls reference](reference/controls/index.md)
+
+-   :material-radar: __Want continuous protection?__
+
+    ---
+
+    Enable drift detection and alerts to keep the image hardened over time.
+
+    [:material-arrow-right: Drift & alerts](guide/drift-and-alerts.md)
+
+</div>
 
 ---
 
@@ -20,54 +58,69 @@ hide:
 
 <div class="grid cards" markdown>
 
--   :material-shield-lock: __Control-centric engine__
+-   :material-shield-check: __Pre-Hardened from First Boot__
 
     ---
 
-    The engine speaks only **controls**; baselines are collections of controls. Content is data, not code — no arbitrary code execution.
+    The image is hardened against a security baseline **before publication**, so the server is protected from the moment it boots — no post-deployment hardening project required.
 
--   :material-file-document-check: __Proprietary baselines__
-
-    ---
-
-    Essential, Standard, Enterprise, and role baselines (Domain Controller, IIS, SQL, Remote Desktop) — each a curated set of controls.
-
--   :material-chart-donut: __Branded reporting__
+-   :material-clipboard-check: __Verify the Hardened State__
 
     ---
 
-    Self-contained HTML reports with a security score, per-standard compliance gauges, filters, and drill-down control detail.
+    One command confirms image integrity, the deployed baseline, the security posture, and any drift since deployment.
 
--   :material-radar: __Drift detection__
-
-    ---
-
-    A daily check re-audits against the hardened baseline and alerts **only on regressions** — with optional automatic remediation.
-
--   :material-backup-restore: __Reversible by design__
+-   :material-format-list-numbered: __300+ Security Controls__
 
     ---
 
-    Every apply auto-snapshots first; roll back a whole snapshot or a single control. Never reboots for you.
+    A broad library of Windows Server controls — attack surface reduction, auditing, credential protection, TLS, user rights and more — each with a verified reference.
 
--   :material-check-decagram: __Marketplace-ready__
+-   :material-radar: __Continuous Drift Detection__
 
     ---
 
-    Integrity `verify`, structured JSON output, and fleet-friendly exit codes — built for Azure, AWS, and GCP images.
+    A scheduled check re-audits against the deployed baseline and alerts **only on regressions** — with optional automatic remediation.
+
+-   :material-backup-restore: __Controlled and Reversible Changes__
+
+    ---
+
+    Every change auto-snapshots first; roll back a single control or a whole snapshot. The engine never reboots the server for you.
+
+-   :material-chart-donut: __Compliance Alignment Reporting__
+
+    ---
+
+    Self-contained HTML reports with a security score, security-framework alignment, severity summaries, filters and drill-down control detail.
 
 </div>
 
 ---
 
-## Compliance alignment
+## How it works
 
-CloudInfra Secure controls carry **informational** mappings to recognised security standards, surfaced as gauges and filters in every report:
+CloudInfra Secure is a **declarative** engine: security controls are data, not
+code, so content can be reviewed and can never execute arbitrary commands. The
+engine evaluates each control against the live server, and — where you ask it to
+— applies or reverts it through a small set of audited providers (registry,
+security policy, audit policy, services). Every change is snapshotted first and
+is fully reversible.
+
+[Read the architecture :material-arrow-right:](about/architecture.md){ .md-button }
+
+---
+
+## Security framework alignment
+
+CloudInfra Secure maps individual Windows Server technical controls to related
+requirements in recognised security and compliance frameworks, surfaced as
+alignment gauges and filters in every report:
 
 `DISA STIG` · `NIST CSF` · `NIST SP 800-53 Rev 5` · `NIST SP 800-171` · `FedRAMP` · `Microsoft Cloud Security Benchmark` · `Microsoft Security Baselines` · `CMMC Level 2` · `PCI DSS v4.0` · `SOC 2` · `ISO/IEC 27001` · `HIPAA Security Rule` · `UK Cyber Essentials` · `NIS2`
 
 !!! note "Compliance disclaimer"
-    CloudInfra Secure controls are designed to help organisations implement technical security requirements commonly found in recognised security standards. CloudInfra Secure is **not** certified, approved, endorsed, officially compliant with, or authorised by any standards organisation. Compliance mappings are informational only and do not constitute certification or proof of compliance.
+    CloudInfra Secure is designed to assist organisations in implementing and assessing technical security controls that align with recognised cybersecurity and compliance frameworks. CloudInfra Secure is **not certified, approved, endorsed or authorised** by any standards body or framework owner. Compliance mappings are provided for informational purposes only and do not constitute certification, accreditation, audit evidence or a guarantee of compliance. Organisations remain responsible for validating their own compliance based on their specific environment, policies and operational controls.
 
 ---
 
