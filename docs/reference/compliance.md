@@ -1,14 +1,19 @@
-# Compliance Coverage
+# Security Framework Mapping
 
-Number of controls whose technical requirements may help implement each standard (informational only).
+CloudInfra Secure maps individual Windows Server technical controls to related requirements in recognised security and compliance frameworks. These mappings help customers understand where a technical configuration may support a broader security requirement.
 
 !!! note "Compliance disclaimer"
     CloudInfra Secure is designed to assist organisations in implementing and assessing technical security controls that align with recognised cybersecurity and compliance frameworks. CloudInfra Secure is not certified, approved, endorsed or authorised by any standards body or framework owner. Compliance mappings are provided for informational purposes only and do not constitute certification, accreditation, audit evidence or a guarantee of compliance. Organisations remain responsible for validating their own compliance based on their specific environment, policies and operational controls.
 
-## Coverage summary
+## Controls with a framework mapping
 
-| Standard | Controls |
-|----------|----------|
+The number of CloudInfra Secure technical controls that carry **one or more** mappings to each framework. A single hardening control commonly relates to the configuration-management or system-hardening requirement of several frameworks at once, which is why broad frameworks show high counts.
+
+!!! warning "What this is not"
+    A high mapping count does **not** mean CloudInfra Secure implements, satisfies or certifies that framework. It means the listed technical controls relate to requirements within it. Framework compliance depends on organisational, procedural and environmental factors outside the scope of any hardening tool.
+
+| Framework | Controls with a mapping |
+|-----------|-------------------------|
 | DISA STIG | 301 |
 | NIST CSF | 301 |
 | NIST SP 800-53 Rev 5 | 301 |
@@ -24,12 +29,12 @@ Number of controls whose technical requirements may help implement each standard
 | UK Cyber Essentials | 260 |
 | NIS2 | 301 |
 
-## Browse controls by standard
+## Browse controls by framework
 
-Select a standard to list the controls that map to it. This shows technical alignment only, not certification.
+Select a framework to list the CloudInfra Secure controls that carry a mapping to it. This shows technical alignment only - not certification, accreditation or a guarantee of compliance.
 
 <div class="cmpl-toolbar">
-  <label for="cmplStd"><strong>Filter by standard:</strong></label>
+  <label for="cmplStd"><strong>Filter by framework:</strong></label>
   <select id="cmplStd">
     <option value="__all">All standards (301 controls)</option>
     <option value="DISA STIG">DISA STIG (301)</option>

@@ -85,7 +85,7 @@ nav:
   - Reference:
       - Controls: reference/controls/index.md
       - Baselines: reference/baselines/index.md
-      - Compliance Coverage: reference/compliance.md
+      - Security Framework Mapping: reference/compliance.md
   - About:
       - Architecture: about/architecture.md
       - Roadmap: about/roadmap.md
