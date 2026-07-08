@@ -1,8 +1,8 @@
 site_name: CloudInfra Secure Documentation
 site_description: >-
-  CloudInfra Secure - a lightweight, native Windows Server security baseline
-  platform. Audit, harden, report, and detect configuration drift with zero
-  external dependencies.
+  CloudInfra Secure - pre-hardened Windows Server images for Azure, AWS and
+  Google Cloud. Verify the hardened state, report on security posture, detect
+  configuration drift and safely remediate or roll back changes.
 site_author: InfraSOS FZCO
 site_url: https://cloudcis.github.io/CloudInfra-Secure/
 copyright: Copyright &copy; 2026 InfraSOS FZCO - CloudInfra Secure
@@ -77,8 +77,8 @@ nav:
       - Your First 10 Minutes: getting-started/quickstart.md
   - User Guide:
       - Commands: guide/commands.md
-      - Baselines: guide/baselines.md
-      - Audit, Apply & Rollback: guide/audit-apply-rollback.md
+      - Security Baseline Profiles: guide/baselines.md
+      - Assess & Change Safely: guide/audit-apply-rollback.md
       - Reporting: guide/reporting.md
       - Drift & Alerts: guide/drift-and-alerts.md
       - Configuration: guide/configuration.md
