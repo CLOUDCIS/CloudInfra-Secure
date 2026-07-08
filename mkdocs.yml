@@ -80,7 +80,7 @@ nav:
       - Security Baseline Profiles: guide/baselines.md
       - Assess & Change Safely: guide/audit-apply-rollback.md
       - Reporting: guide/reporting.md
-      - Drift & Alerts: guide/drift-and-alerts.md
+      - Drift Detection & Alerts: guide/drift-and-alerts.md
       - Configuration: guide/configuration.md
   - Reference:
       - Controls: reference/controls/index.md
