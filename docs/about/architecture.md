@@ -73,10 +73,10 @@ trust after every update. Trust is never assumed; it is re-verifiable at any tim
 with one command.
 
 !!! note "Signing status"
-    Authenticode signing is applied to **published marketplace images**. If you
-    are evaluating a pre-release or self-built copy, files may be unsigned; the
-    SHA-256 integrity manifest still applies. See the
-    [Roadmap](roadmap.md) for current signing status.
+    Product releases are Authenticode code-signed by **InfraSOS FZCO** with a
+    trusted timestamp, so on a published image `Get-AuthenticodeSignature` returns
+    `Valid` with that signer. A copy you build yourself from source is unsigned
+    until you sign it — the SHA-256 integrity manifest applies either way.
 
 ## Forward compatibility
 
