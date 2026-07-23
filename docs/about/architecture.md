@@ -46,11 +46,13 @@ the code to a verified publisher identity and proves it has not been altered sin
 signing. You can inspect any file's signature directly:
 
 ```powershell
-Get-AuthenticodeSignature .\Modules\Core.psm1 | Select-Object Status, SignerCertificate
+Get-AuthenticodeSignature .\Modules\Core.psm1 |
+    Format-List Status, @{ n = 'Signer'; e = { $_.SignerCertificate.Subject } }
 ```
 
-A `Valid` status with the InfraSOS FZCO signer is the expected result on a genuine
-published image.
+A `Valid` status with the `INFRASOS - FZCO` signer is the expected result on a
+genuine published image. (`Format-List` with the signer subject avoids the
+console truncating the certificate details.)
 
 **Signed integrity manifest.** Every product file is listed in a SHA-256
 `manifest.json`. The `verify` command recomputes each file's hash and compares it

@@ -59,11 +59,20 @@ are **Authenticode code-signed** by the publisher (**InfraSOS FZCO**); you can
 inspect a signature at any time:
 
 ```powershell
-Get-AuthenticodeSignature .\Modules\Core.psm1 | Select-Object Status, SignerCertificate
+# One file's signature — Status should be Valid, signer INFRASOS - FZCO:
+Get-AuthenticodeSignature .\Modules\Core.psm1 |
+    Format-List Status, @{ n = 'Signer'; e = { $_.SignerCertificate.Subject } }
+
+# Confirm every product script at once (expect a single row: Valid):
+Get-ChildItem . -Recurse -Include *.ps1, *.psm1, *.psd1 |
+    Get-AuthenticodeSignature | Group-Object Status | Select-Object Name, Count
 ```
 
-See [Architecture › Software integrity and trust](../about/architecture.md) for
-the full trust model.
+`Format-List` keeps the signer subject on its own line so it isn't truncated. For
+the complete picture — all product files against the signed manifest — run
+`.\CloudInfraSecure.ps1 verify`, which reports `Image integrity : PASS`. See
+[Architecture › Software integrity and trust](../about/architecture.md) for the
+full trust model.
 
 ## Cloud-specific notes
 
