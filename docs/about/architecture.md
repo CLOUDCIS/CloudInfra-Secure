@@ -40,10 +40,11 @@ CloudInfra Secure runs with administrative privilege on a hardened server, so th
 integrity of the product itself is part of the security model. Two independent
 mechanisms establish that trust:
 
-**Authenticode code signing.** Published product files are Authenticode-signed by
-the publisher, **InfraSOS FZCO**, with a trusted timestamp. The signature binds
-the code to a verified publisher identity and proves it has not been altered since
-signing. You can inspect any file's signature directly:
+**Authenticode code signing.** The product's PowerShell code — every `.ps1`,
+`.psm1` and `.psd1` — is Authenticode-signed by the publisher, **InfraSOS FZCO**,
+with a trusted timestamp. The signature binds the executable content to a verified
+publisher identity and proves it has not been altered since signing; it cannot be
+forged without the publisher's key. You can inspect any file's signature directly:
 
 ```powershell
 Get-AuthenticodeSignature .\Modules\Core.psm1 |
@@ -54,11 +55,12 @@ A `Valid` status with the `INFRASOS - FZCO` signer is the expected result on a
 genuine published image. (`Format-List` with the signer subject avoids the
 console truncating the certificate details.)
 
-**Signed integrity manifest.** Every product file is listed in a SHA-256
-`manifest.json`. The `verify` command recomputes each file's hash and compares it
-to the manifest, detecting any addition, removal or modification of product
-content — including the declarative control and baseline JSON. What `verify`
-checks:
+**SHA-256 integrity manifest.** Every product file — the signed code *and* the
+declarative control and baseline JSON — is listed in a SHA-256 `manifest.json`.
+The `verify` command recomputes each file's hash and compares it to the manifest,
+detecting any addition, removal or modification of product content. This extends
+tamper detection to the non-executable data files that Authenticode does not
+cover. What `verify` checks:
 
 - all product files are present and unmodified (hashes match the manifest);
 - the deployed baseline is intact;

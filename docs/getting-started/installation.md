@@ -69,7 +69,7 @@ Get-ChildItem . -Recurse -Include *.ps1, *.psm1, *.psd1 |
 ```
 
 `Format-List` keeps the signer subject on its own line so it isn't truncated. For
-the complete picture — all product files against the signed manifest — run
+the complete picture — all product files against the SHA-256 manifest — run
 `.\CloudInfraSecure.ps1 verify`, which reports `Image integrity : PASS`. See
 [Architecture › Software integrity and trust](../about/architecture.md) for the
 full trust model.
