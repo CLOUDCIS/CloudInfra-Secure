@@ -5,6 +5,17 @@ cloud marketplace. The security baseline was applied **before publication**, so
 the server is protected from first boot. Nothing to install — this page shows you
 what is already on the image and how to confirm its security state.
 
+!!! warning "Set a 14+ character administrator password when you deploy"
+    This image enforces a **14-character minimum password** (a hardened baseline
+    setting). Your cloud may let you enter a shorter password at VM creation
+    (Azure allows 12), but if you deploy with fewer than 14 characters the guest
+    cannot apply it during provisioning and **you will not be able to sign in** —
+    even though the RDP screen appears. Always create the VM with an administrator
+    password of **at least 14 characters** using upper- and lower-case letters, a
+    digit and a symbol. If you are already locked out, reset the password to 14+
+    characters with your cloud's tooling (Azure: `az vm user update`) and sign in
+    as `.\<admin>`.
+
 ## What is already on the image
 
 | Component | Purpose |

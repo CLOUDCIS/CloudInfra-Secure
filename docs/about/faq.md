@@ -15,6 +15,22 @@ code-signed by the publisher (**InfraSOS FZCO**). Inspect a signature with
 `Get-AuthenticodeSignature .\Modules\Core.psm1`. See
 [Architecture › Software integrity and trust](architecture.md).
 
+### I can't sign in to my newly deployed VM — RDP connects but rejects my password.
+
+The image enforces a **14-character minimum password**. Most clouds let you enter
+a shorter password at VM creation (Azure allows 12), but if the VM was created with
+fewer than 14 characters the guest cannot apply it during provisioning, so sign-in
+fails even though the RDP screen appears. Reset the administrator password to **14+
+characters** with your cloud's password-reset tooling — for Azure:
+
+```bash
+az vm user update -g <rg> -n <vm> -u <admin> -p '<14-plus-char password>'
+```
+
+Then sign in as `.\<admin>`. Deploy future VMs with a 14+ character password to
+avoid this. (Also try the `.\<admin>` username form first — a bare username is
+sometimes treated as a domain account and rejected.)
+
 ### Does CloudInfra Secure require any external dependencies?
 
 No. It is native PowerShell 5.1 using only built-in Windows tooling (Registry, `auditpol`, `secedit`, `schtasks`, `Get-Service`, NetSecurity, Defender cmdlets). No Python, Go, Node.js, SQL, web server, or third-party PowerShell modules.
