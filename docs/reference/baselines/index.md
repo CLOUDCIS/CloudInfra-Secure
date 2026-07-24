@@ -8,9 +8,9 @@ CloudInfra Secure ships 7 baseline profiles. Each is a curated collection of con
 <table class="cmpl-table">
   <thead><tr><th>Capability</th><th>DomainController</th><th>Enterprise</th><th>Essential</th><th>IISWebServer</th><th>RemoteDesktopServer</th><th>SQLServer</th><th>Standard</th></tr></thead>
   <tbody>
-    <tr><td><strong>Total controls</strong></td><td>181</td><td>301</td><td>17</td><td>103</td><td>99</td><td>93</td><td>274</td></tr>
+    <tr><td><strong>Total controls</strong></td><td>182</td><td>301</td><td>18</td><td>104</td><td>99</td><td>94</td><td>275</td></tr>
     <tr><td><strong>High / Critical severity</strong></td><td>36</td><td>47</td><td>15</td><td>32</td><td>28</td><td>32</td><td>40</td></tr>
-    <tr><td><strong>Medium severity</strong></td><td>102</td><td>167</td><td>0</td><td>56</td><td>52</td><td>50</td><td>149</td></tr>
+    <tr><td><strong>Medium severity</strong></td><td>103</td><td>167</td><td>1</td><td>57</td><td>52</td><td>51</td><td>150</td></tr>
     <tr><td><strong>Low severity</strong></td><td>43</td><td>87</td><td>2</td><td>15</td><td>19</td><td>11</td><td>85</td></tr>
     <tr><td><strong>Require reboot</strong></td><td>19</td><td>20</td><td>5</td><td>14</td><td>10</td><td>16</td><td>15</td></tr>
     <tr><td><strong>Recommended for</strong></td><td>Active Directory Domain Controllers</td><td>Regulated / high-assurance</td><td>Any Windows Server workload</td><td>IIS web servers</td><td>Remote Desktop Session Hosts</td><td>Microsoft SQL Server hosts</td><td>General-purpose member servers</td></tr>
@@ -24,7 +24,7 @@ Baseline for Active Directory Domain Controllers.
 
 **ID:** `CloudInfraSecure-DomainController` &nbsp; **Recommended for:** Active Directory Domain Controllers
 
-**Controls:** 181 &nbsp; **High/Critical:** 36 &nbsp; **Medium:** 102 &nbsp; **Low:** 43 &nbsp; **Require reboot:** 19
+**Controls:** 182 &nbsp; **High/Critical:** 36 &nbsp; **Medium:** 103 &nbsp; **Low:** 43 &nbsp; **Require reboot:** 19
 
 **Supported OS:** WindowsServer2022, WindowsServer2025
 
@@ -211,6 +211,7 @@ Baseline for Active Directory Domain Controllers.
 | [WIN-SCRSVR-003](../controls/index.md#win-scrsvr-003) | Screen Saver Timeout (Default Profile) | Low |
 | [WIN-LOGON-018](../controls/index.md#win-logon-018) | Logon Legal Notice Text | Low |
 | [WIN-LOGON-019](../controls/index.md#win-logon-019) | Logon Legal Notice Title | Low |
+| [WIN-SVC-002](../controls/index.md#win-svc-002) | Disable Print Spooler Service | Medium |
 
 ## CloudInfra Secure Enterprise - Enterprise tier
 
@@ -532,7 +533,7 @@ Baseline of essential hardening controls suitable for any Windows Server workloa
 
 **ID:** `CloudInfraSecure-Essential` &nbsp; **Recommended for:** Any Windows Server workload
 
-**Controls:** 17 &nbsp; **High/Critical:** 15 &nbsp; **Medium:** 0 &nbsp; **Low:** 2 &nbsp; **Require reboot:** 5
+**Controls:** 18 &nbsp; **High/Critical:** 15 &nbsp; **Medium:** 1 &nbsp; **Low:** 2 &nbsp; **Require reboot:** 5
 
 **Supported OS:** WindowsServer2022, WindowsServer2025
 
@@ -555,6 +556,7 @@ Baseline of essential hardening controls suitable for any Windows Server workloa
 | [WIN-DEF-003](../controls/index.md#win-def-003) | Enable Defender Real-Time Protection | High |
 | [WIN-LOGON-018](../controls/index.md#win-logon-018) | Logon Legal Notice Text | Low |
 | [WIN-LOGON-019](../controls/index.md#win-logon-019) | Logon Legal Notice Title | Low |
+| [WIN-SVC-002](../controls/index.md#win-svc-002) | Disable Print Spooler Service | Medium |
 
 ## CloudInfra Secure IIS Web Server - Role tier
 
@@ -562,7 +564,7 @@ Baseline for Internet Information Services (IIS) web servers.
 
 **ID:** `CloudInfraSecure-IISWebServer` &nbsp; **Recommended for:** IIS web servers
 
-**Controls:** 103 &nbsp; **High/Critical:** 32 &nbsp; **Medium:** 56 &nbsp; **Low:** 15 &nbsp; **Require reboot:** 14
+**Controls:** 104 &nbsp; **High/Critical:** 32 &nbsp; **Medium:** 57 &nbsp; **Low:** 15 &nbsp; **Require reboot:** 14
 
 **Supported OS:** WindowsServer2022, WindowsServer2025
 
@@ -671,6 +673,7 @@ Baseline for Internet Information Services (IIS) web servers.
 | [WIN-DEF-017](../controls/index.md#win-def-017) | Notify Antivirus When Opening Attachments (Default Profile) | Medium |
 | [WIN-LOGON-018](../controls/index.md#win-logon-018) | Logon Legal Notice Text | Low |
 | [WIN-LOGON-019](../controls/index.md#win-logon-019) | Logon Legal Notice Title | Low |
+| [WIN-SVC-002](../controls/index.md#win-svc-002) | Disable Print Spooler Service | Medium |
 
 ## CloudInfra Secure Remote Desktop Server - Role tier
 
@@ -790,7 +793,7 @@ Baseline for Microsoft SQL Server hosts.
 
 **ID:** `CloudInfraSecure-SQLServer` &nbsp; **Recommended for:** Microsoft SQL Server hosts
 
-**Controls:** 93 &nbsp; **High/Critical:** 32 &nbsp; **Medium:** 50 &nbsp; **Low:** 11 &nbsp; **Require reboot:** 16
+**Controls:** 94 &nbsp; **High/Critical:** 32 &nbsp; **Medium:** 51 &nbsp; **Low:** 11 &nbsp; **Require reboot:** 16
 
 **Supported OS:** WindowsServer2022, WindowsServer2025
 
@@ -889,6 +892,7 @@ Baseline for Microsoft SQL Server hosts.
 | [WIN-EVTLOG-009](../controls/index.md#win-evtlog-009) | Security Log Near-Capacity Warning Threshold | Low |
 | [WIN-LOGON-018](../controls/index.md#win-logon-018) | Logon Legal Notice Text | Low |
 | [WIN-LOGON-019](../controls/index.md#win-logon-019) | Logon Legal Notice Title | Low |
+| [WIN-SVC-002](../controls/index.md#win-svc-002) | Disable Print Spooler Service | Medium |
 
 ## CloudInfra Secure Standard - Standard tier
 
@@ -896,7 +900,7 @@ Recommended baseline adding logging, auditing and access hardening on top of Ess
 
 **ID:** `CloudInfraSecure-Standard` &nbsp; **Recommended for:** General-purpose member servers
 
-**Controls:** 274 &nbsp; **High/Critical:** 40 &nbsp; **Medium:** 149 &nbsp; **Low:** 85 &nbsp; **Require reboot:** 15
+**Controls:** 275 &nbsp; **High/Critical:** 40 &nbsp; **Medium:** 150 &nbsp; **Low:** 85 &nbsp; **Require reboot:** 15
 
 **Supported OS:** WindowsServer2022, WindowsServer2025
 
@@ -1176,4 +1180,5 @@ Recommended baseline adding logging, auditing and access hardening on top of Ess
 | [WIN-DEF-017](../controls/index.md#win-def-017) | Notify Antivirus When Opening Attachments (Default Profile) | Medium |
 | [WIN-LOGON-018](../controls/index.md#win-logon-018) | Logon Legal Notice Text | Low |
 | [WIN-LOGON-019](../controls/index.md#win-logon-019) | Logon Legal Notice Title | Low |
+| [WIN-SVC-002](../controls/index.md#win-svc-002) | Disable Print Spooler Service | Medium |
 
