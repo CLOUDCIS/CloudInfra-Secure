@@ -10,7 +10,7 @@ The complete CloudInfra Secure control library. Each control exists once and may
 <div class="stat-cards" markdown="0">
   <div class="stat-card"><span class="stat-num">301</span><span class="stat-label">Total controls</span></div>
   <div class="stat-card"><span class="stat-num">15</span><span class="stat-label">Categories</span></div>
-  <div class="stat-card"><span class="stat-num">47</span><span class="stat-label">High / Critical severity</span></div>
+  <div class="stat-card"><span class="stat-num">48</span><span class="stat-label">High / Critical severity</span></div>
   <div class="stat-card"><span class="stat-num">141</span><span class="stat-label">Group Policy-backed</span></div>
   <div class="stat-card"><span class="stat-num">20</span><span class="stat-label">Require reboot</span></div>
   <div class="stat-card"><span class="stat-num">6</span><span class="stat-label">Provider types</span></div>
@@ -64,8 +64,8 @@ Controls tagged **GPO** are delivered through a Group Policy registry value that
   </select>
   <select class="ctl-filter" id="ctlSeverity" data-col="severity">
     <option value="__all">All severities</option>
-    <option value="High">High (47)</option>
-    <option value="Medium">Medium (167)</option>
+    <option value="High">High (48)</option>
+    <option value="Medium">Medium (166)</option>
     <option value="Low">Low (87)</option>
   </select>
   <select class="ctl-filter" id="ctlProvider" data-col="provider">
@@ -313,7 +313,7 @@ Controls tagged **GPO** are delivered through a Group Policy registry value that
     <tr data-delivery="direct" data-category="Network Protocols" data-severity="Low" data-provider="Registry"><td class="cmpl-num"></td><td><a href="#win-smb-012">WIN-SMB-012</a></td><td>Disconnect Clients When Logon Hours Expire</td><td>Low</td><td>Network Protocols</td><td>Registry</td><td><span class="muted-badge">Direct</span></td></tr>
     <tr data-delivery="direct" data-category="Network Protocols" data-severity="Medium" data-provider="Registry"><td class="cmpl-num"></td><td><a href="#win-smb-013">WIN-SMB-013</a></td><td>Server SPN Target Name Validation Level</td><td>Medium</td><td>Network Protocols</td><td>Registry</td><td><span class="muted-badge">Direct</span></td></tr>
     <tr data-delivery="direct" data-category="Attack Surface Reduction" data-severity="Medium" data-provider="Service"><td class="cmpl-num"></td><td><a href="#win-svc-001">WIN-SVC-001</a></td><td>Disable Remote Registry Service</td><td>Medium</td><td>Attack Surface Reduction</td><td>Service</td><td><span class="muted-badge">Direct</span></td></tr>
-    <tr data-delivery="direct" data-category="Attack Surface Reduction" data-severity="Medium" data-provider="Service"><td class="cmpl-num"></td><td><a href="#win-svc-002">WIN-SVC-002</a></td><td>Disable Print Spooler Service</td><td>Medium</td><td>Attack Surface Reduction</td><td>Service</td><td><span class="muted-badge">Direct</span></td></tr>
+    <tr data-delivery="direct" data-category="Attack Surface Reduction" data-severity="High" data-provider="Service"><td class="cmpl-num"></td><td><a href="#win-svc-002">WIN-SVC-002</a></td><td>Disable Print Spooler Service</td><td>High</td><td>Attack Surface Reduction</td><td>Service</td><td><span class="muted-badge">Direct</span></td></tr>
     <tr data-delivery="gpo" data-category="Attack Surface Reduction" data-severity="Low" data-provider="Registry"><td class="cmpl-num"></td><td><a href="#win-telem-001">WIN-TELEM-001</a></td><td>Limit Diagnostic Data to Required or Less</td><td>Low</td><td>Attack Surface Reduction</td><td>Registry</td><td><span class="gpo-badge" title="Delivered via a Group Policy registry value; a domain GPO can override it">GPO</span></td></tr>
     <tr data-delivery="gpo" data-category="Attack Surface Reduction" data-severity="Low" data-provider="Registry"><td class="cmpl-num"></td><td><a href="#win-telem-002">WIN-TELEM-002</a></td><td>Disable OneSettings Downloads</td><td>Low</td><td>Attack Surface Reduction</td><td>Registry</td><td><span class="gpo-badge" title="Delivered via a Group Policy registry value; a domain GPO can override it">GPO</span></td></tr>
     <tr data-delivery="gpo" data-category="Attack Surface Reduction" data-severity="Low" data-provider="Registry"><td class="cmpl-num"></td><td><a href="#win-telem-003">WIN-TELEM-003</a></td><td>Do Not Show Feedback Notifications</td><td>Low</td><td>Attack Surface Reduction</td><td>Registry</td><td><span class="gpo-badge" title="Delivered via a Group Policy registry value; a domain GPO can override it">GPO</span></td></tr>
@@ -3744,7 +3744,7 @@ The Remote Registry service must be stopped and disabled to reduce remote attack
 
 ### WIN-SVC-002 - Disable Print Spooler Service { #win-svc-002 }
 
-**Severity:** Medium &nbsp; **Category:** Attack Surface Reduction &nbsp; **Provider:** Service &nbsp; **Delivery:** Direct &nbsp; **Reboot:** No &nbsp; **Tier:** Enterprise
+**Severity:** High &nbsp; **Category:** Attack Surface Reduction &nbsp; **Provider:** Service &nbsp; **Delivery:** Direct &nbsp; **Reboot:** No &nbsp; **Tier:** Enterprise
 
 The Print Spooler service must be stopped and disabled on servers that do not print (PrintNightmare mitigation).
 
