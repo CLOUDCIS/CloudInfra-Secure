@@ -19,6 +19,7 @@ or **roll back** changes.
 
 [Just deployed? Verify your image :material-arrow-right:](getting-started/quickstart.md){ .md-button .md-button--primary }
 [Browse the controls :material-shield-check:](reference/controls/index.md){ .md-button }
+[Not deployed? View our images :material-open-in-new:](https://cloudinfrastructureservices.co.uk/cloudinfra-secure-server-hardening/){ .md-button target="_blank" rel="noopener" }
 
 ---
 
