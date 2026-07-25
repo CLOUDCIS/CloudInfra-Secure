@@ -13,10 +13,18 @@ When the product adds new settings, they are **automatically backfilled** into y
 
 ## Managing config
 
+Edit `config.json` directly in a text editor (run the editor **elevated**, since
+the file is under `ProgramData`), or back it up and restore it:
+
 ```powershell
-.\CloudInfraSecure.ps1 config export C:\CloudInfraSecure\config-backup.json
-.\CloudInfraSecure.ps1 config import C:\CloudInfraSecure\config-backup.json
+.\CloudInfraSecure.ps1 config export C:\CloudInfraSecure\config-backup.json   # back up the current config
+.\CloudInfraSecure.ps1 config import C:\CloudInfraSecure\config-backup.json   # restore it
 ```
+
+`export` writes your **current** settings; `import` replaces the active config
+with the file. The secret commands (`set-graph-secret`, `set-smtp-password`) only
+add the encrypted secret and **preserve everything else** in `config.json`, so you
+can edit the file and store the secret in either order.
 
 ## Key settings
 

@@ -63,14 +63,47 @@ at once:
 
 ## Remediation
 
-Off by default. When enabled, drift re-applies **only the regressed controls**
-(snapshotting first, so it remains reversible):
+Drift can be corrected automatically. It is **off by default**, and when enabled it
+re-applies **only the regressed controls** (snapshotting first, so it stays
+reversible).
+
+### One-off, on demand
+
+Run an elevated check with `-Remediate` to detect and fix in one step:
 
 ```powershell
-.\CloudInfraSecure.ps1 drift check -Remediate      # one-off (elevated)
+.\CloudInfraSecure.ps1 drift check -Remediate
 ```
 
-Or set `drift.autoRemediate: true` in config for the scheduled task to self-heal.
+### Enable automatic remediation (self-healing scheduled check)
+
+1. **Register the scheduled drift task** (if you haven't already):
+   ```powershell
+   .\CloudInfraSecure.ps1 drift enable
+   ```
+2. **Open the config file** in an editor (elevated):
+   `C:\ProgramData\Cloud Infrastructure Services\CloudInfra Secure\config.json`
+3. **In the `drift` block, set `autoRemediate` to `true`:**
+   ```json
+   "drift": {
+     "enabled": true,
+     "autoRemediate": true,
+     "time": "03:00",
+     "attachReport": "csv"
+   }
+   ```
+4. **Save.** From now on the scheduled check re-applies any regressed control
+   automatically, logs it (Event ID **3001**), and — if email is configured — the
+   alert states it was auto-remediated.
+
+**Confirm it works** without waiting for the daily run — trigger the task, then
+verify:
+
+```powershell
+Start-ScheduledTask -TaskName 'CloudInfraSecure-DriftCheck'
+Start-Sleep 20
+.\CloudInfraSecure.ps1 verify        # expect drift=PASS
+```
 
 ## Email alerts
 
@@ -90,7 +123,9 @@ IP-reputation blocklists.
 3. **Certificates & secrets → New client secret** → copy the **Value**.
 4. From **Overview** copy the **Application (client) ID** and **Directory (tenant) ID**; choose a licensed mailbox as `sender`.
 
-Configure the `graph` block and store the secret (DPAPI-encrypted):
+Edit the config file at
+`C:\ProgramData\Cloud Infrastructure Services\CloudInfra Secure\config.json` and
+set the `graph` block:
 
 ```json
 "graph": {
@@ -101,10 +136,19 @@ Configure the `graph` block and store the secret (DPAPI-encrypted):
   "to":       ["secops@yourdomain.com"]
 }
 ```
+
+Then store the client secret (DPAPI-encrypted) and send a test message:
+
 ```powershell
 .\CloudInfraSecure.ps1 config set-graph-secret     # prompts for the client secret
-.\Tests\Send-TestEmail.ps1                          # test delivery
+.\Tools\Send-TestEmail.ps1                          # test delivery
 ```
+
+!!! note "Order doesn't matter"
+    `config set-graph-secret` only stores the encrypted secret — it **preserves the
+    rest of your config**, so you can edit the `graph` block before or after running
+    it. (Run each command in its own step; the secret is written straight to
+    `config.json` and never appears in plaintext.)
 
 ### SMTP / Direct Send
 
@@ -133,8 +177,8 @@ also capture **who** changed a setting, enable registry object-access auditing o
 (elevated):
 
 ```powershell
-.\Build\Enable-CisChangeAuditing.ps1            # enable (after an apply, so keys exist)
-.\Build\Enable-CisChangeAuditing.ps1 -Disable   # remove later
+.\Tools\Enable-CisChangeAuditing.ps1            # enable (after an apply, so keys exist)
+.\Tools\Enable-CisChangeAuditing.ps1 -Disable   # remove later
 ```
 
 This enables the Registry audit subcategory and sets audit SACLs on the controlled
