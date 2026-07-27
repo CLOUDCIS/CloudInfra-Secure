@@ -5,12 +5,12 @@ is here to assist.
 
 ## Contact us
 
-The quickest way to reach us is through our contact page:
+Reach our team through our contact page — it goes straight to support:
 
 [Contact Cloud Infrastructure Services :material-open-in-new:](https://cloudinfrastructureservices.co.uk/contact-us/){ .md-button .md-button--primary target="_blank" rel="noopener" }
 
-You can also email us directly at
-[support@cloudinfrastructureservices.co.uk](mailto:support@cloudinfrastructureservices.co.uk).
+Prefer email? Use the contact form on that page and your message reaches our
+support team directly — we keep our address off these pages to cut down on spam.
 
 ## Before you get in touch
 
