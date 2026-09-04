@@ -1,8 +1,8 @@
 # Active Directory Hardening
 
-This guide describes the supported workflow for a Windows Server image that is intended to be promoted to a domain controller and then hardened with CloudInfra Secure.
+Use the following steps when deploying this image as a domain controller. The server is shipped as an AD-ready Windows Server image, and the recommended workflow is to promote it to a domain controller first, then apply the CloudInfra Secure Domain Controller baseline.
 
-The recommended deployment model is:
+Follow this sequence:
 
 1. Launch the VM.
 2. Sign in with the local administrator account.
@@ -17,9 +17,9 @@ This sequence is the supported pattern for domain-controller-ready images.
 
 ## Why this workflow matters
 
-The image should be treated as an AD-ready server, not as a fully hardened domain controller before promotion. The server must first complete the AD DS promotion process and become a live domain controller before the CloudInfra Secure Domain Controller baseline is applied.
+This image is intended to be promoted to a domain controller after launch. Do not apply the Domain Controller hardening baseline before the server has completed AD DS promotion and is acting as a live domain controller.
 
-This avoids issues caused by trying to harden a machine before the role is active.
+Applying the baseline before promotion can leave the server in a mismatched state and may cause failed controls.
 
 ---
 
@@ -120,7 +120,7 @@ This verifies the domain controller against the Domain Controller baseline.
 
 ### Step 12: Review failed controls
 
-If the audit reports failures, inspect the reported control IDs and messages. In a live DC, the most common remaining controls are:
+If the audit reports failures, review the control IDs and messages. On a live domain controller, the most common remaining controls are:
 
 - `WIN-ACCT-003` — Force Logoff When Logon Hours Expire
 - `WIN-SVC-001` — Disable Remote Registry Service
@@ -275,20 +275,35 @@ This ensures the service remains disabled and stopped after the change.
 
 ---
 
-## 7. Final verification
+## 7. Generate a report if needed
 
-After the GPO change and the Remote Registry change are complete, run the DC verification again:
+To produce a compliance report for the domain controller, run:
 
 ```powershell
 cd C:\CloudInfraSecure
-.\CloudInfraSecure.ps1 audit -Baseline CloudInfraSecure-DomainController
+.\CloudInfraSecure.ps1 report -Baseline CloudInfraSecure-DomainController -Format HTML
 ```
 
-If no fails remain, the domain controller is successfully hardened and ready for production use.
+Reports are saved to:
+
+```powershell
+C:\CloudInfraSecure\Reports\
+```
+
+## 8. Verify the hardened state
+
+To confirm the current Domain Controller state matches the expected hardened configuration, run:
+
+```powershell
+cd C:\CloudInfraSecure
+.\CloudInfraSecure.ps1 verify -Baseline CloudInfraSecure-DomainController
+```
+
+If no failures remain, the domain controller is successfully hardened and ready for production use.
 
 ---
 
-## 8. Recommended end-user workflow
+## 9. Recommended end-user workflow
 
 The supported customer flow is:
 
@@ -299,14 +314,7 @@ The supported customer flow is:
 5. Log in as the domain administrator.
 6. Run the Domain Controller baseline.
 7. Review and fix any remaining DC-specific failures.
-8. Re-run verification.
+8. Generate a report if needed.
+9. Run verification to confirm the hardened state.
 
-This is the correct deployment model for a hardened AD-ready image.
-
----
-
-## 9. Final note
-
-The image should be positioned as an AD-ready Windows Server image that a customer promotes to a Domain Controller after launch. The CloudInfra Secure Domain Controller baseline is then applied once the role is active.
-
-This model matches the intended hardening flow for the product, and it avoids the compatibility issues that can arise when hardening a server before the AD role is live.
+This is the supported deployment model for a hardened AD-ready image.
