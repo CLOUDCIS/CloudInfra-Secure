@@ -15,6 +15,15 @@ Follow this sequence:
 
 This sequence is the supported pattern for domain-controller-ready images.
 
+## Related information
+
+- [CloudInfra Secure Domain Controller baseline](../reference/baselines/index.md#cloudinfra-secure-domain-controller-role-tier)
+- [WIN-ACCT-003 — Force Logoff When Logon Hours Expire](../reference/controls/index.md#win-acct-003)
+- [WIN-SVC-001 — Disable Remote Registry Service](../reference/controls/index.md#win-svc-001)
+- [Reporting guide](reporting.md)
+- [Drift Detection & Alerts](drift-and-alerts.md)
+- [Commands reference](commands.md)
+
 ## Why this workflow matters
 
 This image is intended to be promoted to a domain controller after launch. Do not apply the Domain Controller hardening baseline before the server has completed AD DS promotion and is acting as a live domain controller.
