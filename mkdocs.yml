@@ -7,15 +7,9 @@ site_author: InfraSOS FZCO
 site_url: https://cloudcis.github.io/CloudInfra-Secure/
 copyright: Copyright &copy; 2026 InfraSOS FZCO - CloudInfra Secure
 
-repo_url: https://github.com/CLOUDCIS/CloudInfra-Secure
-repo_name: CLOUDCIS/CloudInfra-Secure
-edit_uri: edit/main/docs/
-
 theme:
   name: material
   language: en
-  icon:
-    repo: fontawesome/brands/github
   features:
     - navigation.tabs
     - navigation.sections
