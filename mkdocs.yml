@@ -72,6 +72,7 @@ nav:
   - User Guide:
       - Commands: guide/commands.md
       - Security Baseline Profiles: guide/baselines.md
+      - Active Directory Hardening: guide/active-directory-hardening.md
       - Assess & Change Safely: guide/audit-apply-rollback.md
       - Reporting: guide/reporting.md
       - Drift Detection & Alerts: guide/drift-and-alerts.md
