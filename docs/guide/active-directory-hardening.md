@@ -15,15 +15,6 @@ Follow this sequence:
 
 This sequence is the supported pattern for domain-controller-ready images.
 
-## Related information
-
-- [CloudInfra Secure Domain Controller baseline](../reference/baselines/index.md#cloudinfra-secure-domain-controller-role-tier)
-- [WIN-ACCT-003 — Force Logoff When Logon Hours Expire](../reference/controls/index.md#win-acct-003)
-- [WIN-SVC-001 — Disable Remote Registry Service](../reference/controls/index.md#win-svc-001)
-- [Reporting guide](reporting.md)
-- [Drift Detection & Alerts](drift-and-alerts.md)
-- [Commands reference](commands.md)
-
 ## Why this workflow matters
 
 This image is intended to be promoted to a domain controller after launch. Do not apply the Domain Controller hardening baseline before the server has completed AD DS promotion and is acting as a live domain controller.
@@ -125,14 +116,14 @@ cd C:\CloudInfraSecure
 .\CloudInfraSecure.ps1 audit -Baseline CloudInfraSecure-DomainController
 ```
 
-This verifies the domain controller against the Domain Controller baseline.
+This verifies the domain controller against the [CloudInfra Secure Domain Controller baseline](../reference/baselines/index.md#cloudinfra-secure-domain-controller-role-tier).
 
 ### Step 12: Review failed controls
 
 If the audit reports failures, review the control IDs and messages. On a live domain controller, the most common remaining controls are:
 
-- `WIN-ACCT-003` — Force Logoff When Logon Hours Expire
-- `WIN-SVC-001` — Disable Remote Registry Service
+- [WIN-ACCT-003 — Force Logoff When Logon Hours Expire](../reference/controls/index.md#win-acct-003)
+- [WIN-SVC-001 — Disable Remote Registry Service](../reference/controls/index.md#win-svc-001)
 
 ### Step 13: Apply the DC baseline
 
@@ -149,7 +140,7 @@ This applies the hardening baseline to the server and records the expected confi
 
 ## 5. Fix the GPO setting: Force logoff when logon hours expire
 
-The control `WIN-ACCT-003` is a domain-level security policy. It requires the following effective value:
+The control [WIN-ACCT-003 — Force Logoff When Logon Hours Expire](../reference/controls/index.md#win-acct-003) is a domain-level security policy. It requires the following effective value:
 
 - Policy name: Network security: Force logoff when logon hours expire
 - Expected state: Enabled
@@ -227,7 +218,7 @@ If the control still fails, verify that the GPO is linked to the correct scope a
 
 ## 6. Disable the Remote Registry service
 
-The control `WIN-SVC-001` requires that the Remote Registry service is both stopped and disabled.
+The control [WIN-SVC-001 — Disable Remote Registry Service](../reference/controls/index.md#win-svc-001) requires that the Remote Registry service is both stopped and disabled.
 
 This service should not be running on a hardened domain controller because it expands the remote attack surface and allows registry reconnaissance or remote configuration access.
 
@@ -327,3 +318,12 @@ The supported customer flow is:
 9. Run verification to confirm the hardened state.
 
 This is the supported deployment model for a hardened AD-ready image.
+
+## Related information
+
+- [CloudInfra Secure Domain Controller baseline](../reference/baselines/index.md#cloudinfra-secure-domain-controller-role-tier)
+- [WIN-ACCT-003 — Force Logoff When Logon Hours Expire](../reference/controls/index.md#win-acct-003)
+- [WIN-SVC-001 — Disable Remote Registry Service](../reference/controls/index.md#win-svc-001)
+- [Reporting guide](reporting.md)
+- [Drift Detection & Alerts](drift-and-alerts.md)
+- [Commands reference](commands.md)
